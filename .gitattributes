@@ -1,0 +1,3 @@
+# Same attributes as OCTGN
+*.xml text eol=crlf
+*.py text
