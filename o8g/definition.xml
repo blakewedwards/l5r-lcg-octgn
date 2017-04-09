@@ -13,11 +13,20 @@
     tags="legend five rings l5r lcg"
     iconurl="https://tinyurl.com/kgre8ce">
   <scripts/>
-  <proxygen definitionsrc="proxygen/definition.xml">
-  </proxygen>
-  <card front="card/front.png" back="card/back.png"/>
-  <table width="1250" height="700" background="table/background.jpg"/>
+  <proxygen definitionsrc="proxygen/definition.xml"/>
+  <card
+    front="card/front.png"
+    back="card/back.png"/>
+  <table
+    width="1250"
+    height="700"
+    background="table/background.jpg"/>
   <player>
-    <group name="deck" icon="card/back.png" visibility="none" width="63" height="88"/>
+    <group
+      name="deck"
+      icon="card/back.png"
+      visibility="none"
+      width="63"
+      height="88"/>
   </player>
 </game>
