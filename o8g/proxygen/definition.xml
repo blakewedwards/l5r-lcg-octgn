@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  <blocks>
+    <block type="overlay" id="0" src="card/back.png">
+      <location x="0" y="0"/>
+    </block>
+  </blocks>
+  <template src="card/back.png">
+    <matches>
+      <match name="" value=""/>
+    </matches>
+  </template>
+</templates>
+

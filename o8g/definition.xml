@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<game
+    name="Legend of the Five Rings LCG"
+    id="bb0f02e7-2a6f-4ae3-84a2-c501b4176844"
+    octgnVersion="3.1.284.0"
+    version="0.0.1.0"
+    scriptVersion="3.1.0.2"
+    markersize="16"
+    setsurl="https://tinyurl.com/mab3ars"
+    gameurl="http://octgngames.com/l5r-lcg"
+    authors="Intolerance"
+    description="Legend of the Five Rings: The Card Game is a Living Card Game developed by Fantasy Flight Games"
+    tags="legend five rings l5r lcg"
+    iconurl="https://tinyurl.com/kgre8ce">
+  <scripts/>
+  <proxygen definitionsrc="proxygen/definition.xml">
+  </proxygen>
+  <card front="card/front.png" back="card/back.png"/>
+  <table width="1250" height="700" background="table/background.jpg"/>
+  <player>
+    <group name="deck" icon="card/back.png" visibility="none" width="63" height="88"/>
+  </player>
+</game>
