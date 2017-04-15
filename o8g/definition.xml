@@ -24,6 +24,13 @@
     height="700"
     background="table/background.jpg"/>
   <player>
+    <hand
+      name="hand"
+      icon="card/back.png"
+      width="63"
+      height="88"
+      visibility="me"
+      ordered="False"/>
     <group
       name="deck"
       icon="card/back.png"
