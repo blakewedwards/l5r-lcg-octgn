@@ -15,6 +15,8 @@
   <scripts/>
   <proxygen definitionsrc="proxygen/definition.xml"/>
   <card
+    width="63"
+    height="88"
     front="card/front.png"
     back="card/back.png"/>
   <table
@@ -29,4 +31,9 @@
       width="63"
       height="88"/>
   </player>
+  <deck>
+    <section
+      name="Cards"
+      group="deck"/>
+  </deck>
 </game>
