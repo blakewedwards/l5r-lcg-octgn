@@ -20,19 +20,22 @@
     front="card/front.png"
     back="card/back.png"/>
   <table
-    width="1250"
-    height="700"
-    background="table/background.jpg"/>
+    name="Table"
+    width="1050"
+    height="300"
+    background="table/background.jpg"
+    backgroundStyle="uniformToFill"
+    ordered="False"/>
   <player>
     <hand
-      name="hand"
+      name="Hand"
       icon="card/back.png"
       width="63"
       height="88"
       visibility="me"
       ordered="False"/>
     <group
-      name="deck"
+      name="Deck"
       icon="card/back.png"
       visibility="none"
       width="63"
@@ -41,6 +44,6 @@
   <deck>
     <section
       name="Cards"
-      group="deck"/>
+      group="Deck"/>
   </deck>
 </game>
