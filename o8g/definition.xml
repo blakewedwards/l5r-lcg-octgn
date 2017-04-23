@@ -9,9 +9,9 @@
     setsurl="https://tinyurl.com/mab3ars"
     gameurl="http://octgngames.com/l5r-lcg"
     authors="Intolerance"
-    description="Legend of the Five Rings: The Card Game is a Living Card Game developed by Fantasy Flight Games"
-    tags="legend five rings l5r lcg"
-    iconurl="https://tinyurl.com/kgre8ce">
+    description="Legend of the Five Rings: The Card Game is a player-influenced LCG that sees two players take on the role of one of the seven Great Clans of Rokugan, vying for military and political control of the land while maintaining Rokugan society’s strict code of honor."
+    tags="legend five rings l5r lcg ffg fantasy flight games"
+    iconurl="http://i.imgur.com/PgP90M6.jpg">
   <scripts/>
   <proxygen definitionsrc="proxygen/definition.xml"/>
   <card
