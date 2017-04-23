@@ -5,5 +5,35 @@
   gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844"
   gameVersion="0.0.1.0"
   version="1.0">
-  <cards/>
+  <cards>
+    <card id="b4551ad3-509d-4f07-94c5-8a639d7e1bb0" name="Borderlands Defender">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi."/>
+      <property name="Text" value="While this character is defending, opponents' card effects cannot bow it or move it."/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="3"/>
+      <property name="Glory" value="1"/>
+    </card>
+    <card id="35f74bd9-ac4b-4a32-b6d8-667573a006c7" name="Eager Scout">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Scout."/>
+      <property name="Text" value=""/>
+      <property name="Cost" value="0"/>
+      <property name="Military Skill" value="0"/>
+      <property name="Political Skill" value="0"/>
+      <property name="Glory" value="0"/>
+    </card>
+    <card id="400e69c3-d603-4d7f-9b43-27858ef3f890" name="Jade Tetsubo">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Jade. Weapon."/>
+      <property name="Text" value=""/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="0"/>
+    </card>
+  </cards>
 </set>

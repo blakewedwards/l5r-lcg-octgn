@@ -14,11 +14,17 @@
     iconurl="http://i.imgur.com/PgP90M6.jpg">
   <scripts/>
   <proxygen definitionsrc="proxygen/definition.xml"/>
-  <card
-    width="63"
-    height="88"
-    front="card/front.png"
-    back="card/back.png"/>
+  <card back="card/back.png" front="card/front.png" width="63" height="88">
+    <property name="Clan" type="String" textKind="Enum"/>
+    <property name="Type" type="String" textKind="Enum"/>
+    <property name="Unique" type="String"/>
+    <property name="Traits" type="String" textKind="Tokens"/>
+    <property name="Text" type="String"/>
+    <property name="Cost" type="String"/>
+    <property name="Military Skill" type="String"/>
+    <property name="Political Skill" type="String"/>
+    <property name="Glory" type="String"/>
+  </card>
   <table
     name="Table"
     width="1050"
