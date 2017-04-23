@@ -27,23 +27,14 @@
     backgroundStyle="uniformToFill"
     ordered="False"/>
   <player>
-    <hand
-      name="Hand"
-      icon="card/back.png"
-      width="63"
-      height="88"
-      visibility="me"
-      ordered="False"/>
-    <group
-      name="Deck"
-      icon="card/back.png"
-      visibility="none"
-      width="63"
-      height="88"/>
+    <hand name="Hand" icon="card/back.png" visibility="me" ordered="False" width="63" height="88"/>
+    <group name="Dynasty Deck" icon="card/back.png" visibility="none" width="63" height="88"/>
+    <group name="Conflict Deck" icon="card/back.png" visibility="none" width="63" height="88"/>
   </player>
   <deck>
-    <section
-      name="Cards"
-      group="Deck"/>
+    <section name="Stronghold" group="Hand"/>
+    <section name="Province Cards" group="Hand"/>
+    <section name="Dynasty Deck" group="Dynasty Deck"/>
+    <section name="Conflict Deck" group="Conflict Deck"/>
   </deck>
 </game>
