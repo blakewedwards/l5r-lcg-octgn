@@ -34,8 +34,8 @@
     ordered="False"/>
   <player>
     <hand name="Hand" icon="card/back.png" visibility="me" ordered="False" width="63" height="88"/>
-    <group name="Dynasty Deck" icon="card/back.png" visibility="none" width="63" height="88"/>
-    <group name="Conflict Deck" icon="card/back.png" visibility="none" width="63" height="88"/>
+    <group name="Dynasty Deck" icon="card/dynasty.png" visibility="none" width="63" height="88"/>
+    <group name="Conflict Deck" icon="card/conflict.png" visibility="none" width="63" height="88"/>
   </player>
   <deck>
     <section name="Stronghold" group="Hand"/>
