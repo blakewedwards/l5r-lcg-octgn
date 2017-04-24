@@ -9,6 +9,7 @@
         x="0"
         y="0"/>
     </block>
+    <block type="overlay" id="crabAttachment" src="proxygen/images/crab/attachment.png"><location x="0" y="0"/></block>
     <block type="text" id="characterName">
       <location x="29" y="358" rotate="270" />
       <text color="#000000" size="23" font="fonts/name.ttf"/>
@@ -62,19 +63,18 @@
     </textblocks>
   </template>
 
-  <template src="proxygen/images/crab/attachment.png">
+  <template src="proxygen/images/empty.png">
     <matches>
-      <match name="Clan" value="Crab"/>
       <match name="Type" value="Attachment"/>
     </matches>
 
-    <!--overlayblocks>
+    <overlayblocks>
       <conditional>
-        <if property="Unique" value="yes">
-          <link block="SupportUniqueYes"/>
-        </if>
+        <switch property="Clan" >
+          <case value="Crab"><link block="crabAttachment"/></case>
+        </switch>
       </conditional>
-    </overlayblocks-->
+    </overlayblocks>
 
     <textblocks>
       <!--link block="cost"><property name="Cost"/></link-->
