@@ -1,88 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates>
   <blocks>
-    <block
-      type="overlay"
-      id="0"
-      src="card/back.png">
-      <location
-        x="0"
-        y="0"/>
-    </block>
-    <block type="overlay" id="crabAttachment" src="proxygen/images/crab/attachment.png"><location x="0" y="0"/></block>
-    <block type="text" id="characterName">
+    <block type="overlay" id="character-base-crab" src="proxygen/images/character-base-crab.png"><location x="0" y="0"/></block>
+    <block type="text" id="character-name">
       <location x="29" y="358" rotate="270" />
       <text color="#000000" size="23" font="fonts/name.ttf"/>
       <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
     </block>
-    <block type="text" id="characterTraits">
+    <block type="text" id="character-traits">
       <location x="70" y="415"/>
       <text color="#000000" size="21" font="fonts/traits.ttf"/>
       <wordwrap height="34" width="300" align="center" shrinktofit="True"/>
     </block>
-    <block type="text" id="attachmentName">
+
+    <block type="overlay" id="attachment-base-crab" src="proxygen/images/attachment-base-crab.png"><location x="0" y="0"/></block>
+    <block type="text" id="attachment-name">
       <location x="29" y="358" rotate="270" />
       <text color="#000000" size="23" font="fonts/name.ttf"/>
       <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
     </block>
-    <block type="text" id="attachmentTraits">
+    <block type="text" id="attachment-traits">
       <location x="70" y="415"/>
       <text color="#000000" size="21" font="fonts/traits.ttf"/>
       <wordwrap height="34" width="300" align="center" shrinktofit="True"/>
     </block>
   </blocks>
-  <template src="card/back.png">
-    <matches>
-      <match
-        name=""
-        value=""/>
-    </matches>
-  </template>
-
-  <template src="proxygen/images/crab/character.png">
-    <matches>
-      <match name="Clan" value="Crab"/>
-      <match name="Type" value="Character"/>
-    </matches>
-
-    <!--overlayblocks>
-      <conditional>
-        <if property="Unique" value="yes">
-          <link block="SupportUniqueYes"/>
-        </if>
-      </conditional>
-    </overlayblocks-->
-
-    <textblocks>
-      <!--link block="cost"><property name="Cost"/></link-->
-      <link block="characterName"><property name="Name"/></link>
-      <link block="characterTraits"><property name="Traits"/></link>
-      <!--link block="characterText"><property name="Text"/></link-->
-      <!--link block="militarySkill"><property name="Military Skill"/></link-->
-      <!--link block="politicalSkill"><property name="Political Skill"/></link-->
-    </textblocks>
-  </template>
 
   <template src="proxygen/images/empty.png">
-    <matches>
-      <match name="Type" value="Attachment"/>
-    </matches>
+    <matches><match name="Type" value="Character"/></matches>
 
     <overlayblocks>
       <conditional>
-        <switch property="Clan" >
-          <case value="Crab"><link block="crabAttachment"/></case>
+        <switch property="Clan">
+          <case value="Crab"><link block="character-base-crab"/></case>
         </switch>
       </conditional>
     </overlayblocks>
 
     <textblocks>
-      <!--link block="cost"><property name="Cost"/></link-->
-      <link block="attachmentName"><property name="Name"/></link>
-      <link block="attachmentTraits"><property name="Traits"/></link>
-      <!--link block="characterText"><property name="Text"/></link-->
-      <!--link block="militarySkill"><property name="Military Skill"/></link-->
-      <!--link block="politicalSkill"><property name="Political Skill"/></link-->
+      <link block="character-name"><property name="Name"/></link>
+      <link block="character-traits"><property name="Traits"/></link>
+    </textblocks>
+  </template>
+
+  <template src="proxygen/images/empty.png">
+    <matches><match name="Type" value="Attachment"/></matches>
+
+    <overlayblocks>
+      <conditional>
+        <switch property="Clan">
+          <case value="Crab"><link block="attachment-base-crab"/></case>
+        </switch>
+      </conditional>
+    </overlayblocks>
+
+    <textblocks>
+      <link block="attachment-name"><property name="Name"/></link>
+      <link block="attachment-traits"><property name="Traits"/></link>
     </textblocks>
   </template>
 </templates>
