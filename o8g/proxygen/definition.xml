@@ -9,6 +9,26 @@
         x="0"
         y="0"/>
     </block>
+    <block type="text" id="characterName">
+      <location x="29" y="358" rotate="270" />
+      <text color="#000000" size="23" font="fonts/name.ttf"/>
+      <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
+    </block>
+    <block type="text" id="characterTraits">
+      <location x="70" y="415"/>
+      <text color="#000000" size="21" font="fonts/traits.ttf"/>
+      <wordwrap height="34" width="300" align="center" shrinktofit="True"/>
+    </block>
+    <block type="text" id="attachmentName">
+      <location x="29" y="358" rotate="270" />
+      <text color="#000000" size="23" font="fonts/name.ttf"/>
+      <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
+    </block>
+    <block type="text" id="attachmentTraits">
+      <location x="70" y="415"/>
+      <text color="#000000" size="21" font="fonts/traits.ttf"/>
+      <wordwrap height="34" width="300" align="center" shrinktofit="True"/>
+    </block>
   </blocks>
   <template src="card/back.png">
     <matches>
@@ -16,5 +36,53 @@
         name=""
         value=""/>
     </matches>
+  </template>
+
+  <template src="proxygen/images/crab/character.png">
+    <matches>
+      <match name="Clan" value="Crab"/>
+      <match name="Type" value="Character"/>
+    </matches>
+
+    <!--overlayblocks>
+      <conditional>
+        <if property="Unique" value="yes">
+          <link block="SupportUniqueYes"/>
+        </if>
+      </conditional>
+    </overlayblocks-->
+
+    <textblocks>
+      <!--link block="cost"><property name="Cost"/></link-->
+      <link block="characterName"><property name="Name"/></link>
+      <link block="characterTraits"><property name="Traits"/></link>
+      <!--link block="characterText"><property name="Text"/></link-->
+      <!--link block="militarySkill"><property name="Military Skill"/></link-->
+      <!--link block="politicalSkill"><property name="Political Skill"/></link-->
+    </textblocks>
+  </template>
+
+  <template src="proxygen/images/crab/attachment.png">
+    <matches>
+      <match name="Clan" value="Crab"/>
+      <match name="Type" value="Attachment"/>
+    </matches>
+
+    <!--overlayblocks>
+      <conditional>
+        <if property="Unique" value="yes">
+          <link block="SupportUniqueYes"/>
+        </if>
+      </conditional>
+    </overlayblocks-->
+
+    <textblocks>
+      <!--link block="cost"><property name="Cost"/></link-->
+      <link block="attachmentName"><property name="Name"/></link>
+      <link block="attachmentTraits"><property name="Traits"/></link>
+      <!--link block="characterText"><property name="Text"/></link-->
+      <!--link block="militarySkill"><property name="Military Skill"/></link-->
+      <!--link block="politicalSkill"><property name="Political Skill"/></link-->
+    </textblocks>
   </template>
 </templates>
