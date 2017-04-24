@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates>
   <blocks>
+    <block type="text" id="type">
+      <location x="3" y="87"/>
+      <text color="#000000" size="14" font="fonts/text.ttf"/>
+      <wordwrap height="20" width="85" align="center" valign="center" shrinktofit="True"/>
+    </block>
+    <block type="text" id="text">
+      <location x="25" y="482"/>
+      <text color="#000000" size="20" font="fonts/text.ttf"/>
+      <wordwrap height="100" width="380" shrinktofit="True"/>
+    </block>
+
     <block type="overlay" id="character-base-crab" src="proxygen/images/character-base-crab.png"><location x="0" y="0"/></block>
     <block type="text" id="character-name">
       <location x="29" y="358" rotate="270" />
@@ -38,6 +49,8 @@
     </overlayblocks>
 
     <textblocks>
+      <link block="type"><property name="Type"/></link>
+      <link block="text"><property name="Text"/></link>
       <link block="character-name"><property name="Name"/></link>
       <link block="character-traits"><property name="Traits"/></link>
     </textblocks>
@@ -55,6 +68,8 @@
     </overlayblocks>
 
     <textblocks>
+      <link block="type"><property name="Type"/></link>
+      <link block="text"><property name="Text"/></link>
       <link block="attachment-name"><property name="Name"/></link>
       <link block="attachment-traits"><property name="Traits"/></link>
     </textblocks>
