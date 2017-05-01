@@ -12,7 +12,9 @@
     description="Legend of the Five Rings: The Card Game is a player-influenced LCG that sees two players take on the role of one of the seven Great Clans of Rokugan, vying for military and political control of the land while maintaining Rokugan society’s strict code of honor."
     tags="legend five rings l5r lcg ffg fantasy flight games"
     iconurl="http://i.imgur.com/PgP90M6.jpg">
-  <scripts/>
+  <scripts>
+    <script src="scripts/actions.py"/>
+  </scripts>
   <proxygen definitionsrc="proxygen/definition.xml"/>
   <card back="card/back.png" front="card/front.png" width="63" height="88">
     <property name="Clan" type="String" textKind="Enum"/>
@@ -36,8 +38,11 @@
     height="300"
     background="table/background.jpg"
     backgroundStyle="uniformToFill"
-    ordered="False"/>
+    ordered="False">
+    <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
+  </table>
   <player>
+    <globalvariable name="setup_required" value="True"/>
     <hand name="Hand" icon="card/back.png" visibility="me" ordered="False" width="63" height="88"/>
     <group name="Dynasty Deck" icon="card/dynasty.png" visibility="none" width="63" height="88"/>
     <group name="Conflict Deck" icon="card/conflict.png" visibility="none" width="63" height="88"/>
