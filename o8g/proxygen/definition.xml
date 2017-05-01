@@ -12,7 +12,33 @@
       <wordwrap height="100" width="380" shrinktofit="True"/>
     </block>
 
+    <block type="overlay" id="stronghold-base-crab" src="proxygen/images/stronghold-base-crab.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="stronghold-base-crane" src="proxygen/images/stronghold-base-crane.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="stronghold-base-dragon" src="proxygen/images/stronghold-base-dragon.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="stronghold-base-lion" src="proxygen/images/stronghold-base-lion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="stronghold-base-phoenix" src="proxygen/images/stronghold-base-phoenix.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="stronghold-base-scorpion" src="proxygen/images/stronghold-base-scorpion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="stronghold-base-unicorn" src="proxygen/images/stronghold-base-unicorn.png"><location x="0" y="0"/></block>
+
+    <block type="text" id="stronghold-name">
+      <location x="29" y="358" rotate="270" />
+      <text color="#000000" size="23" font="fonts/name.ttf"/>
+      <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
+    </block>
+    <block type="text" id="stronghold-traits">
+      <location x="70" y="415"/>
+      <text color="#000000" size="21" font="fonts/traits.ttf"/>
+      <wordwrap height="34" width="300" align="center" shrinktofit="True"/>
+    </block>
+
     <block type="overlay" id="character-base-crab" src="proxygen/images/character-base-crab.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="character-base-crane" src="proxygen/images/character-base-crane.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="character-base-dragon" src="proxygen/images/character-base-dragon.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="character-base-lion" src="proxygen/images/character-base-lion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="character-base-phoenix" src="proxygen/images/character-base-phoenix.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="character-base-scorpion" src="proxygen/images/character-base-scorpion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="character-base-unicorn" src="proxygen/images/character-base-unicorn.png"><location x="0" y="0"/></block>
+
     <block type="text" id="character-name">
       <location x="29" y="358" rotate="270" />
       <text color="#000000" size="23" font="fonts/name.ttf"/>
@@ -24,7 +50,33 @@
       <wordwrap height="34" width="300" align="center" shrinktofit="True"/>
     </block>
 
+    <block type="overlay" id="holding-base-crab" src="proxygen/images/holding-base-crab.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="holding-base-crane" src="proxygen/images/holding-base-crane.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="holding-base-dragon" src="proxygen/images/holding-base-dragon.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="holding-base-lion" src="proxygen/images/holding-base-lion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="holding-base-phoenix" src="proxygen/images/holding-base-phoenix.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="holding-base-scorpion" src="proxygen/images/holding-base-scorpion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="holding-base-unicorn" src="proxygen/images/holding-base-unicorn.png"><location x="0" y="0"/></block>
+
+    <block type="text" id="holding-name">
+      <location x="29" y="358" rotate="270" />
+      <text color="#000000" size="23" font="fonts/name.ttf"/>
+      <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
+    </block>
+    <block type="text" id="holding-traits">
+      <location x="70" y="415"/>
+      <text color="#000000" size="21" font="fonts/traits.ttf"/>
+      <wordwrap height="34" width="300" align="center" shrinktofit="True"/>
+    </block>
+
     <block type="overlay" id="attachment-base-crab" src="proxygen/images/attachment-base-crab.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="attachment-base-crane" src="proxygen/images/attachment-base-crane.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="attachment-base-dragon" src="proxygen/images/attachment-base-dragon.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="attachment-base-lion" src="proxygen/images/attachment-base-lion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="attachment-base-phoenix" src="proxygen/images/attachment-base-phoenix.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="attachment-base-scorpion" src="proxygen/images/attachment-base-scorpion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="attachment-base-unicorn" src="proxygen/images/attachment-base-unicorn.png"><location x="0" y="0"/></block>
+
     <block type="text" id="attachment-name">
       <location x="29" y="358" rotate="270" />
       <text color="#000000" size="23" font="fonts/name.ttf"/>
@@ -35,7 +87,51 @@
       <text color="#000000" size="21" font="fonts/traits.ttf"/>
       <wordwrap height="34" width="300" align="center" shrinktofit="True"/>
     </block>
+
+    <block type="overlay" id="event-base-crab" src="proxygen/images/event-base-crab.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="event-base-crane" src="proxygen/images/event-base-crane.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="event-base-dragon" src="proxygen/images/event-base-dragon.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="event-base-lion" src="proxygen/images/event-base-lion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="event-base-phoenix" src="proxygen/images/event-base-phoenix.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="event-base-scorpion" src="proxygen/images/event-base-scorpion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="event-base-unicorn" src="proxygen/images/event-base-unicorn.png"><location x="0" y="0"/></block>
+
+    <block type="text" id="event-name">
+      <location x="29" y="358" rotate="270" />
+      <text color="#000000" size="23" font="fonts/name.ttf"/>
+      <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
+    </block>
+    <block type="text" id="event-traits">
+      <location x="70" y="415"/>
+      <text color="#000000" size="21" font="fonts/traits.ttf"/>
+      <wordwrap height="34" width="300" align="center" shrinktofit="True"/>
+    </block>
   </blocks>
+
+  <template src="proxygen/images/empty.png">
+    <matches><match name="Type" value="Stronghold"/></matches>
+
+    <overlayblocks>
+      <conditional>
+        <switch property="Clan">
+          <case value="Crab"><link block="stronghold-base-crab"/></case>
+          <case value="Crane"><link block="stronghold-base-crane"/></case>
+          <case value="Dragon"><link block="stronghold-base-dragon"/></case>
+          <case value="Lion"><link block="stronghold-base-lion"/></case>
+          <case value="Phoenix"><link block="stronghold-base-phoenix"/></case>
+          <case value="Scorpion"><link block="stronghold-base-scorpion"/></case>
+          <case value="Unicorn"><link block="stronghold-base-unicorn"/></case>
+        </switch>
+      </conditional>
+    </overlayblocks>
+
+    <textblocks>
+      <link block="type"><property name="Type"/></link>
+      <link block="text"><property name="Text"/></link>
+      <link block="stronghold-name"><property name="Name"/></link>
+      <link block="stronghold-traits"><property name="Traits"/></link>
+    </textblocks>
+  </template>
 
   <template src="proxygen/images/empty.png">
     <matches><match name="Type" value="Character"/></matches>
@@ -44,6 +140,12 @@
       <conditional>
         <switch property="Clan">
           <case value="Crab"><link block="character-base-crab"/></case>
+          <case value="Crane"><link block="character-base-crane"/></case>
+          <case value="Dragon"><link block="character-base-dragon"/></case>
+          <case value="Lion"><link block="character-base-lion"/></case>
+          <case value="Phoenix"><link block="character-base-phoenix"/></case>
+          <case value="Scorpion"><link block="character-base-scorpion"/></case>
+          <case value="Unicorn"><link block="character-base-unicorn"/></case>
         </switch>
       </conditional>
     </overlayblocks>
@@ -57,12 +159,43 @@
   </template>
 
   <template src="proxygen/images/empty.png">
+    <matches><match name="Type" value="Holding"/></matches>
+
+    <overlayblocks>
+      <conditional>
+        <switch property="Clan">
+          <case value="Crab"><link block="holding-base-crab"/></case>
+          <case value="Crane"><link block="holding-base-crane"/></case>
+          <case value="Dragon"><link block="holding-base-dragon"/></case>
+          <case value="Lion"><link block="holding-base-lion"/></case>
+          <case value="Phoenix"><link block="holding-base-phoenix"/></case>
+          <case value="Scorpion"><link block="holding-base-scorpion"/></case>
+          <case value="Unicorn"><link block="holding-base-unicorn"/></case>
+        </switch>
+      </conditional>
+    </overlayblocks>
+
+    <textblocks>
+      <link block="type"><property name="Type"/></link>
+      <link block="text"><property name="Text"/></link>
+      <link block="holding-name"><property name="Name"/></link>
+      <link block="holding-traits"><property name="Traits"/></link>
+    </textblocks>
+  </template>
+
+  <template src="proxygen/images/empty.png">
     <matches><match name="Type" value="Attachment"/></matches>
 
     <overlayblocks>
       <conditional>
         <switch property="Clan">
           <case value="Crab"><link block="attachment-base-crab"/></case>
+          <case value="Crane"><link block="attachment-base-crane"/></case>
+          <case value="Dragon"><link block="attachment-base-dragon"/></case>
+          <case value="Lion"><link block="attachment-base-lion"/></case>
+          <case value="Phoenix"><link block="attachment-base-phoenix"/></case>
+          <case value="Scorpion"><link block="attachment-base-scorpion"/></case>
+          <case value="Unicorn"><link block="attachment-base-unicorn"/></case>
         </switch>
       </conditional>
     </overlayblocks>
@@ -72,6 +205,31 @@
       <link block="text"><property name="Text"/></link>
       <link block="attachment-name"><property name="Name"/></link>
       <link block="attachment-traits"><property name="Traits"/></link>
+    </textblocks>
+  </template>
+
+  <template src="proxygen/images/empty.png">
+    <matches><match name="Type" value="Event"/></matches>
+
+    <overlayblocks>
+      <conditional>
+        <switch property="Clan">
+          <case value="Crab"><link block="event-base-crab"/></case>
+          <case value="Crane"><link block="event-base-crane"/></case>
+          <case value="Dragon"><link block="event-base-dragon"/></case>
+          <case value="Lion"><link block="event-base-lion"/></case>
+          <case value="Phoenix"><link block="event-base-phoenix"/></case>
+          <case value="Scorpion"><link block="event-base-scorpion"/></case>
+          <case value="Unicorn"><link block="event-base-unicorn"/></case>
+        </switch>
+      </conditional>
+    </overlayblocks>
+
+    <textblocks>
+      <link block="type"><property name="Type"/></link>
+      <link block="text"><property name="Text"/></link>
+      <link block="event-name"><property name="Name"/></link>
+      <link block="event-traits"><property name="Traits"/></link>
     </textblocks>
   </template>
 </templates>
