@@ -24,6 +24,11 @@
     <property name="Military Skill" type="String"/>
     <property name="Political Skill" type="String"/>
     <property name="Glory" type="String"/>
+    <property name="Bonus Strength" type="String"/>
+    <property name="Starting Honor" type="String"/>
+    <property name="Fate Value" type="String"/>
+    <property name="Influence Value" type="String"/>
+    <property name="Card Number" type="Integer"/>
   </card>
   <table
     name="Table"
