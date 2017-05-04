@@ -83,6 +83,28 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="46"/>
     </card>
+    <card id="4dae1138-cf99-4880-a600-b8b4d5c6631b" name="Togashi Initiate">
+      <property name="Clan" value="Dragon"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Monk. Tattooed."/>
+      <property name="Text" value="Action: While this character is attacking, spend 1 fate to an unclaimed ring - honor this character."/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="2"/>
+      <property name="Card Number" value="55"/>
+    </card>
+    <card id="a8c52b13-c2fa-4ccf-9d5f-a76436144a41" name="Seeker of Enlightenment">
+      <property name="Clan" value="Dragon"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Monk. Tattooed."/>
+      <property name="Text" value="This character gets +1[Military Skill] and +1[Political Skill] for each fate on each unclaimed ring."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="0"/>
+      <property name="Card Number" value="59"/>
+    </card>
     <card id="92fb3c5e-a2a0-4a5d-aca8-c867218f7747" name="Matsu Berserker">
       <property name="Clan" value="Lion"/>
       <property name="Type" value="Character"/>
@@ -93,6 +115,17 @@
       <property name="Political Skill" value="-"/>
       <property name="Glory" value="1"/>
       <property name="Card Number" value="69"/>
+    </card>
+    <card id="47826d27-2a19-4832-ab36-c1fc92b3f948" name="Lion's Pride Brawler">
+      <property name="Clan" value="Lion"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Courtier."/>
+      <property name="Text" value="Action: While this character is attacking, choose a character with equal or lower [Military Skill] skill than this character - bow that character."/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="1"/>
+      <property name="Card Number" value="75"/>
     </card>
     <card id="0c93ed20-599b-4d83-af62-9336e8ab5925" name="Staging Ground">
       <property name="Clan" value="Lion"/>
@@ -113,6 +146,17 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="96"/>
     </card>
+    <card id="8fbaa0fa-ef55-4775-a47c-414c3a154dc9" name="Young Rumormonger">
+      <property name="Clan" value="Scorpion"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier."/>
+      <property name="Text" value="Interrupt: When a character would be honored or dishonored, choose another character controlled by the same player - that character receives the honor or dishonor instead."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="1"/>
+      <property name="Card Number" value="101"/>
+    </card>
     <card id="df365b9f-63cd-4d81-ae02-a69db1d81cea" name="City of Lies">
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Holding"/>
@@ -131,6 +175,34 @@
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="1"/>
       <property name="Card Number" value="112"/>
+    </card>
+    <card id="4754fed3-44b5-4d6f-bac9-e8dce9028712" name="Reprieve">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Condition."/>
+      <property name="Text" value="Interrupt: When attached character would leave play - discard this attachment instead."/>
+      <property name="Cost" value="1"/>
+      <property name="Bonus Military Skill" value="0"/>
+      <property name="Bonus Political Skill" value="0"/>
+      <property name="Card Number" value="132"/>
+    </card>
+    <card id="916f4fab-1e57-444e-bdbe-8cd7eeb956c8" name="Admit Defeat">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: Choose a character that is defending alone - bow that character."/>
+      <property name="Cost" value="1"/>
+      <property name="Card Number" value="147"/>
+    </card>
+    <card id="b1dcf0f9-2ee4-4274-99db-21d749ffa435" name="Pacifism">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Condition."/>
+      <property name="Text" value="This attachment cannot be played during a conflict. Attached character cannot participate in [Military Conflict] conflicts."/>
+      <property name="Cost" value="2"/>
+      <property name="Bonus Military Skill" value="0"/>
+      <property name="Bonus Political Skill" value="0"/>
+      <property name="Card Number" value="174"/>
     </card>
     <card id="ed546e3d-c954-4354-94fe-5bce936b649e" name="I Can Swim">
       <property name="Clan" value="Scorpion"/>
