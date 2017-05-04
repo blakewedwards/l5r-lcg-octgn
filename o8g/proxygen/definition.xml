@@ -16,6 +16,7 @@
     <block type="overlay" id="stronghold-base-crane" src="proxygen/images/stronghold-base-crane.png"><location x="0" y="0"/></block>
     <block type="overlay" id="stronghold-base-dragon" src="proxygen/images/stronghold-base-dragon.png"><location x="0" y="0"/></block>
     <block type="overlay" id="stronghold-base-lion" src="proxygen/images/stronghold-base-lion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="stronghold-base-neutral" src="proxygen/images/stronghold-base-neutral.png"><location x="0" y="0"/></block>
     <block type="overlay" id="stronghold-base-phoenix" src="proxygen/images/stronghold-base-phoenix.png"><location x="0" y="0"/></block>
     <block type="overlay" id="stronghold-base-scorpion" src="proxygen/images/stronghold-base-scorpion.png"><location x="0" y="0"/></block>
     <block type="overlay" id="stronghold-base-unicorn" src="proxygen/images/stronghold-base-unicorn.png"><location x="0" y="0"/></block>
@@ -35,6 +36,7 @@
     <block type="overlay" id="character-base-crane" src="proxygen/images/character-base-crane.png"><location x="0" y="0"/></block>
     <block type="overlay" id="character-base-dragon" src="proxygen/images/character-base-dragon.png"><location x="0" y="0"/></block>
     <block type="overlay" id="character-base-lion" src="proxygen/images/character-base-lion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="character-base-neutral" src="proxygen/images/character-base-neutral.png"><location x="0" y="0"/></block>
     <block type="overlay" id="character-base-phoenix" src="proxygen/images/character-base-phoenix.png"><location x="0" y="0"/></block>
     <block type="overlay" id="character-base-scorpion" src="proxygen/images/character-base-scorpion.png"><location x="0" y="0"/></block>
     <block type="overlay" id="character-base-unicorn" src="proxygen/images/character-base-unicorn.png"><location x="0" y="0"/></block>
@@ -54,6 +56,7 @@
     <block type="overlay" id="holding-base-crane" src="proxygen/images/holding-base-crane.png"><location x="0" y="0"/></block>
     <block type="overlay" id="holding-base-dragon" src="proxygen/images/holding-base-dragon.png"><location x="0" y="0"/></block>
     <block type="overlay" id="holding-base-lion" src="proxygen/images/holding-base-lion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="holding-base-neutral" src="proxygen/images/holding-base-neutral.png"><location x="0" y="0"/></block>
     <block type="overlay" id="holding-base-phoenix" src="proxygen/images/holding-base-phoenix.png"><location x="0" y="0"/></block>
     <block type="overlay" id="holding-base-scorpion" src="proxygen/images/holding-base-scorpion.png"><location x="0" y="0"/></block>
     <block type="overlay" id="holding-base-unicorn" src="proxygen/images/holding-base-unicorn.png"><location x="0" y="0"/></block>
@@ -73,6 +76,7 @@
     <block type="overlay" id="attachment-base-crane" src="proxygen/images/attachment-base-crane.png"><location x="0" y="0"/></block>
     <block type="overlay" id="attachment-base-dragon" src="proxygen/images/attachment-base-dragon.png"><location x="0" y="0"/></block>
     <block type="overlay" id="attachment-base-lion" src="proxygen/images/attachment-base-lion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="attachment-base-neutral" src="proxygen/images/attachment-base-neutral.png"><location x="0" y="0"/></block>
     <block type="overlay" id="attachment-base-phoenix" src="proxygen/images/attachment-base-phoenix.png"><location x="0" y="0"/></block>
     <block type="overlay" id="attachment-base-scorpion" src="proxygen/images/attachment-base-scorpion.png"><location x="0" y="0"/></block>
     <block type="overlay" id="attachment-base-unicorn" src="proxygen/images/attachment-base-unicorn.png"><location x="0" y="0"/></block>
@@ -92,6 +96,7 @@
     <block type="overlay" id="event-base-crane" src="proxygen/images/event-base-crane.png"><location x="0" y="0"/></block>
     <block type="overlay" id="event-base-dragon" src="proxygen/images/event-base-dragon.png"><location x="0" y="0"/></block>
     <block type="overlay" id="event-base-lion" src="proxygen/images/event-base-lion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="event-base-neutral" src="proxygen/images/event-base-neutral.png"><location x="0" y="0"/></block>
     <block type="overlay" id="event-base-phoenix" src="proxygen/images/event-base-phoenix.png"><location x="0" y="0"/></block>
     <block type="overlay" id="event-base-scorpion" src="proxygen/images/event-base-scorpion.png"><location x="0" y="0"/></block>
     <block type="overlay" id="event-base-unicorn" src="proxygen/images/event-base-unicorn.png"><location x="0" y="0"/></block>
@@ -118,6 +123,7 @@
           <case value="Crane"><link block="stronghold-base-crane"/></case>
           <case value="Dragon"><link block="stronghold-base-dragon"/></case>
           <case value="Lion"><link block="stronghold-base-lion"/></case>
+          <case value="Neutral"><link block="stronghold-base-neutral"/></case>
           <case value="Phoenix"><link block="stronghold-base-phoenix"/></case>
           <case value="Scorpion"><link block="stronghold-base-scorpion"/></case>
           <case value="Unicorn"><link block="stronghold-base-unicorn"/></case>
@@ -143,6 +149,7 @@
           <case value="Crane"><link block="character-base-crane"/></case>
           <case value="Dragon"><link block="character-base-dragon"/></case>
           <case value="Lion"><link block="character-base-lion"/></case>
+          <case value="Neutral"><link block="character-base-neutral"/></case>
           <case value="Phoenix"><link block="character-base-phoenix"/></case>
           <case value="Scorpion"><link block="character-base-scorpion"/></case>
           <case value="Unicorn"><link block="character-base-unicorn"/></case>
@@ -168,6 +175,7 @@
           <case value="Crane"><link block="holding-base-crane"/></case>
           <case value="Dragon"><link block="holding-base-dragon"/></case>
           <case value="Lion"><link block="holding-base-lion"/></case>
+          <case value="Neutral"><link block="holding-base-neutral"/></case>
           <case value="Phoenix"><link block="holding-base-phoenix"/></case>
           <case value="Scorpion"><link block="holding-base-scorpion"/></case>
           <case value="Unicorn"><link block="holding-base-unicorn"/></case>
@@ -193,6 +201,7 @@
           <case value="Crane"><link block="attachment-base-crane"/></case>
           <case value="Dragon"><link block="attachment-base-dragon"/></case>
           <case value="Lion"><link block="attachment-base-lion"/></case>
+          <case value="Neutral"><link block="attachment-base-neutral"/></case>
           <case value="Phoenix"><link block="attachment-base-phoenix"/></case>
           <case value="Scorpion"><link block="attachment-base-scorpion"/></case>
           <case value="Unicorn"><link block="attachment-base-unicorn"/></case>
@@ -218,6 +227,7 @@
           <case value="Crane"><link block="event-base-crane"/></case>
           <case value="Dragon"><link block="event-base-dragon"/></case>
           <case value="Lion"><link block="event-base-lion"/></case>
+          <case value="Neutral"><link block="event-base-neutral"/></case>
           <case value="Phoenix"><link block="event-base-phoenix"/></case>
           <case value="Scorpion"><link block="event-base-scorpion"/></case>
           <case value="Unicorn"><link block="event-base-unicorn"/></case>

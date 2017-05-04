@@ -6,7 +6,7 @@
   gameVersion="0.0.1.0"
   version="1.0">
   <cards>
-     <card id="8c53e061-b416-4d32-84a1-596c4f3d005a" name="Shizuka Toshi">
+    <card id="8c53e061-b416-4d32-84a1-596c4f3d005a" name="Shizuka Toshi">
       <property name="Clan" value="Crane"/>
       <property name="Type" value="Stronghold"/>
       <property name="Unique" value="Unique"/>
@@ -135,6 +135,17 @@
       <property name="Bonus Strength" value="1"/>
       <property name="Card Number" value="80"/>
     </card>
+    <card id="f909e855-0994-4ef8-b350-7152ff4e03f9" name="Solemn Scholar">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Shugenja. Earth. Scholar."/>
+      <property name="Text" value="Action: During a conflict, if the [Earth] ring is in your claimed ring pool, choose an attacking character - bow that character."/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="1"/>
+      <property name="Card Number" value="83"/>
+    </card>
     <card id="221a1956-1bac-4aa1-ac9e-4b78ab0bd83c" name="Bayushi Manipulator">
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Character"/>
@@ -175,6 +186,39 @@
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="1"/>
       <property name="Card Number" value="112"/>
+    </card>
+    <card id="ec021f72-2e5e-4b7c-88ab-3474658ee98c" name="Shinjo Outrider">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Cavalry. Scout."/>
+      <property name="Text" value="Action: During a conflict - move this character to the conflict."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="2"/>
+      <property name="Card Number" value="114"/>
+    </card>
+    <card id="67b18356-65a2-4a04-8d15-4e5425ab4160" name="Otomo Courtier">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier. Imperial."/>
+      <property name="Text" value="This character cannot participate in conflicts as an attacker against a player that controls the Imperial Favor."/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="-"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="1"/>
+      <property name="Card Number" value="122"/>
+    </card>
+    <card id="21bb93d6-537d-4084-bda1-e3647789fee8" name="Wandering Ronin">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Ronin."/>
+      <property name="Text" value="Action: During a conflict, remove 1 fate from this character - it gets +2[Military Skill] and +2[Political Skill] until the end of the conflict. (Limit twice per conflict.)"/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="0"/>
+      <property name="Card Number" value="127"/>
     </card>
     <card id="4754fed3-44b5-4d6f-bac9-e8dce9028712" name="Reprieve">
       <property name="Clan" value="Crab"/>
@@ -227,6 +271,22 @@
       <property name="Text" value="Interrupt: When you would pass the first player token - keep it instead."/>
       <property name="Cost" value="0"/>
       <property name="Card Number" value="198"/>
+    </card>
+    <card id="613a8a9f-4b3f-4ea4-90ed-3d7423d8423a" name="Fallen in Battle">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Reaction: After you win a [Military Conflict] conflict by 5 or more skill, choose a participating character - discard that character. (Max 1 per conflict.)"/>
+      <property name="Cost" value="1"/>
+      <property name="Card Number" value="201"/>
+    </card>
+    <card id="95b10d7c-092b-414d-af65-bc351d1ce8ab" name="Spies at Court">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Reaction: After you win a [Political Conflict] conflict, dishonor a (friendly) participating character - discard 2 cards at random from your opponent's hand. (Max 1 per conflict.)"/>
+      <property name="Cost" value="0"/>
+      <property name="Card Number" value="205"/>
     </card>
   </cards>
 </set>
