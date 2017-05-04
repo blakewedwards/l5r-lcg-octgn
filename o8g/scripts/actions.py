@@ -1,7 +1,9 @@
+HONOR = 'Honor'
+STARTING_HONOR = 'Starting Honor'
 DYNASTY = 'Dynasty Deck'
 CONFLICT = 'Conflict Deck'
-STARTING_HAND_SIZE = 5
-CARD_GAP_RATIO = 1.0/10.0 # Ratio to width for space inbetween cards
+STARTING_HAND_SIZE = 4
+CARD_GAP_RATIO = 1.0/3.0 # Ratio to width for space inbetween cards
 
 def setup_required(table, x, y):
   return bool(me.getGlobalVariable('setup_required'))
@@ -28,6 +30,7 @@ def setup(table, x, y):
   stronghold.moveToTable(-2.5*width - 2*gap, height + 3*gap)
   stronghold.isFaceUp = True
   stronghold.anchor = True
+  me.honor = int(stronghold.properties[STARTING_HONOR])
   me.piles[DYNASTY].shuffle
   me.piles[CONFLICT].shuffle
   for card in me.piles[CONFLICT].top(STARTING_HAND_SIZE):
