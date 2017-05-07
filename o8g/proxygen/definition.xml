@@ -3,13 +3,28 @@
   <blocks>
     <block type="text" id="type">
       <location x="3" y="87"/>
-      <text color="#000000" size="14" font="fonts/text.ttf"/>
+      <text color="#000000" size="14" font="fonts/arial.ttf"/>
       <wordwrap height="20" width="85" align="center" valign="center" shrinktofit="True"/>
     </block>
     <block type="text" id="text">
       <location x="25" y="482"/>
-      <text color="#000000" size="20" font="fonts/text.ttf"/>
+      <text color="#000000" size="20" font="fonts/arial.ttf"/>
       <wordwrap height="100" width="380" shrinktofit="True"/>
+    </block>
+    <block type="text" id="traits-middle-name-top">
+      <location x="70" y="415"/>
+      <text color="#000000" size="20" font="fonts/arialbi.ttf"/>
+      <wordwrap height="34" width="300" align="center"/>
+    </block>
+    <block type="text" id="traits-middle-name-left">
+      <location x="70" y="415"/>
+      <text color="#000000" size="20" font="fonts/arialbi.ttf"/>
+      <wordwrap height="34" width="300" align="center"/>
+    </block>
+    <block type="text" id="traits-top-name-left">
+      <location x="70" y="415"/>
+      <text color="#000000" size="20" font="fonts/arialbi.ttf"/>
+      <wordwrap height="34" width="300" align="center"/>
     </block>
 
     <block type="overlay" id="stronghold-base-crab" src="proxygen/images/stronghold-base-crab.png"><location x="0" y="0"/></block>
@@ -26,11 +41,6 @@
       <text color="#000000" size="23" font="fonts/name.ttf"/>
       <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
     </block>
-    <block type="text" id="stronghold-traits">
-      <location x="70" y="415"/>
-      <text color="#000000" size="21" font="fonts/traits.ttf"/>
-      <wordwrap height="34" width="300" align="center" shrinktofit="True"/>
-    </block>
 
     <block type="overlay" id="character-base-crab" src="proxygen/images/character-base-crab.png"><location x="0" y="0"/></block>
     <block type="overlay" id="character-base-crane" src="proxygen/images/character-base-crane.png"><location x="0" y="0"/></block>
@@ -45,11 +55,6 @@
       <location x="29" y="358" rotate="270" />
       <text color="#000000" size="23" font="fonts/name.ttf"/>
       <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
-    </block>
-    <block type="text" id="character-traits">
-      <location x="70" y="415"/>
-      <text color="#000000" size="21" font="fonts/traits.ttf"/>
-      <wordwrap height="34" width="300" align="center" shrinktofit="True"/>
     </block>
 
     <block type="overlay" id="holding-base-crab" src="proxygen/images/holding-base-crab.png"><location x="0" y="0"/></block>
@@ -66,11 +71,6 @@
       <text color="#000000" size="23" font="fonts/name.ttf"/>
       <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
     </block>
-    <block type="text" id="holding-traits">
-      <location x="70" y="415"/>
-      <text color="#000000" size="21" font="fonts/traits.ttf"/>
-      <wordwrap height="34" width="300" align="center" shrinktofit="True"/>
-    </block>
 
     <block type="overlay" id="attachment-base-crab" src="proxygen/images/attachment-base-crab.png"><location x="0" y="0"/></block>
     <block type="overlay" id="attachment-base-crane" src="proxygen/images/attachment-base-crane.png"><location x="0" y="0"/></block>
@@ -86,11 +86,6 @@
       <text color="#000000" size="23" font="fonts/name.ttf"/>
       <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
     </block>
-    <block type="text" id="attachment-traits">
-      <location x="70" y="415"/>
-      <text color="#000000" size="21" font="fonts/traits.ttf"/>
-      <wordwrap height="34" width="300" align="center" shrinktofit="True"/>
-    </block>
 
     <block type="overlay" id="event-base-crab" src="proxygen/images/event-base-crab.png"><location x="0" y="0"/></block>
     <block type="overlay" id="event-base-crane" src="proxygen/images/event-base-crane.png"><location x="0" y="0"/></block>
@@ -105,11 +100,6 @@
       <location x="29" y="358" rotate="270" />
       <text color="#000000" size="23" font="fonts/name.ttf"/>
       <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
-    </block>
-    <block type="text" id="event-traits">
-      <location x="70" y="415"/>
-      <text color="#000000" size="21" font="fonts/traits.ttf"/>
-      <wordwrap height="34" width="300" align="center" shrinktofit="True"/>
     </block>
   </blocks>
 
@@ -135,7 +125,7 @@
       <link block="type"><property name="Type"/></link>
       <link block="text"><property name="Text"/></link>
       <link block="stronghold-name"><property name="Name"/></link>
-      <link block="stronghold-traits"><property name="Traits"/></link>
+      <link block="traits-middle-name-top"><property name="Traits"/></link>
     </textblocks>
   </template>
 
@@ -161,7 +151,7 @@
       <link block="type"><property name="Type"/></link>
       <link block="text"><property name="Text"/></link>
       <link block="character-name"><property name="Name"/></link>
-      <link block="character-traits"><property name="Traits"/></link>
+      <link block="traits-middle-name-top"><property name="Traits"/></link>
     </textblocks>
   </template>
 
@@ -187,7 +177,7 @@
       <link block="type"><property name="Type"/></link>
       <link block="text"><property name="Text"/></link>
       <link block="holding-name"><property name="Name"/></link>
-      <link block="holding-traits"><property name="Traits"/></link>
+      <link block="traits-top-name-left"><property name="Traits"/></link>
     </textblocks>
   </template>
 
@@ -213,7 +203,7 @@
       <link block="type"><property name="Type"/></link>
       <link block="text"><property name="Text"/></link>
       <link block="attachment-name"><property name="Name"/></link>
-      <link block="attachment-traits"><property name="Traits"/></link>
+      <link block="traits-middle-name-left"><property name="Traits"/></link>
     </textblocks>
   </template>
 
@@ -239,7 +229,7 @@
       <link block="type"><property name="Type"/></link>
       <link block="text"><property name="Text"/></link>
       <link block="event-name"><property name="Name"/></link>
-      <link block="event-traits"><property name="Traits"/></link>
+      <link block="traits-middle-name-top"><property name="Traits"/></link>
     </textblocks>
   </template>
 </templates>
