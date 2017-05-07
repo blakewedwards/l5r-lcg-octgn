@@ -38,3 +38,11 @@ def setup(table, x, y):
   notify('{} sets up'.format(me))
   me.setGlobalVariable('setup_required', '')
   return
+
+def table_default_card_action(card):
+  if not card.isFaceUp:
+    card.isFaceUp=True
+  else:
+    mute()
+    card.orientation ^= Rot90
+    notify('{} {} {}.'.format(me, 'bows' if card.orientation & Rot90 == Rot90 else 'readies', card))

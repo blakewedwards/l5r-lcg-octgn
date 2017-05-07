@@ -44,6 +44,7 @@
     backgroundStyle="uniformToFill"
     ordered="False">
     <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
+    <cardaction menu="Default" execute="table_default_card_action" default="True" showIf="lambda: False"/>
   </table>
   <player>
     <globalvariable name="setup_required" value="True"/>
