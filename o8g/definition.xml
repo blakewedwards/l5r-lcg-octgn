@@ -33,8 +33,8 @@
     <property name="Bonus Military Skill" type="String"/>
     <property name="Bonus Political Skill" type="String"/>
     <property name="Card Number" type="Integer"/>
-    <size name="dynasty" back="card/dynasty.png" front="card/front.png" width="63" height="88"/>
-    <size name="conflict" back="card/conflict.png" front="card/front.png" width="63" height="88"/>
+    <size name="dynasty" back="card/dynasty.png" front="card/dynasty.png" width="63" height="88"/>
+    <size name="conflict" back="card/conflict.png" front="card/conflict.png" width="63" height="88"/>
   </card>
   <table
     name="Table"
@@ -49,7 +49,7 @@
     <globalvariable name="setup_required" value="True"/>
     <counter name="Honor" icon="icons/honor.png"/>
     <counter name="Fate" icon="icons/fate.png"/>
-    <hand name="Hand" icon="card/back.png" visibility="me" ordered="False" width="63" height="88"/>
+    <hand name="Hand" icon="card/conflict.png" visibility="me" ordered="False" width="63" height="88"/>
     <group name="Dynasty Deck" icon="card/dynasty.png" visibility="none" width="63" height="88"/>
     <group name="Conflict Deck" icon="card/conflict.png" visibility="none" width="63" height="88"/>
   </player>
