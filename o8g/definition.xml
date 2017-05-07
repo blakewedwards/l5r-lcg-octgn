@@ -33,6 +33,8 @@
     <property name="Bonus Military Skill" type="String"/>
     <property name="Bonus Political Skill" type="String"/>
     <property name="Card Number" type="Integer"/>
+    <size name="dynasty" back="card/dynasty.png" front="card/front.png" width="63" height="88"/>
+    <size name="conflict" back="card/conflict.png" front="card/front.png" width="63" height="88"/>
   </card>
   <table
     name="Table"

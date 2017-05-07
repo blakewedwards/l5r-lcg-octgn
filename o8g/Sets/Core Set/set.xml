@@ -6,7 +6,7 @@
   gameVersion="0.0.1.0"
   version="1.0">
   <cards>
-    <card id="8c53e061-b416-4d32-84a1-596c4f3d005a" name="Shizuka Toshi">
+    <card id="8c53e061-b416-4d32-84a1-596c4f3d005a" name="Shizuka Toshi" size="dynasty">
       <property name="Clan" value="Crane"/>
       <property name="Type" value="Stronghold"/>
       <property name="Unique" value="Unique"/>
@@ -63,7 +63,7 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="31"/>
     </card>
-    <card id="8d80f714-c1f8-40ab-9f12-a4d18b82337a" name="Borderlands Fortifications">
+    <card id="8d80f714-c1f8-40ab-9f12-a4d18b82337a" name="Borderlands Fortifications" size="dynasty">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Holding"/>
       <property name="Traits" value="Battlefield."/>
