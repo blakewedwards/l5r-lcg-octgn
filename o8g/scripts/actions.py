@@ -2,6 +2,8 @@ HONOR = 'Honor'
 STARTING_HONOR = 'Starting Honor'
 DYNASTY = 'Dynasty Deck'
 CONFLICT = 'Conflict Deck'
+DYNASTY_DISCARD = 'Dynasty Discard'
+CONFLICT_DISCARD = 'Conflict Discard'
 STARTING_HAND_SIZE = 4
 CARD_GAP_RATIO = 1.0/3.0 # Ratio to width for space inbetween cards
 
@@ -41,8 +43,26 @@ def setup(table, x, y):
 
 def table_default_card_action(card):
   if not card.isFaceUp:
-    card.isFaceUp=True
+    flip(card)
   else:
-    mute()
-    card.orientation ^= Rot90
-    notify('{} {} {}.'.format(me, 'bows' if card.orientation & Rot90 == Rot90 else 'readies', card))
+    toggle_bow_ready(card)
+
+def toggle_bow_ready(card, x=0, y=0):
+  mute()
+  card.orientation ^= Rot90
+  notify('{} {} {}.'.format(me, 'bows' if card.orientation & Rot90 == Rot90 else 'readies', card))
+
+def flip(card, x=0, y=0):
+  card.isFaceUp = not card.isFaceUp
+
+def is_dynasty(card):
+  return card.size == "dynasty"
+
+def is_conflict(card):
+  return card.size == "conflict"
+
+def discard(card, x=0, y=0):
+  if is_dynasty(card):
+    card.moveTo(card.owner.piles[DYNASTY_DISCARD])
+  elif is_conflict(card):
+    card.moveTo(card.owner.piles[CONFLICT_DISCARD])

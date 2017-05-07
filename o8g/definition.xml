@@ -45,6 +45,11 @@
     ordered="False">
     <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
     <cardaction menu="Default" execute="table_default_card_action" default="True" showIf="lambda: False"/>
+    <cardaction menu="Bow/ready" execute="toggle_bow_ready"/>
+    <cardaction menu="Flip" execute="flip"/>
+    <cardaction menu="Discard" execute="discard"/>
+    <!--cardaction menu="Add fate" execute="add_fate" showIf="is_character"/-->
+    <!--cardaction menu="Remove fate" execute="add_fate" showIf="is_character"/-->
   </table>
   <player>
     <globalvariable name="setup_required" value="True"/>
@@ -52,7 +57,9 @@
     <counter name="Fate" icon="icons/fate.png"/>
     <hand name="Hand" icon="card/conflict.png" visibility="me" ordered="False" width="63" height="88"/>
     <group name="Dynasty Deck" icon="card/dynasty.png" visibility="none" width="63" height="88"/>
+    <group name="Dynasty Discard" icon="card/dynasty.png" visibility="all" width="63" height="88"/>
     <group name="Conflict Deck" icon="card/conflict.png" visibility="none" width="63" height="88"/>
+    <group name="Conflict Discard" icon="card/conflict.png" visibility="all" width="63" height="88"/>
   </player>
   <deck>
     <section name="Stronghold" group="Hand"/>
