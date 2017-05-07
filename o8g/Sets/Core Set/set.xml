@@ -6,7 +6,7 @@
   gameVersion="0.0.1.0"
   version="1.0">
   <cards>
-    <card id="8c53e061-b416-4d32-84a1-596c4f3d005a" name="Shizuka Toshi" size="dynasty">
+    <card id="8c53e061-b416-4d32-84a1-596c4f3d005a" name="Shizuka Toshi">
       <property name="Clan" value="Crane"/>
       <property name="Type" value="Stronghold"/>
       <property name="Unique" value="Unique"/>
@@ -30,7 +30,7 @@
       <property name="Influence Value" value="10"/>
       <property name="Card Number" value="4"/>
     </card>
-    <card id="35f74bd9-ac4b-4a32-b6d8-667573a006c7" name="Eager Scout">
+    <card id="35f74bd9-ac4b-4a32-b6d8-667573a006c7" name="Eager Scout" size="dynasty">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Scout."/>
@@ -41,7 +41,7 @@
       <property name="Glory" value="0"/>
       <property name="Card Number" value="25"/>
     </card>
-    <card id="15012b1d-41e8-48e5-a3a4-2493a05ec2d1" name="Shrewd Yasuki">
+    <card id="15012b1d-41e8-48e5-a3a4-2493a05ec2d1" name="Shrewd Yasuki" size="dynasty">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Courtier."/>
@@ -52,7 +52,7 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="29"/>
     </card>
-    <card id="b4551ad3-509d-4f07-94c5-8a639d7e1bb0" name="Borderlands Defender">
+    <card id="b4551ad3-509d-4f07-94c5-8a639d7e1bb0" name="Borderlands Defender" size="dynasty">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi."/>
@@ -71,7 +71,7 @@
       <property name="Bonus Strength" value="2"/>
       <property name="Card Number" value="36"/>
     </card>
-    <card id="5de0deef-9cdc-42f7-9cfc-c03bce65bfed" name="Daidoji Nerishma">
+    <card id="5de0deef-9cdc-42f7-9cfc-c03bce65bfed" name="Daidoji Nerishma" size="dynasty">
       <property name="Clan" value="Crane"/>
       <property name="Type" value="Character"/>
       <property name="Unique" value="Unique"/>
@@ -83,7 +83,7 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="46"/>
     </card>
-    <card id="4dae1138-cf99-4880-a600-b8b4d5c6631b" name="Togashi Initiate">
+    <card id="4dae1138-cf99-4880-a600-b8b4d5c6631b" name="Togashi Initiate" size="dynasty">
       <property name="Clan" value="Dragon"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Monk. Tattooed."/>
@@ -94,7 +94,7 @@
       <property name="Glory" value="2"/>
       <property name="Card Number" value="55"/>
     </card>
-    <card id="a8c52b13-c2fa-4ccf-9d5f-a76436144a41" name="Seeker of Enlightenment">
+    <card id="a8c52b13-c2fa-4ccf-9d5f-a76436144a41" name="Seeker of Enlightenment" size="dynasty">
       <property name="Clan" value="Dragon"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Monk. Tattooed."/>
@@ -105,7 +105,7 @@
       <property name="Glory" value="0"/>
       <property name="Card Number" value="59"/>
     </card>
-    <card id="92fb3c5e-a2a0-4a5d-aca8-c867218f7747" name="Matsu Berserker">
+    <card id="92fb3c5e-a2a0-4a5d-aca8-c867218f7747" name="Matsu Berserker" size="dynasty">
       <property name="Clan" value="Lion"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Berserker."/>
@@ -116,7 +116,7 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="69"/>
     </card>
-    <card id="47826d27-2a19-4832-ab36-c1fc92b3f948" name="Lion's Pride Brawler">
+    <card id="47826d27-2a19-4832-ab36-c1fc92b3f948" name="Lion's Pride Brawler" size="dynasty">
       <property name="Clan" value="Lion"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Courtier."/>
@@ -127,7 +127,7 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="75"/>
     </card>
-    <card id="0c93ed20-599b-4d83-af62-9336e8ab5925" name="Staging Ground">
+    <card id="0c93ed20-599b-4d83-af62-9336e8ab5925" name="Staging Ground" size="dynasty">
       <property name="Clan" value="Lion"/>
       <property name="Type" value="Holding"/>
       <property name="Traits" value="Battlefield."/>
@@ -135,7 +135,7 @@
       <property name="Bonus Strength" value="1"/>
       <property name="Card Number" value="80"/>
     </card>
-    <card id="f909e855-0994-4ef8-b350-7152ff4e03f9" name="Solemn Scholar">
+    <card id="f909e855-0994-4ef8-b350-7152ff4e03f9" name="Solemn Scholar" size="dynasty">
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Shugenja. Earth. Scholar."/>
@@ -146,7 +146,7 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="83"/>
     </card>
-    <card id="221a1956-1bac-4aa1-ac9e-4b78ab0bd83c" name="Bayushi Manipulator">
+    <card id="221a1956-1bac-4aa1-ac9e-4b78ab0bd83c" name="Bayushi Manipulator" size="dynasty">
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Courtier."/>
@@ -157,7 +157,7 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="96"/>
     </card>
-    <card id="8fbaa0fa-ef55-4775-a47c-414c3a154dc9" name="Young Rumormonger">
+    <card id="8fbaa0fa-ef55-4775-a47c-414c3a154dc9" name="Young Rumormonger" size="dynasty">
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Courtier."/>
@@ -168,7 +168,7 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="101"/>
     </card>
-    <card id="df365b9f-63cd-4d81-ae02-a69db1d81cea" name="City of Lies">
+    <card id="df365b9f-63cd-4d81-ae02-a69db1d81cea" name="City of Lies" size="dynasty">
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Holding"/>
       <property name="Traits" value="City."/>
@@ -176,7 +176,7 @@
       <property name="Bonus Strength" value="1"/>
       <property name="Card Number" value="108"/>
     </card>
-    <card id="0a0f5ebc-b682-4a3c-96d2-281758f5f5ad" name="Border Rider">
+    <card id="0a0f5ebc-b682-4a3c-96d2-281758f5f5ad" name="Border Rider" size="dynasty">
       <property name="Clan" value="Unicorn"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Cavalry."/>
@@ -187,7 +187,7 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="112"/>
     </card>
-    <card id="ec021f72-2e5e-4b7c-88ab-3474658ee98c" name="Shinjo Outrider">
+    <card id="ec021f72-2e5e-4b7c-88ab-3474658ee98c" name="Shinjo Outrider" size="dynasty">
       <property name="Clan" value="Unicorn"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Cavalry. Scout."/>
@@ -198,7 +198,7 @@
       <property name="Glory" value="2"/>
       <property name="Card Number" value="114"/>
     </card>
-    <card id="67b18356-65a2-4a04-8d15-4e5425ab4160" name="Otomo Courtier">
+    <card id="67b18356-65a2-4a04-8d15-4e5425ab4160" name="Otomo Courtier" size="dynasty">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Courtier. Imperial."/>
@@ -209,7 +209,7 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="122"/>
     </card>
-    <card id="21bb93d6-537d-4084-bda1-e3647789fee8" name="Wandering Ronin">
+    <card id="21bb93d6-537d-4084-bda1-e3647789fee8" name="Wandering Ronin" size="dynasty">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Ronin."/>
@@ -220,7 +220,7 @@
       <property name="Glory" value="0"/>
       <property name="Card Number" value="127"/>
     </card>
-    <card id="4754fed3-44b5-4d6f-bac9-e8dce9028712" name="Reprieve">
+    <card id="4754fed3-44b5-4d6f-bac9-e8dce9028712" name="Reprieve" size="conflict">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Attachment"/>
       <property name="Traits" value="Condition."/>
@@ -230,7 +230,7 @@
       <property name="Bonus Political Skill" value="0"/>
       <property name="Card Number" value="132"/>
     </card>
-    <card id="916f4fab-1e57-444e-bdbe-8cd7eeb956c8" name="Admit Defeat">
+    <card id="916f4fab-1e57-444e-bdbe-8cd7eeb956c8" name="Admit Defeat" size="conflict">
       <property name="Clan" value="Crane"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
@@ -238,7 +238,7 @@
       <property name="Cost" value="1"/>
       <property name="Card Number" value="147"/>
     </card>
-    <card id="b1dcf0f9-2ee4-4274-99db-21d749ffa435" name="Pacifism">
+    <card id="b1dcf0f9-2ee4-4274-99db-21d749ffa435" name="Pacifism" size="conflict">
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Attachment"/>
       <property name="Traits" value="Condition."/>
@@ -248,7 +248,7 @@
       <property name="Bonus Political Skill" value="0"/>
       <property name="Card Number" value="174"/>
     </card>
-    <card id="ed546e3d-c954-4354-94fe-5bce936b649e" name="I Can Swim">
+    <card id="ed546e3d-c954-4354-94fe-5bce936b649e" name="I Can Swim" size="conflict">
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value="Philosophy."/>
@@ -256,7 +256,7 @@
       <property name="Cost" value="2"/>
       <property name="Card Number" value="187"/>
     </card>
-    <card id="e0949fb5-72cc-47da-bfef-979d967aff28" name="Blackmail">
+    <card id="e0949fb5-72cc-47da-bfef-979d967aff28" name="Blackmail" size="conflict">
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
@@ -264,7 +264,7 @@
       <property name="Cost" value="3"/>
       <property name="Card Number" value="189"/>
     </card>
-    <card id="3a4a2547-142c-4394-81fc-314fd3a14236" name="Way of the Unicorn">
+    <card id="3a4a2547-142c-4394-81fc-314fd3a14236" name="Way of the Unicorn" size="conflict">
       <property name="Clan" value="Unicorn"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value="Philosophy."/>
@@ -272,7 +272,7 @@
       <property name="Cost" value="0"/>
       <property name="Card Number" value="198"/>
     </card>
-    <card id="613a8a9f-4b3f-4ea4-90ed-3d7423d8423a" name="Fallen in Battle">
+    <card id="613a8a9f-4b3f-4ea4-90ed-3d7423d8423a" name="Fallen in Battle" size="conflict">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
@@ -280,7 +280,7 @@
       <property name="Cost" value="1"/>
       <property name="Card Number" value="201"/>
     </card>
-    <card id="95b10d7c-092b-414d-af65-bc351d1ce8ab" name="Spies at Court">
+    <card id="95b10d7c-092b-414d-af65-bc351d1ce8ab" name="Spies at Court" size="conflict">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
