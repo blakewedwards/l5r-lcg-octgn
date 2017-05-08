@@ -55,7 +55,9 @@
     <globalvariable name="setup_required" value="True"/>
     <counter name="Honor" icon="icons/honor.png"/>
     <counter name="Fate" icon="icons/fate.png"/>
-    <hand name="Hand" icon="card/conflict.png" visibility="me" ordered="False" width="63" height="88"/>
+    <hand name="Hand" icon="card/conflict.png" visibility="me" ordered="False" width="63" height="88">
+      <groupaction menu="Random discard" execute="random_discard_from"/>
+    </hand>
     <group name="Dynasty Deck" icon="card/dynasty.png" visibility="none" width="63" height="88"/>
     <group name="Dynasty Discard" icon="card/dynasty.png" visibility="all" width="63" height="88"/>
     <group name="Conflict Deck" icon="card/conflict.png" visibility="none" width="63" height="88"/>

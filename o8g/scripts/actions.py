@@ -56,13 +56,28 @@ def flip(card, x=0, y=0):
   card.isFaceUp = not card.isFaceUp
 
 def is_dynasty(card):
-  return card.size == "dynasty"
+  return card.size == 'dynasty'
 
 def is_conflict(card):
-  return card.size == "conflict"
+  return card.size == 'conflict'
+
+def get_discard_pile(card):
+  if is_dynasty(card):
+    return card.owner.piles[DYNASTY_DISCARD]
+  elif is_conflict(card):
+    return card.owner.piles[CONFLICT_DISCARD]
 
 def discard(card, x=0, y=0):
-  if is_dynasty(card):
-    card.moveTo(card.owner.piles[DYNASTY_DISCARD])
-  elif is_conflict(card):
-    card.moveTo(card.owner.piles[CONFLICT_DISCARD])
+  pile = get_discard_pile(card)
+  if pile is not None:
+    card.moveTo(pile)
+  return pile
+
+def random_discard_from(group):
+  mute()
+  card = group.random()
+  if card is None:
+    return
+  pile = discard(card)
+  if pile is not None:
+    notify("{} randomly moves {} to {}'s {}.".format(me, card, me, pile.name))
