@@ -7,22 +7,25 @@ CONFLICT_DISCARD = 'Conflict Discard'
 STARTING_HAND_SIZE = 4
 CARD_GAP_RATIO = 1.0/3.0 # Ratio to width for space inbetween cards
 
-def setup_required(table, x, y):
+def setup_required(group, x=0, y=0):
   return bool(me.getGlobalVariable('setup_required'))
 
-def setup(table, x, y):
+def setup_not_required(group, x=0, y=0):
+  return not setup_required(group, x, y)
+
+def setup(group, x=0, y=0):
   mute()
   if not bool(me.getGlobalVariable('setup_required')):
-    notify('Set up is no longer required')
+    whisper('Set up is no longer required.')
     return
   if not len(me.hand):
-    notify('You must load a deck prior to setting up')
+    whisper('A deck must be loaded prior to setting up.')
     return
   # Create the stronghold and 4 provinces in a line, with space for a row of cards above. Use the first card dimensions as reference
-  # TODO: isInverted
+  # TODO: isInverted anywhere moved to table
   width = me.hand[0].width
   height = me.hand[0].height
-  gap = width * CARD_GAP_RATIO
+  gap = width*CARD_GAP_RATIO
   for i, card in enumerate(me.hand[1:]):
     card.moveToTable(-2.5*width - 2*gap + i*(width+gap), height + 2*gap, True)
     card.sendToBack()
@@ -37,7 +40,7 @@ def setup(table, x, y):
   me.piles[CONFLICT].shuffle
   for card in me.piles[CONFLICT].top(STARTING_HAND_SIZE):
     card.moveTo(me.hand)
-  notify('{} sets up'.format(me))
+  notify('{} sets up.'.format(me))
   me.setGlobalVariable('setup_required', '')
   return
 
@@ -81,3 +84,17 @@ def random_discard_from(group):
   pile = discard(card)
   if pile is not None:
     notify("{} randomly moves {} to {}'s {}.".format(me, card, me, pile.name))
+
+def play(card): #, x=0, y=0):
+  mute()
+  if card.cost == "":
+    whisper('The card does not have a cost.')
+    return
+  cost=int(card.cost)
+  if me.Fate < cost:
+    whisper("The card's cost cannot be paid.")
+    return
+  card.moveToTable(-2.5*card.width - 2*card.width*CARD_GAP_RATIO + 5*(card.width+card.width*CARD_GAP_RATIO), card.height + 2*card.width*CARD_GAP_RATIO, True)
+  card.isFaceUp = True
+  me.Fate -= cost
+  notify('{} plays {} for {} fate.'.format(me, card.name, cost))
