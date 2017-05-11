@@ -38,9 +38,9 @@
   </card>
   <table
     name="Table"
-    width="1050"
-    height="300"
-    background="table/background.jpg"
+    width="1280"
+    height="618"
+    background="table/background.png"
     backgroundStyle="uniformToFill"
     ordered="False">
     <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
