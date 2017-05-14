@@ -26,8 +26,12 @@ def setup(group, x=0, y=0):
   width = me.hand[0].width
   height = me.hand[0].height
   gap = width*CARD_GAP_RATIO
+  me.piles[DYNASTY].shuffle
+  me.piles[CONFLICT].shuffle
   for i, card in enumerate(me.hand[1:]):
     card.moveToTable(-2.5*width - 2*gap + i*(width+gap), height + 2*gap, True)
+    if i > 0:
+      me.piles[DYNASTY].top().moveToTable(-2.5*width - 2*gap + i*(width+gap), height + 3*gap, True)
     card.sendToBack()
     card.peek()
     card.anchor = True
@@ -36,8 +40,6 @@ def setup(group, x=0, y=0):
   stronghold.isFaceUp = True
   stronghold.anchor = True
   me.honor = int(stronghold.properties[STARTING_HONOR])
-  me.piles[DYNASTY].shuffle
-  me.piles[CONFLICT].shuffle
   for card in me.piles[CONFLICT].top(STARTING_HAND_SIZE):
     card.moveTo(me.hand)
   notify('{} sets up.'.format(me))
