@@ -1,5 +1,7 @@
+CHARACTER = 'Character'
 HONOR = 'Honor'
 STARTING_HONOR = 'Starting Honor'
+FATE_VALUE = 'Fate Value'
 DYNASTY = 'Dynasty Deck'
 CONFLICT = 'Conflict Deck'
 DYNASTY_DISCARD = 'Dynasty Discard'
@@ -40,6 +42,7 @@ def setup(group, x=0, y=0):
   stronghold.isFaceUp = True
   stronghold.anchor = True
   me.honor = int(stronghold.properties[STARTING_HONOR])
+  me.fate = int(stronghold.properties[FATE_VALUE])
   for card in me.piles[CONFLICT].top(STARTING_HAND_SIZE):
     card.moveTo(me.hand)
   notify('{} sets up.'.format(me))
@@ -87,7 +90,7 @@ def random_discard_from(group):
   if pile is not None:
     notify("{} randomly moves {} to {}'s {}.".format(me, card, me, pile.name))
 
-def play(card): #, x=0, y=0):
+def play_conflict(card): #, x=0, y=0):
   mute()
   if card.cost == "":
     whisper('The card does not have a cost.')
@@ -98,5 +101,26 @@ def play(card): #, x=0, y=0):
     return
   card.moveToTable(-2.5*card.width - 2*card.width*CARD_GAP_RATIO + 5*(card.width+card.width*CARD_GAP_RATIO), card.height + 2*card.width*CARD_GAP_RATIO, True)
   card.isFaceUp = True
+  me.Fate -= cost
+  notify('{} plays {} for {} fate.'.format(me, card.name, cost))
+
+def play_dynasty(card, x=0, y=0):
+  mute()
+  if not card.isFaceUp:
+    whisper("The card is not face up.")
+    return
+  if card.type != CHARACTER:
+    whisper("The card is not a character.")
+    return
+  if card.cost == "":
+    whisper('The card does not have a cost.')
+    return
+  cost=int(card.cost)
+  if me.Fate < cost:
+    whisper("The card's cost cannot be paid.")
+    return
+  x, y = card.position
+  #TODO: is inverted
+  card.moveToTable(x, y - card.height - card.width*2*CARD_GAP_RATIO)
   me.Fate -= cost
   notify('{} plays {} for {} fate.'.format(me, card.name, cost))
