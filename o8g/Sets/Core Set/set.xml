@@ -11,19 +11,19 @@
       <property name="Type" value="Stronghold"/>
       <property name="Unique" value="Unique"/>
       <property name="Traits" value="City."/>
-      <property name="Text" value="Action: During a conflict, bow this stronghold - each attacking character you control gets +1[Military Skill] until the end of the conflict."/>
+      <property name="Text" value="Action: During a [Political Conflict] conflict, bow this stronghold, choose a participating character with [Political Skill] skill 2 or lower - bow that character."/>
       <property name="Bonus Strength" value="2"/>
       <property name="Starting Honor" value="11"/>
       <property name="Fate Value" value="7"/>
       <property name="Influence Value" value="10"/>
       <property name="Card Number" value="2"/>
     </card>
-    <card id="fd38f0c7-45bf-4b85-b572-824fbaa9cba5" name="Shiro no Yojin">
+    <card id="fd38f0c7-45bf-4b85-b572-824fbaa9cba5" name="Yojin no Shiro">
       <property name="Clan" value="Lion"/>
       <property name="Type" value="Stronghold"/>
       <property name="Unique" value="Unique"/>
       <property name="Traits" value="Castle."/>
-      <property name="Text" value="Action: During a [Political Conflict] conflict, bow this stronghold, choose a participating character with [Political Skill] skill 2 or lower - bow that character."/>
+      <property name="Text" value="Action: During a conflict, bow this stronghold - each attacking character you control gets +1[Military Skill] until the end of the conflict."/>
       <property name="Bonus Strength" value="2"/>
       <property name="Starting Honor" value="12"/>
       <property name="Fate Value" value="7"/>
@@ -109,7 +109,7 @@
       <property name="Clan" value="Lion"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Berserker."/>
-      <property name="Text" value="Reaction: After honor dials are revealed - increase the value of your bid by 1."/>
+      <property name="Text" value=""/>
       <property name="Cost" value="1"/>
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="-"/>
@@ -272,21 +272,21 @@
       <property name="Cost" value="0"/>
       <property name="Card Number" value="198"/>
     </card>
-    <card id="613a8a9f-4b3f-4ea4-90ed-3d7423d8423a" name="Fallen in Battle" size="conflict">
-      <property name="Clan" value="Neutral"/>
-      <property name="Type" value="Event"/>
-      <property name="Traits" value=""/>
-      <property name="Text" value="Reaction: After you win a [Military Conflict] conflict by 5 or more skill, choose a participating character - discard that character. (Max 1 per conflict.)"/>
-      <property name="Cost" value="1"/>
-      <property name="Card Number" value="201"/>
-    </card>
     <card id="95b10d7c-092b-414d-af65-bc351d1ce8ab" name="Spies at Court" size="conflict">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
       <property name="Text" value="Reaction: After you win a [Political Conflict] conflict, dishonor a (friendly) participating character - discard 2 cards at random from your opponent's hand. (Max 1 per conflict.)"/>
       <property name="Cost" value="0"/>
-      <property name="Card Number" value="205"/>
+      <property name="Card Number" value="209"/>
+    </card>
+    <card id="613a8a9f-4b3f-4ea4-90ed-3d7423d8423a" name="Fallen in Battle" size="conflict">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Reaction: After you win a [Military Conflict] conflict by 5 or more skill, choose a participating character - discard that character. (Max 1 per conflict.)"/>
+      <property name="Cost" value="1"/>
+      <property name="Card Number" value="211"/>
     </card>
   </cards>
 </set>
