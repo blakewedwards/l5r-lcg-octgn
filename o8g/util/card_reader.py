@@ -2,6 +2,9 @@ import csv
 from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
 
+# Copy the full table (with column headers) from https://l5r.gamepedia.com/User:Intolerancegaming?profile=no
+# Past it into a spreadsheet and save as csv to l5r.csv. Delimiter is , and text wrapper is ", use ascii (western europe).
+
 ids = {
     "1": "9ff46167-1893-45bc-87f6-266f77be7789",
     "2": "8c53e061-b416-4d32-84a1-596c4f3d005a",
