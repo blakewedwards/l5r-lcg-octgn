@@ -1,6 +1,9 @@
 import csv
 from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
+import re
+
+icon_regex = re.compile(r'\[\w+\]', re.IGNORECASE)
 
 # Copy the full table (with column headers) from https://l5r.gamepedia.com/User:Intolerancegaming?profile=no
 # Past it into a spreadsheet and save as csv to l5r.csv. Delimiter is , and text wrapper is ", use ascii (western europe).
@@ -245,16 +248,20 @@ with open('l5r.csv', 'rb') as f:
         SubElement(card, 'property', {'name': 'Unique', 'value': 'Unique'})
 
       SubElement(card, 'property', {'name': 'Traits', 'value': row['Traits'].strip()})
-      SubElement(card, 'property', {'name': 'Text', 'value': row['Text'].strip()})
+      SubElement(card, 'property', {'name': 'Text', 'value': re.sub(icon_regex, lambda m: m.group().title(), row['Text'].strip())})
 
       if row['Cost'].strip() != '':
         SubElement(card, 'property', {'name': 'Cost', 'value': row['Cost'].strip()})
 
       if row['Military'].strip() != '':
         SubElement(card, 'property', {'name': row['Type'].strip().capitalize() == 'Attachment' and 'Bonus Military Skill' or 'Military Skill', 'value': row['Military'].strip()})
+      elif row['Type'].strip().capitalize() == 'Character':
+        SubElement(card, 'property', {'name': 'Military Skill', 'value': '-'})
 
       if row['Political'].strip() != '':
         SubElement(card, 'property', {'name': row['Type'].strip().capitalize() == 'Attachment' and 'Bonus Political Skill' or 'Political Skill', 'value': row['Political'].strip()})
+      elif row['Type'].strip().capitalize() == 'Character':
+        SubElement(card, 'property', {'name': 'Political Skill', 'value': '-'})
 
       if row['Glory'].strip() != '':
         SubElement(card, 'property', {'name': 'Glory', 'value': row['Glory'].strip()})
