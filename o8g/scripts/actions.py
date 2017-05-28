@@ -81,6 +81,14 @@ def discard(card, x=0, y=0):
     card.moveTo(pile)
   return pile
 
+def replace(card, x=0, y=0):
+  card_x, card_y = card.position
+  discard(card, x, y)
+  me.piles[DYNASTY].top().moveToTable(card_x, card_y, True)
+
+def refill(card, x=0, y=0):
+  me.piles[DYNASTY].top().moveToTable(card.position[0], card.position[1] + card.width*CARD_GAP_RATIO, True)
+
 def random_discard_from(group):
   mute()
   card = group.random()

@@ -50,6 +50,8 @@
     <cardaction menu="Discard" execute="discard"/>
     <cardaction menu="Flip" execute="flip"/>
     <cardaction menu="Play" execute="play_dynasty"/>
+    <cardaction menu="Refill" execute="refill"/>
+    <cardaction menu="Replace" execute="replace"/>
     <!--cardaction menu="Add fate" execute="add_fate" showIf="is_character"/-->
     <!--cardaction menu="Remove fate" execute="add_fate" showIf="is_character"/-->
   </table>
