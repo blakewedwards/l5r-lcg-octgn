@@ -99,7 +99,7 @@ def play_conflict(card): #, x=0, y=0):
   if me.Fate < cost:
     whisper("The card's cost cannot be paid.")
     return
-  card.moveToTable(-2.5*card.width - 2*card.width*CARD_GAP_RATIO + 5*(card.width+card.width*CARD_GAP_RATIO), card.height + 2*card.width*CARD_GAP_RATIO, True)
+  card.moveToTable(-2.5*card.width - 2*card.width*CARD_GAP_RATIO + 5*(card.width+card.width*CARD_GAP_RATIO), card.height + 2*card.width*CARD_GAP_RATIO, True) # Why True and not False here?
   card.isFaceUp = True
   me.Fate -= cost
   notify('{} plays {} for {} fate.'.format(me, card.name, cost))
@@ -123,4 +123,5 @@ def play_dynasty(card, x=0, y=0):
   #TODO: is inverted
   card.moveToTable(x, y - card.height - card.width*2*CARD_GAP_RATIO)
   me.Fate -= cost
+  me.piles[DYNASTY].top().moveToTable(x, y, True)
   notify('{} plays {} for {} fate.'.format(me, card.name, cost))
