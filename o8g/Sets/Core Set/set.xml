@@ -30,6 +30,57 @@
       <property name="Influence Value" value="10"/>
       <property name="Card Number" value="4"/>
     </card>
+    <card id="40683c9f-b1e9-4055-88bd-ce2a2e846297" name="Defend the Wall">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Province"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Reaction: After you win a conflict at this province - resolve the ring effect of that conflict as if you were the attacking player"/>
+      <property name="Bonus Strength" value="4"/>
+      <property name="Card Number" value="8"/>
+    </card>
+    <card id="98e106b6-7bb4-47c5-9fe7-dd290e3d42df" name="The Art of Peace">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Province"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Interrupt: When this province is broken - dishonor each attacking character and honor each defending character."/>
+      <property name="Bonus Strength" value="4"/>
+      <property name="Ring" value="Air"/>
+      <property name="Card Number" value="9"/>
+    </card>
+    <card id="99c8a45a-e16a-406b-9029-acf90e0c49bd" name="Mori Kuroi">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Province"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: During a conflict at this province, select one - switch the contested ring with an unclaimed ring (the conflict retains its type), or switch the conflict type (the conflict retains its ring)."/>
+      <property name="Bonus Strength" value="4"/>
+      <property name="Ring" value="Void"/>
+      <property name="Card Number" value="12"/>
+    </card>
+    <card id="cb8186ae-7c61-4be1-b4de-fb43e2b7a44c" name="Endless Plains">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Province"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Reaction: After an attack is declared here, break this province, your opponent chooses an attacking character - discard that character."/>
+      <property name="Bonus Strength" value="2"/>
+      <property name="Card Number" value="14"/>
+    </card>
+    <card id="82de5aed-145f-4fda-812e-5d1cdf80b0a8" name="Ancestral Lands">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Province"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="???"/>
+      <property name="Bonus Strength" value="5"/>
+      <property name="Card Number" value="15"/>
+    </card>
+    <card id="8f0246b6-a8dd-4939-891c-7143c2ac9b53" name="Elemental Fury">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Province"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Reaction: After this province is revealed - switch the contested ring with an unclaimed ring. (The conflict retains its type.)"/>
+      <property name="Bonus Strength" value="4"/>
+      <property name="Ring" value="Water"/>
+      <property name="Card Number" value="16"/>
+    </card>
     <card id="35f74bd9-ac4b-4a32-b6d8-667573a006c7" name="Eager Scout" size="dynasty">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
@@ -71,6 +122,61 @@
       <property name="Bonus Strength" value="2"/>
       <property name="Card Number" value="36"/>
     </card>
+    <card id="f364aac3-9e20-4b59-bebc-19627b0ba91d" name="Asahina Artisan" size="dynasty">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Shugenja. Air."/>
+      <property name="Text" value="Action: During a conflict, bow this character. Choose another [Crane] character - that character gets +3[Political] until the end of the conflict."/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="0"/>
+      <property name="Political Skill" value="0"/>
+      <property name="Glory" value="2"/>
+      <property name="Card Number" value="40"/>
+    </card>
+    <card id="b73d6577-5532-4bd9-9843-0187dd3feff2" name="Doji Whisperer" size="dynasty">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier."/>
+      <property name="Text" value=""/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="0"/>
+      <property name="Political Skill" value="3"/>
+      <property name="Glory" value="1"/>
+      <property name="Card Number" value="41"/>
+    </card>
+    <card id="291fbfe6-8a12-4f0a-bbb9-78b7de0b4ad9" name="Brash Samurai" size="dynasty">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi."/>
+      <property name="Text" value="Action: When this character is your only participating member in a conflict - honor this character."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="2"/>
+      <property name="Card Number" value="42"/>
+    </card>
+    <card id="da3ab68e-ab00-4dbf-a2f6-111075e3046a" name="Doji Gift Giver" size="dynasty">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier."/>
+      <property name="Text" value="Action: While this character is participating in a conflict, give your opponent 1 fate. That opponent must choose a ready participating character he or she controls - bow that character."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="0"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="1"/>
+      <property name="Card Number" value="44"/>
+    </card>
+    <card id="ead54ee3-d509-458c-bc23-638fded33c64" name="Savvy Politician" size="dynasty">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier."/>
+      <property name="Text" value="Reaction: After this character is honored, choose a character - honor that character."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="1"/>
+      <property name="Card Number" value="45"/>
+    </card>
     <card id="5de0deef-9cdc-42f7-9cfc-c03bce65bfed" name="Daidoji Nerishma" size="dynasty">
       <property name="Clan" value="Crane"/>
       <property name="Type" value="Character"/>
@@ -83,6 +189,96 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="46"/>
     </card>
+    <card id="fea8a1bc-d121-4cfc-9330-6a547f0aad46" name="Doji Challenger" size="dynasty">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Duelist."/>
+      <property name="Text" value="Action: While this character is attacking, choose a character controlled by your opponent - move that character to this conflict."/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="3"/>
+      <property name="Glory" value="2"/>
+      <property name="Card Number" value="47"/>
+    </card>
+    <card id="a00790d4-5ae0-41d9-881a-373e14ca40fa" name="Kakita Asami" size="dynasty">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Character"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Courtier."/>
+      <property name="Text" value="Action: While this character is participating in a [Political] conflict, if you count more current [Political] skill in the conflict than your opponent - take 1 honor from that opponent."/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="3"/>
+      <property name="Glory" value="2"/>
+      <property name="Card Number" value="48"/>
+    </card>
+    <card id="d59dba2f-3416-4fe7-91a6-f9d3c80cdcd2" name="Kakita Kaezin" size="dynasty">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Character"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Bushi. Duelist. Kenshinzen."/>
+      <property name="Text" value="Action: While this character is participating in a conflict, your opponent must choose a participating character he or she controls - challenge that character to a [Military] duel. If this character wins, move each character not involved in the duel home. If it loses, send it home."/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="2"/>
+      <property name="Card Number" value="49"/>
+    </card>
+    <card id="64b7f051-9950-408f-accf-001cb8a74a7a" name="Asahina Storyteller" size="dynasty">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier. Shugenja. Air."/>
+      <property name="Text" value="Sincerity. (When this character leaves play, draw 1 card.)
+Each honored [Crane] character you control gains sincerity."/>
+      <property name="Cost" value="4"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="4"/>
+      <property name="Glory" value="2"/>
+      <property name="Card Number" value="50"/>
+    </card>
+    <card id="a9cf0985-a4e6-4874-9a61-c4f480225f23" name="Guest of Honor" size="dynasty">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier."/>
+      <property name="Text" value="While this character is participating in a conflict, opponents cannot play events."/>
+      <property name="Cost" value="4"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="4"/>
+      <property name="Glory" value="1"/>
+      <property name="Card Number" value="51"/>
+    </card>
+    <card id="3935c2f6-c1f3-46b8-a549-16d32f9a99a2" name="Doji Hotaru" size="dynasty">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Character"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Bushi. Champion."/>
+      <property name="Text" value="Reaction: After you claim a ring during a [Political] conflict in which this character is participating - resolve that ring's effect."/>
+      <property name="Cost" value="5"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="6"/>
+      <property name="Glory" value="3"/>
+      <property name="Card Number" value="52"/>
+    </card>
+    <card id="04d91060-4fe5-4191-a6e5-9e423c9f5f8f" name="Artisan Academy" size="dynasty">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Holding"/>
+      <property name="Traits" value="Academy."/>
+      <property name="Text" value="Action: During the conflict phase - reveal the top card of your conflict deck. Until the end of the phase you may play that card as if it were in your hand."/>
+      <property name="Bonus Strength" value="1"/>
+      <property name="Card Number" value="53"/>
+    </card>
+    <card id="5dbe18ad-6493-42fa-8b14-d5cbf933929a" name="Doomed Shugenja" size="dynasty">
+      <property name="Clan" value="Dragon"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Shugenja. Fire."/>
+      <property name="Text" value="Limited. (No more than one limited card can be played by each player each round.)
+You cannot place fate on this character when it is played from one of your provinces."/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="3"/>
+      <property name="Glory" value="1"/>
+      <property name="Card Number" value="54"/>
+    </card>
     <card id="4dae1138-cf99-4880-a600-b8b4d5c6631b" name="Togashi Initiate" size="dynasty">
       <property name="Clan" value="Dragon"/>
       <property name="Type" value="Character"/>
@@ -93,6 +289,28 @@
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="2"/>
       <property name="Card Number" value="55"/>
+    </card>
+    <card id="c7b3b775-e0f2-4786-87aa-59133c0305b6" name="Agasha Swordsmith" size="dynasty">
+      <property name="Clan" value="Dragon"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Shugenja. Fire."/>
+      <property name="Text" value="Action: Search the top 5 cards of your conflict deck for an attachment, reveal it, and add it to your hand. Shuffle."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="1"/>
+      <property name="Card Number" value="56"/>
+    </card>
+    <card id="d66f08e3-a528-4598-8c96-149155d2abdd" name="Mirumoto Prodigy" size="dynasty">
+      <property name="Clan" value="Dragon"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Duelist."/>
+      <property name="Text" value="While this character is attacking alone, your opponent cannot declare more than 1 defender."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="1"/>
+      <property name="Card Number" value="57"/>
     </card>
     <card id="a8c52b13-c2fa-4ccf-9d5f-a76436144a41" name="Seeker of Enlightenment" size="dynasty">
       <property name="Clan" value="Dragon"/>
@@ -116,6 +334,29 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="69"/>
     </card>
+    <card id="ec52acdd-a2af-49e9-b3e1-2e073bc2a30f" name="Steadfast Samurai" size="dynasty">
+      <property name="Clan" value="Lion"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi."/>
+      <property name="Text" value="Forced Reaction: After the fate phase begins, if you have at least 5 more honor than an opponent - this character cannot be discarded or lose fate this phase."/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="1"/>
+      <property name="Card Number" value="70"/>
+    </card>
+    <card id="508003aa-e833-4cb5-99a7-15cb9dab508d" name="Akodo Guns?" size="dynasty">
+      <property name="Clan" value="Lion"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi."/>
+      <property name="Text" value="Pride. (After this character wins a conflict, honor it. After this character loses a conflict, dishonor it.)
+Reaction: After this character enters play from a province - refill that province faceup."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="2"/>
+      <property name="Card Number" value="71"/>
+    </card>
     <card id="47826d27-2a19-4832-ab36-c1fc92b3f948" name="Lion's Pride Brawler" size="dynasty">
       <property name="Clan" value="Lion"/>
       <property name="Type" value="Character"/>
@@ -135,6 +376,17 @@
       <property name="Bonus Strength" value="1"/>
       <property name="Card Number" value="80"/>
     </card>
+    <card id="5baae90a-1d1b-4de6-8181-a7dffd7e09e9" name="Shiba Peacemaker" size="dynasty">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi."/>
+      <property name="Text" value="This character cannot participate in conflicts as an attacker."/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="4"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="1"/>
+      <property name="Card Number" value="82"/>
+    </card>
     <card id="f909e855-0994-4ef8-b350-7152ff4e03f9" name="Solemn Scholar" size="dynasty">
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Character"/>
@@ -145,6 +397,18 @@
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="1"/>
       <property name="Card Number" value="83"/>
+    </card>
+    <card id="2d9d2a28-d496-4e72-bcb3-6b979376f314" name="Isawa Masahiro" size="dynasty">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Shugenja. Fire."/>
+      <property name="Text" value="Action: During a [Fire] conflict, bow this character. Choose a participating character with printed cost 2 or lower - discard that character."/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="2"/>
+      <property name="Card Number" value="90"/>
     </card>
     <card id="221a1956-1bac-4aa1-ac9e-4b78ab0bd83c" name="Bayushi Manipulator" size="dynasty">
       <property name="Clan" value="Scorpion"/>
@@ -175,6 +439,17 @@
       <property name="Text" value="Action: Reduce the cost of the next event you play this phase by 1."/>
       <property name="Bonus Strength" value="1"/>
       <property name="Card Number" value="108"/>
+    </card>
+    <card id="080c2783-86c3-4070-b503-501f4acd4433" name="Aggressive Moto" size="dynasty">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Cavalry."/>
+      <property name="Text" value="This character cannot be declared as a defender."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="0"/>
+      <property name="Glory" value="0"/>
+      <property name="Card Number" value="111"/>
     </card>
     <card id="0a0f5ebc-b682-4a3c-96d2-281758f5f5ad" name="Border Rider" size="dynasty">
       <property name="Clan" value="Unicorn"/>
@@ -209,6 +484,17 @@
       <property name="Glory" value="1"/>
       <property name="Card Number" value="122"/>
     </card>
+    <card id="708ff8aa-3b55-4a59-a13f-a9b2b0b63ae2" name="Miya Mystic" size="dynasty">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Shugenja. Earth. Imperial."/>
+      <property name="Text" value="Action: During the conflict phase, choose an attachment on an opponent's character - move that attachment to another character controlled by that opponent, if able."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="1"/>
+      <property name="Card Number" value="125"/>
+    </card>
     <card id="21bb93d6-537d-4084-bda1-e3647789fee8" name="Wandering Ronin" size="dynasty">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Character"/>
@@ -228,7 +514,87 @@
       <property name="Cost" value="1"/>
       <property name="Bonus Military Skill" value="0"/>
       <property name="Bonus Political Skill" value="0"/>
+      <property name="Influence Value" value="1"/>
       <property name="Card Number" value="132"/>
+    </card>
+    <card id="9f06d1b0-4a4c-4b76-a44e-2bef3b37a785" name="Rebuild" size="conflict">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="???"/>
+      <property name="Influence Value" value="2"/>
+      <property name="Card Number" value="136"/>
+    </card>
+    <card id="ad350407-e999-4da0-b136-dd046375e07a" name="Steward of Law" size="conflict">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier. Scholar."/>
+      <property name="Text" value="While this character is participating in a conflict, characters cannot become dishonored."/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="0"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Card Number" value="139"/>
+    </card>
+    <card id="2abecb53-9c4c-45d7-8a26-787af66511fd" name="Above Question" size="conflict">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Condition."/>
+      <property name="Text" value="Attached character cannot be chosen as a target of an opponent's event."/>
+      <property name="Cost" value="1"/>
+      <property name="Bonus Military Skill" value="0"/>
+      <property name="Bonus Political Skill" value="0"/>
+      <property name="Influence Value" value="2"/>
+      <property name="Card Number" value="141"/>
+    </card>
+    <card id="3cab40e6-8964-4aa7-aead-378bbdd87ed1" name="Duelist Training" size="conflict">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Technique."/>
+      <property name="Text" value="Attached character gains: &quot;Action: While this character is participating in a conflict, choose a participating character controlled by your opponent - challenge that character to a [Military] duel. Instead of giving honor for this duel's bid a player may choose and discard the required number of cards from hand. Bow the loser of the duel.&quot;"/>
+      <property name="Cost" value="1"/>
+      <property name="Bonus Military Skill" value="0"/>
+      <property name="Bonus Political Skill" value="0"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Card Number" value="142"/>
+    </card>
+    <card id="2536d187-8579-4c38-bc95-460444803797" name="Height of Fashion" size="conflict">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Condition."/>
+      <property name="Text" value="The attachment cannot be played during a conflict."/>
+      <property name="Cost" value="2"/>
+      <property name="Bonus Military Skill" value="0"/>
+      <property name="Bonus Political Skill" value="4"/>
+      <property name="Influence Value" value="3"/>
+      <property name="Card Number" value="143"/>
+    </card>
+    <card id="06c75060-149d-4f18-8473-8358dc9f751a" name="The Perfect Gift" size="conflict">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: Reveal the top 4 cards of each player's conflict deck. Choose 1 revealed card by each player and add it to its owner's hand. Shuffle."/>
+      <property name="Cost" value="0"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Card Number" value="144"/>
+    </card>
+    <card id="61870bd9-a875-4e63-b261-c271a8097d48" name="Voice of Honor" size="conflict">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Interrupt: When then effects of an event would initiate, if you control more honored characters than an opponent - cancel those effects."/>
+      <property name="Cost" value="0"/>
+      <property name="Influence Value" value="2"/>
+      <property name="Card Number" value="145"/>
+    </card>
+    <card id="8e1d1326-c2cc-48db-ad41-8e26ce78a4bb" name="Way of the Crane" size="conflict">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value="Philosophy."/>
+      <property name="Text" value="Action: Choose a [Crane] character you control - honor that character."/>
+      <property name="Cost" value="0"/>
+      <property name="Card Number" value="146"/>
     </card>
     <card id="916f4fab-1e57-444e-bdbe-8cd7eeb956c8" name="Admit Defeat" size="conflict">
       <property name="Clan" value="Crane"/>
@@ -236,7 +602,70 @@
       <property name="Traits" value=""/>
       <property name="Text" value="Action: Choose a character that is defending alone - bow that character."/>
       <property name="Cost" value="1"/>
+      <property name="Influence Value" value="2"/>
       <property name="Card Number" value="147"/>
+    </card>
+    <card id="27a2aea7-18e8-403c-88cb-74d240b772e9" name="Noble Sacrifice" size="conflict">
+      <property name="Clan" value="Crane"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: Sacrifice a (friendly) honored character. Choose a dishonored character - discard that character."/>
+      <property name="Cost" value="1"/>
+      <property name="Influence Value" value="2"/>
+      <property name="Card Number" value="148"/>
+    </card>
+    <card id="f1efd236-4b40-4726-8d0b-26777af79d97" name="Daimyo's Favor" size="conflict">
+      <property name="Clan" value="Dragon"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value=""/>
+      <property name="Cost" value="0"/>
+      <property name="Bonus Military Skill" value="0"/>
+      <property name="Bonus Political Skill" value="0"/>
+      <property name="Card Number" value="150"/>
+    </card>
+    <card id="0c57ad14-3794-4d09-badf-596134dab781" name="Ancestral Daisho" size="conflict">
+      <property name="Clan" value="Dragon"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Weapon."/>
+      <property name="Text" value="Ancestral. (When attached card leaves play, return this card to your hand.)
+Restricted. (No more than two restricted attachments per character.)"/>
+      <property name="Cost" value="1"/>
+      <property name="Bonus Military Skill" value="2"/>
+      <property name="Bonus Political Skill" value="0"/>
+      <property name="Influence Value" value="2"/>
+      <property name="Card Number" value="151"/>
+    </card>
+    <card id="5aaaabac-df50-429d-8013-2607ec17c1c9" name="Way of the Dragon" size="conflict">
+      <property name="Clan" value="Dragon"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Philosophy."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="2"/>
+      <property name="Card Number" value="154"/>
+    </card>
+    <card id="0036d752-5951-422d-b05e-e3cde23bc26a" name="Vengeful Oathkeeper" size="conflict">
+      <property name="Clan" value="Lion"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi."/>
+      <property name="Text" value="???"/>
+      <property name="Military Skill" value="-"/>
+      <property name="Political Skill" value="-"/>
+      <property name="Glory" value="0"/>
+      <property name="Influence Value" value="2"/>
+      <property name="Card Number" value="160"/>
+    </card>
+    <card id="42aff476-2841-41cb-b3fe-d29b33af41c8" name="Seeker of Knowledge" size="conflict">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier. Shugenja. Air."/>
+      <property name="Text" value="While this character is attacking, the contested ring gets [Air] element. If this character wins the conflict you may choose which ring effect to resolve."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="0"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="1"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Card Number" value="171"/>
     </card>
     <card id="b1dcf0f9-2ee4-4274-99db-21d749ffa435" name="Pacifism" size="conflict">
       <property name="Clan" value="Phoenix"/>
@@ -247,6 +676,7 @@ Attached character cannot participate in [Military] conflicts."/>
       <property name="Cost" value="2"/>
       <property name="Bonus Military Skill" value="0"/>
       <property name="Bonus Political Skill" value="0"/>
+      <property name="Influence Value" value="2"/>
       <property name="Card Number" value="174"/>
     </card>
     <card id="ed546e3d-c954-4354-94fe-5bce936b649e" name="I Can Swim" size="conflict">
@@ -255,6 +685,7 @@ Attached character cannot participate in [Military] conflicts."/>
       <property name="Traits" value="Philosophy."/>
       <property name="Text" value="Action: During a conflict, if the bid on your honor dial is higher than an opponent's, choose a participating dishonored character controlled by that opponent - discard that character."/>
       <property name="Cost" value="2"/>
+      <property name="Influence Value" value="1"/>
       <property name="Card Number" value="187"/>
     </card>
     <card id="e0949fb5-72cc-47da-bfef-979d967aff28" name="Blackmail" size="conflict">
@@ -264,7 +695,17 @@ Attached character cannot participate in [Military] conflicts."/>
       <property name="Text" value="Play only if you are less honorable than your opponent.
 Action: During a conflict, choose a character controlled by your opponent with printed cost 2 or lower - take control of that character until the end of the conflict."/>
       <property name="Cost" value="3"/>
+      <property name="Influence Value" value="3"/>
       <property name="Card Number" value="189"/>
+    </card>
+    <card id="04b588fd-bb81-4222-88d4-44f0c1ee35a8" name="Breakthrough" size="conflict">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Reaction: After the resolution of your first conflict this phase as the attacking player, if that conflict broke a province - immediately declare your second conflict for this phase."/>
+      <property name="Cost" value="0"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Card Number" value="196"/>
     </card>
     <card id="3a4a2547-142c-4394-81fc-314fd3a14236" name="Way of the Unicorn" size="conflict">
       <property name="Clan" value="Unicorn"/>
@@ -273,6 +714,50 @@ Action: During a conflict, choose a character controlled by your opponent with p
       <property name="Text" value="Interrupt: When you would pass the first player token - keep it instead."/>
       <property name="Cost" value="0"/>
       <property name="Card Number" value="198"/>
+    </card>
+    <card id="0d11eb2f-2f27-4bf8-bc25-752e367e045a" name="Fine Katana" size="conflict">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Weapon."/>
+      <property name="Text" value="Restricted. (No more than two restricted attachments per character.)"/>
+      <property name="Cost" value="0"/>
+      <property name="Bonus Military Skill" value="2"/>
+      <property name="Bonus Political Skill" value="0"/>
+      <property name="Card Number" value="200"/>
+    </card>
+    <card id="6d8d67f8-38ea-4db2-a5d5-2f54b9493f33" name="Cloud the Mind" size="conflict">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Spell. Air."/>
+      <property name="Text" value="Play only if you control a Shugenja character. 
+Treat attached character as if its printed text box were blank (except for Traits)."/>
+      <property name="Cost" value="1"/>
+      <property name="Bonus Military Skill" value="0"/>
+      <property name="Bonus Political Skill" value="0"/>
+      <property name="Card Number" value="202"/>
+    </card>
+    <card id="3b85a2ef-1f9c-4c3f-bc17-f427effc1a14" name="Assassination" size="conflict">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="???"/>
+      <property name="Card Number" value="203"/>
+    </card>
+    <card id="84ed44dc-0324-4f88-90ff-1d4b0679be8d" name="Banzai!" size="conflict">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: During a conflict, choose a participating character - that character gets +2[Military] until the end of the conflict. You may lose 1 honor to resolve this ability twice. (Max 1 per conflict.)"/>
+      <property name="Cost" value="0"/>
+      <property name="Card Number" value="204"/>
+    </card>
+    <card id="4943895d-ab44-4571-ae49-2f51781469ad" name="For Shame!" size="conflict">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: During a conflict, if you control a participating Courtier character, choose a participating character controlled by your opponent. Your opponent must select one - dishonor the chosen character or bow it."/>
+      <property name="Cost" value="0"/>
+      <property name="Card Number" value="207"/>
     </card>
     <card id="95b10d7c-092b-414d-af65-bc351d1ce8ab" name="Spies at Court" size="conflict">
       <property name="Clan" value="Neutral"/>
