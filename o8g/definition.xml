@@ -32,6 +32,7 @@
     <property name="Influence Value" type="String"/>
     <property name="Bonus Military Skill" type="String"/>
     <property name="Bonus Political Skill" type="String"/>
+    <property name="Ring" type="String"/>
     <property name="Card Number" type="Integer"/>
     <size name="dynasty" back="card/dynasty.png" front="card/dynasty.png" width="63" height="88"/>
     <size name="conflict" back="card/conflict.png" front="card/conflict.png" width="63" height="88"/>

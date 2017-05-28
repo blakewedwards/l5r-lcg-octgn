@@ -101,6 +101,21 @@
       <text color="#000000" size="23" font="fonts/name.ttf"/>
       <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
     </block>
+
+    <block type="overlay" id="province-base-crab" src="proxygen/images/province-base-crab.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="province-base-crane" src="proxygen/images/province-base-crane.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="province-base-dragon" src="proxygen/images/province-base-dragon.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="province-base-lion" src="proxygen/images/province-base-lion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="province-base-neutral" src="proxygen/images/province-base-neutral.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="province-base-phoenix" src="proxygen/images/province-base-phoenix.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="province-base-scorpion" src="proxygen/images/province-base-scorpion.png"><location x="0" y="0"/></block>
+    <block type="overlay" id="province-base-unicorn" src="proxygen/images/province-base-unicorn.png"><location x="0" y="0"/></block>
+
+    <block type="text" id="province-name">
+      <location x="29" y="358" rotate="270" />
+      <text color="#000000" size="23" font="fonts/name.ttf"/>
+      <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
+    </block>
   </blocks>
 
   <template src="proxygen/images/empty.png">
@@ -230,6 +245,31 @@
       <link block="text"><property name="Text"/></link>
       <link block="event-name"><property name="Name"/></link>
       <link block="traits-middle-name-top"><property name="Traits"/></link>
+    </textblocks>
+  </template>
+
+  <template src="proxygen/images/empty.png">
+    <matches><match name="Type" value="Province"/></matches>
+
+    <overlayblocks>
+      <conditional>
+        <switch property="Clan">
+          <case value="Crab"><link block="province-base-crab"/></case>
+          <case value="Crane"><link block="province-base-crane"/></case>
+          <case value="Dragon"><link block="province-base-dragon"/></case>
+          <case value="Lion"><link block="province-base-lion"/></case>
+          <case value="Neutral"><link block="province-base-neutral"/></case>
+          <case value="Phoenix"><link block="province-base-phoenix"/></case>
+          <case value="Scorpion"><link block="province-base-scorpion"/></case>
+          <case value="Unicorn"><link block="province-base-unicorn"/></case>
+        </switch>
+      </conditional>
+    </overlayblocks>
+
+    <textblocks>
+      <link block="type"><property name="Type"/></link>
+      <link block="text"><property name="Text"/></link>
+      <link block="province-name"><property name="Name"/></link>
     </textblocks>
   </template>
 </templates>

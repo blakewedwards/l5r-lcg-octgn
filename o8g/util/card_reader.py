@@ -229,7 +229,7 @@ cards = SubElement(set, 'cards')
 with open('l5r.csv', 'rb') as f:
   reader = csv.DictReader(f, delimiter=',', quotechar='"')
   for row in sorted(reader, key=lambda r: r['ID'].strip() and int(r['ID']) or 9999):
-    if row['ID'].strip() != '' and row['Type'].strip() != 'Province':
+    if row['ID'].strip() != '':
       attr = {'id': row['ID'].strip() in ids and ids[row['ID'].strip()] or '', 'name': row['Name'].strip()}
       if row['Deck'].strip():
         attr['size'] = row['Deck'].strip().lower()
@@ -270,6 +270,9 @@ with open('l5r.csv', 'rb') as f:
       
       if row['Influence'].strip() != '' and row['Type'].strip().capitalize() == 'Stronghold':
         SubElement(card, 'property', {'name': 'Influence Value', 'value': row['Influence'].strip()})
+
+      if row['Ring'].strip() != '':
+        SubElement(card, 'property', {'name': 'Ring', 'value': row['Ring'].strip().capitalize()})
 
       SubElement(card, 'property', {'name': 'Card Number', 'value': row['ID'].strip()})
 
