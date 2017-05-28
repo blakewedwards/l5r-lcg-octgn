@@ -268,7 +268,7 @@ with open('l5r.csv', 'rb') as f:
       if row['Fate'].strip() != '':
         SubElement(card, 'property', {'name': 'Fate Value', 'value': row['Fate'].strip()})
       
-      if row['Influence'].strip() != '' and row['Type'].strip().capitalize() == 'Stronghold':
+      if row['Influence'].strip() != '':
         SubElement(card, 'property', {'name': 'Influence Value', 'value': row['Influence'].strip()})
 
       if row['Ring'].strip() != '':
