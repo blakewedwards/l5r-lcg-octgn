@@ -11,7 +11,7 @@
       <property name="Type" value="Stronghold"/>
       <property name="Unique" value="Unique"/>
       <property name="Traits" value="City."/>
-      <property name="Text" value="Action: During a [Political Conflict] conflict, bow this stronghold, choose a participating character with [Political Skill] skill 2 or lower - bow that character."/>
+      <property name="Text" value="Action: During a [Political] conflict, bow this stronghold, choose a participating character with [Political] skill 2 or lower - bow that character."/>
       <property name="Bonus Strength" value="2"/>
       <property name="Starting Honor" value="11"/>
       <property name="Fate Value" value="7"/>
@@ -23,7 +23,7 @@
       <property name="Type" value="Stronghold"/>
       <property name="Unique" value="Unique"/>
       <property name="Traits" value="Castle."/>
-      <property name="Text" value="Action: During a conflict, bow this stronghold - each attacking character you control gets +1[Military Skill] until the end of the conflict."/>
+      <property name="Text" value="Action: During a conflict, bow this stronghold - each attacking character you control gets +1[Military] until the end of the conflict."/>
       <property name="Bonus Strength" value="2"/>
       <property name="Starting Honor" value="12"/>
       <property name="Fate Value" value="7"/>
@@ -98,7 +98,7 @@
       <property name="Clan" value="Dragon"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Monk. Tattooed."/>
-      <property name="Text" value="This character gets +1[Military Skill] and +1[Political Skill] for each fate on each unclaimed ring."/>
+      <property name="Text" value="This character gets +1[Military] and +1[Political] for each fate on each unclaimed ring."/>
       <property name="Cost" value="2"/>
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="1"/>
@@ -120,7 +120,7 @@
       <property name="Clan" value="Lion"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Courtier."/>
-      <property name="Text" value="Action: While this character is attacking, choose a character with equal or lower [Military Skill] skill than this character - bow that character."/>
+      <property name="Text" value="Action: While this character is attacking, choose a character with equal or lower [Military] skill than this character - bow that character."/>
       <property name="Cost" value="3"/>
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="2"/>
@@ -213,7 +213,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Ronin."/>
-      <property name="Text" value="Action: During a conflict, remove 1 fate from this character - it gets +2[Military Skill] and +2[Political Skill] until the end of the conflict. (Limit twice per conflict.)"/>
+      <property name="Text" value="Action: During a conflict, remove 1 fate from this character - it gets +2[Military] and +2[Political] until the end of the conflict. (Limit twice per conflict.)"/>
       <property name="Cost" value="3"/>
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="2"/>
@@ -242,7 +242,8 @@
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Attachment"/>
       <property name="Traits" value="Condition."/>
-      <property name="Text" value="This attachment cannot be played during a conflict. Attached character cannot participate in [Military Conflict] conflicts."/>
+      <property name="Text" value="This attachment cannot be played during a conflict.
+Attached character cannot participate in [Military] conflicts."/>
       <property name="Cost" value="2"/>
       <property name="Bonus Military Skill" value="0"/>
       <property name="Bonus Political Skill" value="0"/>
@@ -260,7 +261,8 @@
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Play only if you are less honorable than your opponent. Action: During a conflict, choose a character controlled by your opponent with printed cost 2 or lower - take control of that character until the end of the conflict."/>
+      <property name="Text" value="Play only if you are less honorable than your opponent.
+Action: During a conflict, choose a character controlled by your opponent with printed cost 2 or lower - take control of that character until the end of the conflict."/>
       <property name="Cost" value="3"/>
       <property name="Card Number" value="189"/>
     </card>
@@ -276,7 +278,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Reaction: After you win a [Political Conflict] conflict, dishonor a (friendly) participating character - discard 2 cards at random from your opponent's hand. (Max 1 per conflict.)"/>
+      <property name="Text" value="Reaction: After you win a [Political] conflict, dishonor a (friendly) participating character - discard 2 cards at random from your opponent's hand. (Max 1 per conflict.)"/>
       <property name="Cost" value="0"/>
       <property name="Card Number" value="209"/>
     </card>
@@ -284,7 +286,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Reaction: After you win a [Military Conflict] conflict by 5 or more skill, choose a participating character - discard that character. (Max 1 per conflict.)"/>
+      <property name="Text" value="Reaction: After you win a [Military] conflict by 5 or more skill, choose a participating character - discard that character. (Max 1 per conflict.)"/>
       <property name="Cost" value="1"/>
       <property name="Card Number" value="211"/>
     </card>
