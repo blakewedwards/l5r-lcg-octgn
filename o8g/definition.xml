@@ -47,6 +47,7 @@
     <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
     <cardaction menu="Default" execute="table_default_card_action" default="True" showIf="lambda: False"/>
     <cardaction menu="Bow/ready" execute="toggle_bow_ready"/>
+    <cardaction menu="Break/unbreak" execute="toggle_break"/>
     <cardaction menu="Discard" execute="discard"/>
     <cardaction menu="Flip" execute="flip"/>
     <cardaction menu="Play" execute="play_dynasty"/>

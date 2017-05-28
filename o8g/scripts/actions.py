@@ -60,6 +60,11 @@ def toggle_bow_ready(card, x=0, y=0):
   card.orientation ^= Rot90
   notify('{} {} {}.'.format(me, 'bows' if card.orientation & Rot90 == Rot90 else 'readies', card))
 
+def toggle_break(card, x=0, y=0):
+  mute()
+  card.orientation ^= Rot180
+  notify('{} {} {}.'.format(me, 'breaks' if card.orientation & Rot180 == Rot180 else 'unbreaks', card))
+
 def flip(card, x=0, y=0):
   card.isFaceUp = not card.isFaceUp
 
