@@ -3,7 +3,7 @@
     name="Legend of the Five Rings LCG"
     id="bb0f02e7-2a6f-4ae3-84a2-c501b4176844"
     octgnVersion="3.1.284.0"
-    version="0.0.1.105"
+    version="0.0.1.0"
     scriptVersion="3.1.0.2"
     markersize="16"
     setsurl="https://tinyurl.com/mab3ars"
@@ -50,6 +50,8 @@
     <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
     <groupaction menu="End turn" execute="end_turn" showIf="setup_not_required"/>
     <cardaction menu="Default" execute="table_default_card_action" default="True" showIf="lambda: False"/>
+    <cardaction menu="Add fate" execute="add_fate"/>
+    <cardaction menu="Remove fate" execute="remove_fate"/>
     <cardaction menu="Bow/ready" execute="toggle_bow_ready"/>
     <cardaction menu="Break/unbreak" execute="toggle_break"/>
     <cardaction menu="Discard" execute="discard"/>

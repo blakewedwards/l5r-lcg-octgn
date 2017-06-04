@@ -5,6 +5,9 @@
   gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844"
   gameVersion="0.0.1.0"
   version="1.0">
+  <markers>
+    <marker id="1c469258-900d-44e7-b005-d3c5d0de3f95" name="Fate"/>
+  </markers>
   <cards>
     <card id="8c53e061-b416-4d32-84a1-596c4f3d005a" name="Shizuka Toshi">
       <property name="Clan" value="Crane"/>
