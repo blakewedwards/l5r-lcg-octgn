@@ -9,6 +9,8 @@
     <marker id="1c469258-900d-44e7-b005-d3c5d0de3f95" name="Fate"/>
   </markers>
   <cards>
+    <card id="4c4f1d22-f2e8-46ff-8446-9aa6ec0a45a6" name="Honor Dial">
+    </card>
     <card id="8c53e061-b416-4d32-84a1-596c4f3d005a" name="Shizuka Toshi">
       <property name="Clan" value="Crane"/>
       <property name="Type" value="Stronghold"/>

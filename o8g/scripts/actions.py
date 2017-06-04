@@ -11,6 +11,7 @@ DYNASTY_DISCARD = 'Dynasty Discard'
 CONFLICT_DISCARD = 'Conflict Discard'
 STARTING_HAND_SIZE = 4
 CARD_GAP_RATIO = 1.0/3.0 # Ratio to width for space inbetween cards
+HONOR_DIAL_1 = '4c4f1d22-f2e8-46ff-8446-9aa6ec0a45a6'
 
 def setup_required(group, x=0, y=0):
   return bool(me.getGlobalVariable('setup_required'))
@@ -47,6 +48,7 @@ def setup(group, x=0, y=0):
   me.honor = int(stronghold.properties[STARTING_HONOR])
   me.fate = int(stronghold.properties[FATE_VALUE])
   me.setGlobalVariable(PLAYER_FATE_VALUE, stronghold.properties[FATE_VALUE])
+  table.create(HONOR_DIAL_1, -3.5*width - 3*gap, height + 3*gap, persist=True).isFaceUp = True
   for card in me.piles[CONFLICT].top(STARTING_HAND_SIZE):
     card.moveTo(me.hand)
   notify('{} sets up.'.format(me))
