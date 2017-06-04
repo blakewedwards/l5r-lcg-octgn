@@ -1,27 +1,34 @@
+#!/usr/bin/env python
 import itertools
-from xml.dom import minidom
+import os
+import sys
+from xml.dom.minidom import parse
 
-file = 'deck.o8d'
+if (len(sys.argv) != 2):
+  sys.exit('Usage: {} <deck.o8d>'.format(os.path.basename(sys.argv[0])))
 
-dom = minidom.parse(file)
-cards = [(card.getAttribute('id'), int(card.getAttribute('qty'))) for card in dom.getElementsByTagName('card')]
+# Get ids and quantities for cards in the deck
+cards = [(card.getAttribute('id'), int(card.getAttribute('qty'))) for card in parse(sys.argv[1]).getElementsByTagName('card')]
 
-class row_builder:
-  def __init__(self):
-    self.row_count = 0
-    self.rows = [[]]
+# Expand the ids to have each appearing a number of times equal to its quantity
+ids = [i for (id, qty) in cards for i in itertools.repeat(id, qty)]
 
-  def append(self, image_src):
-    self.rows[-1].append(image_src)
-    if len(self.rows[-1]) == 3:
-      self.rows.append([])
+# Organize the ids into rows/columns
+num_columns = 3
+rows = [ids[i:i+num_columns] for i in range(0, len(ids), num_columns)]
 
-s = "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\">\n<html><head><style>img {width: 240px;} table {border-spacing: 0px;} td {padding: 0 1px 0 1px;}</style>\n</head>\n\n<body>\n<table>\n<tr>"
-r = row_builder()
-for (id, qty) in cards:
-  for _ in itertools.repeat(None, qty):
-    r.append(id)
-
-s += '</tr><tr>'.join(['<td>' + '</td><td>'.join(['<img src="' + id + '.png">' for id in row]) + '</td>' for row in r.rows])
-s += "</tr>\n</table>\n</body>\n</html>";
-print s
+# Htmlify. Td has left/right padding to balance the whitespace chrome automatically adds to the bottom. Width is specified as 240 in
+# case all downloaded images aren't the same size.
+print """<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<style>img {{width: 240px;}} table {{border-spacing: 0px;}} td {{padding: 0 1px 0 1px;}}</style>
+</head>
+<body>
+<table>
+<tr>
+{}
+</tr>
+</table>
+</body>
+</html>""".format("\n</tr>\n<tr>\n".join(["<td>{}</td>".format("</td>\n<td>".join(['<img src="{}.png"/>'.format(id) for id in row])) for row in rows]))
