@@ -16,7 +16,7 @@ class row_builder:
     if len(self.rows[-1]) == 3:
       self.rows.append([])
 
-s = "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\">\n<html><head><style>img {width: 220px;}</style>\n</head>\n\n<body>\n<table>\n<tr>"
+s = "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01//EN\">\n<html><head><style>img {width: 240px;} table {border-spacing: 0px;} td {padding: 0 1px 0 1px;}</style>\n</head>\n\n<body>\n<table>\n<tr>"
 r = row_builder()
 for (id, qty) in cards:
   for _ in itertools.repeat(None, qty):
