@@ -1,6 +1,8 @@
 CHARACTER = 'Character'
 HONOR = 'Honor'
+TURN = 'turn'
 STARTING_HONOR = 'Starting Honor'
+PLAYER_FATE_VALUE = 'fate_value'
 FATE_VALUE = 'Fate Value'
 DYNASTY = 'Dynasty Deck'
 CONFLICT = 'Conflict Deck'
@@ -43,6 +45,7 @@ def setup(group, x=0, y=0):
   stronghold.anchor = True
   me.honor = int(stronghold.properties[STARTING_HONOR])
   me.fate = int(stronghold.properties[FATE_VALUE])
+  me.setGlobalVariable(PLAYER_FATE_VALUE, stronghold.properties[FATE_VALUE])
   for card in me.piles[CONFLICT].top(STARTING_HAND_SIZE):
     card.moveTo(me.hand)
   notify('{} sets up.'.format(me))
@@ -138,3 +141,26 @@ def play_dynasty(card, x=0, y=0):
   me.Fate -= cost
   me.piles[DYNASTY].top().moveToTable(x, y, True)
   notify('{} plays {} for {} fate.'.format(me, card.name, cost))
+
+def resolve_regroup():
+  mute()
+  cards = (card for card in table if card.controller == me and card.isFaceUp)
+  for card in cards:
+    card.orientation &= ~Rot90
+  me.fate += int(me.getGlobalVariable(PLAYER_FATE_VALUE))
+
+def end_turn(table, x=0, y=0):
+  mute()
+  turn = int(getGlobalVariable(TURN))
+  if not confirm('Resolve the turn {} regroup phase?'.format(turn)):
+    return
+
+  resolve_regroup()
+  if len(getPlayers()) != 1:
+    remoteCall(players[1], "resolve_regroup")
+
+  # TODO: Test if they have initiative, or don't show the action if not?
+
+  notify('{} resolves the turn {} regroup phase.'.format(me, turn))
+  turn += 1
+  setGlobalVariable(TURN, str(turn))
