@@ -22,7 +22,7 @@ rows = [ids[i:i+num_columns] for i in range(0, len(ids), num_columns)]
 print """<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <html>
 <head>
-<style>img {{width: 240px;}} table {{border-spacing: 0px;}} td {{padding: 0 1px 0 1px;}}</style>
+<style>img {{width: 240px;}} table {{border-spacing: 0px;}} td {{padding: 0;}}</style>
 </head>
 <body>
 <table>
