@@ -223,10 +223,11 @@ ids = {
     '211': '613a8a9f-4b3f-4ea4-90ed-3d7423d8423a',
 }
 
-if len(ids.keys()) != 211:
+num_cards = 211
+if len(ids.keys()) != num_cards:
   sys.exit('Invalid number of uuid keys')
 for key in ids.keys():
-  if int(key) < 1 or int(key) > 211:
+  if int(key) < 1 or int(key) > num_cards:
     sys.exit('Invalid card number in uuid keys')
 
 icon_regex = re.compile(r'\[\w+\]', re.IGNORECASE)
@@ -239,7 +240,7 @@ cards = SubElement(set, 'cards')
 
 with open(sys.argv[1], 'rb') as f:
   reader = csv.DictReader(f, delimiter=',', quotechar='"')
-  for row in sorted(reader, key=lambda r: r['ID'].strip() and int(r['ID']) or 9999):
+  for row in sorted(reader, key=lambda r: r['ID'].strip() and int(r['ID']) or num_cards+1):
     if row['ID'].strip() != '':
       attr = {'id': row['ID'].strip() in ids and ids[row['ID'].strip()] or '', 'name': row['Name'].strip()}
       if row['Deck'].strip():
@@ -276,13 +277,13 @@ with open(sys.argv[1], 'rb') as f:
 
       if row['Strength'].strip() != '':
         SubElement(card, 'property', {'name': 'Bonus Strength', 'value': row['Strength'].strip()})
-      
+
       if row['Honor'].strip() != '':
         SubElement(card, 'property', {'name': 'Starting Honor', 'value': row['Honor'].strip()})
-      
+
       if row['Fate'].strip() != '':
         SubElement(card, 'property', {'name': 'Fate Value', 'value': row['Fate'].strip()})
-      
+
       if row['Influence'].strip() != '':
         SubElement(card, 'property', {'name': 'Influence Value', 'value': row['Influence'].strip()})
 
@@ -291,6 +292,5 @@ with open(sys.argv[1], 'rb') as f:
 
       SubElement(card, 'property', {'name': 'Card Number', 'value': row['ID'].strip()})
 
-    
 reparsed = minidom.parseString(tostring(set))
-print reparsed.toprettyxml(indent="  ")
+print reparsed.toprettyxml(indent='  ')
