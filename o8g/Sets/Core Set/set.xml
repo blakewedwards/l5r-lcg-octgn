@@ -86,6 +86,15 @@
       <property name="Ring" value="Water"/>
       <property name="Card Number" value="16"/>
     </card>
+    <card id="a8c4f60e-6c36-4bd7-99da-eef1c3da2aab" name="Night Raid">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Province"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Reaction: After this province is revealed - your opponent chooses and discards X cards from his or her hand. X is equal to the number of attacking characters."/>
+      <property name="Bonus Strength" value="4"/>
+      <property name="Ring" value="Fire"/>
+      <property name="Card Number" value="21"/>
+    </card>
     <card id="35f74bd9-ac4b-4a32-b6d8-667573a006c7" name="Eager Scout" size="dynasty">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
@@ -362,6 +371,17 @@ Reaction: After this character enters play from a province - refill that provinc
       <property name="Glory" value="2"/>
       <property name="Card Number" value="71"/>
     </card>
+    <card id="cf5dec4b-7351-4b04-aac2-987df5873bc5" name="Deathseeker" size="dynasty">
+      <property name="Clan" value="Lion"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi."/>
+      <property name="Text" value="Reaction: After this character loses a conflict as an attacker, sacrifice this character. Choose a character controlled by your opponent - if that character has no fate on it, discard it. Otherwise, remove 1 fate from that character."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="0"/>
+      <property name="Card Number" value="72"/>
+    </card>
     <card id="47826d27-2a19-4832-ab36-c1fc92b3f948" name="Lion's Pride Brawler" size="dynasty">
       <property name="Clan" value="Lion"/>
       <property name="Type" value="Character"/>
@@ -372,6 +392,18 @@ Reaction: After this character enters play from a province - refill that provinc
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
       <property name="Card Number" value="75"/>
+    </card>
+    <card id="9a34b4f5-3cb0-4067-bb49-21a234d4d81b" name="Honored General" size="dynasty">
+      <property name="Clan" value="Lion"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Commander."/>
+      <property name="Text" value="During a conflict in which this character is participating, each other participating [Lion] character you control gets +1[Military].
+Reaction: After this character enters play - honor it."/>
+      <property name="Cost" value="4"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="2"/>
+      <property name="Card Number" value="77"/>
     </card>
     <card id="0c93ed20-599b-4d83-af62-9336e8ab5925" name="Staging Ground" size="dynasty">
       <property name="Clan" value="Lion"/>
@@ -660,6 +692,35 @@ Restricted. (No more than two restricted attachments per character.)"/>
       <property name="Influence Value" value="2"/>
       <property name="Card Number" value="160"/>
     </card>
+    <card id="0506f09d-431a-45ee-bc2a-c60f4b28cef3" name="Honored Blade" size="conflict">
+      <property name="Clan" value="Lion"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Weapon."/>
+      <property name="Text" value="Restricted. (No more than two restricted attachments per character.)
+Reaction: After attached character wins a conflict - gain 1 honor."/>
+      <property name="Cost" value="1"/>
+      <property name="Bonus Military Skill" value="2"/>
+      <property name="Bonus Political Skill" value="0"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Card Number" value="163"/>
+    </card>
+    <card id="0d320b35-9c12-4608-85f3-067abc04ba88" name="Ready for Battle" size="conflict">
+      <property name="Clan" value="Lion"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Reaction: After an opponent's card effect or a ring effect bows a character you control - ready that character."/>
+      <property name="Cost" value="0"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Card Number" value="165"/>
+    </card>
+    <card id="7bbc1cad-9a17-4730-bab3-b500f9a7f97b" name="Way of the Lion" size="conflict">
+      <property name="Clan" value="Lion"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value="Philosophy."/>
+      <property name="Text" value="Action: During a conflict, choose a [Lion] character - double that character's base [Military] skill until the end of the conflict."/>
+      <property name="Cost" value="0"/>
+      <property name="Card Number" value="167"/>
+    </card>
     <card id="42aff476-2841-41cb-b3fe-d29b33af41c8" name="Seeker of Knowledge" size="conflict">
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Character"/>
@@ -683,6 +744,15 @@ Attached character cannot participate in [Military] conflicts."/>
       <property name="Bonus Political Skill" value="0"/>
       <property name="Influence Value" value="2"/>
       <property name="Card Number" value="174"/>
+    </card>
+    <card id="d8e881bd-66c8-4103-9c0e-4953d028044b" name="Know the World" size="conflict">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value="Spell. Void."/>
+      <property name="Text" value="Action: Switch a ring in your claimed ring pool with an unclaimed ring and gain all fate on that ring. (Retain the ring's conflict type.)"/>
+      <property name="Cost" value="1"/>
+      <property name="Influence Value" value="3"/>
+      <property name="Card Number" value="178"/>
     </card>
     <card id="ed546e3d-c954-4354-94fe-5bce936b649e" name="I Can Swim" size="conflict">
       <property name="Clan" value="Scorpion"/>
@@ -763,6 +833,15 @@ Treat attached character as if its printed text box were blank (except for Trait
       <property name="Text" value="Action: During a conflict, if you control a participating Courtier character, choose a participating character controlled by your opponent. Your opponent must select one - dishonor the chosen character or bow it."/>
       <property name="Cost" value="0"/>
       <property name="Card Number" value="207"/>
+    </card>
+    <card id="485cc3e7-1fd1-4ba1-8a6d-3a2c476b9993" name="Good Omen" size="conflict">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Play only if your honor bid is lower than an opponent's.
+Action: Choose a character with printed cost 3 or higher - place 1 fate on that character."/>
+      <property name="Cost" value="0"/>
+      <property name="Card Number" value="208"/>
     </card>
     <card id="95b10d7c-092b-414d-af65-bc351d1ce8ab" name="Spies at Court" size="conflict">
       <property name="Clan" value="Neutral"/>
