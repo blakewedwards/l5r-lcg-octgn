@@ -26,11 +26,12 @@ class PNGPageParser(HTMLParser):
 
 user_agent = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
 name_swaps = {'Yojin no Shiro': 'Shiro no Yojin'}
+jpgs = ['Deathseeker']
 cards = [(card.getAttribute('name'), card.getAttribute('id')) for card in parse(sys.argv[1]).getElementsByTagName('card')]
 not_found = []
 for (name, id) in cards:
   name = name_swaps.get(name, name)
-  url = 'http://l5r.gamepedia.com/File:{}.png'.format(name.replace(' ', '_'))
+  url = 'http://l5r.gamepedia.com/File:{}.{}'.format(name.replace(' ', '_'), 'jpg' if name in jpgs else 'png')
   try:
     parser = PNGPageParser(name)
     print 'GET ' + url
