@@ -1,59 +1,49 @@
-import urllib2
-from HTMLParser import HTMLParser  
-from xml.dom import minidom
+from HTMLParser import HTMLParser
+import os
+import shutil
+import sys
+from urllib2 import HTTPError, Request, urlopen
+from xml.dom.minidom import parse
 
-set = 'set.xml'
+if (len(sys.argv) != 3):
+  sys.exit('Usage: {} <set.xml> <output_folder>'.format(os.path.basename(sys.argv[0])))
 
-dom = minidom.parse(set)
-cards = [(card.getAttribute('name'), card.getAttribute('id')) for card in dom.getElementsByTagName('card')]
-print cards
-
-class MyHTMLParser(HTMLParser):
-
+class PNGPageParser(HTMLParser):
   def __init__(self, name):
-    HTMLParser.__init__(self) 
-    self.image_urls = []
+    HTMLParser.__init__(self)
+    self.image_url = ''
     self.file = False
 
   def handle_starttag(self, tag, attrs):
     if tag == 'div':
-      for name, value in attrs:
-        if name == 'id' and value == 'file':
-          self.file = True
+      self.file = ('id', 'file') in attrs
+    elif tag == 'img' and self.file:
+      self.image_url = [value for (name, value) in attrs if name == 'src'][0].strip().replace('https://', 'http://')
 
-    if tag == 'img' and self.file:
-      src = ''
-      found = False
-      for name, value in attrs:
-        if name == 'src':
-          src = value
-        elif name == 'alt' and value == 'File:' + name + '.png':
-          found = True
-
-      self.image_urls.append(src)
-      
   def handle_endtag(self, tag):
     if tag == 'div':
       self.file = False
 
-missing = []
+user_agent = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+name_swaps = {'Yojin no Shiro': 'Shiro no Yojin'}
+cards = [(card.getAttribute('name'), card.getAttribute('id')) for card in parse(sys.argv[1]).getElementsByTagName('card')]
+not_found = []
 for (name, id) in cards:
-  if name == 'Yojin no Shiro':
-    name = 'Shiro no Yojin'
-  url = 'http://l5r.gamepedia.com/File:' + name.replace(' ', '_') + '.png'
-  print '[' + name + '] Getting ' + url + '...'
+  name = name_swaps.get(name, name)
+  url = 'http://l5r.gamepedia.com/File:{}.png'.format(name.replace(' ', '_'))
   try:
-    req = urllib2.Request(url=url, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'})
-    f = urllib2.urlopen(req)
-    p = MyHTMLParser(name)
-    html = f.read()
-    p.feed(html)
-    for image_url in p.image_urls:
-      with open('images/' + id + '.png', 'wb') as f:
-        print image_url
-        f.write(urllib2.urlopen(image_url).read())
-    p.close()
-  except urllib2.HTTPError as err:
-    missing.append(name)
+    parser = PNGPageParser(name)
+    print 'GET ' + url
+    parser.feed(urlopen(Request(url, None, {'User-Agent': user_agent})).read())
+    parser.close()
+    if parser.image_url:
+      print '  GET ' + parser.image_url
+      with open(os.path.join(sys.argv[2], id) + '.png', 'wb') as image:
+        shutil.copyfileobj(urlopen(parser.image_url), image)
+    else:
+      not_found.append(name)
+  except HTTPError as err:
+    print '  ' + str(err)
+    not_found.append(name)
 
-print 'Missing: ' + str(missing)
+print 'Not found: ' + str(not_found)

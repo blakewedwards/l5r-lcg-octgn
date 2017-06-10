@@ -350,7 +350,7 @@ You cannot place fate on this character when it is played from one of your provi
       <property name="Glory" value="1"/>
       <property name="Card Number" value="70"/>
     </card>
-    <card id="508003aa-e833-4cb5-99a7-15cb9dab508d" name="Akodo Guns?" size="dynasty">
+    <card id="508003aa-e833-4cb5-99a7-15cb9dab508d" name="Akodo Gunso" size="dynasty">
       <property name="Clan" value="Lion"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi."/>
