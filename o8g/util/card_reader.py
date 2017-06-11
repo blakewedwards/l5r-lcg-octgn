@@ -1,6 +1,7 @@
 import csv
 import os
 import re
+#import string
 import sys
 from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
@@ -230,6 +231,8 @@ for key in ids.keys():
   if int(key) < 1 or int(key) > num_cards:
     sys.exit('Invalid card number in uuid keys')
 
+icon_regex = re.compile(r'\[\w+\]', re.IGNORECASE)
+
 # Use an attribute dict to make accessing the columns convenient, including stripping whitespace on results
 class AttributeDict(dict):
   def __init__(self, *args, **kwargs):
@@ -241,7 +244,12 @@ class AttributeDict(dict):
 
   __setattr__ = dict.__setitem__
 
-icon_regex = re.compile(r'\[\w+\]', re.IGNORECASE)
+def add_property(card, name, value):
+  SubElement(card, 'property', {'name': name, 'value': value})
+
+def add_property_if_nonempty(card, name, value):
+  if value:
+    add_property(card, name, value)
 
 if (len(sys.argv) != 2):
   sys.exit('Usage: {} <l5r.csv>'.format(os.path.basename(sys.argv[0])))
@@ -254,55 +262,39 @@ with open(sys.argv[1], 'rb') as f:
   for row in sorted(reader, key=lambda r: r['id'].strip() and int(r['id']) or num_cards+1):
     row = AttributeDict(row)
     if row.id:
-      attr = {'id': row.id in ids and ids[row.id] or '', 'name': row.name}
+      attr = {'id': ids[row.id], 'name': row.name}
       if row.deck:
         attr['size'] = row.deck.lower()
       card = SubElement(cards, 'card', attr)
-      if row.clan:
-        SubElement(card, 'property', {'name': 'Clan', 'value': row.clan.capitalize()})
-      else:
-        SubElement(card, 'property', {'name': 'Clan', 'value': 'Neutral'})
 
-      SubElement(card, 'property', {'name': 'Type', 'value': row.type.capitalize()})
+      add_property(card, 'Clan', row.clan.capitalize() if row.clan else 'Neutral')
+      add_property(card, 'Type', row.type.capitalize())
 
       if row.unique == '1':
-        SubElement(card, 'property', {'name': 'Unique', 'value': 'Unique'})
+        add_property(card, 'Unique', 'Unique')
 
-      SubElement(card, 'property', {'name': 'Traits', 'value': row.traits})
-      SubElement(card, 'property', {'name': 'Text', 'value': re.sub(icon_regex, lambda m: m.group().title(), row.text)})
-
-      if row.cost:
-        SubElement(card, 'property', {'name': 'Cost', 'value': row.cost})
+      add_property(card, 'Traits', row.traits)
+      #add_property(card, 'Text', filter(lambda x: x in string.printable, re.sub(icon_regex, lambda m: m.group().title(), row.text)))
+      add_property(card, 'Text', re.sub(icon_regex, lambda m: m.group().title(), row.text))
+      add_property_if_nonempty(card, 'Cost', row.cost)
 
       if row.military:
-        SubElement(card, 'property', {'name': row.type.capitalize() == 'Attachment' and 'Bonus Military Skill' or 'Military Skill', 'value': row.military})
+        add_property(card, row.type.capitalize() == 'Attachment' and 'Bonus Military Skill' or 'Military Skill', row.military)
       elif row.type.capitalize() == 'Character':
-        SubElement(card, 'property', {'name': 'Military Skill', 'value': '-'})
+        add_property(card, 'Military Skill', '-')
 
       if row.political:
-        SubElement(card, 'property', {'name': row.type.capitalize() == 'Attachment' and 'Bonus Political Skill' or 'Political Skill', 'value': row.political})
+        add_property(card, row.type.capitalize() == 'Attachment' and 'Bonus Political Skill' or 'Political Skill', row.political)
       elif row.type.capitalize() == 'Character':
-        SubElement(card, 'property', {'name': 'Political Skill', 'value': '-'})
+        add_property(card, 'Political Skill', '-')
 
-      if row.glory:
-        SubElement(card, 'property', {'name': 'Glory', 'value': row.glory})
-
-      if row.strength:
-        SubElement(card, 'property', {'name': 'Bonus Strength', 'value': row.strength})
-
-      if row.honor:
-        SubElement(card, 'property', {'name': 'Starting Honor', 'value': row.honor})
-
-      if row.fate:
-        SubElement(card, 'property', {'name': 'Fate Value', 'value': row.fate})
-
-      if row.influence:
-        SubElement(card, 'property', {'name': 'Influence Value', 'value': row.influence})
-
-      if row.ring:
-        SubElement(card, 'property', {'name': 'Ring', 'value': row.ring.capitalize()})
-
-      SubElement(card, 'property', {'name': 'Card Number', 'value': row.id})
+      add_property_if_nonempty(card, 'Glory', row.glory)
+      add_property_if_nonempty(card, 'Bonus Strength', row.strength)
+      add_property_if_nonempty(card, 'Starting Honor', row.honor)
+      add_property_if_nonempty(card, 'Fate Value', row.fate)
+      add_property_if_nonempty(card, 'Influence Value', row.influence)
+      add_property_if_nonempty(card, 'Ring', row.ring.capitalize())
+      add_property(card, 'Card Number', row.id)
 
 reparsed = minidom.parseString(tostring(set))
 print reparsed.toprettyxml(indent='  ')
