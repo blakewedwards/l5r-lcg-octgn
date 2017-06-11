@@ -6,7 +6,7 @@ from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
 
 # Usage: copy the full table (with column headers) from https://l5r.gamepedia.com/User:Intolerancegaming?profile=no
-# Paste it into a spreadsheet and save as csv to l5r.csv. Delimiter is , and text wrapper is ", use ascii (western europe).
+# Paste it into a spreadsheet and save as csv. Delimiter is , and text wrapper is ", use ascii (western europe).
 
 # A bit clunky but some IDs had already been assigned and wanted to maintain them.
 ids = {
@@ -230,6 +230,17 @@ for key in ids.keys():
   if int(key) < 1 or int(key) > num_cards:
     sys.exit('Invalid card number in uuid keys')
 
+# Use an attribute dict to make accessing the columns convenient, including stripping whitespace on results
+class AttributeDict(dict):
+  def __init__(self, *args, **kwargs):
+    super(AttributeDict, self).__init__(*args, **kwargs)
+    self.__dict__ = self
+
+  def __getattr__(self, attr):
+    return self.__getitem__(attr).strip()
+
+  __setattr__ = dict.__setitem__
+
 icon_regex = re.compile(r'\[\w+\]', re.IGNORECASE)
 
 if (len(sys.argv) != 2):
@@ -240,57 +251,58 @@ cards = SubElement(set, 'cards')
 
 with open(sys.argv[1], 'rb') as f:
   reader = csv.DictReader(f, delimiter=',', quotechar='"')
-  for row in sorted(reader, key=lambda r: r['ID'].strip() and int(r['ID']) or num_cards+1):
-    if row['ID'].strip() != '':
-      attr = {'id': row['ID'].strip() in ids and ids[row['ID'].strip()] or '', 'name': row['Name'].strip()}
-      if row['Deck'].strip():
-        attr['size'] = row['Deck'].strip().lower()
+  for row in sorted(reader, key=lambda r: r['id'].strip() and int(r['id']) or num_cards+1):
+    row = AttributeDict(row)
+    if row.id:
+      attr = {'id': row.id in ids and ids[row.id] or '', 'name': row.name}
+      if row.deck:
+        attr['size'] = row.deck.lower()
       card = SubElement(cards, 'card', attr)
-      if row['Clan'].strip():
-        SubElement(card, 'property', {'name': 'Clan', 'value': row['Clan'].strip().capitalize()})
+      if row.clan:
+        SubElement(card, 'property', {'name': 'Clan', 'value': row.clan.capitalize()})
       else:
         SubElement(card, 'property', {'name': 'Clan', 'value': 'Neutral'})
 
-      SubElement(card, 'property', {'name': 'Type', 'value': row['Type'].strip().capitalize()})
+      SubElement(card, 'property', {'name': 'Type', 'value': row.type.capitalize()})
 
-      if row['Unique'].strip() == '1':
+      if row.unique == '1':
         SubElement(card, 'property', {'name': 'Unique', 'value': 'Unique'})
 
-      SubElement(card, 'property', {'name': 'Traits', 'value': row['Traits'].strip()})
-      SubElement(card, 'property', {'name': 'Text', 'value': re.sub(icon_regex, lambda m: m.group().title(), row['Text'].strip())})
+      SubElement(card, 'property', {'name': 'Traits', 'value': row.traits})
+      SubElement(card, 'property', {'name': 'Text', 'value': re.sub(icon_regex, lambda m: m.group().title(), row.text)})
 
-      if row['Cost'].strip() != '':
-        SubElement(card, 'property', {'name': 'Cost', 'value': row['Cost'].strip()})
+      if row.cost:
+        SubElement(card, 'property', {'name': 'Cost', 'value': row.cost})
 
-      if row['Military'].strip() != '':
-        SubElement(card, 'property', {'name': row['Type'].strip().capitalize() == 'Attachment' and 'Bonus Military Skill' or 'Military Skill', 'value': row['Military'].strip()})
-      elif row['Type'].strip().capitalize() == 'Character':
+      if row.military:
+        SubElement(card, 'property', {'name': row.type.capitalize() == 'Attachment' and 'Bonus Military Skill' or 'Military Skill', 'value': row.military})
+      elif row.type.capitalize() == 'Character':
         SubElement(card, 'property', {'name': 'Military Skill', 'value': '-'})
 
-      if row['Political'].strip() != '':
-        SubElement(card, 'property', {'name': row['Type'].strip().capitalize() == 'Attachment' and 'Bonus Political Skill' or 'Political Skill', 'value': row['Political'].strip()})
-      elif row['Type'].strip().capitalize() == 'Character':
+      if row.political:
+        SubElement(card, 'property', {'name': row.type.capitalize() == 'Attachment' and 'Bonus Political Skill' or 'Political Skill', 'value': row.political})
+      elif row.type.capitalize() == 'Character':
         SubElement(card, 'property', {'name': 'Political Skill', 'value': '-'})
 
-      if row['Glory'].strip() != '':
-        SubElement(card, 'property', {'name': 'Glory', 'value': row['Glory'].strip()})
+      if row.glory:
+        SubElement(card, 'property', {'name': 'Glory', 'value': row.glory})
 
-      if row['Strength'].strip() != '':
-        SubElement(card, 'property', {'name': 'Bonus Strength', 'value': row['Strength'].strip()})
+      if row.strength:
+        SubElement(card, 'property', {'name': 'Bonus Strength', 'value': row.strength})
 
-      if row['Honor'].strip() != '':
-        SubElement(card, 'property', {'name': 'Starting Honor', 'value': row['Honor'].strip()})
+      if row.honor:
+        SubElement(card, 'property', {'name': 'Starting Honor', 'value': row.honor})
 
-      if row['Fate'].strip() != '':
-        SubElement(card, 'property', {'name': 'Fate Value', 'value': row['Fate'].strip()})
+      if row.fate:
+        SubElement(card, 'property', {'name': 'Fate Value', 'value': row.fate})
 
-      if row['Influence'].strip() != '':
-        SubElement(card, 'property', {'name': 'Influence Value', 'value': row['Influence'].strip()})
+      if row.influence:
+        SubElement(card, 'property', {'name': 'Influence Value', 'value': row.influence})
 
-      if row['Ring'].strip() != '':
-        SubElement(card, 'property', {'name': 'Ring', 'value': row['Ring'].strip().capitalize()})
+      if row.ring:
+        SubElement(card, 'property', {'name': 'Ring', 'value': row.ring.capitalize()})
 
-      SubElement(card, 'property', {'name': 'Card Number', 'value': row['ID'].strip()})
+      SubElement(card, 'property', {'name': 'Card Number', 'value': row.id})
 
 reparsed = minidom.parseString(tostring(set))
 print reparsed.toprettyxml(indent='  ')
