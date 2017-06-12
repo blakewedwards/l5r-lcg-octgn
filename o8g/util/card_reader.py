@@ -2,11 +2,11 @@ import csv
 import os
 import re
 import sys
-from xml.etree.ElementTree import Element, SubElement, tostring
-from xml.dom import minidom
+from xml.etree.ElementTree import Element, ElementTree, SubElement
 
 # Usage: copy the full table (with column headers) from https://l5r.gamepedia.com/User:Intolerancegaming?profile=no
-# Paste it into a spreadsheet and save as csv. Delimiter is , and text wrapper is ", use ascii (western europe).
+# Paste it into a spreadsheet and save as csv with delimiter ',' and text wrapper '"'. Use ascii (western europe)
+# or UTF-8. My experience has been positive with libre office and poor with excel, but was limited to the starter version.
 
 # A bit clunky but some IDs had already been assigned and wanted to maintain them.
 ids = {
@@ -230,7 +230,7 @@ for key in ids.keys():
   if int(key) < 1 or int(key) > num_cards:
     sys.exit('Invalid card number in uuid keys')
 
-icon_regex = re.compile(r'\[\w+\]', re.IGNORECASE)
+icon_regex = re.compile(r'\[\w+\]')
 
 # Use an attribute dict to make accessing the columns convenient, including stripping whitespace on results
 class AttributeDict(dict):
@@ -238,7 +238,7 @@ class AttributeDict(dict):
     super(AttributeDict, self).__init__(*args, **kwargs)
 
   def __getattr__(self, attr):
-    return self.__getitem__(attr).strip()
+    return self.__getitem__(attr).decode('UTF-8').strip() # TODO: Remove the emdashes
 
   __setattr__ = dict.__setitem__
 
@@ -249,15 +249,15 @@ def add_property_if_nonempty(card, name, value):
   if value:
     add_property(card, name, value)
 
-if (len(sys.argv) != 2):
-  sys.exit('Usage: {} <l5r.csv>'.format(os.path.basename(sys.argv[0])))
+if (len(sys.argv) != 3):
+  sys.exit('Usage: {} <l5r.csv> <out.xml>'.format(os.path.basename(sys.argv[0])))
 
 set = Element('set')
 cards = SubElement(set, 'cards')
 
 with open(sys.argv[1], 'rb') as f:
-  reader = csv.DictReader(f, delimiter=',', quotechar='"')
-  for row in sorted(reader, key=lambda r: r['id'].strip() and int(r['id']) or num_cards+1):
+  reader = csv.DictReader(f, delimiter=',', quotechar='"') # TODO: args needed?
+  for row in sorted(reader, key=lambda r: int(r['id']) if r['id'].strip() else num_cards+1):
     row = AttributeDict(row)
     if row.id:
       attr = {'id': ids[row.id], 'name': row.name}
@@ -276,12 +276,12 @@ with open(sys.argv[1], 'rb') as f:
       add_property_if_nonempty(card, 'Cost', row.cost)
 
       if row.military:
-        add_property(card, row.type.capitalize() == 'Attachment' and 'Bonus Military Skill' or 'Military Skill', row.military)
+        add_property(card, 'Bonus Military Skill' if row.type.capitalize() == 'Attachment' else 'Military Skill', row.military)
       elif row.type.capitalize() == 'Character':
         add_property(card, 'Military Skill', '-')
 
       if row.political:
-        add_property(card, row.type.capitalize() == 'Attachment' and 'Bonus Political Skill' or 'Political Skill', row.political)
+        add_property(card, 'Bonus Political Skill' if row.type.capitalize() == 'Attachment' else 'Political Skill', row.political)
       elif row.type.capitalize() == 'Character':
         add_property(card, 'Political Skill', '-')
 
@@ -293,5 +293,4 @@ with open(sys.argv[1], 'rb') as f:
       add_property_if_nonempty(card, 'Ring', row.ring.capitalize())
       add_property(card, 'Card Number', row.id)
 
-reparsed = minidom.parseString(tostring(set))
-print reparsed.toprettyxml(indent='  ')
+ElementTree(set).write(open(sys.argv[2], 'w'), encoding='UTF-8')
