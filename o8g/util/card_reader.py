@@ -1,7 +1,6 @@
 import csv
 import os
 import re
-#import string
 import sys
 from xml.etree.ElementTree import Element, SubElement, tostring
 from xml.dom import minidom
@@ -237,7 +236,6 @@ icon_regex = re.compile(r'\[\w+\]', re.IGNORECASE)
 class AttributeDict(dict):
   def __init__(self, *args, **kwargs):
     super(AttributeDict, self).__init__(*args, **kwargs)
-    self.__dict__ = self
 
   def __getattr__(self, attr):
     return self.__getitem__(attr).strip()
@@ -274,7 +272,6 @@ with open(sys.argv[1], 'rb') as f:
         add_property(card, 'Unique', 'Unique')
 
       add_property(card, 'Traits', row.traits)
-      #add_property(card, 'Text', filter(lambda x: x in string.printable, re.sub(icon_regex, lambda m: m.group().title(), row.text)))
       add_property(card, 'Text', re.sub(icon_regex, lambda m: m.group().title(), row.text))
       add_property_if_nonempty(card, 'Cost', row.cost)
 
