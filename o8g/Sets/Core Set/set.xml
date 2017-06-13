@@ -95,6 +95,15 @@
       <property name="Ring" value="Fire"/>
       <property name="Card Number" value="21"/>
     </card>
+    <card id="dbcd9eb7-0c13-4906-8d40-339b44a4e6f7" name="Pilgrimage">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Province"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="During conflicts at this province, cancel all ring effects. (If this province breaks, resolve ring effects as normal.)"/>
+      <property name="Bonus Strength" value="5"/>
+      <property name="Ring" value="Void"/>
+      <property name="Card Number" value="22"/>
+    </card>
     <card id="35f74bd9-ac4b-4a32-b6d8-667573a006c7" name="Eager Scout" size="dynasty">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
