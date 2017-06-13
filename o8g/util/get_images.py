@@ -9,7 +9,7 @@ if (len(sys.argv) != 3):
   sys.exit('Usage: {} <set.xml> <output_folder>'.format(os.path.basename(sys.argv[0])))
 
 class PNGPageParser(HTMLParser):
-  def __init__(self, name):
+  def __init__(self):
     HTMLParser.__init__(self)
     self.image_url = ''
     self.file = False
@@ -25,16 +25,16 @@ class PNGPageParser(HTMLParser):
       self.file = False
 
 user_agent = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
-name_swaps = {'Yojin no Shiro': 'Shiro no Yojin'}
+name_swaps = {'Yojin no Shiro': 'Shiro no Yojin'} # TODO: UTF-8 support changes this, need the header if have utf-8 literal
 jpgs = ['Deathseeker']
-cards = [(card.getAttribute('name'), card.getAttribute('id')) for card in parse(sys.argv[1]).getElementsByTagName('card')]
+cards = [(card.getAttribute('name'), card.getAttribute('id')) for card in parse(sys.argv[1]).getElementsByTagName('card')] # TODO: Might need to decode name
 not_found = []
 for (name, id) in cards:
   name = name_swaps.get(name, name)
   url = 'http://l5r.gamepedia.com/File:{}.{}'.format(name.replace(' ', '_'), 'jpg' if name in jpgs else 'png')
   try:
-    parser = PNGPageParser(name)
-    print 'GET ' + url
+    parser = PNGPageParser()
+    print 'GET ' + url # TODO: Might not be able to print if UTF-8?
     parser.feed(urlopen(Request(url, None, {'User-Agent': user_agent})).read())
     parser.close()
     if parser.image_url:
