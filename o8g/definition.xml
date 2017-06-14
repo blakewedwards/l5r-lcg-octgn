@@ -37,6 +37,7 @@
     <property name="Bonus Political Skill" type="String"/>
     <property name="Ring" type="String"/>
     <property name="Card Number" type="Integer"/>
+    <size name="honor_dial" back="card/honor_dial.png" front="card/honor_dial.png" width="63" height="63"/>
     <size name="dynasty" back="card/dynasty.png" front="card/dynasty.png" width="63" height="88"/>
     <size name="conflict" back="card/conflict.png" front="card/conflict.png" width="63" height="88"/>
   </card>
@@ -47,6 +48,7 @@
     background="table/background.png"
     backgroundStyle="uniformToFill"
     ordered="False">
+    <groupaction menu="Set honor dial" execute="set_honor_dial" showIf="setup_not_required"/>
     <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
     <groupaction menu="End turn" execute="end_turn" showIf="setup_not_required"/>
     <cardaction menu="Default" execute="table_default_card_action" default="True" showIf="lambda: False"/>

@@ -11,7 +11,28 @@ DYNASTY_DISCARD = 'Dynasty Discard'
 CONFLICT_DISCARD = 'Conflict Discard'
 STARTING_HAND_SIZE = 4
 CARD_GAP_RATIO = 1.0/3.0 # Ratio to width for space inbetween cards
-HONOR_DIAL_1 = '4c4f1d22-f2e8-46ff-8446-9aa6ec0a45a6'
+HONOR_DIAL_1 = '4c4f1d22-f2e8-46ff-8446-9aa6ec0a45a6' # Font constantia 24
+HONOR_DIAL_CHOICES = 5
+
+def set_honor_dial(group, x=0, y=0):
+  mute()
+  notify("{} is setting their honor dial.".format(me))
+  honor_dial = [card for card in group if card.controller == me and card.type == 'Honor Dial']
+  if len(honor_dial) != 1:
+    whisper('Error: Honor dial not found.')
+    return
+  honor_dial = honor_dial[0]
+  choice = askChoice('How much honor would you like to bid?', [str(c) for c in range(1, HONOR_DIAL_CHOICES + 1)])
+  if choice == 0:
+    notify('{} did not select a bid.'.format(me))
+    return
+  else:
+    notify("{} has selected a bid.".format(me))
+
+  if honor_dial.isFaceUp:
+    honor_dial.isFaceUp = False
+  honor_dial.peek()
+  honor_dial.alternate = '' if choice == 1 else str(choice)
 
 def setup_required(group, x=0, y=0):
   return bool(me.getGlobalVariable('setup_required'))
