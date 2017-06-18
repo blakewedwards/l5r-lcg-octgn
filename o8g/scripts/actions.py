@@ -67,8 +67,8 @@ def setup(group, x=0, y=0):
   width = me.hand[0].width
   height = me.hand[0].height
   gap = width*CARD_GAP_RATIO
-  me.piles[DYNASTY].shuffle
-  me.piles[CONFLICT].shuffle
+  me.piles[DYNASTY].shuffle()
+  me.piles[CONFLICT].shuffle()
   for i, card in enumerate(me.hand[1:]):
     card.moveToTable(-2.5*width - 2*gap + i*(width+gap), height + 2*gap, True)
     if i > 0:
@@ -141,6 +141,12 @@ def is_dynasty(card):
 def is_conflict(card):
   return card.size == 'conflict'
 
+def get_pile(card):
+  if is_dynasty(card):
+    return card.owner.piles[DYNASTY]
+  elif is_conflict(card):
+    return card.owner.piles[CONFLICT]
+
 def get_discard_pile(card):
   if is_dynasty(card):
     return card.owner.piles[DYNASTY_DISCARD]
@@ -151,6 +157,12 @@ def discard(card, x=0, y=0):
   pile = get_discard_pile(card)
   if pile is not None:
     card.moveTo(pile)
+  return pile
+
+def move_to_deck_bottom(card, x=0, y=0):
+  pile = get_pile(card)
+  if pile is not None:
+    card.moveToBottom(pile)
   return pile
 
 def replace(card, x=0, y=0):
@@ -228,3 +240,45 @@ def end_turn(table, x=0, y=0):
   notify('{} resolves the turn {} regroup phase.'.format(me, turn))
   turn += 1
   setGlobalVariable(TURN, str(turn))
+
+def shuffle(group):
+  group.shuffle()
+
+def search_top(group):
+  mute()
+  num = askInteger('How many cards to search?', 2)
+  if num is None:
+    return
+  num = min(num, len(group)) # TODO: Might be that it can't be used
+  if num == 0:
+    return
+
+  notify('{} is searching the top {} card(s) of their {}'.format(me, num, group.name))
+  dialog = cardDlg(group.top(num))
+  dialog.title = 'Select a card'
+  dialog.min = 0
+  dialog.max = num
+  cards = dialog.show()
+
+  if me.isInverted:
+    x1 = -150
+    y1 = -288
+    i = 50
+  else:
+    x1 = 150
+    y1 = 200
+    i = -50
+
+  if cards is not None:
+    for card in cards:
+      card.moveToTable(x1, y1, True)
+      x1 += i
+      card.peek()
+      card.select()
+  else:
+    cards = []
+
+  for card in group.top(num - len(cards)):
+    card.moveToBottom(group)
+
+  notify('{} selected {} cards and put the remaining on the bottom of their deck.'.format(me, len(cards)))

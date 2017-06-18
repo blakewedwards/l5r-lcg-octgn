@@ -65,6 +65,7 @@
     <cardaction menu="Play" execute="play_dynasty"/>
     <cardaction menu="Refill" execute="refill"/>
     <cardaction menu="Replace" execute="replace"/>
+    <cardaction menu="Move to bottom of deck" execute="move_to_deck_bottom"/>
     <!--cardaction menu="Add fate" execute="add_fate" showIf="is_character"/-->
     <!--cardaction menu="Remove fate" execute="add_fate" showIf="is_character"/-->
   </table>
@@ -78,9 +79,14 @@
       <groupaction menu="Random discard" execute="random_discard_from" showIf="setup_not_required"/>
       <cardaction menu="Play" execute="play_conflict" default="True" showIf="setup_not_required"/>
     </hand>
-    <group name="Dynasty Deck" icon="card/dynasty.png" visibility="none" width="63" height="88"/>
+    <group name="Dynasty Deck" icon="card/dynasty.png" visibility="none" width="63" height="88">
+      <groupaction menu="Shuffle" execute="shuffle"/>
+    </group>
     <group name="Dynasty Discard" icon="card/dynasty.png" visibility="all" width="63" height="88"/>
-    <group name="Conflict Deck" icon="card/conflict.png" visibility="none" width="63" height="88"/>
+    <group name="Conflict Deck" icon="card/conflict.png" visibility="none" width="63" height="88">
+      <groupaction menu="Search top X" execute="search_top"/>
+      <groupaction menu="Shuffle" execute="shuffle"/>
+    </group>
     <group name="Conflict Discard" icon="card/conflict.png" visibility="all" width="63" height="88"/>
   </player>
   <deck>
