@@ -51,7 +51,7 @@
       <property name="Influence Value" value="10"/>
       <property name="Card Number" value="4"/>
     </card>
-    <card id="40683c9f-b1e9-4055-88bd-ce2a2e846297" name="Defend the Wall">
+    <card id="40683c9f-b1e9-4055-88bd-ce2a2e846297" name="Defend the Wall" size="province">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
@@ -59,7 +59,7 @@
       <property name="Bonus Strength" value="4"/>
       <property name="Card Number" value="8"/>
     </card>
-    <card id="98e106b6-7bb4-47c5-9fe7-dd290e3d42df" name="The Art of Peace">
+    <card id="98e106b6-7bb4-47c5-9fe7-dd290e3d42df" name="The Art of Peace" size="province">
       <property name="Clan" value="Crane"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
@@ -68,7 +68,7 @@
       <property name="Ring" value="Air"/>
       <property name="Card Number" value="9"/>
     </card>
-    <card id="9695237f-1fb2-4716-936e-50fbcf9274b3" name="The Art of War">
+    <card id="9695237f-1fb2-4716-936e-50fbcf9274b3" name="The Art of War" size="province">
       <property name="Clan" value="Lion"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
@@ -77,7 +77,7 @@
       <property name="Ring" value="Water"/>
       <property name="Card Number" value="11"/>
     </card>
-    <card id="99c8a45a-e16a-406b-9029-acf90e0c49bd" name="Mori Kuroi">
+    <card id="99c8a45a-e16a-406b-9029-acf90e0c49bd" name="Mori Kuroi" size="province">
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
@@ -86,7 +86,7 @@
       <property name="Ring" value="Void"/>
       <property name="Card Number" value="12"/>
     </card>
-    <card id="cb8186ae-7c61-4be1-b4de-fb43e2b7a44c" name="Endless Plains">
+    <card id="cb8186ae-7c61-4be1-b4de-fb43e2b7a44c" name="Endless Plains" size="province">
       <property name="Clan" value="Unicorn"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
@@ -94,7 +94,7 @@
       <property name="Bonus Strength" value="2"/>
       <property name="Card Number" value="14"/>
     </card>
-    <card id="82de5aed-145f-4fda-812e-5d1cdf80b0a8" name="Ancestral Lands">
+    <card id="82de5aed-145f-4fda-812e-5d1cdf80b0a8" name="Ancestral Lands" size="province">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
@@ -102,7 +102,7 @@
       <property name="Bonus Strength" value="5"/>
       <property name="Card Number" value="15"/>
     </card>
-    <card id="8f0246b6-a8dd-4939-891c-7143c2ac9b53" name="Elemental Fury">
+    <card id="8f0246b6-a8dd-4939-891c-7143c2ac9b53" name="Elemental Fury" size="province">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
@@ -111,7 +111,7 @@
       <property name="Ring" value="Water"/>
       <property name="Card Number" value="16"/>
     </card>
-    <card id="a8c4f60e-6c36-4bd7-99da-eef1c3da2aab" name="Night Raid">
+    <card id="a8c4f60e-6c36-4bd7-99da-eef1c3da2aab" name="Night Raid" size="province">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
@@ -120,7 +120,7 @@
       <property name="Ring" value="Fire"/>
       <property name="Card Number" value="21"/>
     </card>
-    <card id="dbcd9eb7-0c13-4906-8d40-339b44a4e6f7" name="Pilgrimage">
+    <card id="dbcd9eb7-0c13-4906-8d40-339b44a4e6f7" name="Pilgrimage" size="province">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>

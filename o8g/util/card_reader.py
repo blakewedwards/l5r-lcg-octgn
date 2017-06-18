@@ -263,6 +263,8 @@ with open(sys.argv[1], 'rb') as f:
       attr = {'id': ids[row.id], 'name': row.name}
       if row.deck:
         attr['size'] = row.deck.lower()
+      elif row.type.capitalize() == 'Province':
+        attr['size'] = row.type.lower()
       card = SubElement(cards, 'card', attr)
 
       add_property(card, 'Clan', row.clan.capitalize() if row.clan else 'Neutral')
