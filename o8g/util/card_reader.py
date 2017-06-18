@@ -238,7 +238,7 @@ class AttributeDict(dict):
     super(AttributeDict, self).__init__(*args, **kwargs)
 
   def __getattr__(self, attr):
-    return self.__getitem__(attr).strip()#.decode('UTF-8').strip() # TODO: Remove the emdashes
+    return self.__getitem__(attr).decode('UTF-8').strip() # TODO: Remove the emdashes
 
   __setattr__ = dict.__setitem__
 
@@ -293,4 +293,4 @@ with open(sys.argv[1], 'rb') as f:
       add_property_if_nonempty(card, 'Ring', row.ring.capitalize())
       add_property(card, 'Card Number', row.id)
 
-ElementTree(set).write(open(sys.argv[2], 'w'))#, encoding='UTF-8')
+ElementTree(set).write(open(sys.argv[2], 'w'), encoding='UTF-8')
