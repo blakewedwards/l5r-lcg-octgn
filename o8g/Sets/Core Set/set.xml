@@ -29,6 +29,36 @@
     <card id="b57c595e-d5ae-4fba-82c8-954a0b78c4a8" name="Imperial Favor" size="imperial_favor">
       <property name="Type" value="Imperial Favor"/>
     </card>
+    <card id="6d19021d-9208-4f3e-8e36-dc2ea28d755e" name="Air Ring">
+      <property name="Type" value="Ring"/>
+      <alternate name="Air Ring" type="Political">
+        <property name="Type" value="Ring"/>
+      </alternate>
+    </card>
+    <card id="7a39169d-1c94-4a2a-9994-105a928dcc7e" name="Earth Ring">
+      <property name="Type" value="Ring"/>
+      <alternate name="Earth Ring" type="Political">
+        <property name="Type" value="Ring"/>
+      </alternate>
+    </card>
+    <card id="459e0ed9-1dac-4660-b9ba-c0e13bb7db3c" name="Fire Ring">
+      <property name="Type" value="Ring"/>
+      <alternate name="Fire Ring" type="Political">
+        <property name="Type" value="Ring"/>
+      </alternate>
+    </card>
+    <card id="70643b2b-868c-4b2a-84e0-107e0d833ebd" name="Void Ring">
+      <property name="Type" value="Ring"/>
+      <alternate name="Void Ring" type="Political">
+        <property name="Type" value="Ring"/>
+      </alternate>
+    </card>
+    <card id="d5e3fa69-0ab9-4a26-9449-db60ac62e098" name="Water Ring">
+      <property name="Type" value="Ring"/>
+      <alternate name="Water Ring" type="Political">
+        <property name="Type" value="Ring"/>
+      </alternate>
+    </card>
     <card id="8c53e061-b416-4d32-84a1-596c4f3d005a" name="Shizuka Toshi">
       <property name="Clan" value="Crane"/>
       <property name="Type" value="Stronghold"/>

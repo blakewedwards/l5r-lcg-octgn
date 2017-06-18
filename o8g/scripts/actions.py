@@ -15,6 +15,17 @@ STARTING_HAND_SIZE = 4
 CARD_GAP_RATIO = 1.0/3.0 # Ratio to width for space inbetween cards
 HONOR_DIAL_1 = '4c4f1d22-f2e8-46ff-8446-9aa6ec0a45a6' # Font constantia 24
 HONOR_DIAL_CHOICES = 5
+AIR_RING = '6d19021d-9208-4f3e-8e36-dc2ea28d755e'
+EARTH_RING = '7a39169d-1c94-4a2a-9994-105a928dcc7e'
+FIRE_RING = '459e0ed9-1dac-4660-b9ba-c0e13bb7db3c'
+VOID_RING = '70643b2b-868c-4b2a-84e0-107e0d833ebd'
+WATER_RING = 'd5e3fa69-0ab9-4a26-9449-db60ac62e098'
+RINGS = [AIR_RING, EARTH_RING, FIRE_RING, VOID_RING, WATER_RING]
+RING_X = 325
+RING_Y_START = -225
+RING_Y_GAP_RATIO = 1
+TYPE_RING = 'Ring'
+RING_POLITICAL = 'Political'
 
 def set_honor_dial(group, x=0, y=0):
   mute()
@@ -77,6 +88,11 @@ def setup(group, x=0, y=0):
   notify('{} sets up.'.format(me))
   me.setGlobalVariable('setup_required', '')
   table.create('b57c595e-d5ae-4fba-82c8-954a0b78c4a8', 668, 0, persist=True)
+  ring_height = 0
+  for i, ring_id in enumerate(RINGS):
+    ring = table.create(ring_id, RING_X, RING_Y_START + i*ring_height*RING_Y_GAP_RATIO, persist=True)
+    ring.isFaceUp = True
+    ring_height = ring.height
 
 def table_default_card_action(card):
   if not card.isFaceUp:
@@ -113,6 +129,9 @@ def toggle_break(card, x=0, y=0):
   notify('{} {} {}.'.format(me, 'breaks' if card.orientation & Rot180 == Rot180 else 'unbreaks', card))
 
 def flip(card, x=0, y=0):
+  if card.type == TYPE_RING:
+    card.alternate = RING_POLITICAL if not card.alternate else ''
+    return
   card.isFaceUp = not card.isFaceUp
 
 def is_dynasty(card):
