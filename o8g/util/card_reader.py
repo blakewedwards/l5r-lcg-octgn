@@ -45,9 +45,9 @@ ids = {
     '33': '0e3f1103-5063-40c9-8f6f-57aec2cdc249',
     '34': 'b9591ff0-c32f-4bd0-9ead-88392c7e5161',
     '35': '59f6b7a8-81fe-4f5c-82ea-9cd0d0cc3eae',
-    '36': 'b59201dd-a763-4944-87f4-c21b48a51432',
+    '36': '8d80f714-c1f8-40ab-9f12-a4d18b82337a',
     '37': 'c7725dcb-9108-4067-9372-ad9e363c0415',
-    '38': '8d80f714-c1f8-40ab-9f12-a4d18b82337a',
+    '38': 'b59201dd-a763-4944-87f4-c21b48a51432',
     '39': '7ddc9756-eaea-4905-b7c7-e9e0b83d1d4a',
     '40': 'f364aac3-9e20-4b59-bebc-19627b0ba91d',
     '41': 'b73d6577-5532-4bd9-9843-0187dd3feff2',
@@ -238,7 +238,7 @@ class AttributeDict(dict):
     super(AttributeDict, self).__init__(*args, **kwargs)
 
   def __getattr__(self, attr):
-    return self.__getitem__(attr).decode('UTF-8').strip() # TODO: Remove the emdashes
+    return self.__getitem__(attr).strip()#.decode('UTF-8').strip() # TODO: Remove the emdashes
 
   __setattr__ = dict.__setitem__
 
@@ -293,4 +293,4 @@ with open(sys.argv[1], 'rb') as f:
       add_property_if_nonempty(card, 'Ring', row.ring.capitalize())
       add_property(card, 'Card Number', row.id)
 
-ElementTree(set).write(open(sys.argv[2], 'w'), encoding='UTF-8')
+ElementTree(set).write(open(sys.argv[2], 'w'))#, encoding='UTF-8')
