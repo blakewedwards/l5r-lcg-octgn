@@ -74,7 +74,7 @@ def setup(group, x=0, y=0):
     card.moveTo(me.hand)
   notify('{} sets up.'.format(me))
   me.setGlobalVariable('setup_required', '')
-  return
+  table.create('b57c595e-d5ae-4fba-82c8-954a0b78c4a8', 668, 0, persist=True)
 
 def table_default_card_action(card):
   if not card.isFaceUp:

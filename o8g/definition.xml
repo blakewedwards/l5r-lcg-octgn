@@ -38,6 +38,7 @@
     <property name="Ring" type="String"/>
     <property name="Card Number" type="Integer"/>
     <size name="honor_dial" back="card/honor_dial.png" front="card/honor_dial.png" width="63" height="63"/>
+    <size name="imperial_favor" back="card/imperial_favor.png" front="card/imperial_favor.png" width="42" height="69"/>
     <size name="dynasty" back="card/dynasty.png" front="card/dynasty.png" width="63" height="88"/>
     <size name="conflict" back="card/conflict.png" front="card/conflict.png" width="63" height="88"/>
   </card>

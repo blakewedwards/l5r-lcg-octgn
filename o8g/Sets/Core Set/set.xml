@@ -24,6 +24,9 @@
         <property name="Type" value="Honor Dial"/>
       </alternate>
     </card>
+    <card id="b57c595e-d5ae-4fba-82c8-954a0b78c4a8" name="Imperial Favor" size="imperial_favor">
+      <property name="Type" value="Imperial Favor"/>
+    </card>
     <card id="8c53e061-b416-4d32-84a1-596c4f3d005a" name="Shizuka Toshi">
       <property name="Clan" value="Crane"/>
       <property name="Type" value="Stronghold"/>
