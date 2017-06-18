@@ -6,7 +6,9 @@
   gameVersion="0.0.1.0"
   version="1.0">
   <markers>
+    <marker id="054b9f42-ac6a-4cc2-9228-294d5df5fb7e" name="Dishonored"/>
     <marker id="1c469258-900d-44e7-b005-d3c5d0de3f95" name="Fate"/>
+    <marker id="af5fc343-121e-4ecc-9d21-f3886644b473" name="Honored"/>
   </markers>
   <cards>
     <card id="4c4f1d22-f2e8-46ff-8446-9aa6ec0a45a6" name="Honor Dial" size="honor_dial">

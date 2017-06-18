@@ -3,7 +3,9 @@ HONOR = 'Honor'
 TURN = 'turn'
 STARTING_HONOR = 'Starting Honor'
 PLAYER_FATE_VALUE = 'fate_value'
+DISHONORED = ('Dishonored', '054b9f42-ac6a-4cc2-9228-294d5df5fb7e')
 FATE = ('Fate', '1c469258-900d-44e7-b005-d3c5d0de3f95')
+HONORED = ('Honored', 'af5fc343-121e-4ecc-9d21-f3886644b473')
 FATE_VALUE = 'Fate Value'
 DYNASTY = 'Dynasty Deck'
 CONFLICT = 'Conflict Deck'
@@ -81,6 +83,18 @@ def table_default_card_action(card):
     flip(card)
   else:
     toggle_bow_ready(card)
+
+def honor(card, x=0, y=0):
+  if card.markers[DISHONORED]:
+    card.markers[DISHONORED] = 0
+  elif not card.markers[HONORED]:
+    card.markers[HONORED] = 1
+
+def dishonor(card, x=0, y=0):
+  if card.markers[HONORED]:
+    card.markers[HONORED] = 0
+  elif not card.markers[DISHONORED]:
+    card.markers[DISHONORED] = 1
 
 def add_fate(card, x=0, y=0):
   card.markers[FATE] += 1

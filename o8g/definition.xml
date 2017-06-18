@@ -56,6 +56,8 @@
     <cardaction menu="Default" execute="table_default_card_action" default="True" showIf="lambda: False"/>
     <cardaction menu="Add fate" execute="add_fate"/>
     <cardaction menu="Remove fate" execute="remove_fate"/>
+    <cardaction menu="Honor" execute="honor"/>
+    <cardaction menu="Dishonor" execute="dishonor"/>
     <cardaction menu="Bow/ready" execute="toggle_bow_ready"/>
     <cardaction menu="Break/unbreak" execute="toggle_break"/>
     <cardaction menu="Discard" execute="discard"/>
