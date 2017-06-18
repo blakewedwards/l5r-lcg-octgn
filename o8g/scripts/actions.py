@@ -282,3 +282,7 @@ def search_top(group):
     card.moveToBottom(group)
 
   notify('{} selected {} cards and put the remaining on the bottom of their deck.'.format(me, len(cards)))
+
+def flip_coin(group, x=0, y=0):
+  mute()
+  notify("{} flips a coin and gets {}.".format(me, 'heads' if rnd(1, 2) == 1 else 'tails'))

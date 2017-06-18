@@ -50,6 +50,7 @@
     background="table/background.png"
     backgroundStyle="uniformToFill"
     ordered="False">
+    <groupaction menu="Flip coin" execute="flip_coin" showIf="setup_not_required"/>
     <groupaction menu="Set honor dial" execute="set_honor_dial" showIf="setup_not_required"/>
     <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
     <groupaction menu="End turn" execute="end_turn" showIf="setup_not_required"/>
