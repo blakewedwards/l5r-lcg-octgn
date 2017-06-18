@@ -24,8 +24,9 @@ RINGS = [AIR_RING, EARTH_RING, FIRE_RING, VOID_RING, WATER_RING]
 RING_X = 325
 RING_Y_START = -225
 RING_Y_GAP_RATIO = 1
+TYPE_IMPERIAL_FAVOR = 'Imperial Favor'
 TYPE_RING = 'Ring'
-RING_POLITICAL = 'Political'
+ALTERNATE_POLITICAL = 'Political'
 
 def set_honor_dial(group, x=0, y=0):
   mute()
@@ -87,7 +88,7 @@ def setup(group, x=0, y=0):
     card.moveTo(me.hand)
   notify('{} sets up.'.format(me))
   me.setGlobalVariable('setup_required', '')
-  table.create('b57c595e-d5ae-4fba-82c8-954a0b78c4a8', 668, 0, persist=True)
+  table.create('b57c595e-d5ae-4fba-82c8-954a0b78c4a8', 668, 0, persist=True).isFaceUp = True
   ring_height = 0
   for i, ring_id in enumerate(RINGS):
     ring = table.create(ring_id, RING_X, RING_Y_START + i*ring_height*RING_Y_GAP_RATIO, persist=True)
@@ -129,8 +130,8 @@ def toggle_break(card, x=0, y=0):
   notify('{} {} {}.'.format(me, 'breaks' if card.orientation & Rot180 == Rot180 else 'unbreaks', card))
 
 def flip(card, x=0, y=0):
-  if card.type == TYPE_RING:
-    card.alternate = RING_POLITICAL if not card.alternate else ''
+  if card.type == TYPE_RING or card.type == TYPE_IMPERIAL_FAVOR:
+    card.alternate = ALTERNATE_POLITICAL if not card.alternate else ''
     return
   card.isFaceUp = not card.isFaceUp
 
