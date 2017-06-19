@@ -7,12 +7,22 @@
       <wordwrap height="20" width="85" align="center" valign="center" shrinktofit="True"/>
     </block>
     <block type="text" id="text">
-      <location x="25" y="482"/>
+      <location x="25" y="425"/>
       <text color="#000000" size="20" font="fonts/arial.ttf"/>
       <wordwrap height="100" width="380" shrinktofit="True"/>
     </block>
+    <block type="text" id="cost">
+      <location x="10" y="10"/>
+      <text color="#000000" size="48" font="fonts/arial.ttf"/>
+      <wordwrap height="50" width="50" align="center" valign="center" shrinktofit="True"/>
+    </block>
     <block type="text" id="traits-middle-name-top">
       <location x="70" y="415"/>
+      <text color="#000000" size="20" font="fonts/arialbi.ttf"/>
+      <wordwrap height="34" width="300" align="center"/>
+    </block>
+    <block type="text" id="traits-middle-name-middle">
+      <location x="70" y="385"/>
       <text color="#000000" size="20" font="fonts/arialbi.ttf"/>
       <wordwrap height="34" width="300" align="center"/>
     </block>
@@ -97,7 +107,7 @@
     <block type="overlay" id="event-base-unicorn" src="proxygen/images/event-base-unicorn.png"><location x="0" y="0"/></block>
 
     <block type="text" id="event-name">
-      <location x="29" y="358" rotate="270" />
+      <location x="100" y="325"/>
       <text color="#000000" size="23" font="fonts/name.ttf"/>
       <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
     </block>
@@ -242,10 +252,11 @@
     </overlayblocks>
 
     <textblocks>
-      <link block="type"><property name="Type"/></link>
+      <!--link block="type"><property name="Type"/></link-->
+      <link block="cost"><property name="Cost"/></link>
       <link block="text"><property name="Text"/></link>
       <link block="event-name"><property name="Name"/></link>
-      <link block="traits-middle-name-top"><property name="Traits"/></link>
+      <link block="traits-middle-name-middle"><property name="Traits"/></link>
     </textblocks>
   </template>
 
