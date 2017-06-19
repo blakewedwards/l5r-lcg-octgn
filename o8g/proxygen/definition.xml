@@ -136,12 +136,13 @@
       </conditional>
     </overlayblocks>
 
-    <textblocks>
+    <!-- Since each clan has a single stronghold, use its cropped image for the base. -->
+    <!--textblocks>
       <link block="type"><property name="Type"/></link>
       <link block="text"><property name="Text"/></link>
       <link block="stronghold-name"><property name="Name"/></link>
       <link block="traits-middle-name-top"><property name="Traits"/></link>
-    </textblocks>
+    </textblocks-->
   </template>
 
   <template src="proxygen/images/empty.png">
