@@ -12,12 +12,12 @@
       <wordwrap height="100" width="380" shrinktofit="True"/>
     </block>
     <block type="text" id="cost">
-      <location x="10" y="10"/>
+      <location x="15" y="15"/>
       <text color="#000000" size="48" font="fonts/arial.ttf"/>
       <wordwrap height="50" width="50" align="center" valign="center" shrinktofit="True"/>
     </block>
     <block type="text" id="traits-middle-name-top">
-      <location x="70" y="415"/>
+      <location x="70" y="385"/>
       <text color="#000000" size="20" font="fonts/arialbi.ttf"/>
       <wordwrap height="34" width="300" align="center"/>
     </block>
@@ -62,7 +62,7 @@
     <block type="overlay" id="character-base-unicorn" src="proxygen/images/character-base-unicorn.png"><location x="0" y="0"/></block>
 
     <block type="text" id="character-name">
-      <location x="29" y="358" rotate="270" />
+      <location x="100" y="20"/>
       <text color="#000000" size="23" font="fonts/name.ttf"/>
       <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
     </block>
@@ -174,7 +174,8 @@
     </overlayblocks>
 
     <textblocks>
-      <link block="type"><property name="Type"/></link>
+      <!--link block="type"><property name="Type"/></link-->
+      <link block="cost"><property name="Cost"/></link>
       <link block="text"><property name="Text"/></link>
       <link block="character-name"><property name="Name"/></link>
       <link block="traits-middle-name-top"><property name="Traits"/></link>
