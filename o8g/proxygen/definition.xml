@@ -56,6 +56,9 @@
       <text color="#000000" size="36" font="fonts/arial.ttf"/>
       <wordwrap height="50" width="50" align="center" valign="center" shrinktofit="True"/>
     </block>
+    <block type="overlay" id="unique-name-top" src="proxygen/images/unique.png">
+      <location x="100" y="28"/>
+    </block>
 
     <block type="overlay" id="stronghold-base-crab" src="proxygen/images/stronghold-base-crab.png"><location x="0" y="0"/></block>
     <block type="overlay" id="stronghold-base-crane" src="proxygen/images/stronghold-base-crane.png"><location x="0" y="0"/></block>
@@ -190,6 +193,11 @@
           <case value="Scorpion"><link block="character-base-scorpion"/></case>
           <case value="Unicorn"><link block="character-base-unicorn"/></case>
         </switch>
+      </conditional>
+      <conditional>
+        <if property="Unique" value="Unique">
+          <link block="unique-name-top"/>
+        </if>
       </conditional>
     </overlayblocks>
 
