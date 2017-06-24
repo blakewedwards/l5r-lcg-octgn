@@ -16,7 +16,17 @@
       <text color="#000000" size="20" font="fonts/arial.ttf"/>
       <wordwrap height="100" width="330" shrinktofit="True"/>
     </block>
+    <block type="text" id="text-top-name-left">
+      <location x="75" y="75"/>
+      <text color="#000000" size="20" font="fonts/arial.ttf"/>
+      <wordwrap height="100" width="330" shrinktofit="True"/>
+    </block>
     <block type="text" id="cost">
+      <location x="15" y="15"/>
+      <text color="#000000" size="48" font="fonts/arial.ttf"/>
+      <wordwrap height="50" width="50" align="center" valign="center" shrinktofit="True"/>
+    </block>
+    <block type="text" id="strength">
       <location x="15" y="15"/>
       <text color="#000000" size="48" font="fonts/arial.ttf"/>
       <wordwrap height="50" width="50" align="center" valign="center" shrinktofit="True"/>
@@ -37,7 +47,7 @@
       <wordwrap height="34" width="300" align="center"/>
     </block>
     <block type="text" id="traits-top-name-left">
-      <location x="70" y="415"/>
+      <location x="70" y="50"/>
       <text color="#000000" size="20" font="fonts/arialbi.ttf"/>
       <wordwrap height="34" width="300" align="center"/>
     </block>
@@ -100,9 +110,9 @@
     <block type="overlay" id="holding-base-unicorn" src="proxygen/images/holding-base-unicorn.png"><location x="0" y="0"/></block>
 
     <block type="text" id="holding-name">
-      <location x="29" y="358" rotate="270" />
+      <location x="23" y="358" rotate="270" />
       <text color="#000000" size="23" font="fonts/name.ttf"/>
-      <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
+      <wordwrap height="34" width="250" align="center" valign="center" shrinktofit="True"/>
     </block>
 
     <block type="overlay" id="attachment-base-crab" src="proxygen/images/attachment-base-crab.png"><location x="0" y="0"/></block>
@@ -117,7 +127,7 @@
     <block type="text" id="attachment-name">
       <location x="23" y="475" rotate="270" />
       <text color="#000000" size="23" font="fonts/name.ttf"/>
-      <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
+      <wordwrap height="34" width="250" align="center" valign="center" shrinktofit="True"/>
     </block>
 
     <block type="overlay" id="event-base-crab" src="proxygen/images/event-base-crab.png"><location x="0" y="0"/></block>
@@ -232,8 +242,9 @@
     </overlayblocks>
 
     <textblocks>
-      <link block="type"><property name="Type"/></link>
-      <link block="text-name-left"><property name="Text"/></link>
+      <!--link block="type"><property name="Type"/></link-->
+      <link block="strength"><property name="Bonus Strength"/></link>
+      <link block="text-top-name-left"><property name="Text"/></link>
       <link block="holding-name"><property name="Name"/></link>
       <link block="traits-top-name-left"><property name="Traits"/></link>
     </textblocks>
