@@ -36,6 +36,21 @@
       <text color="#000000" size="20" font="fonts/arialbi.ttf"/>
       <wordwrap height="34" width="300" align="center"/>
     </block>
+    <block type="text" id="military-skill">
+      <location x="17" y="97"/>
+      <text color="#000000" size="36" font="fonts/arial.ttf"/>
+      <wordwrap height="50" width="50" align="center" valign="center" shrinktofit="True"/>
+    </block>
+    <block type="text" id="political-skill">
+      <location x="17" y="150"/>
+      <text color="#000000" size="36" font="fonts/arial.ttf"/>
+      <wordwrap height="50" width="50" align="center" valign="center" shrinktofit="True"/>
+    </block>
+    <block type="text" id="glory">
+      <location x="347" y="340"/>
+      <text color="#000000" size="36" font="fonts/arial.ttf"/>
+      <wordwrap height="50" width="50" align="center" valign="center" shrinktofit="True"/>
+    </block>
 
     <block type="overlay" id="stronghold-base-crab" src="proxygen/images/stronghold-base-crab.png"><location x="0" y="0"/></block>
     <block type="overlay" id="stronghold-base-crane" src="proxygen/images/stronghold-base-crane.png"><location x="0" y="0"/></block>
@@ -179,6 +194,9 @@
       <link block="text"><property name="Text"/></link>
       <link block="character-name"><property name="Name"/></link>
       <link block="traits-middle-name-top"><property name="Traits"/></link>
+      <link block="military-skill"><property name="Military Skill"/></link>
+      <link block="political-skill"><property name="Political Skill"/></link>
+      <link block="glory"><property name="Glory"/></link>
     </textblocks>
   </template>
 
