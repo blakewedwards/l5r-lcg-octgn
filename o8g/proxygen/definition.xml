@@ -11,6 +11,11 @@
       <text color="#000000" size="20" font="fonts/arial.ttf"/>
       <wordwrap height="100" width="380" shrinktofit="True"/>
     </block>
+    <block type="text" id="text-top-name-top">
+      <location x="25" y="75"/>
+      <text color="#000000" size="20" font="fonts/arial.ttf"/>
+      <wordwrap height="100" width="380" shrinktofit="True"/>
+    </block>
     <block type="text" id="text-name-left">
       <location x="75" y="425"/>
       <text color="#000000" size="20" font="fonts/arial.ttf"/>
@@ -155,7 +160,7 @@
     <block type="overlay" id="province-base-unicorn" src="proxygen/images/province-base-unicorn.png"><location x="0" y="0"/></block>
 
     <block type="text" id="province-name">
-      <location x="29" y="358" rotate="270" />
+      <location x="100" y="20"/>
       <text color="#000000" size="23" font="fonts/name.ttf"/>
       <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
     </block>
@@ -326,6 +331,7 @@
 
     <textblocks>
       <link block="type"><property name="Type"/></link>
+      <link block="strength"><property name="Bonus Strength"/></link>
       <link block="text-name-top"><property name="Text"/></link>
       <link block="province-name"><property name="Name"/></link>
     </textblocks>
