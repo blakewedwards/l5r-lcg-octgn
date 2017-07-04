@@ -2,7 +2,7 @@
 <templates>
   <blocks>
     <block type="text" id="type">
-      <location x="3" y="87"/>
+      <location x="3" y="65"/>
       <text color="#000000" size="14" font="fonts/arial.ttf"/>
       <wordwrap height="20" width="85" align="center" valign="center" shrinktofit="True"/>
     </block>
@@ -12,7 +12,7 @@
       <wordwrap height="100" width="380" shrinktofit="True"/>
     </block>
     <block type="text" id="text-top-name-top">
-      <location x="25" y="75"/>
+      <location x="25" y="110"/>
       <text color="#000000" size="20" font="fonts/arial.ttf"/>
       <wordwrap height="100" width="380" shrinktofit="True"/>
     </block>
@@ -164,6 +164,12 @@
       <text color="#000000" size="23" font="fonts/name.ttf"/>
       <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
     </block>
+
+    <block type="overlay" id="ring-air" src="proxygen/images/ring-air.png"><location x="375" y="540"/></block>
+    <block type="overlay" id="ring-earth" src="proxygen/images/ring-earth.png"><location x="375" y="540"/></block>
+    <block type="overlay" id="ring-fire" src="proxygen/images/ring-fire.png"><location x="375" y="540"/></block>
+    <block type="overlay" id="ring-void" src="proxygen/images/ring-void.png"><location x="375" y="540"/></block>
+    <block type="overlay" id="ring-water" src="proxygen/images/ring-water.png"><location x="375" y="540"/></block>
   </blocks>
 
   <template src="proxygen/images/empty.png">
@@ -327,12 +333,21 @@
           <case value="Unicorn"><link block="province-base-unicorn"/></case>
         </switch>
       </conditional>
+      <conditional>
+        <switch property="Ring">
+          <case value="Air"><link block="ring-air"/></case>
+          <case value="Earth"><link block="ring-earth"/></case>
+          <case value="Fire"><link block="ring-fire"/></case>
+          <case value="Void"><link block="ring-void"/></case>
+          <case value="Water"><link block="ring-water"/></case>
+        </switch>
+      </conditional>
     </overlayblocks>
 
     <textblocks>
       <link block="type"><property name="Type"/></link>
       <link block="strength"><property name="Bonus Strength"/></link>
-      <link block="text-name-top"><property name="Text"/></link>
+      <link block="text-top-name-top"><property name="Text"/></link>
       <link block="province-name"><property name="Name"/></link>
     </textblocks>
   </template>
