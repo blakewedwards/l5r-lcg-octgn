@@ -22,20 +22,20 @@
   <card back="card/back.png" front="card/front.png" width="63" height="88">
     <property name="Clan" type="String" textKind="Enum"/>
     <property name="Type" type="String" textKind="Enum"/>
-    <property name="Unique" type="String"/>
+    <property name="Influence Value" type="String"/>
+    <property name="Cost" type="String"/>
     <property name="Traits" type="String" textKind="Tokens"/>
     <property name="Text" type="String"/>
-    <property name="Cost" type="String"/>
+    <property name="Ring" type="String"/>
+    <property name="Unique" type="String"/>
     <property name="Military Skill" type="String"/>
     <property name="Political Skill" type="String"/>
     <property name="Glory" type="String"/>
     <property name="Bonus Strength" type="String"/>
     <property name="Starting Honor" type="String"/>
     <property name="Fate Value" type="String"/>
-    <property name="Influence Value" type="String"/>
     <property name="Bonus Military Skill" type="String"/>
     <property name="Bonus Political Skill" type="String"/>
-    <property name="Ring" type="String"/>
     <property name="Card Number" type="Integer"/>
     <size name="honor_dial" back="card/honor_dial.png" front="card/honor_dial.png" width="63" height="63"/>
     <size name="imperial_favor" back="card/imperial_favor.png" front="card/imperial_favor.png" width="42" height="69"/>
