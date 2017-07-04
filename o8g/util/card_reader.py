@@ -293,6 +293,7 @@ with open(sys.argv[1], 'rb') as f:
       add_property_if_nonempty(card, 'Fate Value', row.fate)
       add_property_if_nonempty(card, 'Influence Value', row.influence)
       add_property_if_nonempty(card, 'Ring', row.ring.capitalize())
+      add_property_if_nonempty(card, 'Deck', row.deck.capitalize())
       add_property(card, 'Card Number', row.id)
 
 ElementTree(set).write(open(sys.argv[2], 'w'), encoding='UTF-8')

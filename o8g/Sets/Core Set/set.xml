@@ -194,6 +194,7 @@
       <property name="Military Skill" value="0"/>
       <property name="Political Skill" value="0"/>
       <property name="Glory" value="0"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="25"/>
     </card>
     <card id="15012b1d-41e8-48e5-a3a4-2493a05ec2d1" name="Shrewd Yasuki" size="dynasty">
@@ -205,6 +206,7 @@
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="29"/>
     </card>
     <card id="b4551ad3-509d-4f07-94c5-8a639d7e1bb0" name="Borderlands Defender" size="dynasty">
@@ -216,6 +218,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="3"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="31"/>
     </card>
     <card id="8d80f714-c1f8-40ab-9f12-a4d18b82337a" name="Borderlands Fortifications" size="dynasty">
@@ -224,6 +227,7 @@
       <property name="Traits" value="Battlefield."/>
       <property name="Text" value="Action: Choose a card in one of your provinces - switch this holding with that card."/>
       <property name="Bonus Strength" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="36"/>
     </card>
     <card id="f364aac3-9e20-4b59-bebc-19627b0ba91d" name="Asahina Artisan" size="dynasty">
@@ -235,6 +239,7 @@
       <property name="Military Skill" value="0"/>
       <property name="Political Skill" value="0"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="40"/>
     </card>
     <card id="b73d6577-5532-4bd9-9843-0187dd3feff2" name="Doji Whisperer" size="dynasty">
@@ -246,6 +251,7 @@
       <property name="Military Skill" value="0"/>
       <property name="Political Skill" value="3"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="41"/>
     </card>
     <card id="291fbfe6-8a12-4f0a-bbb9-78b7de0b4ad9" name="Brash Samurai" size="dynasty">
@@ -257,6 +263,7 @@
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="42"/>
     </card>
     <card id="e3ea6226-5a5c-4311-a61e-e784169260fb" name="Cautious Scout" size="dynasty">
@@ -268,6 +275,7 @@
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="0"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="43"/>
     </card>
     <card id="da3ab68e-ab00-4dbf-a2f6-111075e3046a" name="Doji Gift Giver" size="dynasty">
@@ -279,6 +287,7 @@
       <property name="Military Skill" value="0"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="44"/>
     </card>
     <card id="ead54ee3-d509-458c-bc23-638fded33c64" name="Savvy Politician" size="dynasty">
@@ -290,6 +299,7 @@
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="45"/>
     </card>
     <card id="5de0deef-9cdc-42f7-9cfc-c03bce65bfed" name="Daidoji Nerishma" size="dynasty">
@@ -302,6 +312,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="46"/>
     </card>
     <card id="fea8a1bc-d121-4cfc-9330-6a547f0aad46" name="Doji Challenger" size="dynasty">
@@ -313,6 +324,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="3"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="47"/>
     </card>
     <card id="a00790d4-5ae0-41d9-881a-373e14ca40fa" name="Kakita Asami" size="dynasty">
@@ -325,6 +337,7 @@
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="3"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="48"/>
     </card>
     <card id="d59dba2f-3416-4fe7-91a6-f9d3c80cdcd2" name="Kakita Kaezin" size="dynasty">
@@ -337,6 +350,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="49"/>
     </card>
     <card id="64b7f051-9950-408f-accf-001cb8a74a7a" name="Asahina Storyteller" size="dynasty">
@@ -348,6 +362,7 @@
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="4"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="50"/>
     </card>
     <card id="a9cf0985-a4e6-4874-9a61-c4f480225f23" name="Guest of Honor" size="dynasty">
@@ -359,6 +374,7 @@
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="4"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="51"/>
     </card>
     <card id="3935c2f6-c1f3-46b8-a549-16d32f9a99a2" name="Doji Hotaru" size="dynasty">
@@ -371,6 +387,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="6"/>
       <property name="Glory" value="3"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="52"/>
     </card>
     <card id="04d91060-4fe5-4191-a6e5-9e423c9f5f8f" name="Artisan Academy" size="dynasty">
@@ -379,6 +396,7 @@
       <property name="Traits" value="Academy."/>
       <property name="Text" value="Action: During the conflict phase - reveal the top card of your conflict deck. Until the end of the phase, you may play that card as if it were in your hand."/>
       <property name="Bonus Strength" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="53"/>
     </card>
     <card id="5dbe18ad-6493-42fa-8b14-d5cbf933929a" name="Doomed Shugenja" size="dynasty">
@@ -390,6 +408,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="3"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="54"/>
     </card>
     <card id="4dae1138-cf99-4880-a600-b8b4d5c6631b" name="Togashi Initiate" size="dynasty">
@@ -401,6 +420,7 @@
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="55"/>
     </card>
     <card id="c7b3b775-e0f2-4786-87aa-59133c0305b6" name="Agasha Swordsmith" size="dynasty">
@@ -412,6 +432,7 @@
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="56"/>
     </card>
     <card id="d66f08e3-a528-4598-8c96-149155d2abdd" name="Mirumoto Prodigy" size="dynasty">
@@ -423,6 +444,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="57"/>
     </card>
     <card id="9acf93da-9bb9-473e-b19f-4b873acf8cc2" name="Niten Adept" size="dynasty">
@@ -434,6 +456,7 @@
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="58"/>
     </card>
     <card id="a8c52b13-c2fa-4ccf-9d5f-a76436144a41" name="Seeker of Enlightenment" size="dynasty">
@@ -445,6 +468,7 @@
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="0"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="59"/>
     </card>
     <card id="023b54b4-8fea-4431-a7d4-e28c55a6c03b" name="Enlightened Warrior" size="dynasty">
@@ -456,6 +480,7 @@
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="60"/>
     </card>
     <card id="6ecdf2e7-bf6d-47c6-85f9-67e3153edd39" name="Kitsuki Investigator" size="dynasty">
@@ -467,6 +492,7 @@
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="3"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="61"/>
     </card>
     <card id="b46be533-47bc-4a02-8de8-e110fed818c3" name="Mirumoto Raitsugu" size="dynasty">
@@ -479,6 +505,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="62"/>
     </card>
     <card id="88ed4ad7-de69-4e41-9a82-1f5fed4d1ded" name="Ascetic Visionary" size="dynasty">
@@ -490,6 +517,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="4"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="63"/>
     </card>
     <card id="895e97e4-0f4e-4de7-b478-080f34a37794" name="Niten Master" size="dynasty">
@@ -501,6 +529,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="3"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="64"/>
     </card>
     <card id="6867a986-8eb7-447b-8f09-585d7a416f62" name="Togashi Yokuni" size="dynasty">
@@ -512,6 +541,7 @@
       <property name="Military Skill" value="5"/>
       <property name="Political Skill" value="5"/>
       <property name="Glory" value="3"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="65"/>
     </card>
     <card id="3894796f-3a39-4f7b-aeec-c9df3919b397" name="Secluded Temple" size="dynasty">
@@ -520,6 +550,7 @@
       <property name="Traits" value="Shrine."/>
       <property name="Text" value="Reaction: After the conflict phase begins, each opponent who controls more characters than you must choose a character he or she controls with 1 or more fate on it - remove 1 fate from each chosen character."/>
       <property name="Bonus Strength" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="66"/>
     </card>
     <card id="7f3b9cca-fa3a-4b17-897f-47da40600657" name="Obstinate Recruit" size="dynasty">
@@ -531,6 +562,7 @@
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="0"/>
       <property name="Glory" value="0"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="67"/>
     </card>
     <card id="62140608-93fe-4a57-9e6e-1d686120b7f6" name="Ikoma Prodigy" size="dynasty">
@@ -542,6 +574,7 @@
       <property name="Military Skill" value="0"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="68"/>
     </card>
     <card id="92fb3c5e-a2a0-4a5d-aca8-c867218f7747" name="Matsu Berserker" size="dynasty">
@@ -553,6 +586,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="-"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="69"/>
     </card>
     <card id="ec52acdd-a2af-49e9-b3e1-2e073bc2a30f" name="Steadfast Samurai" size="dynasty">
@@ -564,6 +598,7 @@
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="70"/>
     </card>
     <card id="508003aa-e833-4cb5-99a7-15cb9dab508d" name="Akodo Gunso" size="dynasty">
@@ -575,6 +610,7 @@
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="71"/>
     </card>
     <card id="cf5dec4b-7351-4b04-aac2-987df5873bc5" name="Deathseeker" size="dynasty">
@@ -586,6 +622,7 @@
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="0"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="72"/>
     </card>
     <card id="efd4f883-1a94-4181-8bc6-3bc086b8a3d5" name="Venerable Historian" size="dynasty">
@@ -597,6 +634,7 @@
       <property name="Military Skill" value="-"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="3"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="73"/>
     </card>
     <card id="2529a99b-7b5a-4d93-988c-ce8ba4e42a20" name="Kitsu Spiritcaller" size="dynasty">
@@ -608,6 +646,7 @@
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="3"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="74"/>
     </card>
     <card id="47826d27-2a19-4832-ab36-c1fc92b3f948" name="Lion's Pride Brawler" size="dynasty">
@@ -619,6 +658,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="75"/>
     </card>
     <card id="0f3309d7-375b-44aa-a56a-9230ec696729" name="Matsu Beiona" size="dynasty">
@@ -631,6 +671,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="76"/>
     </card>
     <card id="9a34b4f5-3cb0-4067-bb49-21a234d4d81b" name="Honored General" size="dynasty">
@@ -642,6 +683,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="77"/>
     </card>
     <card id="c4e39cd4-7536-49df-a00b-883a0a15d7a6" name="Ikoma Eiji" size="dynasty">
@@ -654,6 +696,7 @@
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="3"/>
       <property name="Glory" value="3"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="78"/>
     </card>
     <card id="18ff427e-2ce6-4cc6-8e24-09d1df58f756" name="Akodo Toturi" size="dynasty">
@@ -666,6 +709,7 @@
       <property name="Military Skill" value="6"/>
       <property name="Political Skill" value="3"/>
       <property name="Glory" value="3"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="79"/>
     </card>
     <card id="0c93ed20-599b-4d83-af62-9336e8ab5925" name="Staging Ground" size="dynasty">
@@ -674,6 +718,7 @@
       <property name="Traits" value="Battlefield."/>
       <property name="Text" value="Action: Choose up to 2 facedown cards in your provinces - turn the chosen cards faceup."/>
       <property name="Bonus Strength" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="80"/>
     </card>
     <card id="5baae90a-1d1b-4de6-8181-a7dffd7e09e9" name="Shiba Peacemaker" size="dynasty">
@@ -685,6 +730,7 @@
       <property name="Military Skill" value="4"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="82"/>
     </card>
     <card id="f909e855-0994-4ef8-b350-7152ff4e03f9" name="Solemn Scholar" size="dynasty">
@@ -696,6 +742,7 @@
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="83"/>
     </card>
     <card id="2d9d2a28-d496-4e72-bcb3-6b979376f314" name="Isawa Masahiro" size="dynasty">
@@ -708,6 +755,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="90"/>
     </card>
     <card id="221a1956-1bac-4aa1-ac9e-4b78ab0bd83c" name="Bayushi Manipulator" size="dynasty">
@@ -719,6 +767,7 @@
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="96"/>
     </card>
     <card id="8fbaa0fa-ef55-4775-a47c-414c3a154dc9" name="Young Rumormonger" size="dynasty">
@@ -730,6 +779,7 @@
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="101"/>
     </card>
     <card id="df365b9f-63cd-4d81-ae02-a69db1d81cea" name="City of Lies" size="dynasty">
@@ -738,6 +788,7 @@
       <property name="Traits" value="City."/>
       <property name="Text" value="Action: Reduce the cost of the next event you play this phase by 1."/>
       <property name="Bonus Strength" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="108"/>
     </card>
     <card id="080c2783-86c3-4070-b503-501f4acd4433" name="Aggressive Moto" size="dynasty">
@@ -749,6 +800,7 @@
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="0"/>
       <property name="Glory" value="0"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="111"/>
     </card>
     <card id="0a0f5ebc-b682-4a3c-96d2-281758f5f5ad" name="Border Rider" size="dynasty">
@@ -760,6 +812,7 @@
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="112"/>
     </card>
     <card id="ec021f72-2e5e-4b7c-88ab-3474658ee98c" name="Shinjo Outrider" size="dynasty">
@@ -771,6 +824,7 @@
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="114"/>
     </card>
     <card id="67b18356-65a2-4a04-8d15-4e5425ab4160" name="Otomo Courtier" size="dynasty">
@@ -782,6 +836,7 @@
       <property name="Military Skill" value="-"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="122"/>
     </card>
     <card id="9dc58761-e779-4b88-9405-eabf6edcf1ea" name="Seppun Guardsman" size="dynasty">
@@ -793,6 +848,7 @@
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="-"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="123"/>
     </card>
     <card id="708ff8aa-3b55-4a59-a13f-a9b2b0b63ae2" name="Miya Mystic" size="dynasty">
@@ -804,6 +860,7 @@
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="125"/>
     </card>
     <card id="21bb93d6-537d-4084-bda1-e3647789fee8" name="Wandering Ronin" size="dynasty">
@@ -815,6 +872,7 @@
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="0"/>
+      <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="127"/>
     </card>
     <card id="c6a61750-9202-4c6d-b30b-ce843f1316a6" name="Stoic Gunso" size="conflict">
@@ -827,6 +885,7 @@
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="1"/>
       <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="131"/>
     </card>
     <card id="4754fed3-44b5-4d6f-bac9-e8dce9028712" name="Reprieve" size="conflict">
@@ -838,6 +897,7 @@
       <property name="Bonus Military Skill" value="0"/>
       <property name="Bonus Political Skill" value="0"/>
       <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="132"/>
     </card>
     <card id="9f06d1b0-4a4c-4b76-a44e-2bef3b37a785" name="Rebuild" size="conflict">
@@ -846,6 +906,7 @@
       <property name="Traits" value=""/>
       <property name="Text" value="???"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="136"/>
     </card>
     <card id="ad350407-e999-4da0-b136-dd046375e07a" name="Steward of Law" size="conflict">
@@ -858,6 +919,7 @@
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="0"/>
       <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="139"/>
     </card>
     <card id="81ee4125-ccbb-4ee2-b156-bd479181dbe0" name="Political Rival" size="dynasty">
@@ -869,6 +931,8 @@
       <property name="Military Skill" value="-"/>
       <property name="Political Skill" value="3"/>
       <property name="Glory" value="0"/>
+      <property name="Influence Value" value="?"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="140"/>
     </card>
     <card id="2abecb53-9c4c-45d7-8a26-787af66511fd" name="Above Question" size="conflict">
@@ -880,6 +944,7 @@
       <property name="Bonus Military Skill" value="0"/>
       <property name="Bonus Political Skill" value="0"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="141"/>
     </card>
     <card id="3cab40e6-8964-4aa7-aead-378bbdd87ed1" name="Duelist Training" size="conflict">
@@ -891,6 +956,7 @@
       <property name="Bonus Military Skill" value="0"/>
       <property name="Bonus Political Skill" value="0"/>
       <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="142"/>
     </card>
     <card id="2536d187-8579-4c38-bc95-460444803797" name="Height of Fashion" size="conflict">
@@ -902,6 +968,7 @@
       <property name="Bonus Military Skill" value="0"/>
       <property name="Bonus Political Skill" value="4"/>
       <property name="Influence Value" value="3"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="143"/>
     </card>
     <card id="06c75060-149d-4f18-8473-8358dc9f751a" name="The Perfect Gift" size="conflict">
@@ -911,6 +978,7 @@
       <property name="Text" value="Action: Reveal the top 4 cards of each player's conflict deck. Choose 1 revealed card owned by each player and add it to its owner's hand. Shuffle."/>
       <property name="Cost" value="0"/>
       <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="144"/>
     </card>
     <card id="61870bd9-a875-4e63-b261-c271a8097d48" name="Voice of Honor" size="conflict">
@@ -920,6 +988,7 @@
       <property name="Text" value="Interrupt: When the effects of an event would initiate, if you control more honored characters than an opponent - cancel those effects."/>
       <property name="Cost" value="0"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="145"/>
     </card>
     <card id="8e1d1326-c2cc-48db-ad41-8e26ce78a4bb" name="Way of the Crane" size="conflict">
@@ -928,6 +997,7 @@
       <property name="Traits" value="Philosophy."/>
       <property name="Text" value="Action: Choose a [Crane] character you control - honor that character."/>
       <property name="Cost" value="0"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="146"/>
     </card>
     <card id="916f4fab-1e57-444e-bdbe-8cd7eeb956c8" name="Admit Defeat" size="conflict">
@@ -937,6 +1007,7 @@
       <property name="Text" value="Action: Choose a character that is defending alone - bow that character."/>
       <property name="Cost" value="1"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="147"/>
     </card>
     <card id="27a2aea7-18e8-403c-88cb-74d240b772e9" name="Noble Sacrifice" size="conflict">
@@ -946,6 +1017,7 @@
       <property name="Text" value="Action: Sacrifice a (friendly) honored character. Choose a dishonored character - discard that character."/>
       <property name="Cost" value="1"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="148"/>
     </card>
     <card id="bf7ed11c-05e4-4b12-aa6e-54e737a5eb04" name="Tattooed Wanderer" size="conflict">
@@ -958,6 +1030,7 @@
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="0"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="149"/>
     </card>
     <card id="6c6f9607-f925-4523-9b81-c4e589f5b8bb" name="Togashi Kazue" size="conflict">
@@ -971,6 +1044,7 @@
       <property name="Political Skill" value="3"/>
       <property name="Glory" value="1"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="150"/>
     </card>
     <card id="0c57ad14-3794-4d09-badf-596134dab781" name="Ancestral Daisho" size="conflict">
@@ -982,6 +1056,7 @@
       <property name="Bonus Military Skill" value="2"/>
       <property name="Bonus Political Skill" value="0"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="151"/>
     </card>
     <card id="f1efd236-4b40-4726-8d0b-26777af79d97" name="Daimyo's Favor" size="conflict">
@@ -992,6 +1067,7 @@
       <property name="Cost" value="0"/>
       <property name="Bonus Military Skill" value="0"/>
       <property name="Bonus Political Skill" value="0"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="152"/>
     </card>
     <card id="847acaeb-0176-4dae-99d6-e91a1a96e614" name="Kitsuki's Method" size="conflict">
@@ -1003,6 +1079,7 @@
       <property name="Bonus Military Skill" value="0"/>
       <property name="Bonus Political Skill" value="2"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="153"/>
     </card>
     <card id="5aaaabac-df50-429d-8013-2607ec17c1c9" name="Way of the Dragon" size="conflict">
@@ -1013,6 +1090,7 @@
       <property name="Cost" value="2"/>
       <property name="Bonus Military Skill" value="1"/>
       <property name="Bonus Political Skill" value="1"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="154"/>
     </card>
     <card id="798c3705-f26f-4040-bd41-58347c28c8c3" name="Let Go" size="conflict">
@@ -1022,6 +1100,7 @@
       <property name="Text" value="Action: Choose an attachment - discard it."/>
       <property name="Cost" value="0"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="155"/>
     </card>
     <card id="5311700e-ab90-4ccd-a63b-c4ee65001d33" name="Mantra of Fire" size="conflict">
@@ -1031,6 +1110,7 @@
       <property name="Text" value="Reaction: After an opponent declares a [Fire] conflict, choose a Monk character or a character with a Monk attachment - place 1 fate on that character and draw 1 card."/>
       <property name="Cost" value="0"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="156"/>
     </card>
     <card id="6aa2734d-5513-4ce5-8962-2146ee87a6d7" name="Indomitable Will" size="conflict">
@@ -1040,6 +1120,7 @@
       <property name="Text" value="Reaction: After you win a conflict in which you control only a single participating character - that character does not bow as a result of the conflict's resolution."/>
       <property name="Cost" value="1"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="158"/>
     </card>
     <card id="22311657-8eca-4253-b757-b1bf48665cea" name="Mirumoto's Fury" size="conflict">
@@ -1049,6 +1130,7 @@
       <property name="Text" value="Action: During a conflict, choose an attacking character with glory X or lower - bow that character. X is equal to the number of unrevealed provinces you control."/>
       <property name="Cost" value="1"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="159"/>
     </card>
     <card id="0036d752-5951-422d-b05e-e3cde23bc26a" name="Vengeful Oathkeeper" size="conflict">
@@ -1061,6 +1143,7 @@
       <property name="Political Skill" value="1"/>
       <property name="Glory" value="1"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="160"/>
     </card>
     <card id="d7d060b0-d3b8-48e0-8eff-d2f40ac62eff" name="Master of the Spear" size="conflict">
@@ -1073,6 +1156,7 @@
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
       <property name="Influence Value" value="3"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="161"/>
     </card>
     <card id="0519ea31-2708-4bc3-a913-8b955b3971ab" name="Guidance of the Ancestors" size="conflict">
@@ -1084,6 +1168,7 @@
       <property name="Bonus Military Skill" value="1"/>
       <property name="Bonus Political Skill" value="1"/>
       <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="162"/>
     </card>
     <card id="0506f09d-431a-45ee-bc2a-c60f4b28cef3" name="Honored Blade" size="conflict">
@@ -1095,6 +1180,7 @@
       <property name="Bonus Military Skill" value="2"/>
       <property name="Bonus Political Skill" value="0"/>
       <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="163"/>
     </card>
     <card id="6533e650-b569-4530-8bf6-262396135b1b" name="Sashimono" size="conflict">
@@ -1106,6 +1192,7 @@
       <property name="Bonus Military Skill" value="0"/>
       <property name="Bonus Political Skill" value="0"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="164"/>
     </card>
     <card id="0d320b35-9c12-4608-85f3-067abc04ba88" name="Ready for Battle" size="conflict">
@@ -1115,6 +1202,7 @@
       <property name="Text" value="Reaction: After an opponent's card effect or a ring effect bows a character you control - ready that character."/>
       <property name="Cost" value="0"/>
       <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="165"/>
     </card>
     <card id="a1bce639-2b1e-49b4-a197-1e10c3ba843f" name="Stand Your Ground" size="conflict">
@@ -1124,6 +1212,7 @@
       <property name="Text" value="Interrupt: When an honored character you control would leave play - instead discard that character's status token."/>
       <property name="Cost" value="0"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="166"/>
     </card>
     <card id="7bbc1cad-9a17-4730-bab3-b500f9a7f97b" name="Way of the Lion" size="conflict">
@@ -1132,6 +1221,7 @@
       <property name="Traits" value="Philosophy."/>
       <property name="Text" value="Action: During a conflict, choose a [Lion] character - double that character's base [Military] skill until the end of the conflict."/>
       <property name="Cost" value="0"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="167"/>
     </card>
     <card id="24733b42-986b-4471-b704-18af9903b3b1" name="For Greater Glory" size="conflict">
@@ -1141,6 +1231,7 @@
       <property name="Text" value="Reaction: After you break a province during a [Military] conflict - place 1 fate on each participating Bushi character you control. (Max 1 per conflict.)"/>
       <property name="Cost" value="1"/>
       <property name="Influence Value" value="3"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="168"/>
     </card>
     <card id="bf3be207-24ae-4276-92c0-16ce7cb83840" name="Strength in Numbers" size="conflict">
@@ -1150,6 +1241,7 @@
       <property name="Text" value="Action: While you are the attacking player, choose a defending character with glory X or lower - move that character home. X is equal to the number of attacking characters."/>
       <property name="Cost" value="1"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="169"/>
     </card>
     <card id="42aff476-2841-41cb-b3fe-d29b33af41c8" name="Seeker of Knowledge" size="conflict">
@@ -1162,6 +1254,7 @@
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
       <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="171"/>
     </card>
     <card id="b1dcf0f9-2ee4-4274-99db-21d749ffa435" name="Pacifism" size="conflict">
@@ -1173,6 +1266,7 @@
       <property name="Bonus Military Skill" value="0"/>
       <property name="Bonus Political Skill" value="0"/>
       <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="174"/>
     </card>
     <card id="d8e881bd-66c8-4103-9c0e-4953d028044b" name="Know the World" size="conflict">
@@ -1182,6 +1276,7 @@
       <property name="Text" value="Action: Switch a ring in your claimed ring pool with an unclaimed ring and gain all fate on that ring. (Retain the ring's conflict type.)"/>
       <property name="Cost" value="1"/>
       <property name="Influence Value" value="3"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="178"/>
     </card>
     <card id="ed546e3d-c954-4354-94fe-5bce936b649e" name="I Can Swim" size="conflict">
@@ -1191,6 +1286,7 @@
       <property name="Text" value="Action: During a conflict, if the bid on your honor dial is higher than an opponent's, choose a participating dishonored character controlled by that opponent - discard that character."/>
       <property name="Cost" value="2"/>
       <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="187"/>
     </card>
     <card id="e0949fb5-72cc-47da-bfef-979d967aff28" name="Blackmail" size="conflict">
@@ -1200,6 +1296,7 @@
       <property name="Text" value="Play only if you are less honorable than your opponent.&#10;Action: During a conflict, choose a character controlled by your opponent with printed cost 2 or lower - take control of that character until the end of the conflict."/>
       <property name="Cost" value="3"/>
       <property name="Influence Value" value="3"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="189"/>
     </card>
     <card id="04b588fd-bb81-4222-88d4-44f0c1ee35a8" name="Breakthrough" size="conflict">
@@ -1209,6 +1306,7 @@
       <property name="Text" value="Reaction: After the resolution of your first conflict this phase as the attacking player, if that conflict broke a province - immediately declare your second conflict for this phase."/>
       <property name="Cost" value="0"/>
       <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="196"/>
     </card>
     <card id="3a4a2547-142c-4394-81fc-314fd3a14236" name="Way of the Unicorn" size="conflict">
@@ -1217,6 +1315,7 @@
       <property name="Traits" value="Philosophy."/>
       <property name="Text" value="Interrupt: When you would pass the first player token - keep it instead."/>
       <property name="Cost" value="0"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="198"/>
     </card>
     <card id="0d11eb2f-2f27-4bf8-bc25-752e367e045a" name="Fine Katana" size="conflict">
@@ -1227,6 +1326,7 @@
       <property name="Cost" value="0"/>
       <property name="Bonus Military Skill" value="2"/>
       <property name="Bonus Political Skill" value="0"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="200"/>
     </card>
     <card id="0f8ce9b0-be45-42a8-a310-bab3bc4660d7" name="Ornate Fan" size="conflict">
@@ -1237,6 +1337,7 @@
       <property name="Cost" value="0"/>
       <property name="Bonus Military Skill" value="0"/>
       <property name="Bonus Political Skill" value="2"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="201"/>
     </card>
     <card id="6d8d67f8-38ea-4db2-a5d5-2f54b9493f33" name="Cloud the Mind" size="conflict">
@@ -1247,6 +1348,7 @@
       <property name="Cost" value="1"/>
       <property name="Bonus Military Skill" value="0"/>
       <property name="Bonus Political Skill" value="0"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="202"/>
     </card>
     <card id="3b85a2ef-1f9c-4c3f-bc17-f427effc1a14" name="Assassination" size="conflict">
@@ -1254,6 +1356,7 @@
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
       <property name="Text" value="???"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="203"/>
     </card>
     <card id="84ed44dc-0324-4f88-90ff-1d4b0679be8d" name="Banzai!" size="conflict">
@@ -1262,6 +1365,7 @@
       <property name="Traits" value=""/>
       <property name="Text" value="Action: During a conflict, choose a participating character - that character gets +2[Military] until the end of the conflict. You may lose 1 honor to resolve this ability twice. (Max 1 per conflict.)"/>
       <property name="Cost" value="0"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="204"/>
     </card>
     <card id="4943895d-ab44-4571-ae49-2f51781469ad" name="For Shame!" size="conflict">
@@ -1270,6 +1374,7 @@
       <property name="Traits" value=""/>
       <property name="Text" value="Action: During a conflict, if you control a participating Courtier character, choose a participating character controlled by your opponent. Your opponent must select one - dishonor the chosen character or bow it."/>
       <property name="Cost" value="0"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="207"/>
     </card>
     <card id="485cc3e7-1fd1-4ba1-8a6d-3a2c476b9993" name="Good Omen" size="conflict">
@@ -1278,6 +1383,7 @@
       <property name="Traits" value=""/>
       <property name="Text" value="Play only if your honor bid is lower than an opponent's.&#10;Action: Choose a character with printed cost 3 or higher - place 1 fate on that character."/>
       <property name="Cost" value="0"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="208"/>
     </card>
     <card id="95b10d7c-092b-414d-af65-bc351d1ce8ab" name="Spies at Court" size="conflict">
@@ -1286,6 +1392,7 @@
       <property name="Traits" value=""/>
       <property name="Text" value="Reaction: After you win a [Political] conflict, dishonor a (friendly) participating character - discard 2 cards at random from your opponent's hand. (Max 1 per conflict.)"/>
       <property name="Cost" value="0"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="209"/>
     </card>
     <card id="613a8a9f-4b3f-4ea4-90ed-3d7423d8423a" name="Fallen in Battle" size="conflict">
@@ -1294,6 +1401,7 @@
       <property name="Traits" value=""/>
       <property name="Text" value="Reaction: After you win a [Military] conflict by 5 or more skill, choose a participating character - discard that character. (Max 1 per conflict.)"/>
       <property name="Cost" value="1"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="211"/>
     </card>
   </cards>

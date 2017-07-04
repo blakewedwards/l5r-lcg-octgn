@@ -74,6 +74,11 @@
     <block type="overlay" id="unique-name-top" src="proxygen/images/unique.png">
       <location x="100" y="28"/>
     </block>
+    <block type="text" id="deck">
+      <location x="351" y="571"/>
+      <text color="#FFFFFF" size="9" font="fonts/arial.ttf"/>
+      <wordwrap height="9" width="9" shrinktofit="False"/>
+    </block>
 
     <block type="overlay" id="stronghold-base-crab" src="proxygen/images/stronghold-base-crab.png"><location x="0" y="0"/></block>
     <block type="overlay" id="stronghold-base-crane" src="proxygen/images/stronghold-base-crane.png"><location x="0" y="0"/></block>
@@ -231,6 +236,7 @@
       <link block="military-skill"><property name="Military Skill"/></link>
       <link block="political-skill"><property name="Political Skill"/></link>
       <link block="glory"><property name="Glory"/></link>
+      <link block="deck"><property name="Deck"/></link>
     </textblocks>
   </template>
 
@@ -258,6 +264,7 @@
       <link block="text-top-name-left"><property name="Text"/></link>
       <link block="holding-name"><property name="Name"/></link>
       <link block="traits-top-name-left"><property name="Traits"/></link>
+      <link block="deck"><property name="Deck"/></link>
     </textblocks>
   </template>
 
@@ -287,6 +294,7 @@
       <link block="traits-middle-name-left"><property name="Traits"/></link>
       <link block="military-skill"><property name="Bonus Military Skill"/></link>
       <link block="political-skill"><property name="Bonus Political Skill"/></link>
+      <link block="deck"><property name="Deck"/></link>
     </textblocks>
   </template>
 
@@ -314,6 +322,7 @@
       <link block="text-name-top"><property name="Text"/></link>
       <link block="event-name"><property name="Name"/></link>
       <link block="traits-middle-name-middle"><property name="Traits"/></link>
+      <link block="deck"><property name="Deck"/></link>
     </textblocks>
   </template>
 
