@@ -122,13 +122,14 @@ def setup(group, x=0, y=0):
   table.create(HONOR_DIAL_1, hd_x, hd_y, persist=True).isFaceUp = True
   for card in me.piles[CONFLICT].top(STARTING_HAND_SIZE):
     card.moveTo(me.hand)
-  # TODO: these are shared, not one per player
-  table.create('b57c595e-d5ae-4fba-82c8-954a0b78c4a8', 668, 0, persist=True).isFaceUp = True
-  ring_height = 0
-  for i, ring_id in enumerate(RINGS):
-    ring = table.create(ring_id, RING_X, RING_Y_START + i*ring_height*RING_Y_GAP_RATIO, persist=True)
-    ring.isFaceUp = True
-    ring_height = ring.height
+  # Shared resources, only set up by one player
+  if not me.isInverted:
+    table.create('b57c595e-d5ae-4fba-82c8-954a0b78c4a8', 668, 0, persist=True).isFaceUp = True
+    ring_height = 0
+    for i, ring_id in enumerate(RINGS):
+      ring = table.create(ring_id, RING_X, RING_Y_START + i*ring_height*RING_Y_GAP_RATIO, persist=True)
+      ring.isFaceUp = True
+      ring_height = ring.height
   notify('{} sets up.'.format(me))
   me.setGlobalVariable('setup_required', '')
 
