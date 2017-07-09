@@ -25,16 +25,27 @@ RING_X = 325
 RING_Y_START = -225
 RING_Y_GAP_RATIO = 1
 TYPE_IMPERIAL_FAVOR = 'Imperial Favor'
+TYPE_HONOR_DIAL = 'Honor Dial'
 TYPE_RING = 'Ring'
 ALTERNATE_POLITICAL = 'Political'
 MAX_PROVINCES = 5
+
+def invert_x(x, width, inverted):
+  return (-x - width) if inverted else x
+
+def invert_y(y, height, inverted):
+  return invert_x(y, height, inverted)
+
+def honor_dial_position(width, height, gap, inverted):
+  (x, y) = (-3.5*width - 3*gap, height + 3*gap)
+  return (invert_x(x, width, inverted), invert_y(y, height, inverted))
 
 # The leftmost province is index 0 and will hold the stronghold. Valid indicies are 0 to MAX_PROVINCES-1
 def province_position(index, width, height, gap, inverted):
   if index >= MAX_PROVINCES:
     raise ValueError('index must be less than the number of provinces')
   (x, y) = (-2.5*width - 2*gap + index*(width+gap), (height + 2*gap))
-  return (x*(-1 if inverted else 1), y*(-1 if inverted else 1))
+  return (invert_x(x, width, inverted), invert_y(y, height, inverted))
 
 def height_offset(offset, inverted):
   return offset * (-1 if inverted else 1)
@@ -45,7 +56,7 @@ def pass_action(group, x=0, y=0):
 def set_honor_dial(group, x=0, y=0):
   mute()
   notify("{} is setting their honor dial.".format(me))
-  honor_dial = [card for card in group if card.controller == me and card.type == 'Honor Dial']
+  honor_dial = [card for card in group if card.controller == me and card.type == TYPE_HONOR_DIAL]
   if len(honor_dial) != 1:
     whisper('Error: Honor dial not found.')
     return
@@ -101,17 +112,19 @@ def setup(group, x=0, y=0):
   me.honor = int(stronghold.properties[STARTING_HONOR])
   me.fate = int(stronghold.properties[FATE_VALUE])
   me.setGlobalVariable(PLAYER_FATE_VALUE, stronghold.properties[FATE_VALUE])
-  table.create(HONOR_DIAL_1, -3.5*width - 3*gap, height + 3*gap, persist=True).isFaceUp = True
+  (hd_x, hd_y) = honor_dial_position(width, height, gap, me.isInverted)
+  table.create(HONOR_DIAL_1, hd_x, hd_y, persist=True).isFaceUp = True
   for card in me.piles[CONFLICT].top(STARTING_HAND_SIZE):
     card.moveTo(me.hand)
-  notify('{} sets up.'.format(me))
-  me.setGlobalVariable('setup_required', '')
+  # TODO: these are shared, not one per player
   table.create('b57c595e-d5ae-4fba-82c8-954a0b78c4a8', 668, 0, persist=True).isFaceUp = True
   ring_height = 0
   for i, ring_id in enumerate(RINGS):
     ring = table.create(ring_id, RING_X, RING_Y_START + i*ring_height*RING_Y_GAP_RATIO, persist=True)
     ring.isFaceUp = True
     ring_height = ring.height
+  notify('{} sets up.'.format(me))
+  me.setGlobalVariable('setup_required', '')
 
 def table_default_card_action(card):
   if not card.isFaceUp:
