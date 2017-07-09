@@ -36,6 +36,13 @@ def invert_x(x, width, inverted):
 def invert_y(y, height, inverted):
   return invert_x(y, height, inverted)
 
+def invert_offset(offset, inverted):
+  return offset*(-1 if inverted else 1)
+
+def play_conflict_position(width, height, gap, inverted):
+  (x, y) = (-2.5*width - 2*gap + 5*(width+gap), height + 2*gap)
+  return (invert_x(x, width, inverted), invert_y(y, height, inverted))
+
 def honor_dial_position(width, height, gap, inverted):
   (x, y) = (-3.5*width - 3*gap, height + 3*gap)
   return (invert_x(x, width, inverted), invert_y(y, height, inverted))
@@ -88,7 +95,6 @@ def setup(group, x=0, y=0):
     whisper('A deck must be loaded prior to setting up.')
     return
   # Create the stronghold and 4 provinces in a line, with space for a row of cards above. Use the first card dimensions as reference
-  # TODO: isInverted anywhere moved to table
   width = me.hand[0].width
   height = me.hand[0].height
   gap = width*CARD_GAP_RATIO
@@ -196,13 +202,15 @@ def move_to_deck_bottom(card, x=0, y=0):
     card.moveToBottom(pile)
   return pile
 
+# TODO: convenience instead of discard and refill
 def replace(card, x=0, y=0):
   card_x, card_y = card.position
   discard(card, x, y)
   me.piles[DYNASTY].top().moveToTable(card_x, card_y, True)
 
 def refill(card, x=0, y=0):
-  me.piles[DYNASTY].top().moveToTable(card.position[0], card.position[1] + card.width*CARD_GAP_RATIO, True)
+  (x, y) = card.position
+  me.piles[DYNASTY].top().moveToTable(x, y + invert_offset(card.width*CARD_GAP_RATIO, me.isInverted), True)
 
 def random_discard_from(group):
   mute()
@@ -222,7 +230,8 @@ def play_conflict(card): #, x=0, y=0):
   if me.Fate < cost:
     whisper("The card's cost cannot be paid.")
     return
-  card.moveToTable(-2.5*card.width - 2*card.width*CARD_GAP_RATIO + 5*(card.width+card.width*CARD_GAP_RATIO), card.height + 2*card.width*CARD_GAP_RATIO, True) # Why True and not False here?
+  (x, y) = play_conflict_position(card.width, card.height, card.width*CARD_GAP_RATIO, me.isInverted)
+  card.moveToTable(x, y, True) # TODO: Why True and not False here?
   card.isFaceUp = True
   me.Fate -= cost
   notify('{} plays {} for {} fate.'.format(me, card.name, cost))
@@ -243,8 +252,7 @@ def play_dynasty(card, x=0, y=0):
     whisper("The card's cost cannot be paid.")
     return
   x, y = card.position
-  #TODO: is inverted
-  card.moveToTable(x, y - card.height - card.width*2*CARD_GAP_RATIO)
+  card.moveToTable(x, y + invert_offset(-card.height - card.width*2*CARD_GAP_RATIO, me.isInverted))
   me.Fate -= cost
   me.piles[DYNASTY].top().moveToTable(x, y, True)
   notify('{} plays {} for {} fate.'.format(me, card.name, cost))
@@ -291,19 +299,12 @@ def search_top(group):
   dialog.max = num
   cards = dialog.show()
 
-  if me.isInverted:
-    x1 = -150
-    y1 = -288
-    i = 50
-  else:
-    x1 = 150
-    y1 = 200
-    i = -50
-
   if cards is not None:
+    num = 0
     for card in cards:
-      card.moveToTable(x1, y1, True)
-      x1 += i
+      (x, y) = play_conflict_position(card.width, card.height, card.width*CARD_GAP_RATIO, me.isInverted)
+      card.moveToTable(x + invert_offset(num*(card.width+card.width*CARD_GAP_RATIO), me.isInverted), y, True)
+      num += 1
       card.peek()
       card.select()
   else:
