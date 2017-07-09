@@ -28,6 +28,9 @@ TYPE_IMPERIAL_FAVOR = 'Imperial Favor'
 TYPE_RING = 'Ring'
 ALTERNATE_POLITICAL = 'Political'
 
+def pass_action(group, x=0, y=0):
+  notify("{} passes.".format(me))
+
 def set_honor_dial(group, x=0, y=0):
   mute()
   notify("{} is setting their honor dial.".format(me))
