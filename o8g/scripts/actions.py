@@ -27,6 +27,16 @@ RING_Y_GAP_RATIO = 1
 TYPE_IMPERIAL_FAVOR = 'Imperial Favor'
 TYPE_RING = 'Ring'
 ALTERNATE_POLITICAL = 'Political'
+MAX_PROVINCES = 5
+
+# The leftmost province is index 0 and will hold the stronghold. Valid indicies are 0 to MAX_PROVINCES-1
+def province_position(index, width, height, gap, inverted):
+  if index >= MAX_PROVINCES:
+    raise ValueError('index must be less than the number of provinces')
+  return (-2.5*width - 2*gap + index*(width+gap), height + 2*gap)
+
+def height_offset(offset, inverted):
+  return offset
 
 def pass_action(group, x=0, y=0):
   notify("{} passes.".format(me))
@@ -70,19 +80,23 @@ def setup(group, x=0, y=0):
   width = me.hand[0].width
   height = me.hand[0].height
   gap = width*CARD_GAP_RATIO
+  offset = height_offset(gap, me.isInverted)
   me.piles[DYNASTY].shuffle()
   me.piles[CONFLICT].shuffle()
+  stronghold = me.hand[0] # TODO: If they move the stronghold, this breaks
   for i, card in enumerate(me.hand[1:]):
-    card.moveToTable(-2.5*width - 2*gap + i*(width+gap), height + 2*gap, True)
-    if i > 0:
-      me.piles[DYNASTY].top().moveToTable(-2.5*width - 2*gap + i*(width+gap), height + 3*gap, True)
+    (card_x, card_y) = province_position(i, width, height, gap, me.isInverted)
+    card.moveToTable(card_x, card_y, True)
     card.sendToBack()
     card.peek()
     card.anchor = True
-  stronghold = me.hand[0]
-  stronghold.moveToTable(-2.5*width - 2*gap, height + 3*gap)
-  stronghold.isFaceUp = True
-  stronghold.anchor = True
+    if i == 0:
+      stronghold.moveToTable(card_x, card_y + offset)
+      stronghold.isFaceUp = True
+      stronghold.anchor = True
+    else:
+      me.piles[DYNASTY].top().moveToTable(card_x, card_y + offset, True)
+
   me.honor = int(stronghold.properties[STARTING_HONOR])
   me.fate = int(stronghold.properties[FATE_VALUE])
   me.setGlobalVariable(PLAYER_FATE_VALUE, stronghold.properties[FATE_VALUE])
@@ -252,7 +266,7 @@ def search_top(group):
   num = askInteger('How many cards to search?', 2)
   if num is None:
     return
-  num = min(num, len(group)) # TODO: Might be that it can't be used
+  num = min(num, len(group))
   if num == 0:
     return
 
