@@ -33,10 +33,11 @@ MAX_PROVINCES = 5
 def province_position(index, width, height, gap, inverted):
   if index >= MAX_PROVINCES:
     raise ValueError('index must be less than the number of provinces')
-  return (-2.5*width - 2*gap + index*(width+gap), height + 2*gap)
+  (x, y) = (-2.5*width - 2*gap + index*(width+gap), (height + 2*gap))
+  return (x*(-1 if inverted else 1), y*(-1 if inverted else 1))
 
 def height_offset(offset, inverted):
-  return offset
+  return offset * (-1 if inverted else 1)
 
 def pass_action(group, x=0, y=0):
   notify("{} passes.".format(me))
