@@ -273,7 +273,7 @@ def end_turn(table, x=0, y=0):
 
   resolve_regroup()
   if len(getPlayers()) != 1:
-    remoteCall(players[1], "resolve_regroup")
+    remoteCall(players[1], 'resolve_regroup', [])
 
   # TODO: Test if they have initiative, or don't show the action if not?
 
