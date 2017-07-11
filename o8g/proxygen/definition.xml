@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates>
   <blocks>
-    <block type="text" id="type">
-      <location x="3" y="65"/>
-      <text color="#000000" size="14" font="fonts/arial.ttf"/>
-      <wordwrap height="20" width="85" align="center" valign="center" shrinktofit="True"/>
-    </block>
     <block type="text" id="text-name-top">
       <location x="25" y="425"/>
       <text color="#000000" size="20" font="fonts/arial.ttf"/>
@@ -195,11 +190,11 @@
       <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
     </block>
 
-    <block type="overlay" id="ring-air" src="proxygen/images/ring-air.png"><location x="375" y="540"/></block>
-    <block type="overlay" id="ring-earth" src="proxygen/images/ring-earth.png"><location x="375" y="540"/></block>
-    <block type="overlay" id="ring-fire" src="proxygen/images/ring-fire.png"><location x="375" y="540"/></block>
-    <block type="overlay" id="ring-void" src="proxygen/images/ring-void.png"><location x="375" y="540"/></block>
-    <block type="overlay" id="ring-water" src="proxygen/images/ring-water.png"><location x="375" y="540"/></block>
+    <block type="overlay" id="ring-air" src="proxygen/images/ring-air.png"><location x="370" y="527"/></block>
+    <block type="overlay" id="ring-earth" src="proxygen/images/ring-earth.png"><location x="370" y="527"/></block>
+    <block type="overlay" id="ring-fire" src="proxygen/images/ring-fire.png"><location x="370" y="527"/></block>
+    <block type="overlay" id="ring-void" src="proxygen/images/ring-void.png"><location x="370" y="527"/></block>
+    <block type="overlay" id="ring-water" src="proxygen/images/ring-water.png"><location x="370" y="527"/></block>
   </blocks>
 
   <template src="proxygen/images/empty.png">
@@ -256,7 +251,6 @@
     </overlayblocks>
 
     <textblocks>
-      <!--link block="type"><property name="Type"/></link-->
       <link block="cost"><property name="Cost"/></link>
       <link block="text-name-top"><property name="Text"/></link>
       <link block="character-name"><property name="Name"/></link>
@@ -287,7 +281,6 @@
     </overlayblocks>
 
     <textblocks>
-      <!--link block="type"><property name="Type"/></link-->
       <link block="strength"><property name="Bonus Strength"/></link>
       <link block="text-top-name-left"><property name="Text"/></link>
       <link block="holding-name"><property name="Name"/></link>
@@ -315,7 +308,6 @@
     </overlayblocks>
 
     <textblocks>
-      <!--link block="type"><property name="Type"/></link-->
       <link block="cost"><property name="Cost"/></link>
       <link block="text-name-left"><property name="Text"/></link>
       <link block="attachment-name"><property name="Name"/></link>
@@ -345,7 +337,6 @@
     </overlayblocks>
 
     <textblocks>
-      <!--link block="type"><property name="Type"/></link-->
       <link block="cost"><property name="Cost"/></link>
       <link block="text-name-top"><property name="Text"/></link>
       <link block="event-name"><property name="Name"/></link>
@@ -382,7 +373,6 @@
     </overlayblocks>
 
     <textblocks>
-      <link block="type"><property name="Type"/></link>
       <link block="strength"><property name="Bonus Strength"/></link>
       <link block="text-top-name-top"><property name="Text"/></link>
       <link block="province-name"><property name="Name"/></link>
