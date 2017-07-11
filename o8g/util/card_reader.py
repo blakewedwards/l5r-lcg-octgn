@@ -7,6 +7,8 @@ from xml.etree.ElementTree import Element, ElementTree, SubElement
 # Usage: copy the full table (with column headers) from https://l5r.gamepedia.com/User:Intolerancegaming?profile=no
 # Paste it into a spreadsheet and save as csv with delimiter ',' and text wrapper '"'. Use ascii (western europe)
 # or UTF-8. My experience has been positive with libre office and poor with excel, but was limited to the starter version.
+# TODO: Pasting the data into libreoffice removes the '+' on numbers for attachments, holdings, and strongholds, but won't be
+# a problem until something gets a negative number.
 
 # A bit clunky but some IDs had already been assigned and wanted to maintain them.
 ids = {
@@ -249,6 +251,9 @@ def add_property_if_nonempty(card, name, value):
   if value:
     add_property(card, name, value)
 
+def prefix_plus(value):
+  return '+' + value if value else value
+
 if (len(sys.argv) != 3):
   sys.exit('Usage: {} <l5r.csv> <out.xml>'.format(os.path.basename(sys.argv[0])))
 
@@ -278,19 +283,25 @@ with open(sys.argv[1], 'rb') as f:
       add_property_if_nonempty(card, 'Cost', row.cost)
 
       if row.military:
-        add_property(card, 'Bonus Military Skill' if row.type.capitalize() == 'Attachment' else 'Military Skill', row.military)
+        if row.type.capitalize() == 'Attachment':
+          add_property(card, 'Bonus Military Skill', prefix_plus(row.military))
+        else:
+          add_property(card, 'Military Skill', row.military)
       elif row.type.capitalize() == 'Character':
         add_property(card, 'Military Skill', '-')
 
       if row.political:
-        add_property(card, 'Bonus Political Skill' if row.type.capitalize() == 'Attachment' else 'Political Skill', row.political)
+        if row.type.capitalize() == 'Attachment':
+          add_property(card, 'Bonus Political Skill', prefix_plus(row.political))
+        else:
+          add_property(card, 'Political Skill', row.political)
       elif row.type.capitalize() == 'Character':
         add_property(card, 'Political Skill', '-')
 
       add_property_if_nonempty(card, 'Glory', row.glory)
-      add_property_if_nonempty(card, 'Bonus Strength', row.strength)
+      add_property_if_nonempty(card, 'Bonus Strength', prefix_plus(row.strength) if row.type.capitalize() != 'Province' else row.strength)
       add_property_if_nonempty(card, 'Starting Honor', row.honor)
-      add_property_if_nonempty(card, 'Fate Value', row.fate)
+      add_property_if_nonempty(card, 'Fate Value', prefix_plus(row.fate))
       add_property_if_nonempty(card, 'Influence Value', row.influence)
       add_property_if_nonempty(card, 'Ring', row.ring.capitalize())
       add_property_if_nonempty(card, 'Deck', row.deck.capitalize())

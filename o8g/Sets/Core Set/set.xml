@@ -70,7 +70,7 @@
       <property name="Text" value="Action: During a [Political] conflict, bow this stronghold, choose a participating character with [Political] skill 2 or lower - bow that character."/>
       <property name="Bonus Strength" value="+2"/>
       <property name="Starting Honor" value="11"/>
-      <property name="Fate Value" value="7"/>
+      <property name="Fate Value" value="+7"/>
       <property name="Influence Value" value="10"/>
       <property name="Card Number" value="2"/>
     </card>
@@ -82,7 +82,7 @@
       <property name="Text" value="Action: During a conflict, bow this stonghold. Choose a participating character with 1 or more attachments on it - until the end of the conflict, that character gets +1[Military] and +1[Political] (+2[Military] and +2[Political] instead if it has 2 or more attachments on it)."/>
       <property name="Bonus Strength" value="+2"/>
       <property name="Starting Honor" value="11"/>
-      <property name="Fate Value" value="7"/>
+      <property name="Fate Value" value="+7"/>
       <property name="Influence Value" value="10"/>
       <property name="Card Number" value="3"/>
     </card>
@@ -94,7 +94,7 @@
       <property name="Text" value="Action: During a conflict, bow this stronghold - each attacking character you control gets +1[Military] until the end of the conflict."/>
       <property name="Bonus Strength" value="+2"/>
       <property name="Starting Honor" value="12"/>
-      <property name="Fate Value" value="7"/>
+      <property name="Fate Value" value="+7"/>
       <property name="Influence Value" value="10"/>
       <property name="Card Number" value="4"/>
     </card>
@@ -894,8 +894,8 @@
       <property name="Traits" value="Condition."/>
       <property name="Text" value="Interrupt: When attached character would leave play - discard this attachment instead."/>
       <property name="Cost" value="1"/>
-      <property name="Bonus Military Skill" value="0"/>
-      <property name="Bonus Political Skill" value="0"/>
+      <property name="Bonus Military Skill" value="+0"/>
+      <property name="Bonus Political Skill" value="+0"/>
       <property name="Influence Value" value="1"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="132"/>
@@ -941,8 +941,8 @@
       <property name="Traits" value="Condition."/>
       <property name="Text" value="Attached character cannot be chosen as a target of an opponent's event."/>
       <property name="Cost" value="1"/>
-      <property name="Bonus Military Skill" value="0"/>
-      <property name="Bonus Political Skill" value="0"/>
+      <property name="Bonus Military Skill" value="+0"/>
+      <property name="Bonus Political Skill" value="+0"/>
       <property name="Influence Value" value="2"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="141"/>
@@ -953,8 +953,8 @@
       <property name="Traits" value="Technique."/>
       <property name="Text" value="Attached character gains: &quot;Action: While this character is participating in a conflict, choose a participating character controlled by your opponent - challenge that character to a [Military] duel. Instead of giving honor for this duel's bid, a player may choose and discard the required number of cards from hand. Bow the loser of the duel.&quot;"/>
       <property name="Cost" value="1"/>
-      <property name="Bonus Military Skill" value="0"/>
-      <property name="Bonus Political Skill" value="0"/>
+      <property name="Bonus Military Skill" value="+0"/>
+      <property name="Bonus Political Skill" value="+0"/>
       <property name="Influence Value" value="1"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="142"/>
@@ -965,8 +965,8 @@
       <property name="Traits" value="Condition."/>
       <property name="Text" value="This attachment cannot be played during a conflict."/>
       <property name="Cost" value="2"/>
-      <property name="Bonus Military Skill" value="0"/>
-      <property name="Bonus Political Skill" value="4"/>
+      <property name="Bonus Military Skill" value="+0"/>
+      <property name="Bonus Political Skill" value="+4"/>
       <property name="Influence Value" value="3"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="143"/>
@@ -1053,8 +1053,8 @@
       <property name="Traits" value="Weapon."/>
       <property name="Text" value="Ancestral. (When attached card leaves play, return this card to your hand.)&#10;Restricted. (No more than two restricted attachments per character.)"/>
       <property name="Cost" value="1"/>
-      <property name="Bonus Military Skill" value="2"/>
-      <property name="Bonus Political Skill" value="0"/>
+      <property name="Bonus Military Skill" value="+2"/>
+      <property name="Bonus Political Skill" value="+0"/>
       <property name="Influence Value" value="2"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="151"/>
@@ -1065,8 +1065,8 @@
       <property name="Traits" value=""/>
       <property name="Text" value=""/>
       <property name="Cost" value="0"/>
-      <property name="Bonus Military Skill" value="0"/>
-      <property name="Bonus Political Skill" value="0"/>
+      <property name="Bonus Military Skill" value="+0"/>
+      <property name="Bonus Political Skill" value="+0"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="152"/>
     </card>
@@ -1076,8 +1076,8 @@
       <property name="Traits" value="Technique."/>
       <property name="Text" value="Ancestral. (When attached card leaves play, return this card to your hand.)&#10;Restricted. (No more than two restricted attachments per character.)"/>
       <property name="Cost" value="1"/>
-      <property name="Bonus Military Skill" value="0"/>
-      <property name="Bonus Political Skill" value="2"/>
+      <property name="Bonus Military Skill" value="+0"/>
+      <property name="Bonus Political Skill" value="+2"/>
       <property name="Influence Value" value="2"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="153"/>
@@ -1088,8 +1088,8 @@
       <property name="Traits" value="Philosophy."/>
       <property name="Text" value="Attach to a character you control. Limit 1 per character.&#10;You may trigger each of attached character's triggered abilities an additional time each round (or specified period)."/>
       <property name="Cost" value="2"/>
-      <property name="Bonus Military Skill" value="1"/>
-      <property name="Bonus Political Skill" value="1"/>
+      <property name="Bonus Military Skill" value="+1"/>
+      <property name="Bonus Political Skill" value="+1"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="154"/>
     </card>
@@ -1165,8 +1165,8 @@
       <property name="Traits" value="Condition."/>
       <property name="Text" value="Action: Play this attachment from your conflict discard pile."/>
       <property name="Cost" value="1"/>
-      <property name="Bonus Military Skill" value="1"/>
-      <property name="Bonus Political Skill" value="1"/>
+      <property name="Bonus Military Skill" value="+1"/>
+      <property name="Bonus Political Skill" value="+1"/>
       <property name="Influence Value" value="1"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="162"/>
@@ -1177,8 +1177,8 @@
       <property name="Traits" value="Weapon."/>
       <property name="Text" value="Restricted. (No more than two restricted attachments per character.)&#10;Reaction: After attached character wins a conflict - gain 1 honor."/>
       <property name="Cost" value="1"/>
-      <property name="Bonus Military Skill" value="2"/>
-      <property name="Bonus Political Skill" value="0"/>
+      <property name="Bonus Military Skill" value="+2"/>
+      <property name="Bonus Political Skill" value="+0"/>
       <property name="Influence Value" value="1"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="163"/>
@@ -1189,8 +1189,8 @@
       <property name="Traits" value="Item. Banner."/>
       <property name="Text" value="Attach to a Bushi character you control.&#10;Attached character does not bow as a result of conflict resolution during [Military] conflicts."/>
       <property name="Cost" value="2"/>
-      <property name="Bonus Military Skill" value="0"/>
-      <property name="Bonus Political Skill" value="0"/>
+      <property name="Bonus Military Skill" value="+0"/>
+      <property name="Bonus Political Skill" value="+0"/>
       <property name="Influence Value" value="2"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="164"/>
@@ -1263,8 +1263,8 @@
       <property name="Traits" value="Condition."/>
       <property name="Text" value="This attachment cannot be played during a conflict.&#10;Attached character cannot participate in [Military] conflicts."/>
       <property name="Cost" value="2"/>
-      <property name="Bonus Military Skill" value="0"/>
-      <property name="Bonus Political Skill" value="0"/>
+      <property name="Bonus Military Skill" value="+0"/>
+      <property name="Bonus Political Skill" value="+0"/>
       <property name="Influence Value" value="2"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="174"/>
@@ -1324,8 +1324,8 @@
       <property name="Traits" value="Weapon."/>
       <property name="Text" value="Restricted. (No more than two restricted attachments per character.)"/>
       <property name="Cost" value="0"/>
-      <property name="Bonus Military Skill" value="2"/>
-      <property name="Bonus Political Skill" value="0"/>
+      <property name="Bonus Military Skill" value="+2"/>
+      <property name="Bonus Political Skill" value="+0"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="200"/>
     </card>
@@ -1335,8 +1335,8 @@
       <property name="Traits" value=""/>
       <property name="Text" value="Restricted. (No more than two restricted attachments per character.)"/>
       <property name="Cost" value="0"/>
-      <property name="Bonus Military Skill" value="0"/>
-      <property name="Bonus Political Skill" value="2"/>
+      <property name="Bonus Military Skill" value="+0"/>
+      <property name="Bonus Political Skill" value="+2"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="201"/>
     </card>
@@ -1346,8 +1346,8 @@
       <property name="Traits" value="Spell. Air."/>
       <property name="Text" value="Play only if you control a Shugenja character. &#10;Treat attached character as if its printed text box were blank (except for Traits)."/>
       <property name="Cost" value="1"/>
-      <property name="Bonus Military Skill" value="0"/>
-      <property name="Bonus Political Skill" value="0"/>
+      <property name="Bonus Military Skill" value="+0"/>
+      <property name="Bonus Political Skill" value="+0"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="202"/>
     </card>
