@@ -68,7 +68,7 @@
       <property name="Unique" value="Unique"/>
       <property name="Traits" value="City."/>
       <property name="Text" value="Action: During a [Political] conflict, bow this stronghold, choose a participating character with [Political] skill 2 or lower - bow that character."/>
-      <property name="Bonus Strength" value="2"/>
+      <property name="Bonus Strength" value="+2"/>
       <property name="Starting Honor" value="11"/>
       <property name="Fate Value" value="7"/>
       <property name="Influence Value" value="10"/>
@@ -80,7 +80,7 @@
       <property name="Unique" value="Unique"/>
       <property name="Traits" value="Castle."/>
       <property name="Text" value="Action: During a conflict, bow this stonghold. Choose a participating character with 1 or more attachments on it - until the end of the conflict, that character gets +1[Military] and +1[Political] (+2[Military] and +2[Political] instead if it has 2 or more attachments on it)."/>
-      <property name="Bonus Strength" value="2"/>
+      <property name="Bonus Strength" value="+2"/>
       <property name="Starting Honor" value="11"/>
       <property name="Fate Value" value="7"/>
       <property name="Influence Value" value="10"/>
@@ -92,7 +92,7 @@
       <property name="Unique" value="Unique"/>
       <property name="Traits" value="Castle."/>
       <property name="Text" value="Action: During a conflict, bow this stronghold - each attacking character you control gets +1[Military] until the end of the conflict."/>
-      <property name="Bonus Strength" value="2"/>
+      <property name="Bonus Strength" value="+2"/>
       <property name="Starting Honor" value="12"/>
       <property name="Fate Value" value="7"/>
       <property name="Influence Value" value="10"/>
@@ -226,7 +226,7 @@
       <property name="Type" value="Holding"/>
       <property name="Traits" value="Battlefield."/>
       <property name="Text" value="Action: Choose a card in one of your provinces - switch this holding with that card."/>
-      <property name="Bonus Strength" value="2"/>
+      <property name="Bonus Strength" value="+2"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="36"/>
     </card>
@@ -395,7 +395,7 @@
       <property name="Type" value="Holding"/>
       <property name="Traits" value="Academy."/>
       <property name="Text" value="Action: During the conflict phase - reveal the top card of your conflict deck. Until the end of the phase, you may play that card as if it were in your hand."/>
-      <property name="Bonus Strength" value="1"/>
+      <property name="Bonus Strength" value="+1"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="53"/>
     </card>
@@ -549,7 +549,7 @@
       <property name="Type" value="Holding"/>
       <property name="Traits" value="Shrine."/>
       <property name="Text" value="Reaction: After the conflict phase begins, each opponent who controls more characters than you must choose a character he or she controls with 1 or more fate on it - remove 1 fate from each chosen character."/>
-      <property name="Bonus Strength" value="1"/>
+      <property name="Bonus Strength" value="+1"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="66"/>
     </card>
@@ -717,7 +717,7 @@
       <property name="Type" value="Holding"/>
       <property name="Traits" value="Battlefield."/>
       <property name="Text" value="Action: Choose up to 2 facedown cards in your provinces - turn the chosen cards faceup."/>
-      <property name="Bonus Strength" value="1"/>
+      <property name="Bonus Strength" value="+1"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="80"/>
     </card>
@@ -787,7 +787,7 @@
       <property name="Type" value="Holding"/>
       <property name="Traits" value="City."/>
       <property name="Text" value="Action: Reduce the cost of the next event you play this phase by 1."/>
-      <property name="Bonus Strength" value="1"/>
+      <property name="Bonus Strength" value="+1"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="108"/>
     </card>

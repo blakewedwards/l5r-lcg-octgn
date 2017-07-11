@@ -26,6 +26,11 @@
       <text color="#000000" size="20" font="fonts/arial.ttf"/>
       <wordwrap height="100" width="330" shrinktofit="True"/>
     </block>
+    <block type="text" id="text-stronghold">
+      <location x="25" y="375"/>
+      <text color="#000000" size="20" font="fonts/arial.ttf"/>
+      <wordwrap height="125" width="380" shrinktofit="True"/>
+    </block>
     <block type="text" id="cost">
       <location x="15" y="15"/>
       <text color="#000000" size="48" font="fonts/arial.ttf"/>
@@ -56,6 +61,11 @@
       <text color="#000000" size="20" font="fonts/arialbi.ttf"/>
       <wordwrap height="34" width="300" align="center"/>
     </block>
+    <block type="text" id="traits-stronghold">
+      <location x="60" y="345"/>
+      <text color="#000000" size="20" font="fonts/arialbi.ttf"/>
+      <wordwrap height="34" width="300" align="center"/>
+    </block>
     <block type="text" id="military-skill">
       <location x="17" y="97"/>
       <text color="#000000" size="36" font="fonts/arial.ttf"/>
@@ -68,6 +78,21 @@
     </block>
     <block type="text" id="glory">
       <location x="347" y="340"/>
+      <text color="#000000" size="36" font="fonts/arial.ttf"/>
+      <wordwrap height="50" width="50" align="center" valign="center" shrinktofit="True"/>
+    </block>
+    <block type="text" id="influence">
+      <location x="338" y="505"/>
+      <text color="#000000" size="36" font="fonts/arial.ttf"/>
+      <wordwrap height="50" width="50" align="center" valign="center" shrinktofit="True"/>
+    </block>
+    <block type="text" id="honor">
+      <location x="12" y="507"/>
+      <text color="#000000" size="36" font="fonts/arial.ttf"/>
+      <wordwrap height="50" width="50" align="center" valign="center" shrinktofit="True"/>
+    </block>
+    <block type="text" id="fate">
+      <location x="186" y="501"/>
       <text color="#000000" size="36" font="fonts/arial.ttf"/>
       <wordwrap height="50" width="50" align="center" valign="center" shrinktofit="True"/>
     </block>
@@ -193,15 +218,18 @@
           <case value="Unicorn"><link block="stronghold-base-unicorn"/></case>
         </switch>
       </conditional>
+          <link block="unique-name-top"/>
     </overlayblocks>
 
-    <!-- Since each clan has a single stronghold, use its cropped image for the base. -->
-    <!--textblocks>
-      <link block="type"><property name="Type"/></link>
-      <link block="text"><property name="Text"/></link>
-      <link block="stronghold-name"><property name="Name"/></link>
-      <link block="traits-middle-name-top"><property name="Traits"/></link>
-    </textblocks-->
+    <textblocks>
+      <link block="text-stronghold"><property name="Text"/></link>
+      <link block="strength"><property name="Bonus Strength"/></link>
+      <link block="character-name"><property name="Name"/></link>
+      <link block="traits-stronghold"><property name="Traits"/></link>
+      <link block="honor"><property name="Starting Honor"/></link>
+      <link block="influence"><property name="Influence Value"/></link>
+      <link block="fate"><property name="Fate Value"/></link>
+    </textblocks>
   </template>
 
   <template src="proxygen/images/empty.png">
