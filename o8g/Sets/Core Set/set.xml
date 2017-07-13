@@ -62,6 +62,18 @@
         <property name="Type" value="Ring"/>
       </alternate>
     </card>
+    <card id="9ff46167-1893-45bc-87f6-266f77be7789" name="Shiro Nishiyama">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Stronghold"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Castle."/>
+      <property name="Text" value="???"/>
+      <property name="Bonus Strength" value="+3"/>
+      <property name="Starting Honor" value="10"/>
+      <property name="Fate Value" value="+7"/>
+      <property name="Influence Value" value="10"/>
+      <property name="Card Number" value="1"/>
+    </card>
     <card id="8c53e061-b416-4d32-84a1-596c4f3d005a" name="Shizuka Toshi">
       <property name="Clan" value="Crane"/>
       <property name="Type" value="Stronghold"/>
@@ -79,7 +91,7 @@
       <property name="Type" value="Stronghold"/>
       <property name="Unique" value="Unique"/>
       <property name="Traits" value="Castle."/>
-      <property name="Text" value="Action: During a conflict, bow this stonghold. Choose a participating character with 1 or more attachments on it - until the end of the conflict, that character gets +1[Military] and +1[Political] (+2[Military] and +2[Political] instead if it has 2 or more attachments on it)."/>
+      <property name="Text" value="Action: During a conflict, bow this stronghold. Choose a participating character with 1 or more attachments on it - until the end of the conflict, that character gets +1[Military] and +1[Political] (+2[Military] and +2[Political] instead if it has 2 or more attachments on it)."/>
       <property name="Bonus Strength" value="+2"/>
       <property name="Starting Honor" value="11"/>
       <property name="Fate Value" value="+7"/>
@@ -104,6 +116,7 @@
       <property name="Traits" value=""/>
       <property name="Text" value="Reaction: After you win a conflict at this province - resolve the ring effect of that conflict as if you were the attacking player."/>
       <property name="Bonus Strength" value="4"/>
+      <property name="Ring" value="Earth"/>
       <property name="Card Number" value="8"/>
     </card>
     <card id="98e106b6-7bb4-47c5-9fe7-dd290e3d42df" name="The Art of Peace" size="province">
@@ -154,8 +167,9 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="???"/>
+      <property name="Text" value="This province gets +5 during [Political] conflicts here."/>
       <property name="Bonus Strength" value="5"/>
+      <property name="Ring" value="Earth"/>
       <property name="Card Number" value="15"/>
     </card>
     <card id="8f0246b6-a8dd-4939-891c-7143c2ac9b53" name="Elemental Fury" size="province">
@@ -166,6 +180,31 @@
       <property name="Bonus Strength" value="4"/>
       <property name="Ring" value="Water"/>
       <property name="Card Number" value="16"/>
+    </card>
+    <card id="47d199f8-b178-4bb2-9355-11d16356648b" name="Entrenched Position" size="province">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Province"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="This province gets +5 during [Military] conflicts here."/>
+      <property name="Bonus Strength" value="5"/>
+      <property name="Ring" value="Earth"/>
+      <property name="Card Number" value="17"/>
+    </card>
+    <card id="3a269937-2bc6-4dad-ad7f-1a76b0948e42" name="Manicured Garden" size="province">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Province"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value=""/>
+      <property name="Bonus Strength" value="4"/>
+      <property name="Card Number" value="19"/>
+    </card>
+    <card id="90776573-f6a5-45c5-ab3a-204cdd1d1aaf" name="Meditations on the Tao" size="province">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Province"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value=""/>
+      <property name="Bonus Strength" value="4"/>
+      <property name="Card Number" value="20"/>
     </card>
     <card id="a8c4f60e-6c36-4bd7-99da-eef1c3da2aab" name="Night Raid" size="province">
       <property name="Clan" value="Neutral"/>
@@ -185,6 +224,24 @@
       <property name="Ring" value="Void"/>
       <property name="Card Number" value="22"/>
     </card>
+    <card id="513372c8-9f67-4c26-8f54-7a9fce91b3c1" name="Rally to the Cause" size="province">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Province"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value=""/>
+      <property name="Bonus Strength" value="4"/>
+      <property name="Ring" value="Water"/>
+      <property name="Card Number" value="23"/>
+    </card>
+    <card id="19c319c6-b2e5-4877-9f6d-b70a64988ea4" name="Shameful Display" size="province">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Province"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: During a conflict at this province, choose 2 participating characters - honor one of those characters and dishonor the other."/>
+      <property name="Bonus Strength" value="3"/>
+      <property name="Ring" value="Void"/>
+      <property name="Card Number" value="24"/>
+    </card>
     <card id="35f74bd9-ac4b-4a32-b6d8-667573a006c7" name="Eager Scout" size="dynasty">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
@@ -196,6 +253,30 @@
       <property name="Glory" value="0"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="25"/>
+    </card>
+    <card id="6811de40-d5a3-4cf5-b64f-b31b6c6ea497" name="Hida Guardian" size="dynasty">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="?."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="26"/>
+    </card>
+    <card id="59fee928-8b62-424e-8024-a31bbd620bd0" name="Hiruma Yojimbo" size="dynasty">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Yojimbo."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="4"/>
+      <property name="Political Skill" value="3"/>
+      <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="28"/>
     </card>
     <card id="15012b1d-41e8-48e5-a3a4-2493a05ec2d1" name="Shrewd Yasuki" size="dynasty">
       <property name="Clan" value="Crab"/>
@@ -221,14 +302,98 @@
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="31"/>
     </card>
-    <card id="8d80f714-c1f8-40ab-9f12-a4d18b82337a" name="Borderlands Fortifications" size="dynasty">
+    <card id="c4051433-d797-4fef-81fd-3e7e9c8a2023" name="Intimidating Hida" size="dynasty">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="4"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="32"/>
+    </card>
+    <card id="0e3f1103-5063-40c9-8f6f-57aec2cdc249" name="Vengeful Berserker" size="dynasty">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Berserker."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="-"/>
+      <property name="Glory" value="0"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="33"/>
+    </card>
+    <card id="b9591ff0-c32f-4bd0-9ead-88392c7e5161" name="Hida Tomonatsu" size="dynasty">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Character"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Bushi."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="34"/>
+    </card>
+    <card id="59f6b7a8-81fe-4f5c-82ea-9cd0d0cc3eae" name="Steadfast Witch Hunter" size="dynasty">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Shugenja. Earth."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="4"/>
+      <property name="Military Skill" value="4"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="0"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="35"/>
+    </card>
+    <card id="8d80f714-c1f8-40ab-9f12-a4d18b82337a" name="Kaiu Shuichi" size="dynasty">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Character"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Bushi. Engineer."/>
+      <property name="Text" value="Covert. (When this character is declared as an attacker, you may choose a character that does not have covert. That character cannot be declared as a defender for this conflict during the &quot;declare defenders&quot; step.)&#10;Action: During a conflict in which this character is participating, if there is a holding in play - gain 1 fate."/>
+      <property name="Cost" value="4"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="3"/>
+      <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="36"/>
+    </card>
+    <card id="c7725dcb-9108-4067-9372-ad9e363c0415" name="Hida Kisada" size="dynasty">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Character"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Bushi. Champion."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="5"/>
+      <property name="Military Skill" value="7"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="0"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="37"/>
+    </card>
+    <card id="b59201dd-a763-4944-87f4-c21b48a51432" name="Borderlands Fortifications" size="dynasty">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Holding"/>
       <property name="Traits" value="Battlefield."/>
       <property name="Text" value="Action: Choose a card in one of your provinces - switch this holding with that card."/>
       <property name="Bonus Strength" value="+2"/>
       <property name="Deck" value="Dynasty"/>
-      <property name="Card Number" value="36"/>
+      <property name="Card Number" value="38"/>
+    </card>
+    <card id="7ddc9756-eaea-4905-b7c7-e9e0b83d1d4a" name="Funeral Pyre" size="dynasty">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Holding"/>
+      <property name="Traits" value="Ritual."/>
+      <property name="Text" value="???"/>
+      <property name="Bonus Strength" value="+0"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="39"/>
     </card>
     <card id="f364aac3-9e20-4b59-bebc-19627b0ba91d" name="Asahina Artisan" size="dynasty">
       <property name="Clan" value="Crane"/>
@@ -535,6 +700,7 @@
     <card id="6867a986-8eb7-447b-8f09-585d7a416f62" name="Togashi Yokuni" size="dynasty">
       <property name="Clan" value="Dragon"/>
       <property name="Type" value="Character"/>
+      <property name="Unique" value="Unique"/>
       <property name="Traits" value="Bushi. Shugenja. Champion."/>
       <property name="Text" value="Action: Choose a triggered ability printed on another character - this character gains that ability until the end of the phase. (Max 1 per round.)"/>
       <property name="Cost" value="5"/>
@@ -875,6 +1041,19 @@
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="127"/>
     </card>
+    <card id="8b4ece45-02c7-42a2-978b-d8ea103890d5" name="Hiruma Ambusher" size="conflict">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Scout."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="0"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="130"/>
+    </card>
     <card id="c6a61750-9202-4c6d-b30b-ce843f1316a6" name="Stoic Gunso" size="conflict">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
@@ -900,6 +1079,30 @@
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="132"/>
     </card>
+    <card id="56ba414a-40b0-4be2-9a40-417541dbf7fe" name="Watch Commander" size="conflict">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Follower."/>
+      <property name="Text" value="Attach to a character you control. Limit 1 per character.&#10;Reaction: After an opponent plays a card during a conflict in which attached character is participating - that player loses 1 honor. (Unlimited.)"/>
+      <property name="Cost" value="1"/>
+      <property name="Bonus Military Skill" value="+1"/>
+      <property name="Bonus Political Skill" value="+1"/>
+      <property name="Influence Value" value="3"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="133"/>
+    </card>
+    <card id="5df9e7d3-676f-42dd-880c-68fa8e11dbcd" name="Jade Tetsubo" size="conflict">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Jade. Weapon."/>
+      <property name="Text" value="Restricted. (No more than two restricted attachments per character.)&#10;Action: While attached character is participating in a conflict, bow this attachment, choose a participating character with lower [Military] skill - return all fate on that character to its owner's fate pool."/>
+      <property name="Cost" value="2"/>
+      <property name="Bonus Military Skill" value="+3"/>
+      <property name="Bonus Political Skill" value="+0"/>
+      <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="134"/>
+    </card>
     <card id="9f06d1b0-4a4c-4b76-a44e-2bef3b37a785" name="Rebuild" size="conflict">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Event"/>
@@ -908,6 +1111,25 @@
       <property name="Influence Value" value="2"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="136"/>
+    </card>
+    <card id="9cd1be8a-c729-45d6-9b9f-32bf38058a0c" name="Way of the Crab" size="conflict">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value="Philosophy."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="137"/>
+    </card>
+    <card id="6b2b7025-af74-474a-8dee-61efb544122b" name="The Mountain Does Not Fall" size="conflict">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value="Technique."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="1"/>
+      <property name="Influence Value" value="3"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="138"/>
     </card>
     <card id="ad350407-e999-4da0-b136-dd046375e07a" name="Steward of Law" size="conflict">
       <property name="Clan" value="Crane"/>
@@ -922,7 +1144,7 @@
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="139"/>
     </card>
-    <card id="81ee4125-ccbb-4ee2-b156-bd479181dbe0" name="Political Rival" size="dynasty">
+    <card id="81ee4125-ccbb-4ee2-b156-bd479181dbe0" name="Political Rival" size="conflict">
       <property name="Clan" value="Crane"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Courtier."/>
