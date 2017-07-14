@@ -67,7 +67,7 @@
       <property name="Type" value="Stronghold"/>
       <property name="Unique" value="Unique"/>
       <property name="Traits" value="Castle."/>
-      <property name="Text" value="???"/>
+      <property name="Text" value="Action: During a conflict, bow this stronghold - each defending character you control gets +1[Military] and +1[Political] until the end of the conflict."/>
       <property name="Bonus Strength" value="+3"/>
       <property name="Starting Honor" value="10"/>
       <property name="Fate Value" value="+7"/>
@@ -194,8 +194,9 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value=""/>
+      <property name="Text" value="Action: During a conflict at this province, gain 1 fate."/>
       <property name="Bonus Strength" value="4"/>
+      <property name="Ring" value="Air"/>
       <property name="Card Number" value="19"/>
     </card>
     <card id="90776573-f6a5-45c5-ab3a-204cdd1d1aaf" name="Meditations on the Tao" size="province">
@@ -204,6 +205,7 @@
       <property name="Traits" value=""/>
       <property name="Text" value=""/>
       <property name="Bonus Strength" value="4"/>
+      <property name="Ring" value="Fire"/>
       <property name="Card Number" value="20"/>
     </card>
     <card id="a8c4f60e-6c36-4bd7-99da-eef1c3da2aab" name="Night Raid" size="province">
@@ -228,7 +230,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value=""/>
+      <property name="Text" value="Reaction: After this province is revealed - switch the conflict type. (The conflict retains its ring.)"/>
       <property name="Bonus Strength" value="4"/>
       <property name="Ring" value="Water"/>
       <property name="Card Number" value="23"/>
@@ -257,8 +259,8 @@
     <card id="6811de40-d5a3-4cf5-b64f-b31b6c6ea497" name="Hida Guardian" size="dynasty">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
-      <property name="Traits" value="?."/>
-      <property name="Text" value="???"/>
+      <property name="Traits" value="Bushi."/>
+      <property name="Text" value="Action: While this character is participating in a conflict, choose another participating character - until the end of the conflict, that character gets +2[Military] and +2[Political] for each holding you control."/>
       <property name="Cost" value="1"/>
       <property name="Military Skill" value="1"/>
       <property name="Political Skill" value="1"/>
@@ -270,7 +272,7 @@
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Yojimbo."/>
-      <property name="Text" value="???"/>
+      <property name="Text" value="This character cannot be declared as an attacker."/>
       <property name="Cost" value="2"/>
       <property name="Military Skill" value="4"/>
       <property name="Political Skill" value="3"/>
@@ -306,7 +308,7 @@
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi."/>
-      <property name="Text" value="???"/>
+      <property name="Text" value="Reaction: After an opponent passes on declaring a conflict - that player loses 1 honor."/>
       <property name="Cost" value="3"/>
       <property name="Military Skill" value="4"/>
       <property name="Political Skill" value="2"/>
@@ -318,7 +320,7 @@
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Berserker."/>
-      <property name="Text" value="???"/>
+      <property name="Text" value="Reaction: After another character you control leaves play during a conflict - double this character's [Military] skill until the end of the conflict."/>
       <property name="Cost" value="3"/>
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="-"/>
@@ -331,7 +333,7 @@
       <property name="Type" value="Character"/>
       <property name="Unique" value="Unique"/>
       <property name="Traits" value="Bushi."/>
-      <property name="Text" value="???"/>
+      <property name="Text" value="After this character wins a conflict as a defender, sacrifice it. Choose a non-unique attacking character - return that character to the top of its owner's deck."/>
       <property name="Cost" value="3"/>
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="2"/>
@@ -343,7 +345,7 @@
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Shugenja. Earth."/>
-      <property name="Text" value="???"/>
+      <property name="Text" value="Action: Sacrifice a (friendly) character. Choose a character - ready that character."/>
       <property name="Cost" value="4"/>
       <property name="Military Skill" value="4"/>
       <property name="Political Skill" value="2"/>
@@ -369,7 +371,7 @@
       <property name="Type" value="Character"/>
       <property name="Unique" value="Unique"/>
       <property name="Traits" value="Bushi. Champion."/>
-      <property name="Text" value="???"/>
+      <property name="Text" value="While you have not lost a conflict this phase, cancel the effects of the first action ability your opponent triggers from a card during each conflict."/>
       <property name="Cost" value="5"/>
       <property name="Military Skill" value="7"/>
       <property name="Political Skill" value="2"/>
@@ -390,7 +392,7 @@
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Holding"/>
       <property name="Traits" value="Ritual."/>
-      <property name="Text" value="???"/>
+      <property name="Text" value="Action: Sacrifice a (friendly) character - draw 1 card."/>
       <property name="Bonus Strength" value="+0"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="39"/>
@@ -1045,7 +1047,7 @@
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Scout."/>
-      <property name="Text" value="???"/>
+      <property name="Text" value="Reaction: After this character enters play as a defender, choose a character - that character's abilities cannot be triggered during this conflict."/>
       <property name="Cost" value="2"/>
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="2"/>
@@ -1103,6 +1105,16 @@
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="134"/>
     </card>
+    <card id="556841cb-d05e-4d5c-8dc0-4706f88e044c" name="Levy" size="conflict">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: Choose an opponent, that player must select one - give you 1 fate or 1 honor."/>
+      <property name="Cost" value="0"/>
+      <property name="Influence Value" value="3"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="135"/>
+    </card>
     <card id="9f06d1b0-4a4c-4b76-a44e-2bef3b37a785" name="Rebuild" size="conflict">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Event"/>
@@ -1116,7 +1128,7 @@
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value="Philosophy."/>
-      <property name="Text" value="???"/>
+      <property name="Text" value="Action: Sacrifice a (friendly) [Crab] character. Choose an opponent - that player must sacrifice a character. (Max 1 per round.)"/>
       <property name="Cost" value="1"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="137"/>
@@ -1125,7 +1137,7 @@
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value="Technique."/>
-      <property name="Text" value="???"/>
+      <property name="Text" value="Action: Choose a character - Until the end of the phase, that character does not bow as a result of conflict resolution while defending. (Max 1 per round.)"/>
       <property name="Cost" value="1"/>
       <property name="Influence Value" value="3"/>
       <property name="Deck" value="Conflict"/>
