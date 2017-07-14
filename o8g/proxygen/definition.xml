@@ -94,6 +94,15 @@
     <block type="overlay" id="unique-name-top" src="proxygen/images/unique.png">
       <location x="100" y="28"/>
     </block>
+    <block type="overlay" id="influence-1" src="proxygen/images/influence.png">
+      <location x="295" y="568"/>
+    </block>
+    <block type="overlay" id="influence-2" src="proxygen/images/influence.png">
+      <location x="305" y="568"/>
+    </block>
+    <block type="overlay" id="influence-3" src="proxygen/images/influence.png">
+      <location x="315" y="568"/>
+    </block>
     <block type="text" id="deck">
       <location x="351" y="571"/>
       <text color="#FFFFFF" size="9" font="fonts/arial.ttf"/>
@@ -248,6 +257,13 @@
           <link block="unique-name-top"/>
         </if>
       </conditional>
+      <conditional>
+        <switch property="Influence Value">
+          <case value="1"><link block="influence-1"/></case>
+          <case value="2"><link block="influence-1"/><link block="influence-2"/></case>
+          <case value="3"><link block="influence-1"/><link block="influence-2"/><link block="influence-3"/></case>
+        </switch>
+      </conditional>
     </overlayblocks>
 
     <textblocks>
@@ -305,6 +321,13 @@
           <case value="Unicorn"><link block="attachment-base-unicorn"/></case>
         </switch>
       </conditional>
+      <conditional>
+        <switch property="Influence Value">
+          <case value="1"><link block="influence-1"/></case>
+          <case value="2"><link block="influence-1"/><link block="influence-2"/></case>
+          <case value="3"><link block="influence-1"/><link block="influence-2"/><link block="influence-3"/></case>
+        </switch>
+      </conditional>
     </overlayblocks>
 
     <textblocks>
@@ -332,6 +355,13 @@
           <case value="Phoenix"><link block="event-base-phoenix"/></case>
           <case value="Scorpion"><link block="event-base-scorpion"/></case>
           <case value="Unicorn"><link block="event-base-unicorn"/></case>
+        </switch>
+      </conditional>
+      <conditional>
+        <switch property="Influence Value">
+          <case value="1"><link block="influence-1"/></case>
+          <case value="2"><link block="influence-1"/><link block="influence-2"/></case>
+          <case value="3"><link block="influence-1"/><link block="influence-2"/><link block="influence-3"/></case>
         </switch>
       </conditional>
     </overlayblocks>
