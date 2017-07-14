@@ -213,7 +213,7 @@
           <case value="Unicorn"><link block="stronghold-base-unicorn"/></case>
         </switch>
       </conditional>
-          <link block="unique-name-top"/>
+      <link block="unique-name-top"/>
     </overlayblocks>
 
     <textblocks>
