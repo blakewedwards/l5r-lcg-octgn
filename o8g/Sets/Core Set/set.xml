@@ -11,6 +11,8 @@
     <marker id="af5fc343-121e-4ecc-9d21-f3886644b473" name="Honored"/>
   </markers>
   <cards>
+    <!--card id="a88f2213-7711-4699-a94e-23bf10ceedd6" name="First Player Token">
+    </card-->
     <card id="4c4f1d22-f2e8-46ff-8446-9aa6ec0a45a6" name="Honor Dial" size="honor_dial">
       <property name="Type" value="Honor Dial"/>
       <alternate name="Honor Dial" type="2">
