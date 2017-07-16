@@ -194,7 +194,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Action: During a conflict at this province, gain 1 fate."/>
+      <property name="Text" value="Action: During a conflict at this province - gain 1 fate."/>
       <property name="Bonus Strength" value="4"/>
       <property name="Ring" value="Air"/>
       <property name="Card Number" value="19"/>
@@ -268,6 +268,18 @@
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="26"/>
     </card>
+    <card id="b4950e54-5b1a-4af8-b1a5-c1653b809fda" name="Kaiu Envoy" size="dynasty">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi."/>
+      <property name="Text" value="Courtesy. (When this character leaves play, gain 1 fate.)&#10;Sincerity. (When this character leaves play, draw 1 card.)"/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="0"/>
+      <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="27"/>
+    </card>
     <card id="59fee928-8b62-424e-8024-a31bbd620bd0" name="Hiruma Yojimbo" size="dynasty">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Character"/>
@@ -333,7 +345,7 @@
       <property name="Type" value="Character"/>
       <property name="Unique" value="Unique"/>
       <property name="Traits" value="Bushi."/>
-      <property name="Text" value="After this character wins a conflict as a defender, sacrifice it. Choose a non-unique attacking character - return that character to the top of its owner's deck."/>
+      <property name="Text" value="Reaction: After this character wins a conflict as a defender, sacrifice it. Choose a non-unique attacking character - return that character to the top of its owner's deck."/>
       <property name="Cost" value="3"/>
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="2"/>
@@ -1137,7 +1149,7 @@
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value="Technique."/>
-      <property name="Text" value="Action: Choose a character - Until the end of the phase, that character does not bow as a result of conflict resolution while defending. (Max 1 per round.)"/>
+      <property name="Text" value="Action: Choose a character - until the end of the phase, that character does not bow as a result of conflict resolution while defending. (Max 1 per round.)"/>
       <property name="Cost" value="1"/>
       <property name="Influence Value" value="3"/>
       <property name="Deck" value="Conflict"/>
@@ -1297,10 +1309,11 @@
       <property name="Clan" value="Dragon"/>
       <property name="Type" value="Attachment"/>
       <property name="Traits" value=""/>
-      <property name="Text" value=""/>
+      <property name="Text" value="Attach to a character you control.&#10;Action: Bow this attachment - reduce the cost of the next attachment you play on this character this phase by 1."/>
       <property name="Cost" value="0"/>
       <property name="Bonus Military Skill" value="+0"/>
       <property name="Bonus Political Skill" value="+0"/>
+      <property name="Influence Value" value="2"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="152"/>
     </card>
@@ -1513,6 +1526,16 @@
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="178"/>
     </card>
+    <card id="f71abfbd-985e-4f1b-b61f-773a02f82486" name="Display of Power" size="conflict">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value="Spell. Fire."/>
+      <property name="Text" value="Reaction: After you lose an unopposed conflict - cancel the ring effect of that conflict. Then, you resolve that ring effect as if you had won the conflict as the attacking player. Claim that ring."/>
+      <property name="Cost" value="2"/>
+      <property name="Influence Value" value="3"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="179"/>
+    </card>
     <card id="ed546e3d-c954-4354-94fe-5bce936b649e" name="I Can Swim" size="conflict">
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Event"/>
@@ -1602,6 +1625,15 @@
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="204"/>
     </card>
+    <card id="04ebdaa2-b46a-49c7-a0ba-1855504b4a12" name="Court Games" size="conflict">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: During a [Political] conflict, choose one - choose and honor a participating character you control, or your opponent chooses and dishonors a participating character he or she controls. (Max 1 per conflict.)"/>
+      <property name="Cost" value="0"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="205"/>
+    </card>
     <card id="4943895d-ab44-4571-ae49-2f51781469ad" name="For Shame!" size="conflict">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Event"/>
@@ -1628,6 +1660,15 @@
       <property name="Cost" value="0"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="209"/>
+    </card>
+    <card id="b618c2aa-9687-491a-aa7d-7e284264583c" name="Charge!" size="conflict">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: During a [Military] conflict, choose a face-up character in one of your provinces - put that character into play, participating in the conflict."/>
+      <property name="Cost" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="210"/>
     </card>
     <card id="613a8a9f-4b3f-4ea4-90ed-3d7423d8423a" name="Fallen in Battle" size="conflict">
       <property name="Clan" value="Neutral"/>
