@@ -51,6 +51,7 @@
     background="table/background.png"
     backgroundStyle="uniformToFill"
     ordered="False">
+    <groupaction menu="Declare conflict" execute="declare_conflict" showIf="setup_not_required"/>
     <groupaction menu="Pass" execute="pass_action" showIf="setup_not_required"/>
     <groupaction menu="Set honor dial" execute="set_honor_dial" showIf="setup_not_required"/>
     <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
@@ -92,6 +93,7 @@
     </group>
     <group name="Conflict Discard" icon="card/conflict.png" visibility="all" width="63" height="88"/>
   </player>
+  <shared/>
   <deck>
     <section name="Stronghold" group="Hand"/>
     <section name="Province Cards" group="Hand"/>

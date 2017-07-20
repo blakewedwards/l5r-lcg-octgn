@@ -26,8 +26,10 @@ RING_Y_START = -225
 RING_Y_GAP_RATIO = 1
 TYPE_IMPERIAL_FAVOR = 'Imperial Favor'
 TYPE_HONOR_DIAL = 'Honor Dial'
+TYPE_PROVINCE = 'Province'
 TYPE_RING = 'Ring'
 ALTERNATE_POLITICAL = 'Political'
+ALTERNATE_CLAIMED = 'Claimed'
 MAX_PROVINCES = 5
 
 def invert_x(x, width, inverted):
@@ -130,8 +132,35 @@ def setup(group, x=0, y=0):
       ring = table.create(ring_id, RING_X, RING_Y_START + i*ring_height*RING_Y_GAP_RATIO, persist=True)
       ring.isFaceUp = True
       ring_height = ring.height
+      ring.controller = shared
   notify('{} sets up.'.format(me))
   me.setGlobalVariable('setup_required', '')
+
+def is_province(card):
+  return card.type == TYPE_PROVINCE
+
+def declare_conflict(group, x=0, y=0):
+  mute()
+  targets = [card for card in group if card.targetedBy == me]
+  if len(targets) != 1:
+    whisper('A single province must be targeted to declare a conflict.')
+    return
+  target = targets[0]
+  if not is_province(target):
+    whisper('The target of a conflict must be a province.')
+    return
+  if target.controller == me:
+    whisper("You must target an opponent's province.")
+    return
+  unclaimed_rings = [card for card in table if card.type == TYPE_RING and card.alternate != ALTERNATE_CLAIMED]
+  dialog = cardDlg(unclaimed_rings)
+  dialog.title = 'Select a ring'
+  ring = dialog.show()
+  if ring is not None:
+    ring[0].arrow(target)
+    # TODO: Get conflict type
+    # TODO: Set ring alternate as contested
+    notify('{} declares a tbd, {}, conflict against {}.'.format(me, ring[0], target))
 
 def table_default_card_action(card):
   if not card.isFaceUp:
@@ -293,7 +322,7 @@ def search_top(group):
   if num == 0:
     return
 
-  notify('{} is searching the top {} card(s) of their {}'.format(me, num, group.name))
+  notify('{} is searching the top {} card(s) of their {}.'.format(me, num, group.name))
   dialog = cardDlg(group.top(num))
   dialog.title = 'Select a card'
   dialog.min = 0
