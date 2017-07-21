@@ -1493,6 +1493,19 @@
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="169"/>
     </card>
+    <card id="f69ef98f-8e95-496d-bae2-9eb8b1870bbd" name="Ishiken Initiate" size="conflict">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Shugenja. Void."/>
+      <property name="Text" value="This character gets +1[Military] and +1[Political] for each claimed ring."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="0"/>
+      <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="170"/>
+    </card>
     <card id="42aff476-2841-41cb-b3fe-d29b33af41c8" name="Seeker of Knowledge" size="conflict">
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Character"/>
@@ -1505,6 +1518,18 @@
       <property name="Influence Value" value="1"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="171"/>
+    </card>
+    <card id="ed79352d-950a-4904-8887-c8b893fb9659" name="Grasp of Earth" size="conflict">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Spell. Earth."/>
+      <property name="Text" value="Attach to a Shugenja character you control.&#10;Action: During a conflict, bow this attachment - opponents' characters cannot move to this conflict or be played from hand until the end of the conflict."/>
+      <property name="Cost" value="1"/>
+      <property name="Bonus Military Skill" value="+1"/>
+      <property name="Bonus Political Skill" value="+1"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="173"/>
     </card>
     <card id="b1dcf0f9-2ee4-4274-99db-21d749ffa435" name="Pacifism" size="conflict">
       <property name="Clan" value="Phoenix"/>
@@ -1591,7 +1616,7 @@
     <card id="0f8ce9b0-be45-42a8-a310-bab3bc4660d7" name="Ornate Fan" size="conflict">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Attachment"/>
-      <property name="Traits" value=""/>
+      <property name="Traits" value="Item."/>
       <property name="Text" value="Restricted. (No more than two restricted attachments per character.)"/>
       <property name="Cost" value="0"/>
       <property name="Bonus Military Skill" value="+0"/>
