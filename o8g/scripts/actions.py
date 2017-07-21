@@ -28,6 +28,7 @@ TYPE_IMPERIAL_FAVOR = 'Imperial Favor'
 TYPE_HONOR_DIAL = 'Honor Dial'
 TYPE_PROVINCE = 'Province'
 TYPE_RING = 'Ring'
+ALTERNATE_MILITARY = ''
 ALTERNATE_POLITICAL = 'Political'
 ALTERNATE_CLAIMED = 'Claimed'
 MAX_PROVINCES = 5
@@ -136,31 +137,48 @@ def setup(group, x=0, y=0):
   notify('{} sets up.'.format(me))
   me.setGlobalVariable('setup_required', '')
 
-def is_province(card):
+def is_province(card, x=0, y=0):
+  if isinstance(card, list):
+    if len(card) != 1:
+      return False
+    else:
+      card = card[0]
   return card.type == TYPE_PROVINCE
 
 def declare_conflict(group, x=0, y=0):
   mute()
-  targets = [card for card in group if card.targetedBy == me]
+  targets = [c for c in group if c.targetedBy == me]
   if len(targets) != 1:
     whisper('A single province must be targeted to declare a conflict.')
     return
   target = targets[0]
-  if not is_province(target):
+  declare_conflict_at(target, x, y)
+
+def declare_conflict_at(card, x=0, y=0):
+  mute()
+  if not is_province(card):
     whisper('The target of a conflict must be a province.')
     return
-  if target.controller == me:
+  if card.controller == me:
     whisper("You must target an opponent's province.")
     return
-  unclaimed_rings = [card for card in table if card.type == TYPE_RING and card.alternate != ALTERNATE_CLAIMED]
+  types = ['Military', ALTERNATE_POLITICAL]
+  colors = ['#D32E25', '#7E7AD0']
+  type = askChoice('Select a type', types, colors)
+  if type == 0:
+    return
+  type = types[type-1]
+  unclaimed_rings = [c for c in table if c.type == TYPE_RING and c.alternate != ALTERNATE_CLAIMED]
   dialog = cardDlg(unclaimed_rings)
   dialog.title = 'Select a ring'
   ring = dialog.show()
   if ring is not None:
-    ring[0].arrow(target)
+    ring = ring[0]
+    ring.alternate = type if type == ALTERNATE_POLITICAL else ALTERNATE_MILITARY
+    ring.arrow(card)
     # TODO: Get conflict type
     # TODO: Set ring alternate as contested
-    notify('{} declares a tbd, {}, conflict against {}.'.format(me, ring[0], target))
+    notify('{} declares a {}, {}, conflict against {}.'.format(me, type.lower(), ring, card))
 
 def table_default_card_action(card):
   if not card.isFaceUp:
