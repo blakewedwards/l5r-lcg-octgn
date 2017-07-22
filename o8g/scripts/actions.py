@@ -333,7 +333,7 @@ def shuffle(group):
 
 def search_top(group):
   mute()
-  num = askInteger('How many cards to search?', 2)
+  num = askInteger('Search how many cards?', 2)
   if num is None:
     return
   num = min(num, len(group))
@@ -358,10 +358,8 @@ def search_top(group):
   else:
     cards = []
 
-  for card in group.top(num - len(cards)):
-    card.moveToBottom(group)
-
-  notify('{} selected {} cards and put the remaining on the bottom of their deck.'.format(me, len(cards)))
+  group.shuffle()
+  notify('{} selects {} card(s) and shuffles their deck.'.format(me, len(cards)))
 
 def flip_coin(group, x=0, y=0):
   mute()
