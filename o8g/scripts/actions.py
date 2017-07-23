@@ -278,11 +278,32 @@ def play_conflict(card): #, x=0, y=0):
   if me.Fate < cost:
     whisper("The card's cost cannot be paid.")
     return
+  num_fate = 0
+  if card.type == TYPE_CHARACTER:
+    num_fate = prompt_add_fate(cost)
+    if num_fate is None:
+      return
   (x, y) = play_conflict_position(card.width, card.height, card.width*CARD_GAP_RATIO, me.isInverted)
   card.moveToTable(x, y, True) # TODO: Why True and not False here?
   card.isFaceUp = True
-  me.Fate -= cost
-  notify('{} plays {} for {} fate.'.format(me, card.name, cost))
+  me.Fate -= cost + num_fate
+  add_fate(card, quantity=num_fate)
+  notify_play(me, card, cost, num_fate)
+
+def prompt_add_fate(cost):
+  num_fate = askInteger('Add how much fate?', 0)
+  if num_fate is None:
+    return None
+  if me.Fate < cost + num_fate:
+    whisper('Only {} fate remains for adding.'.format(me.Fate - cost))
+    return None
+  return num_fate
+
+def notify_play(player, card, cost, num_fate):
+  if num_fate > 0:
+    notify('{} plays {} for {} fate and places {} fate on it.'.format(player, card.name, cost, num_fate))
+  else:
+    notify('{} plays {} for {} fate.'.format(player, card.name, cost))
 
 def play_dynasty(card, x=0, y=0):
   mute()
@@ -299,18 +320,15 @@ def play_dynasty(card, x=0, y=0):
   if me.Fate < cost:
     whisper("The card's cost cannot be paid.")
     return
-  num_fate = askInteger('Add how much fate?', 0)
+  num_fate = prompt_add_fate(cost)
   if num_fate is None:
-    return
-  if me.Fate < cost + num_fate:
-    whisper('Only {} fate remains for adding.'.format(me.Fate - cost))
     return
   x, y = card.position
   card.moveToTable(x, y + invert_offset(-card.height - card.width*2*CARD_GAP_RATIO, me.isInverted))
   me.Fate -= cost + num_fate
   add_fate(card, quantity=num_fate)
   me.piles[DYNASTY].top().moveToTable(x, y, True)
-  notify('{} plays {} for {} fate and places {} fate on it.'.format(me, card.name, cost, num_fate))
+  notify_play(me, card, cost, num_fate)
 
 def resolve_regroup():
   mute()
