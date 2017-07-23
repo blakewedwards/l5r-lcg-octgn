@@ -356,6 +356,18 @@ def end_turn(table, x=0, y=0):
 def shuffle(group):
   group.shuffle()
 
+def draw(group):
+  mute()
+  num = askInteger('Draw how many cards?', 1)
+  if num is None:
+    return
+  num = min(num, len(group))
+  if num == 0:
+    return
+  for card in group.top(num):
+    card.moveTo(me.hand)
+  notify('{} draws {} card(s) from their {}.'.format(me, num, group.name))
+
 def search_top(group):
   mute()
   num = askInteger('Search how many cards?', 2)

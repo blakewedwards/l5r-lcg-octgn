@@ -85,12 +85,13 @@
       <cardaction menu="Play" execute="play_conflict" default="True" showIf="setup_not_required"/>
     </hand>
     <group name="Conflict Deck" icon="card/conflict.png" visibility="none" width="63" height="88">
-      <groupaction menu="Search top" execute="search_top"/>
-      <groupaction menu="Shuffle" execute="shuffle"/>
+      <groupaction menu="Draw" execute="draw" showIf="setup_not_required"/>
+      <groupaction menu="Search top" execute="search_top" showIf="setup_not_required"/>
+      <groupaction menu="Shuffle" execute="shuffle" showIf="setup_not_required"/>
     </group>
     <group name="Conflict Discard" icon="card/conflict.png" visibility="all" width="63" height="88"/>
     <group name="Dynasty Deck" icon="card/dynasty.png" visibility="none" width="63" height="88">
-      <groupaction menu="Shuffle" execute="shuffle"/>
+      <groupaction menu="Shuffle" execute="shuffle" showIf="setup_not_required"/>
     </group>
     <group name="Dynasty Discard" icon="card/dynasty.png" visibility="all" width="63" height="88"/>
   </player>
