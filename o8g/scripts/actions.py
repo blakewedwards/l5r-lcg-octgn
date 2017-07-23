@@ -76,12 +76,33 @@ def set_honor_dial(group, x=0, y=0):
     notify('{} did not select a bid.'.format(me))
     return
   else:
-    notify("{} has selected a bid.".format(me))
+    notify('{} has selected a bid.'.format(me))
 
   if honor_dial.isFaceUp:
     honor_dial.isFaceUp = False
   honor_dial.peek()
   honor_dial.alternate = '' if choice == 1 else str(choice)
+
+def gain_honor(honor):
+  mute()
+  me.honor += honor
+
+def give_honor(group, x=0, y=0):
+  mute()
+  honor = askInteger('Give how much honor?', 0)
+  if honor is None:
+    return
+  if honor == 0:
+    return
+  if honor > me.honor:
+    whisper('Cannot give more honor than available.')
+    return
+  if len(getPlayers()) == 1:
+    whisper('An opponent is required to give honor to.')
+    return
+  remoteCall(players[1], 'gain_honor', [honor])
+  me.honor -= honor
+  notify('{} gives {} honor to {}.'.format(me, honor, players[1]))
 
 def setup_required(group, x=0, y=0):
   return bool(me.getGlobalVariable('setup_required'))
