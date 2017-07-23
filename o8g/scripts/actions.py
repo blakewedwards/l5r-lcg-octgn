@@ -1,4 +1,4 @@
-CHARACTER = 'Character'
+TYPE_CHARACTER = 'Character'
 HONOR = 'Honor'
 TURN = 'turn'
 STARTING_HONOR = 'Starting Honor'
@@ -160,7 +160,7 @@ def declare_conflict_at(card, x=0, y=0):
     whisper('The target of a conflict must be a province.')
     return
   if card.controller == me:
-    whisper("You must target an opponent's province.")
+    whisper("The target of a conflict must be an opponent's province.")
     return
   types = ['Military', ALTERNATE_POLITICAL]
   colors = ['#D32E25', '#7E7AD0']
@@ -198,8 +198,8 @@ def dishonor(card, x=0, y=0):
   elif not card.markers[DISHONORED]:
     card.markers[DISHONORED] = 1
 
-def add_fate(card, x=0, y=0):
-  card.markers[FATE] += 1
+def add_fate(card, x=0, y=0, quantity=1):
+  card.markers[FATE] += quantity
 
 def remove_fate(card, x=0, y=0):
   card.markers[FATE] -= 1
@@ -287,10 +287,10 @@ def play_conflict(card): #, x=0, y=0):
 def play_dynasty(card, x=0, y=0):
   mute()
   if not card.isFaceUp:
-    whisper("The card is not face up.")
+    whisper('The card is not face up.')
     return
-  if card.type != CHARACTER:
-    whisper("The card is not a character.")
+  if card.type != TYPE_CHARACTER:
+    whisper('The card is not a character.')
     return
   if card.cost == "":
     whisper('The card does not have a cost.')
@@ -299,11 +299,18 @@ def play_dynasty(card, x=0, y=0):
   if me.Fate < cost:
     whisper("The card's cost cannot be paid.")
     return
+  num_fate = askInteger('Add how much fate?', 0)
+  if num_fate is None:
+    return
+  if me.Fate < cost + num_fate:
+    whisper('Only {} fate remains for adding.'.format(me.Fate - cost))
+    return
   x, y = card.position
   card.moveToTable(x, y + invert_offset(-card.height - card.width*2*CARD_GAP_RATIO, me.isInverted))
-  me.Fate -= cost
+  me.Fate -= cost + num_fate
+  add_fate(card, quantity=num_fate)
   me.piles[DYNASTY].top().moveToTable(x, y, True)
-  notify('{} plays {} for {} fate.'.format(me, card.name, cost))
+  notify('{} plays {} for {} fate and places {} fate on it.'.format(me, card.name, cost, num_fate))
 
 def resolve_regroup():
   mute()
