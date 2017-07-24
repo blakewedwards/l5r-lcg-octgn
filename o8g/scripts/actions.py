@@ -137,15 +137,18 @@ def setup(group, x=0, y=0):
       stronghold.isFaceUp = True
       stronghold.anchor = True
     else:
-      me.piles[DYNASTY].top().moveToTable(card_x, card_y + offset, True)
+      c = me.piles[DYNASTY].top()
+      c.moveToTable(card_x, card_y + offset, True)
+      c.peek()
 
   me.honor = int(stronghold.properties[STARTING_HONOR])
   me.fate = int(stronghold.properties[FATE_VALUE])
   me.setGlobalVariable(PLAYER_FATE_VALUE, stronghold.properties[FATE_VALUE])
   (hd_x, hd_y) = honor_dial_position(width, height, gap, me.isInverted)
   table.create(HONOR_DIAL_1, hd_x, hd_y, persist=True).isFaceUp = True
-  for card in me.piles[CONFLICT].top(STARTING_HAND_SIZE):
-    card.moveTo(me.hand)
+  # Current understanding is that dynasty are mulliganed first, so don't draw the hand immediately.
+  #for card in me.piles[CONFLICT].top(STARTING_HAND_SIZE):
+  #  card.moveTo(me.hand)
   # Shared resources, only set up by one player
   if not me.isInverted:
     table.create('b57c595e-d5ae-4fba-82c8-954a0b78c4a8', 668, 0, persist=True).isFaceUp = True
