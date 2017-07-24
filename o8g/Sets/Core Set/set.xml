@@ -13,6 +13,9 @@
   <cards>
     <!--card id="a88f2213-7711-4699-a94e-23bf10ceedd6" name="First Player Token">
     </card-->
+    <card id="a88f2213-7711-4699-a94e-23bf10ceedd6" name="First Player Token" size="first_player_token">
+      <property name="Type" value="First Player Token"/>
+    </card>
     <card id="4c4f1d22-f2e8-46ff-8446-9aa6ec0a45a6" name="Honor Dial" size="honor_dial">
       <property name="Type" value="Honor Dial"/>
       <alternate name="Honor Dial" type="2">

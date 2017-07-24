@@ -15,6 +15,7 @@ STARTING_HAND_SIZE = 4
 CARD_GAP_RATIO = 1.0/3.0 # Ratio to width for space inbetween cards
 HONOR_DIAL_1 = '4c4f1d22-f2e8-46ff-8446-9aa6ec0a45a6' # Font constantia 24
 HONOR_DIAL_CHOICES = 5
+FIRST_PLAYER_TOKEN = 'a88f2213-7711-4699-a94e-23bf10ceedd6'
 AIR_RING = '6d19021d-9208-4f3e-8e36-dc2ea28d755e'
 EARTH_RING = '7a39169d-1c94-4a2a-9994-105a928dcc7e'
 FIRE_RING = '459e0ed9-1dac-4660-b9ba-c0e13bb7db3c'
@@ -151,6 +152,7 @@ def setup(group, x=0, y=0):
   #  card.moveTo(me.hand)
   # Shared resources, only set up by one player
   if not me.isInverted:
+    table.create(FIRST_PLAYER_TOKEN, 700, 0, persist=True).isFaceUp = True
     table.create('b57c595e-d5ae-4fba-82c8-954a0b78c4a8', 668, 0, persist=True).isFaceUp = True
     ring_height = 0
     for i, ring_id in enumerate(RINGS):
