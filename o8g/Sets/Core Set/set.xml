@@ -11,8 +11,6 @@
     <marker id="af5fc343-121e-4ecc-9d21-f3886644b473" name="Honored"/>
   </markers>
   <cards>
-    <!--card id="a88f2213-7711-4699-a94e-23bf10ceedd6" name="First Player Token">
-    </card-->
     <card id="a88f2213-7711-4699-a94e-23bf10ceedd6" name="First Player Token" size="first_player_token">
       <property name="Type" value="First Player Token"/>
     </card>
