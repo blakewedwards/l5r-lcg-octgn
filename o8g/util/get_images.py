@@ -29,7 +29,7 @@ jpgs = ['Deathseeker']
 cards = [(card.getAttribute('name').decode('UTF-8'), card.getAttribute('id')) for card in parse(sys.argv[1]).getElementsByTagName('card')]
 not_found = []
 for (name, id) in cards:
-  url = 'http://l5r.gamepedia.com/File:{}.{}'.format(name.replace(' ', '_'), 'jpg' if name in jpgs else 'png')
+  url = 'https://l5r.gamepedia.com/File:{}.{}'.format(name.replace(' ', '_'), 'jpg' if name in jpgs else 'png')
   try:
     parser = PNGPageParser()
     print 'GET ' + url
