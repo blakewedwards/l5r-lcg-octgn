@@ -113,6 +113,18 @@
       <property name="Influence Value" value="10"/>
       <property name="Card Number" value="4"/>
     </card>
+    <card id="f988df44-9a5e-47d9-bfce-bdfd38c6d9b3" name="Isawa Mori Seido">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Stronghold"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Shrine."/>
+      <property name="Text" value="Action: Bow this stronghold, choose a character - that character gets +2 glory until the end of the phase."/>
+      <property name="Bonus Strength" value="+2"/>
+      <property name="Starting Honor" value="11"/>
+      <property name="Fate Value" value="+7"/>
+      <property name="Influence Value" value="10"/>
+      <property name="Card Number" value="5"/>
+    </card>
     <card id="40683c9f-b1e9-4055-88bd-ce2a2e846297" name="Defend the Wall" size="province">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Province"/>
@@ -928,6 +940,66 @@
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="83"/>
     </card>
+    <card id="aa0d692d-8767-4ba5-adcb-b7b861821b5b" name="Adept of the Waves" size="dynasty">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Shugenja. Water."/>
+      <property name="Text" value="Action: Choose a character - until the end of the phase, that character gains covert during [Water] conflicts."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="84"/>
+    </card>
+    <card id="81f15036-c30a-4424-b7c2-3316bb9a19fa" name="Asako Diplomat" size="dynasty">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier."/>
+      <property name="Text" value="Reaction: After this character wins a conflict, choose a character - honor or dishonor that character."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="85"/>
+    </card>
+    <card id="df86c48d-eba3-4f43-9419-652fea003a89" name="Radiant Orator" size="dynasty">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier."/>
+      <property name="Text" value="Action: While this character is participating in a conflict, if you count more current glory than your opponent among ready participating characters, choose an enemy character - move that character home."/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="87"/>
+    </card>
+    <card id="735ab656-e522-4a8a-86f7-6567ced9b8ad" name="Serene Warrior" size="dynasty">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi."/>
+      <property name="Text" value=""/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="4"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="88"/>
+    </card>
+    <card id="690729e7-6737-42e9-8b36-d625121842a7" name="Shiba Yojimbo" size="dynasty">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Yojimbo."/>
+      <property name="Text" value="Interrupt: When the effects of a triggered ability that targets a Shugenja you control would initiate - cancel those effects."/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="89"/>
+    </card>
     <card id="2d9d2a28-d496-4e72-bcb3-6b979376f314" name="Isawa Masahiro" size="dynasty">
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Character"/>
@@ -940,6 +1012,44 @@
       <property name="Glory" value="2"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="90"/>
+    </card>
+    <card id="8e0c97c3-ade0-4497-b505-b3e80d4f2aed" name="Fearsome Mystic" size="dynasty">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Shugenja. Air."/>
+      <property name="Text" value="This character gets +2 glory during [Air] conflicts.&#10;Action: While this character is participating in a conflict - remove 1 fate from each participating character your opponent controls with lower glory than this character."/>
+      <property name="Cost" value="4"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="4"/>
+      <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="91"/>
+    </card>
+    <card id="dc87cfc5-f173-44de-9c36-2447d2f0e213" name="Isawa Atsuko" size="dynasty">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Shugenja. Void."/>
+      <property name="Text" value="Action: During a [Void] conflict - until the end of the conflict, each participating character you control gets +1[Military] and +1[Political] and each participating character your opponent controls gets -1[Military] and -1[Political]."/>
+      <property name="Cost" value="4"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="3"/>
+      <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="92"/>
+    </card>
+    <card id="28a84c1a-a155-40f1-a5ed-56c105461423" name="Shiba Tsukune" size="dynasty">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Bushi. Champion."/>
+      <property name="Text" value="Interrupt: When the conflict phase ends - resolve the ring effects of up to 2 unclaimed rings as if you were the attacking player."/>
+      <property name="Cost" value="5"/>
+      <property name="Military Skill" value="4"/>
+      <property name="Political Skill" value="4"/>
+      <property name="Glory" value="4"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="93"/>
     </card>
     <card id="221a1956-1bac-4aa1-ac9e-4b78ab0bd83c" name="Bayushi Manipulator" size="dynasty">
       <property name="Clan" value="Scorpion"/>
@@ -1391,7 +1501,7 @@
       <property name="Cost" value="2"/>
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="1"/>
-      <property name="Glory" value="1"/>
+      <property name="Glory" value="0"/>
       <property name="Influence Value" value="2"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="160"/>
@@ -1520,6 +1630,18 @@
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="171"/>
     </card>
+    <card id="a7f0643d-2875-4f23-843a-40bfeec07227" name="Magnificent Kimono" size="conflict">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Item."/>
+      <property name="Text" value="Attached character gains pride. (After this character wins a conflict, honor it. After this character loses a conflict, dishonor it.)"/>
+      <property name="Cost" value="0"/>
+      <property name="Bonus Military Skill" value="+0"/>
+      <property name="Bonus Political Skill" value="+1"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="172"/>
+    </card>
     <card id="ed79352d-950a-4904-8887-c8b893fb9659" name="Grasp of Earth" size="conflict">
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Attachment"/>
@@ -1543,6 +1665,25 @@
       <property name="Influence Value" value="2"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="174"/>
+    </card>
+    <card id="d89d3732-716a-413f-999b-2b39535ccddf" name="Supernatural Storm" size="conflict">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value="Spell. Water."/>
+      <property name="Text" value="Action: Choose a participating character - that character gets +X[Military] and +X[Political] until the end of the conflict. X is equal to the number of Shugenja characters you control."/>
+      <property name="Cost" value="0"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="175"/>
+    </card>
+    <card id="f07a6ceb-e5ca-4ab8-b193-120e4f3507e1" name="Way of the Phoenix" size="conflict">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value="Philosophy."/>
+      <property name="Text" value="Action: Choose a ring and an opponent - that player cannot declare conflicts of that ring's element this phase. (Max 1 per phase.)"/>
+      <property name="Cost" value="0"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="176"/>
     </card>
     <card id="d8e881bd-66c8-4103-9c0e-4953d028044b" name="Know the World" size="conflict">
       <property name="Clan" value="Phoenix"/>
@@ -1640,7 +1781,8 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="???"/>
+      <property name="Text" value="Action: During a conflict, lose 3 honor. Choose a character with printed cost 2 or lower - discard that character. (Max 1 per round.)"/>
+      <property name="Cost" value="0"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="203"/>
     </card>
@@ -1657,10 +1799,10 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Action: During a [Political] conflict, choose one - choose and honor a participating character you control, or your opponent chooses and dishonors a participating character he or she controls. (Max 1 per conflict.)"/>
+      <property name="Text" value="Action: During a [Political] conflict, select one - choose and honor a participating character you control, or your opponent chooses and dishonors a participating character he or she controls. (Max 1 per conflict.)"/>
       <property name="Cost" value="0"/>
       <property name="Deck" value="Conflict"/>
-      <property name="Card Number" value="205"/>
+      <property name="Card Number" value="206"/>
     </card>
     <card id="4943895d-ab44-4571-ae49-2f51781469ad" name="For Shame!" size="conflict">
       <property name="Clan" value="Neutral"/>
