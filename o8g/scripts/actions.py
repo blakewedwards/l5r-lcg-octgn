@@ -11,6 +11,7 @@ DYNASTY = 'Dynasty Deck'
 CONFLICT = 'Conflict Deck'
 DYNASTY_DISCARD = 'Dynasty Discard'
 CONFLICT_DISCARD = 'Conflict Discard'
+CLAIMED_RINGS = 'Claimed Rings'
 STARTING_HAND_SIZE = 4
 CARD_GAP_RATIO = 1.0/3.0 # Ratio to width for space inbetween cards
 HONOR_DIAL_1 = '4c4f1d22-f2e8-46ff-8446-9aa6ec0a45a6' # Font constantia 24
@@ -111,6 +112,16 @@ def setup_required(group, x=0, y=0):
 def setup_not_required(group, x=0, y=0):
   return not setup_required(group, x, y)
 
+def ring_field(card, field):
+  return card.name.lower() + '_' + field
+
+def save_ring_position(card):
+  setGlobalVariable(ring_field(card, 'x'), card.position[0])
+  setGlobalVariable(ring_field(card, 'y'), card.position[1])
+
+def load_ring_position(card):
+  return int(getGlobalVariable(ring_field(card, 'x'))), int(getGlobalVariable(ring_field(card, 'y')))
+
 def setup(group, x=0, y=0):
   mute()
   if not bool(me.getGlobalVariable('setup_required')):
@@ -159,7 +170,8 @@ def setup(group, x=0, y=0):
       ring = table.create(ring_id, RING_X, RING_Y_START + i*ring_height*RING_Y_GAP_RATIO, persist=True)
       ring.isFaceUp = True
       ring_height = ring.height
-      ring.controller = shared
+      #ring.controller = shared
+      save_ring_position(ring)
   notify('{} sets up.'.format(me))
   me.setGlobalVariable('setup_required', '')
 
@@ -201,10 +213,28 @@ def declare_conflict_at(card, x=0, y=0):
   if ring is not None:
     ring = ring[0]
     ring.alternate = type if type == ALTERNATE_POLITICAL else ALTERNATE_MILITARY
-    ring.arrow(card)
+    ring.target()
+    card.target()
     # TODO: Get conflict type
     # TODO: Set ring alternate as contested
     notify('{} declares a {}, {}, conflict against {}.'.format(me, type.lower(), ring, card))
+
+def take_control(card):
+  if card.controller == me:
+    return
+  remoteCall(card.controller, 'lambda card, player: card.controller = player', [card, me])
+
+def claim_ring(group, x=0, y=0):
+  mute()
+  targets = [c for c in group if c.type == TYPE_RING and c.targetedBy] # Doesn't matter who is targeting, either can claim
+  if len(targets) != 1:
+    whisper('A single ring must be targeted to be claimed.')
+    return
+  target = targets[0]
+  take_control(target)
+  target.target(active=False)
+  target.moveTo(me.piles[CLAIMED_RINGS])
+  notify('{} claims the {}.'.format(me, target))
 
 def table_default_card_action(card):
   if not card.isFaceUp:
@@ -242,6 +272,7 @@ def toggle_break(card, x=0, y=0):
 
 def flip(card, x=0, y=0):
   if card.type == TYPE_RING or card.type == TYPE_IMPERIAL_FAVOR:
+    card.isFaceUp = True
     card.alternate = ALTERNATE_POLITICAL if not card.alternate else ''
     return
   card.isFaceUp = not card.isFaceUp
@@ -362,6 +393,12 @@ def resolve_regroup():
   for card in cards:
     card.orientation &= ~Rot90
   me.fate += int(me.getGlobalVariable(PLAYER_FATE_VALUE))
+  for card in me.piles[CLAIMED_RINGS]:
+    if card.type == TYPE_RING:
+      x, y = load_ring_position(card)
+      card.moveToTable(x, y, False)
+      card.isFaceUp = True
+      #card.controller = shared
 
 def end_turn(table, x=0, y=0):
   mute()

@@ -18,6 +18,16 @@
   <proxygen definitionsrc="proxygen/definition.xml"/>
   <globalvariables>
     <globalvariable name="turn" value="1"/>
+    <globalvariable name="air_ring_x" value="0"/>
+    <globalvariable name="air_ring_y" value="0"/>
+    <globalvariable name="earth_ring_x" value="0"/>
+    <globalvariable name="earth_ring_y" value="0"/>
+    <globalvariable name="fire_ring_x" value="0"/>
+    <globalvariable name="fire_ring_y" value="0"/>
+    <globalvariable name="void_ring_x" value="0"/>
+    <globalvariable name="void_ring_y" value="0"/>
+    <globalvariable name="water_ring_x" value="0"/>
+    <globalvariable name="water_ring_y" value="0"/>
   </globalvariables>
   <card back="card/back.png" front="card/front.png" width="63" height="88">
     <property name="Clan" type="String" textKind="Enum"/>
@@ -57,6 +67,7 @@
     <groupaction menu="Set honor dial" execute="set_honor_dial" showIf="setup_not_required"/>
     <groupaction menu="Give honor" execute="give_honor" showIf="setup_not_required"/>
     <groupaction menu="Declare conflict" execute="declare_conflict" showIf="setup_not_required"/>
+    <groupaction menu="Claim ring" execute="claim_ring" showIf="setup_not_required"/>
     <groupaction menu="End turn" execute="end_turn" showIf="setup_not_required"/>
     <groupaction menu="Flip coin" execute="flip_coin" showIf="setup_not_required"/>
     <cardaction menu="Default" execute="table_default_card_action" default="True" showIf="lambda: False"/>
@@ -96,6 +107,7 @@
       <groupaction menu="Shuffle" execute="shuffle" showIf="setup_not_required"/>
     </group>
     <group name="Dynasty Discard" icon="card/dynasty.png" visibility="all" width="63" height="88"/>
+    <group name="Claimed Rings" icon="card/dynasty.png" width="63" height="88" visibility="all" collapsed="True"/>
   </player>
   <shared/>
   <deck>
