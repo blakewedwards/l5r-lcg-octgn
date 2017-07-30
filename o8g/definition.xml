@@ -15,6 +15,9 @@
   <scripts>
     <script src="scripts/actions.py"/>
   </scripts>
+  <events>
+    <event name="OnCardControllerChanged" action="card_controller_changed" />
+  </events>
   <proxygen definitionsrc="proxygen/definition.xml"/>
   <globalvariables>
     <globalvariable name="turn" value="1"/>

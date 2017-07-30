@@ -219,10 +219,14 @@ def declare_conflict_at(card, x=0, y=0):
     # TODO: Set ring alternate as contested
     notify('{} declares a {}, {}, conflict against {}.'.format(me, type.lower(), ring, card))
 
+def set_controller(card, player):
+  card.controller = player
+
 def take_control(card):
   if card.controller == me:
-    return
-  remoteCall(card.controller, 'lambda card, player: card.controller = player', [card, me])
+    return True
+  remoteCall(card.controller, 'set_controller', [card, me])
+  return False
 
 def claim_ring(group, x=0, y=0):
   mute()
@@ -231,10 +235,18 @@ def claim_ring(group, x=0, y=0):
     whisper('A single ring must be targeted to be claimed.')
     return
   target = targets[0]
-  take_control(target)
-  target.target(active=False)
-  target.moveTo(me.piles[CLAIMED_RINGS])
-  notify('{} claims the {}.'.format(me, target))
+  if take_control(target):
+    card_controller_changed(EventArgument({'card': target, 'player': me, 'value': me}))
+  # Remaining actions handled in controller changed callback
+
+def card_controller_changed(args):
+  # Assume targeted rings that change controller to this player are being claimed
+  mute()
+  card = args.card
+  if card.type == TYPE_RING and card.targetedBy and args.player == me:
+    card.target(active=False)
+    card.moveTo(me.piles[CLAIMED_RINGS])
+    notify('{} claims the {}.'.format(me, card))
 
 def table_default_card_action(card):
   if not card.isFaceUp:
