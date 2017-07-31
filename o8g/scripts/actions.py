@@ -170,7 +170,6 @@ def setup(group, x=0, y=0):
       ring = table.create(ring_id, RING_X, RING_Y_START + i*ring_height*RING_Y_GAP_RATIO, persist=True)
       ring.isFaceUp = True
       ring_height = ring.height
-      #ring.controller = shared
       save_ring_position(ring)
   notify('{} sets up.'.format(me))
   me.setGlobalVariable('setup_required', '')
@@ -217,7 +216,10 @@ def declare_conflict_at(card, x=0, y=0):
     card.target()
     # TODO: Get conflict type
     # TODO: Set ring alternate as contested
-    notify('{} declares a {}, {}, conflict against {}.'.format(me, type.lower(), ring, card))
+    fate = ring.markers[FATE]
+    ring.markers[FATE] = 0
+    me.fate += fate
+    notify('{} declares a {}, {}, conflict against {} and gains {} fate.'.format(me, type.lower(), ring, card, fate))
 
 def set_controller(card, player):
   card.controller = player
@@ -404,13 +406,15 @@ def resolve_regroup():
   cards = (card for card in table if card.controller == me and card.isFaceUp)
   for card in cards:
     card.orientation &= ~Rot90
+    if card.type == TYPE_RING:
+      add_fate(card)
+
   me.fate += int(me.getGlobalVariable(PLAYER_FATE_VALUE))
   for card in me.piles[CLAIMED_RINGS]:
     if card.type == TYPE_RING:
       x, y = load_ring_position(card)
       card.moveToTable(x, y, False)
       card.isFaceUp = True
-      #card.controller = shared
 
 def end_turn(table, x=0, y=0):
   mute()

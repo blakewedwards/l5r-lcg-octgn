@@ -112,7 +112,6 @@
     <group name="Dynasty Discard" icon="card/dynasty.png" visibility="all" width="63" height="88"/>
     <group name="Claimed Rings" icon="card/dynasty.png" width="63" height="88" visibility="all" collapsed="True"/>
   </player>
-  <shared/>
   <deck>
     <section name="Stronghold" group="Hand"/>
     <section name="Province Cards" group="Hand"/>
