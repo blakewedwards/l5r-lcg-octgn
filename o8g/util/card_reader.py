@@ -223,9 +223,10 @@ ids = {
     '209': '95b10d7c-092b-414d-af65-bc351d1ce8ab',
     '210': 'b618c2aa-9687-491a-aa7d-7e284264583c',
     '211': '613a8a9f-4b3f-4ea4-90ed-3d7423d8423a',
+    '212': '3589825a-aceb-42aa-8796-652803b56585',
 }
 
-num_cards = 211
+num_cards = 212
 if len(ids.keys()) != num_cards:
   sys.exit('Invalid number of uuid keys')
 for key in ids.keys():
@@ -264,6 +265,10 @@ with open(sys.argv[1], 'rb') as f:
   reader = csv.DictReader(f, delimiter=',', quotechar='"') # TODO: args needed?
   for row in sorted(reader, key=lambda r: int(r['id']) if r['id'].strip() else num_cards+1):
     row = AttributeDict(row)
+    if row.name.strip() == "Rout":
+      row.id = '212'
+    elif row.name.strip() == "Imperial Storehouse":
+      row.id = '128'
     if row.id:
       attr = {'id': ids[row.id], 'name': row.name}
       if row.deck:

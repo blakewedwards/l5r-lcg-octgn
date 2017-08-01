@@ -916,6 +916,18 @@
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="80"/>
     </card>
+    <card id="d42090c2-a6d9-4821-843a-70e0c9e06345" name="Naive Student" size="dynasty">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="?."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="-"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="?"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="81"/>
+    </card>
     <card id="5baae90a-1d1b-4de6-8181-a7dffd7e09e9" name="Shiba Peacemaker" size="dynasty">
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Character"/>
@@ -1051,6 +1063,15 @@
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="93"/>
     </card>
+    <card id="bb5532b4-c5b1-449b-85b9-ea88acfb3e57" name="Core Set 94" size="dynasty">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Holding"/>
+      <property name="Traits" value="Library. Shrine."/>
+      <property name="Text" value="Reaction: After the draw phase begins - draw 1 card."/>
+      <property name="Bonus Strength" value="++?"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="94"/>
+    </card>
     <card id="221a1956-1bac-4aa1-ac9e-4b78ab0bd83c" name="Bayushi Manipulator" size="dynasty">
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Character"/>
@@ -1119,6 +1140,18 @@
       <property name="Glory" value="2"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="114"/>
+    </card>
+    <card id="26564d02-8f88-4ba2-99b9-6c5f9d499768" name="Warrior Poet" size="dynasty">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Cavalry."/>
+      <property name="Text" value="Action: While this character is participating in a conflict - each participating character controlled by your opponent gets -1[Military] and -1[Political] until the end of the conflict."/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="117"/>
     </card>
     <card id="67b18356-65a2-4a04-8d15-4e5425ab4160" name="Otomo Courtier" size="dynasty">
       <property name="Clan" value="Neutral"/>
@@ -1685,6 +1718,16 @@
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="176"/>
     </card>
+    <card id="bc87d1b4-28ea-4874-9d20-99e08efe753c" name="Against the Waves" size="conflict">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value="Spell. Water."/>
+      <property name="Text" value="Action: Choose a Shugenja character - bow or ready that character."/>
+      <property name="Cost" value="1"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="177"/>
+    </card>
     <card id="d8e881bd-66c8-4103-9c0e-4953d028044b" name="Know the World" size="conflict">
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Event"/>
@@ -1848,6 +1891,24 @@
       <property name="Cost" value="1"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="211"/>
+    </card>
+    <card id="8dd56bff-5761-4075-9dde-2dba1452e6f6" name="Imperial Storehouse" size="dynasty">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Holding"/>
+      <property name="Traits" value="Imperial."/>
+      <property name="Text" value="Action: Sacrifice this holding - draw a card."/>
+      <property name="Bonus Strength" value="+1"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="128"/>
+    </card>
+    <card id="3589825a-aceb-42aa-8796-652803b56585" name="Rout" size="conflict">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: During a conflict, choose a participating character with lower [Military] skill than a participating Bushi character you control - send that character home."/>
+      <property name="Cost" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="212"/>
     </card>
   </cards>
 </set>
