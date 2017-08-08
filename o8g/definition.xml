@@ -50,7 +50,7 @@
     <property name="Bonus Military Skill" type="String"/>
     <property name="Bonus Political Skill" type="String"/>
     <property name="Deck" type="String" textKind="Enum"/>
-    <property name="Card Number" type="Integer"/>
+    <property name="Card Number" type="String"/>
     <size name="first_player_token" back="card/first_player_token.png" front="card/first_player_token.png" width="42" height="69"/>
     <size name="honor_dial" back="card/honor_dial.png" front="card/honor_dial.png" width="63" height="88"/>
     <size name="imperial_favor" back="card/imperial_favor.png" front="card/imperial_favor.png" width="42" height="69"/>
