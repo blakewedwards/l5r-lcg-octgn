@@ -49,7 +49,7 @@ def play_conflict_position(width, height, gap, inverted):
   return (invert_x(x, width, inverted), invert_y(y, height, inverted))
 
 def honor_dial_position(width, height, gap, inverted):
-  (x, y) = (-3.5*width - 3*gap, height + 3*gap)
+  (x, y) = (-4.5*width - 4*gap, height + 3*gap)
   return (invert_x(x, width, inverted), invert_y(y, height, inverted))
 
 # The leftmost province is index 0 and will hold the stronghold. Valid indicies are 0 to MAX_PROVINCES-1
@@ -57,6 +57,10 @@ def province_position(index, width, height, gap, inverted):
   if index >= MAX_PROVINCES:
     raise ValueError('index must be less than the number of provinces')
   (x, y) = (-2.5*width - 2*gap + index*(width+gap), (height + 2*gap))
+  return (invert_x(x, width, inverted), invert_y(y, height, inverted))
+
+def role_position(width, height, gap, inverted):
+  (x, y) = (-3.5*width - 3*gap, (height + 2*gap))
   return (invert_x(x, width, inverted), invert_y(y, height, inverted))
 
 def height_offset(offset, inverted):
@@ -138,7 +142,7 @@ def setup(group, x=0, y=0):
   me.piles[DYNASTY].shuffle()
   me.piles[CONFLICT].shuffle()
   stronghold = me.hand[0] # TODO: If they move the stronghold, this breaks
-  for i, card in enumerate(me.hand[1:]):
+  for i, card in enumerate(me.hand[1:6]):
     (card_x, card_y) = province_position(i, width, height, gap, me.isInverted)
     card.moveToTable(card_x, card_y, True)
     card.sendToBack()
@@ -152,6 +156,13 @@ def setup(group, x=0, y=0):
       c = me.piles[DYNASTY].top()
       c.moveToTable(card_x, card_y + offset, True)
       c.peek()
+
+  if len(me.hand) > 0: # If there's something left in the hand, assume it's a role
+    (card_x, card_y) = role_position(width, height, gap, me.isInverted)
+    role = me.hand[0]
+    role.moveToTable(card_x, card_y + offset)
+    role.isFaceUp = True
+    role.anchor = True
 
   me.honor = int(stronghold.properties[STARTING_HONOR])
   me.fate = int(stronghold.properties[FATE_VALUE])

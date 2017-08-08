@@ -115,6 +115,7 @@
   <deck>
     <section name="Stronghold" group="Hand"/>
     <section name="Province Cards" group="Hand"/>
+    <section name="Role" group="Hand"/>
     <section name="Dynasty Deck" group="Dynasty Deck"/>
     <section name="Conflict Deck" group="Conflict Deck"/>
   </deck>
