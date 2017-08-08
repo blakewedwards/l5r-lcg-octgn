@@ -125,6 +125,30 @@
       <property name="Influence Value" value="10"/>
       <property name="Card Number" value="5"/>
     </card>
+    <card id="8fc39443-2135-40fb-bece-3889c3dde8a0" name="City of the Open Hand">
+      <property name="Clan" value="Scorpion"/>
+      <property name="Type" value="Stronghold"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="City."/>
+      <property name="Text" value="???"/>
+      <property name="Bonus Strength" value="+1"/>
+      <property name="Starting Honor" value="10"/>
+      <property name="Fate Value" value="++?"/>
+      <property name="Influence Value" value="??"/>
+      <property name="Card Number" value="6"/>
+    </card>
+    <card id="0d08602f-ca83-4761-845f-2eb3cae8b74d" name="Golden Plains Outpost">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Stronghold"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="???"/>
+      <property name="Bonus Strength" value="+0"/>
+      <property name="Starting Honor" value="??"/>
+      <property name="Fate Value" value="++?"/>
+      <property name="Influence Value" value="??"/>
+      <property name="Card Number" value="7"/>
+    </card>
     <card id="40683c9f-b1e9-4055-88bd-ce2a2e846297" name="Defend the Wall" size="province">
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Province"/>
@@ -385,7 +409,7 @@
       <property name="Type" value="Character"/>
       <property name="Unique" value="Unique"/>
       <property name="Traits" value="Bushi. Engineer."/>
-      <property name="Text" value="Covert. (When this character is declared as an attacker, you may choose a character that does not have covert. That character cannot be declared as a defender for this conflict during the &quot;declare defenders&quot; step.)&#10;Action: During a conflict in which this character is participating, if there is a holding in play - gain 1 fate."/>
+      <property name="Text" value="Covert. (When this character attacks, choose one character without covert. That character cannot be declared as a defender.)&#10;Action: During a conflict in which this character is participating, if there is a holding in play - gain 1 fate."/>
       <property name="Cost" value="4"/>
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="3"/>
@@ -464,7 +488,7 @@
       <property name="Clan" value="Crane"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Scout."/>
-      <property name="Text" value="???"/>
+      <property name="Text" value="While this character is attacking alone, treat the defending province as if its printed text box were blank (except for Traits)."/>
       <property name="Cost" value="2"/>
       <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="0"/>
@@ -1096,6 +1120,30 @@
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="101"/>
     </card>
+    <card id="f8376024-7ca5-4698-a381-e9bb3a18eaae" name="Favored Niece" size="dynasty">
+      <property name="Clan" value="Scorpion"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier."/>
+      <property name="Text" value="Action: Choose and discard 1 card from your hand - draw 1 card. (Limit twice per round.)"/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="102"/>
+    </card>
+    <card id="5c757161-4872-4ae7-9c5e-6d4a75245a77" name="Shosuro Actress" size="dynasty">
+      <property name="Clan" value="Scorpion"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier. Shinobi."/>
+      <property name="Text" value="Action: During a conflict, sacrifice this character. Choose a non-Shinobi character with printed cost 3 or lower in an opponent's discard pile - put that character into play in the conflict under your control."/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="3"/>
+      <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="103"/>
+    </card>
     <card id="df365b9f-63cd-4d81-ae02-a69db1d81cea" name="City of Lies" size="dynasty">
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Holding"/>
@@ -1104,6 +1152,18 @@
       <property name="Bonus Strength" value="+1"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="108"/>
+    </card>
+    <card id="4c39ba79-1d7e-4b9f-a81a-8b9364307465" name="Utaku Infantry" size="dynasty">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi."/>
+      <property name="Text" value="While this character is participating in a conflict, it gets +1[Military] and +1[Political] for each participating [Unicorn] character you control."/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="0"/>
+      <property name="Political Skill" value="0"/>
+      <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="110"/>
     </card>
     <card id="080c2783-86c3-4070-b503-501f4acd4433" name="Aggressive Moto" size="dynasty">
       <property name="Clan" value="Unicorn"/>
@@ -1177,6 +1237,18 @@
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="123"/>
     </card>
+    <card id="7750490a-5dfb-4960-bd4b-2b800174a5ef" name="Keeper Initiate" size="dynasty">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Monk."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="?"/>
+      <property name="Political Skill" value="?"/>
+      <property name="Glory" value="?"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="124"/>
+    </card>
     <card id="708ff8aa-3b55-4a59-a13f-a9b2b0b63ae2" name="Miya Mystic" size="dynasty">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Character"/>
@@ -1189,6 +1261,18 @@
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="125"/>
     </card>
+    <card id="ecab8b91-acd6-46f0-8f9b-991bfe1a599e" name="Seeker Initiate" size="dynasty">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Monk."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="?"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="126"/>
+    </card>
     <card id="21bb93d6-537d-4084-bda1-e3647789fee8" name="Wandering Ronin" size="dynasty">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Character"/>
@@ -1200,6 +1284,24 @@
       <property name="Glory" value="0"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="127"/>
+    </card>
+    <card id="eac25eba-25ae-4d38-b1f0-01cfe5cc35df" name="Favorable Ground" size="dynasty">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Holding"/>
+      <property name="Traits" value="?."/>
+      <property name="Text" value="???"/>
+      <property name="Bonus Strength" value="+1"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="128"/>
+    </card>
+    <card id="8dd56bff-5761-4075-9dde-2dba1452e6f6" name="Imperial Storehouse" size="dynasty">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Holding"/>
+      <property name="Traits" value="Imperial."/>
+      <property name="Text" value="Action: Sacrifice this holding - draw 1 card."/>
+      <property name="Bonus Strength" value="+1"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="129"/>
     </card>
     <card id="8b4ece45-02c7-42a2-978b-d8ea103890d5" name="Hiruma Ambusher" size="conflict">
       <property name="Clan" value="Crab"/>
@@ -1838,6 +1940,15 @@
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="204"/>
     </card>
+    <card id="b814b1f3-f7e9-462a-99ed-448937dfc1a8" name="Contingency Plan" size="conflict">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="0"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="205"/>
+    </card>
     <card id="04ebdaa2-b46a-49c7-a0ba-1855504b4a12" name="Court Games" size="conflict">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Event"/>
@@ -1892,14 +2003,14 @@
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="211"/>
     </card>
-    <card id="8dd56bff-5761-4075-9dde-2dba1452e6f6" name="Imperial Storehouse" size="dynasty">
+    <card id="9859c9e7-ddb5-4239-aef2-591feb6a8ac7" name="Outwit" size="conflict">
       <property name="Clan" value="Neutral"/>
-      <property name="Type" value="Holding"/>
-      <property name="Traits" value="Imperial."/>
-      <property name="Text" value="Action: Sacrifice this holding - draw a card."/>
-      <property name="Bonus Strength" value="+1"/>
-      <property name="Deck" value="Dynasty"/>
-      <property name="Card Number" value="128"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: During a conflict, choose an opponent's character with lower [Political] skill than a participating Courtier character you control - move the chosen character home."/>
+      <property name="Cost" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="212"/>
     </card>
     <card id="3589825a-aceb-42aa-8796-652803b56585" name="Rout" size="conflict">
       <property name="Clan" value="Neutral"/>
@@ -1908,7 +2019,77 @@
       <property name="Text" value="Action: During a conflict, choose a participating character with lower [Military] skill than a participating Bushi character you control - send that character home."/>
       <property name="Cost" value="1"/>
       <property name="Deck" value="Conflict"/>
-      <property name="Card Number" value="212"/>
+      <property name="Card Number" value="213"/>
+    </card>
+    <card id="f3307dcd-2e9f-4927-84af-7c5af05fdb19" name="Keeper of Air">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Role"/>
+      <property name="Traits" value="Keeper. Air."/>
+      <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win an [Air] conflict as the defending player - gain 1 fate."/>
+      <property name="Card Number" value="214A"/>
+    </card>
+    <card id="276a3f10-2e2f-48eb-ba65-2f354274f98d" name="Seeker of Air">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Role"/>
+      <property name="Traits" value="Seeker. Air."/>
+      <property name="Text" value="You may replace 1 province of any element with an additional [Air] province while deckbuilding.&#10;Reaction: After an [Air] province you control is revealed - gain 1 fate."/>
+      <property name="Card Number" value="214B"/>
+    </card>
+    <card id="ee1b351c-a755-403c-a3f4-c1b2c141e4cc" name="Keeper of Earth">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Role"/>
+      <property name="Traits" value="Keeper. Earth."/>
+      <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win an [Earth] conflict as the defending player - gain 1 fate."/>
+      <property name="Card Number" value="215A"/>
+    </card>
+    <card id="8b08da3c-3613-4edf-a3d4-a69aa54da11a" name="Seeker of Earth">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Role"/>
+      <property name="Traits" value="Seeker. Earth."/>
+      <property name="Text" value="You may replace 1 province of any element with an additional [Earth] province while deckbuilding.&#10;Reaction: After an [Earth] province you control is revealed - gain 1 fate."/>
+      <property name="Card Number" value="215B"/>
+    </card>
+    <card id="5eb460ba-ed48-4c9c-8c00-cfc21c1e6c5f" name="Keeper of Fire">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Role"/>
+      <property name="Traits" value="Keeper. Fire."/>
+      <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win a [Fire] conflict as the defending player - gain 1 fate."/>
+      <property name="Card Number" value="216A"/>
+    </card>
+    <card id="75f3b6ba-8745-4c90-873e-bd88e95bf8e2" name="Seeker of Fire">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Role"/>
+      <property name="Traits" value="Seeker. Fire."/>
+      <property name="Text" value="You may replace 1 province of any element with an additional [Fire] province while deckbuilding.&#10;Reaction: After a [Fire] province you control is revealed - gain 1 fate."/>
+      <property name="Card Number" value="216B"/>
+    </card>
+    <card id="4a7d2f30-6e0e-43b3-b8bb-a10c34d77097" name="Keeper of Water">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Role"/>
+      <property name="Traits" value="Keeper. Water."/>
+      <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win a [Water] conflict as the defending player - gain 1 fate."/>
+      <property name="Card Number" value="217A"/>
+    </card>
+    <card id="8e5881ab-043e-4148-8052-ee8ce1860d8e" name="Seeker of Water">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Role"/>
+      <property name="Traits" value="Seeker. Water."/>
+      <property name="Text" value="You may replace 1 province of any element with an additional [Water] province while deckbuilding.&#10;Reaction: After a [Water] province you control is revealed - gain 1 fate."/>
+      <property name="Card Number" value="217B"/>
+    </card>
+    <card id="156cee09-4e74-4808-823d-ffe7213b47ca" name="Keeper of Void">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Role"/>
+      <property name="Traits" value="Keeper. Void."/>
+      <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win a [Void] conflict as the defending player - gain 1 fate."/>
+      <property name="Card Number" value="218A"/>
+    </card>
+    <card id="a43631fa-106d-4316-b9d3-d31fc532f165" name="Seeker of Void">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Role"/>
+      <property name="Traits" value="Seeker. Void."/>
+      <property name="Text" value="You may replace 1 province of any element with an additional [Void] province while deckbuilding.&#10;Reaction: After a [Void] province you control is revealed - gain 1 fate."/>
+      <property name="Card Number" value="218B"/>
     </card>
   </cards>
 </set>
