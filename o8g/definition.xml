@@ -76,16 +76,16 @@
     <cardaction menu="Default" execute="table_default_card_action" default="True" showIf="lambda: False"/>
     <cardaction menu="Add fate" execute="add_fate"/>
     <cardaction menu="Remove fate" execute="remove_fate"/>
-    <cardaction menu="Honor" execute="honor"/>
-    <cardaction menu="Dishonor" execute="dishonor"/>
     <cardaction menu="Bow/ready" execute="toggle_bow_ready"/>
     <cardaction menu="Break/unbreak" execute="toggle_break"/>
+    <cardaction menu="Declare conflict" execute="declare_conflict_at" showIf="is_province"/>
     <cardaction menu="Discard" execute="discard"/>
     <cardaction menu="Flip" execute="flip"/>
+    <cardaction menu="Honor" execute="honor"/>
+    <cardaction menu="Dishonor" execute="dishonor"/>
     <cardaction menu="Play" execute="play_dynasty"/>
     <cardaction menu="Refill" execute="refill"/>
     <cardaction menu="Replace" execute="replace"/>
-    <cardaction menu="Declare conflict" execute="declare_conflict_at" showIf="is_province"/>
     <cardaction menu="Move to bottom of deck" execute="move_to_deck_bottom"/>
     <!--cardaction menu="Add fate" execute="add_fate" showIf="is_character"/-->
     <!--cardaction menu="Remove fate" execute="add_fate" showIf="is_character"/-->
