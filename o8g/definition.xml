@@ -67,7 +67,6 @@
     ordered="False">
     <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
     <groupaction menu="Pass" execute="pass_action" showIf="setup_not_required"/>
-    <groupaction menu="Set honor dial" execute="set_honor_dial" showIf="setup_not_required"/>
     <groupaction menu="Give honor" execute="give_honor" showIf="setup_not_required"/>
     <groupaction menu="Declare conflict" execute="declare_conflict" showIf="setup_not_required"/>
     <groupaction menu="Claim ring" execute="claim_ring" showIf="setup_not_required"/>
@@ -86,6 +85,7 @@
     <cardaction menu="Play" execute="play_dynasty" showIf="can_play"/>
     <cardaction menu="Refill" execute="refill" showIf="is_province"/>
     <cardaction menu="Replace" execute="replace" showIf="can_replace"/>
+    <cardaction menu="Select bid" execute="select_bid" showIf="is_honor_dial"/>
     <cardaction menu="Move to bottom of deck" execute="move_to_deck_bottom" showIf="has_deck"/>
   </table>
   <player>

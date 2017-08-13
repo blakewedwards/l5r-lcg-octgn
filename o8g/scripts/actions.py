@@ -75,25 +75,23 @@ def height_offset(offset, inverted):
 def pass_action(group, x=0, y=0):
   notify("{} passes.".format(me))
 
-def set_honor_dial(group, x=0, y=0):
+def is_honor_dial(card, x=0, y=0):
+  return unpack(card, lambda c: c.type == TYPE_HONOR_DIAL)
+
+def select_bid(card, x=0, y=0):
   mute()
-  notify("{} is setting their honor dial.".format(me))
-  honor_dial = [card for card in group if card.controller == me and card.type == TYPE_HONOR_DIAL]
-  if len(honor_dial) != 1:
-    whisper('Error: Honor dial not found.')
-    return
-  honor_dial = honor_dial[0]
-  choice = askChoice('How much honor would you like to bid?', [str(c) for c in range(1, HONOR_DIAL_CHOICES + 1)])
+  notify("{} is selecting their honor bid.".format(me))
+  choice = askChoice('Select a bid', [str(c) for c in range(1, HONOR_DIAL_CHOICES + 1)])
   if choice == 0:
     notify('{} did not select a bid.'.format(me))
     return
   else:
     notify('{} has selected a bid.'.format(me))
 
-  if honor_dial.isFaceUp:
-    honor_dial.isFaceUp = False
-  honor_dial.peek()
-  honor_dial.alternate = '' if choice == 1 else str(choice)
+  if card.isFaceUp:
+    card.isFaceUp = False
+  card.peek()
+  card.alternate = '' if choice == 1 else str(choice)
 
 def gain_honor(honor):
   mute()
