@@ -398,6 +398,8 @@ def play_conflict(card): #, x=0, y=0):
   (x, y) = play_conflict_position(card.width, card.height, card.width*CARD_GAP_RATIO, me.isInverted)
   card.moveToTable(x, y, True) # TODO: Why True and not False here?
   card.isFaceUp = True
+  if card.type == TYPE_ATTACHMENT:
+    card.sendToBack()
   me.Fate -= cost + num_fate
   add_fate(card, quantity=num_fate)
   notify_play(me, card, cost, num_fate)
