@@ -133,7 +133,7 @@
       <property name="Text" value="???"/>
       <property name="Bonus Strength" value="+1"/>
       <property name="Starting Honor" value="10"/>
-      <property name="Fate Value" value="++?"/>
+      <property name="Fate Value" value="+?"/>
       <property name="Influence Value" value="??"/>
       <property name="Card Number" value="6"/>
     </card>
@@ -2135,7 +2135,7 @@
       <property name="Traits" value="Condition."/>
       <property name="Text" value="Cavalry character only.&#10;X is equal to the number of unclaimed rings."/>
       <property name="Cost" value="2"/>
-      <property name="Bonus Military Skill" value="++X"/>
+      <property name="Bonus Military Skill" value="+X"/>
       <property name="Bonus Political Skill" value="+0"/>
       <property name="Influence Value" value="1"/>
       <property name="Deck" value="Conflict"/>
