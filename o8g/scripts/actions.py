@@ -26,10 +26,16 @@ RINGS = [AIR_RING, EARTH_RING, FIRE_RING, VOID_RING, WATER_RING]
 RING_X = 325
 RING_Y_START = -225
 RING_Y_GAP_RATIO = 1
-TYPE_IMPERIAL_FAVOR = 'Imperial Favor'
+TYPE_ATTACHMENT = 'Attachment'
+TYPE_CHARACTER = 'Character'
+TYPE_EVENT = 'Event'
+TYPE_FIRST_PLAYER_TOKEN = 'First Player Token'
+TYPE_HOLDING = 'Holding'
 TYPE_HONOR_DIAL = 'Honor Dial'
+TYPE_IMPERIAL_FAVOR = 'Imperial Favor'
 TYPE_PROVINCE = 'Province'
 TYPE_RING = 'Ring'
+TYPE_STRONGHOLD = 'Stronghold'
 ALTERNATE_MILITARY = ''
 ALTERNATE_POLITICAL = 'Political'
 ALTERNATE_CLAIMED = 'Claimed'
@@ -185,13 +191,17 @@ def setup(group, x=0, y=0):
   notify('{} sets up.'.format(me))
   me.setGlobalVariable('setup_required', '')
 
-def is_province(card, x=0, y=0):
-  if isinstance(card, list):
-    if len(card) != 1:
-      return False
+def unpack(item, f, default=True):
+  if isinstance(item, list):
+    if len(item) != 1:
+      return default
     else:
-      card = card[0]
-  return card.type == TYPE_PROVINCE
+      return f(item[0])
+  else:
+    return f(item)
+
+def is_province(card, x=0, y=0):
+  return unpack(card, lambda c: c.type == TYPE_PROVINCE)
 
 def declare_conflict(group, x=0, y=0):
   mute()
@@ -267,6 +277,9 @@ def table_default_card_action(card):
   else:
     toggle_bow_ready(card)
 
+def can_honor(card, x=0, y=0):
+  return unpack(card, lambda c: c.isFaceUp and c.type == TYPE_CHARACTER)
+
 def honor(card, x=0, y=0):
   if card.markers[DISHONORED]:
     card.markers[DISHONORED] = 0
@@ -279,11 +292,17 @@ def dishonor(card, x=0, y=0):
   elif not card.markers[DISHONORED]:
     card.markers[DISHONORED] = 1
 
+def can_fate(card, x=0, y=0):
+  return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_RING))
+
 def add_fate(card, x=0, y=0, quantity=1):
   card.markers[FATE] += quantity
 
 def remove_fate(card, x=0, y=0):
   card.markers[FATE] -= 1
+
+def can_bow(card, x=0, y=0):
+  return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_ATTACHMENT or c.type == TYPE_STRONGHOLD))
 
 def toggle_bow_ready(card, x=0, y=0):
   mute()
@@ -294,6 +313,9 @@ def toggle_break(card, x=0, y=0):
   mute()
   card.orientation ^= Rot180
   notify('{} {} {}.'.format(me, 'breaks' if card.orientation & Rot180 == Rot180 else 'unbreaks', card))
+
+def can_flip(card, x=0, y=0):
+  return unpack(card, lambda c: c.type != TYPE_STRONGHOLD and c.type != TYPE_FIRST_PLAYER_TOKEN)
 
 def flip(card, x=0, y=0):
   if card.type == TYPE_RING or card.type == TYPE_IMPERIAL_FAVOR:
@@ -320,6 +342,9 @@ def get_discard_pile(card):
   elif is_conflict(card):
     return card.owner.piles[CONFLICT_DISCARD]
 
+def has_deck(card, x=0, y=0):
+  return unpack(card, lambda c: get_pile(c) is not None)
+
 def discard(card, x=0, y=0):
   pile = get_discard_pile(card)
   if pile is not None:
@@ -332,7 +357,9 @@ def move_to_deck_bottom(card, x=0, y=0):
     card.moveToBottom(pile)
   return pile
 
-# TODO: convenience instead of discard and refill
+def can_replace(card, x=0, y=0):
+  return unpack(card, lambda c: c.type == TYPE_CHARACTER or c.type == TYPE_HOLDING)
+
 def replace(card, x=0, y=0):
   card_x, card_y = card.position
   discard(card, x, y)
@@ -350,6 +377,9 @@ def random_discard_from(group):
   pile = discard(card)
   if pile is not None:
     notify("{} randomly moves {} to {}'s {}.".format(me, card, me, pile.name))
+
+def can_play(card, x=0, y=0):
+  return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_EVENT or c.type == TYPE_ATTACHMENT))
 
 def play_conflict(card): #, x=0, y=0):
   mute()

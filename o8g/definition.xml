@@ -74,21 +74,19 @@
     <groupaction menu="End turn" execute="end_turn" showIf="setup_not_required"/>
     <groupaction menu="Flip coin" execute="flip_coin" showIf="setup_not_required"/>
     <cardaction menu="Default" execute="table_default_card_action" default="True" showIf="lambda: False"/>
-    <cardaction menu="Add fate" execute="add_fate"/>
-    <cardaction menu="Remove fate" execute="remove_fate"/>
-    <cardaction menu="Bow/ready" execute="toggle_bow_ready"/>
-    <cardaction menu="Break/unbreak" execute="toggle_break"/>
+    <cardaction menu="Add fate" execute="add_fate" showIf="can_fate"/>
+    <cardaction menu="Remove fate" execute="remove_fate" showIf="can_fate"/>
+    <cardaction menu="Bow/ready" execute="toggle_bow_ready" showIf="can_bow"/>
+    <cardaction menu="Break/unbreak" execute="toggle_break" showIf="is_province"/>
     <cardaction menu="Declare conflict" execute="declare_conflict_at" showIf="is_province"/>
-    <cardaction menu="Discard" execute="discard"/>
-    <cardaction menu="Flip" execute="flip"/>
-    <cardaction menu="Honor" execute="honor"/>
-    <cardaction menu="Dishonor" execute="dishonor"/>
-    <cardaction menu="Play" execute="play_dynasty"/>
-    <cardaction menu="Refill" execute="refill"/>
-    <cardaction menu="Replace" execute="replace"/>
-    <cardaction menu="Move to bottom of deck" execute="move_to_deck_bottom"/>
-    <!--cardaction menu="Add fate" execute="add_fate" showIf="is_character"/-->
-    <!--cardaction menu="Remove fate" execute="add_fate" showIf="is_character"/-->
+    <cardaction menu="Discard" execute="discard" showIf="has_deck"/>
+    <cardaction menu="Flip" execute="flip" showIf="can_flip"/>
+    <cardaction menu="Honor" execute="honor" showIf="can_honor"/>
+    <cardaction menu="Dishonor" execute="dishonor" showIf="can_honor"/>
+    <cardaction menu="Play" execute="play_dynasty" showIf="can_play"/>
+    <cardaction menu="Refill" execute="refill" showIf="is_province"/>
+    <cardaction menu="Replace" execute="replace" showIf="can_replace"/>
+    <cardaction menu="Move to bottom of deck" execute="move_to_deck_bottom" showIf="has_deck"/>
   </table>
   <player>
     <globalvariable name="setup_required" value="True"/>
