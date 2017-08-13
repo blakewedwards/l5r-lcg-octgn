@@ -35,6 +35,7 @@ TYPE_HONOR_DIAL = 'Honor Dial'
 TYPE_IMPERIAL_FAVOR = 'Imperial Favor'
 TYPE_PROVINCE = 'Province'
 TYPE_RING = 'Ring'
+TYPE_ROLE = 'Role'
 TYPE_STRONGHOLD = 'Stronghold'
 ALTERNATE_MILITARY = ''
 ALTERNATE_POLITICAL = 'Political'
@@ -143,10 +144,24 @@ def setup(group, x=0, y=0):
   height = me.hand[0].height
   gap = width*CARD_GAP_RATIO
   offset = height_offset(gap, me.isInverted)
-  me.piles[DYNASTY].shuffle()
-  me.piles[CONFLICT].shuffle()
-  stronghold = me.hand[0] # TODO: If they move the stronghold, this breaks
-  for i, card in enumerate(me.hand[1:6]):
+  if len([c for c in me.hand if c.type != TYPE_STRONGHOLD and c.type != TYPE_PROVINCE and c.type != TYPE_ROLE]) != 0:
+    whisper('Set up requires only strongholds, provinces, and roles in hand.')
+    return
+  stronghold = [c for c in me.hand if c.type == TYPE_STRONGHOLD]
+  if len(stronghold) != 1:
+    whisper('Set up requires a deck with exactly one stronghold in hand.')
+    return
+  stronghold = stronghold[0]
+  provinces = [c for c in me.hand if c.type == TYPE_PROVINCE]
+  if len(provinces) != MAX_PROVINCES:
+    whisper('Set up requires a deck with exactly five provinces in hand.')
+    return
+  role = [c for c in me.hand if c.type == TYPE_ROLE]
+  if len(role) > 1:
+    whisper('Set up requires a deck with at most one role in hand.')
+    return
+  role = role[0] if role else None
+  for i, card in enumerate(provinces): # TODO: Need random.shuffle
     (card_x, card_y) = province_position(i, width, height, gap, me.isInverted)
     card.moveToTable(card_x, card_y, True)
     card.sendToBack()
@@ -161,13 +176,14 @@ def setup(group, x=0, y=0):
       c.moveToTable(card_x, card_y + offset, True)
       c.peek()
 
-  if len(me.hand) > 0: # If there's something left in the hand, assume it's a role
+  if role:
     (card_x, card_y) = role_position(width, height, gap, me.isInverted)
-    role = me.hand[0]
     role.moveToTable(card_x, card_y + offset)
     role.isFaceUp = True
     role.anchor = True
 
+  me.piles[DYNASTY].shuffle()
+  me.piles[CONFLICT].shuffle()
   me.honor = int(stronghold.properties[STARTING_HONOR])
   me.fate = int(stronghold.properties[FATE_VALUE])
   me.setGlobalVariable(PLAYER_FATE_VALUE, stronghold.properties[FATE_VALUE])
@@ -313,7 +329,7 @@ def toggle_break(card, x=0, y=0):
   notify('{} {} {}.'.format(me, 'breaks' if card.orientation & Rot180 == Rot180 else 'unbreaks', card))
 
 def can_flip(card, x=0, y=0):
-  return unpack(card, lambda c: c.type != TYPE_STRONGHOLD and c.type != TYPE_FIRST_PLAYER_TOKEN)
+  return unpack(card, lambda c: c.type != TYPE_STRONGHOLD and c.type != TYPE_FIRST_PLAYER_TOKEN and c.type != TYPE_ROLE)
 
 def flip(card, x=0, y=0):
   if card.type == TYPE_RING or card.type == TYPE_IMPERIAL_FAVOR:
