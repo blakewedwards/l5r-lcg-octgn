@@ -141,12 +141,12 @@
       <property name="Clan" value="Unicorn"/>
       <property name="Type" value="Stronghold"/>
       <property name="Unique" value="Unique"/>
-      <property name="Traits" value=""/>
-      <property name="Text" value="???"/>
+      <property name="Traits" value="Outpost."/>
+      <property name="Text" value="Action: During a [Military] conflict, bow this stronghold. Choose a Cavalry character you control - move it to that conflict."/>
       <property name="Bonus Strength" value="+0"/>
-      <property name="Starting Honor" value="??"/>
-      <property name="Fate Value" value="++?"/>
-      <property name="Influence Value" value="??"/>
+      <property name="Starting Honor" value="10"/>
+      <property name="Fate Value" value="+7"/>
+      <property name="Influence Value" value="10"/>
       <property name="Card Number" value="7"/>
     </card>
     <card id="40683c9f-b1e9-4055-88bd-ce2a2e846297" name="Defend the Wall" size="province">
@@ -198,8 +198,9 @@
       <property name="Clan" value="Unicorn"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Reaction: After an attack is declared here, break this province, your opponent chooses an attacking character - discard that character."/>
+      <property name="Text" value="Reaction: After an attack is declared here, break this province. Your opponent chooses an attacking character - discard that character."/>
       <property name="Bonus Strength" value="2"/>
+      <property name="Ring" value="Water"/>
       <property name="Card Number" value="14"/>
     </card>
     <card id="82de5aed-145f-4fda-812e-5d1cdf80b0a8" name="Ancestral Lands" size="province">
@@ -229,6 +230,15 @@
       <property name="Ring" value="Earth"/>
       <property name="Card Number" value="17"/>
     </card>
+    <card id="0549220e-c514-4f95-beac-4471ea24ab10" name="Fertile Fields" size="province">
+      <property name="Clan" value="Neutral"/>
+      <property name="Type" value="Province"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="???"/>
+      <property name="Bonus Strength" value="?"/>
+      <property name="Ring" value="Air"/>
+      <property name="Card Number" value="18"/>
+    </card>
     <card id="3a269937-2bc6-4dad-ad7f-1a76b0948e42" name="Manicured Garden" size="province">
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
@@ -242,7 +252,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value=""/>
+      <property name="Text" value="???"/>
       <property name="Bonus Strength" value="4"/>
       <property name="Ring" value="Fire"/>
       <property name="Card Number" value="20"/>
@@ -342,6 +352,18 @@
       <property name="Glory" value="1"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="29"/>
+    </card>
+    <card id="09d394df-0326-48da-90e2-bf5721a7035a" name="Vanguard Warrior" size="dynasty">
+      <property name="Clan" value="Crab"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="?"/>
+      <property name="Military Skill" value="?"/>
+      <property name="Political Skill" value="?"/>
+      <property name="Glory" value="?"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="30"/>
     </card>
     <card id="b4551ad3-509d-4f07-94c5-8a639d7e1bb0" name="Borderlands Defender" size="dynasty">
       <property name="Clan" value="Crab"/>
@@ -1000,6 +1022,18 @@
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="85"/>
     </card>
+    <card id="86ad25a6-ef0a-4216-8bfb-269b5c21efc4" name="Meddling Mediator" size="dynasty">
+      <property name="Clan" value="Phoenix"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="?"/>
+      <property name="Military Skill" value="?"/>
+      <property name="Political Skill" value="?"/>
+      <property name="Glory" value="?"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="86"/>
+    </card>
     <card id="df86c48d-eba3-4f43-9419-652fea003a89" name="Radiant Orator" size="dynasty">
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Character"/>
@@ -1087,12 +1121,12 @@
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="93"/>
     </card>
-    <card id="bb5532b4-c5b1-449b-85b9-ea88acfb3e57" name="Core Set 94" size="dynasty">
+    <card id="bb5532b4-c5b1-449b-85b9-ea88acfb3e57" name="Forgotten Library" size="dynasty">
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Holding"/>
       <property name="Traits" value="Library. Shrine."/>
       <property name="Text" value="Reaction: After the draw phase begins - draw 1 card."/>
-      <property name="Bonus Strength" value="++?"/>
+      <property name="Bonus Strength" value="+0"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="94"/>
     </card>
@@ -1144,6 +1178,19 @@
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="103"/>
     </card>
+    <card id="8a6ae3d6-a34a-4340-ad2d-05304377e8f8" name="Bayushi Shoju" size="dynasty">
+      <property name="Clan" value="Scorpion"/>
+      <property name="Type" value="Character"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Bushi. Courtier. Champion."/>
+      <property name="Text" value="Action: While this character is participating in a [Political] conflict, choose a participating character controlled by your opponent - until the end of the conflict, that character gets -1[Political] and is dicarded if its [Political] skill is 0. (Limit twice per round.)"/>
+      <property name="Cost" value="5"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="7"/>
+      <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="107"/>
+    </card>
     <card id="df365b9f-63cd-4d81-ae02-a69db1d81cea" name="City of Lies" size="dynasty">
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Holding"/>
@@ -1152,6 +1199,18 @@
       <property name="Bonus Strength" value="+1"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="108"/>
+    </card>
+    <card id="f62bb726-4566-4ddf-b160-a6ec4f732557" name="Moto Youth" size="dynasty">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Cavalry."/>
+      <property name="Text" value="This character gets +1[Military] during the first [Military] conflict each round."/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="0"/>
+      <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="109"/>
     </card>
     <card id="4c39ba79-1d7e-4b9f-a81a-8b9364307465" name="Utaku Infantry" size="dynasty">
       <property name="Clan" value="Unicorn"/>
@@ -1189,6 +1248,18 @@
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="112"/>
     </card>
+    <card id="a5bc1b90-6094-420c-ad31-a9b3ffb4bdd6" name="Meishodo Wielder" size="dynasty">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Shugenja. Water."/>
+      <property name="Text" value="Reduce the cost to play this character by 1 while you are the first player."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="113"/>
+    </card>
     <card id="ec021f72-2e5e-4b7c-88ab-3474658ee98c" name="Shinjo Outrider" size="dynasty">
       <property name="Clan" value="Unicorn"/>
       <property name="Type" value="Character"/>
@@ -1201,6 +1272,30 @@
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="114"/>
     </card>
+    <card id="e8d040bb-d41d-4741-9eac-68112deb14ca" name="Giver of Gifts" size="dynasty">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier."/>
+      <property name="Text" value="Action: Choose an attachment you control - move that attachment to an eligible character you control."/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="3"/>
+      <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="115"/>
+    </card>
+    <card id="cd33e2bb-2c7b-4c3f-8e0d-87bfc7c48bc1" name="Ide Trader" size="dynasty">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier."/>
+      <property name="Text" value="Reaction: After 1 or more characters move to a conflict in which this character is participating, select one - gain 1 fate or draw 1 card. (Limit once per conflict.)"/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="3"/>
+      <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="116"/>
+    </card>
     <card id="26564d02-8f88-4ba2-99b9-6c5f9d499768" name="Warrior Poet" size="dynasty">
       <property name="Clan" value="Unicorn"/>
       <property name="Type" value="Character"/>
@@ -1212,6 +1307,57 @@
       <property name="Glory" value="2"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="117"/>
+    </card>
+    <card id="8bec26c1-94c8-4a30-8138-28f7465f00d2" name="Utaku Yumino" size="dynasty">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Character"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Bushi. Battle Maiden. Cavalry."/>
+      <property name="Text" value="Action: During a conflict, discard a card from your hand - this character gets +2[Military] and +2[Political] until the end of the conflict. (Limit once per conflict.)"/>
+      <property name="Cost" value="3"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="3"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="118"/>
+    </card>
+    <card id="7742aa81-4781-4846-a1d1-9c4446f6373f" name="Moto Horde" size="dynasty">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Army. Cavalry."/>
+      <property name="Text" value="No attachments except Weapon."/>
+      <property name="Cost" value="4"/>
+      <property name="Military Skill" value="6"/>
+      <property name="Political Skill" value="-"/>
+      <property name="Glory" value="1"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="119"/>
+    </card>
+    <card id="a74c2bdb-45c4-40ac-b5df-b92cf92503df" name="Shinjo Tatsuo" size="dynasty">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Character"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Bushi. Cavalry. Scout."/>
+      <property name="Text" value="Action: During a conflict, choose this character and up to 1 other character you control - move those characters to the conflict."/>
+      <property name="Cost" value="4"/>
+      <property name="Military Skill" value="3"/>
+      <property name="Political Skill" value="3"/>
+      <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="120"/>
+    </card>
+    <card id="50b1ae8a-6257-4991-bb62-00b979c7c0f0" name="Shinjo Altansarnai" size="dynasty">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Character"/>
+      <property name="Unique" value="Unique"/>
+      <property name="Traits" value="Bushi. Cavalry. Champion."/>
+      <property name="Text" value="Reaction: After you break a province during a [Military] conflict in which this character is participating, your opponent chooses a character he or she controls - discard that character."/>
+      <property name="Cost" value="5"/>
+      <property name="Military Skill" value="5"/>
+      <property name="Political Skill" value="4"/>
+      <property name="Glory" value="2"/>
+      <property name="Deck" value="Dynasty"/>
+      <property name="Card Number" value="121"/>
     </card>
     <card id="67b18356-65a2-4a04-8d15-4e5425ab4160" name="Otomo Courtier" size="dynasty">
       <property name="Clan" value="Neutral"/>
@@ -1608,6 +1754,16 @@
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="156"/>
     </card>
+    <card id="82777c2f-1a7e-4bf9-8ed7-11c06aa6e97d" name="Tranquility" size="conflict">
+      <property name="Clan" value="Dragon"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="?"/>
+      <property name="Influence Value" value="?"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="157"/>
+    </card>
     <card id="6aa2734d-5513-4ce5-8962-2146ee87a6d7" name="Indomitable Will" size="conflict">
       <property name="Clan" value="Dragon"/>
       <property name="Type" value="Event"/>
@@ -1850,6 +2006,49 @@
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="179"/>
     </card>
+    <card id="e3768195-9e62-4468-8ef4-5349c2a4f1ad" name="Adept of Shadows" size="conflict">
+      <property name="Clan" value="Scorpion"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Bushi. Shinobi."/>
+      <property name="Text" value="Action: Lose 1 honor - return this character to your hand."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="2"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="0"/>
+      <property name="Influence Value" value="3"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="180"/>
+    </card>
+    <card id="3f288e4d-8003-4f8e-94ab-318110500035" name="Unassuming Yojimbo" size="conflict">
+      <property name="Clan" value="Scorpion"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="?"/>
+      <property name="Military Skill" value="-"/>
+      <property name="Political Skill" value="-"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="181"/>
+    </card>
+    <card id="6c18d7c6-03fb-4717-93f3-e44314efae56" name="Way of the Scorpion" size="conflict">
+      <property name="Clan" value="Scorpion"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value="Philosophy."/>
+      <property name="Text" value="???"/>
+      <property name="Cost" value="0"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="185"/>
+    </card>
+    <card id="e71194e8-30ae-4e8e-a053-d6d7ce0cb149" name="Calling in Favors" size="conflict">
+      <property name="Clan" value="Scorpion"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: Dishonor a (friendly) character. Choose an opponent's attachment - take control of that attachment and attach it to that character, if able. Otherwise, discard the attachment."/>
+      <property name="Cost" value="1"/>
+      <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="186"/>
+    </card>
     <card id="ed546e3d-c954-4354-94fe-5bce936b649e" name="I Can Swim" size="conflict">
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Event"/>
@@ -1859,6 +2058,16 @@
       <property name="Influence Value" value="1"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="187"/>
+    </card>
+    <card id="f2ca9035-de1c-4539-8cb8-cc504e47156c" name="Ambush" size="conflict">
+      <property name="Clan" value="Scorpion"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: During a conflict, choose up to 2 [Scorpion] characters with total printed cost 6 or lower from your hand and/or provinces - put those character into play as participating characters."/>
+      <property name="Cost" value="3"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="188"/>
     </card>
     <card id="e0949fb5-72cc-47da-bfef-979d967aff28" name="Blackmail" size="conflict">
       <property name="Clan" value="Scorpion"/>
@@ -1870,6 +2079,68 @@
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="189"/>
     </card>
+    <card id="c5538aa2-657a-43b1-9224-76f10dd6d4e4" name="Iuchi Wayfinder" size="conflict">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Shugenja. Water. Cavalry."/>
+      <property name="Text" value="Reaction: After this character enters play - look at a facedown province."/>
+      <property name="Cost" value="1"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="1"/>
+      <property name="Glory" value="0"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="190"/>
+    </card>
+    <card id="5e815eda-983a-4afe-ba7d-5e6c7e421a6d" name="Ide Messenger" size="conflict">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Character"/>
+      <property name="Traits" value="Courtier."/>
+      <property name="Text" value="Action: During a conflict, spend 1 fate. Choose a character you control - move that character to the conflict."/>
+      <property name="Cost" value="2"/>
+      <property name="Military Skill" value="1"/>
+      <property name="Political Skill" value="2"/>
+      <property name="Glory" value="0"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="191"/>
+    </card>
+    <card id="b288d363-9dcf-4853-9b83-65c20b53863c" name="Favored Mount" size="conflict">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Creature."/>
+      <property name="Text" value="Attach to a character you control.&#10;Attached character gains Cavalry.&#10;Action: During a conflict, bow this attachment - move attached character to the conflict."/>
+      <property name="Cost" value="1"/>
+      <property name="Bonus Military Skill" value="+1"/>
+      <property name="Bonus Political Skill" value="+0"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="192"/>
+    </card>
+    <card id="9131e723-ebd2-4154-b7a1-d2ab8731950d" name="Spyglass" size="conflict">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Item. Gaijin."/>
+      <property name="Text" value="Reaction: After attached character commits to a conflict or moves to a conflict - draw 1 card. (Limit twice per round.)"/>
+      <property name="Cost" value="1"/>
+      <property name="Bonus Military Skill" value="+0"/>
+      <property name="Bonus Political Skill" value="+1"/>
+      <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="193"/>
+    </card>
+    <card id="98db54e5-2bc2-4bcf-bd55-a49b3783b387" name="Born in War" size="conflict">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Attachment"/>
+      <property name="Traits" value="Condition."/>
+      <property name="Text" value="Cavalry character only.&#10;X is equal to the number of unclaimed rings."/>
+      <property name="Cost" value="2"/>
+      <property name="Bonus Military Skill" value="++X"/>
+      <property name="Bonus Political Skill" value="+0"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="194"/>
+    </card>
     <card id="04b588fd-bb81-4222-88d4-44f0c1ee35a8" name="Breakthrough" size="conflict">
       <property name="Clan" value="Unicorn"/>
       <property name="Type" value="Event"/>
@@ -1878,7 +2149,27 @@
       <property name="Cost" value="0"/>
       <property name="Influence Value" value="1"/>
       <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="195"/>
+    </card>
+    <card id="2add7f54-6d9e-44b3-b0aa-df45e4106382" name="Captive Audience" size="conflict">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: During a [Political] conflict, lose 1 honor - change the conflict type to [Military]."/>
+      <property name="Cost" value="0"/>
+      <property name="Influence Value" value="3"/>
+      <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="196"/>
+    </card>
+    <card id="5cf714bf-5dd7-44bb-906c-734182886b9d" name="I Am Ready" size="conflict">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: Remove 1 fate from a (friendly) [Unicorn] character - ready that character."/>
+      <property name="Cost" value="0"/>
+      <property name="Influence Value" value="1"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="197"/>
     </card>
     <card id="3a4a2547-142c-4394-81fc-314fd3a14236" name="Way of the Unicorn" size="conflict">
       <property name="Clan" value="Unicorn"/>
@@ -1888,6 +2179,16 @@
       <property name="Cost" value="0"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="198"/>
+    </card>
+    <card id="a18a5893-9931-4cb5-a1e9-49c6e8a9fcb0" name="Cavalry Reserves" size="conflict">
+      <property name="Clan" value="Unicorn"/>
+      <property name="Type" value="Event"/>
+      <property name="Traits" value=""/>
+      <property name="Text" value="Action: During a [Military] conflict, choose up to 6 printed cost worth of Cavalry characters in your dynasty discard pile - put those characters into play in the conflict."/>
+      <property name="Cost" value="3"/>
+      <property name="Influence Value" value="2"/>
+      <property name="Deck" value="Conflict"/>
+      <property name="Card Number" value="199"/>
     </card>
     <card id="0d11eb2f-2f27-4bf8-bc25-752e367e045a" name="Fine Katana" size="conflict">
       <property name="Clan" value="Neutral"/>
@@ -2016,7 +2317,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Action: During a conflict, choose a participating character with lower [Military] skill than a participating Bushi character you control - send that character home."/>
+      <property name="Text" value="Action: During a conflict, choose an opponent's character with lower [Military] skill than a participating Bushi character you control - move the chosen character home."/>
       <property name="Cost" value="1"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="213"/>
