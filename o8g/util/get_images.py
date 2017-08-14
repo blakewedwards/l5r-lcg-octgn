@@ -24,12 +24,12 @@ class PNGPageParser(HTMLParser):
     if tag == 'div':
       self.file = False
 
-user_agent = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'
+user_agent = 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36'
 jpgs = ['Deathseeker']
 cards = [(card.getAttribute('name').decode('UTF-8'), card.getAttribute('id')) for card in parse(sys.argv[1]).getElementsByTagName('card')]
 not_found = []
 for (name, id) in cards:
-  url = 'https://l5r.gamepedia.com/File:{}.{}'.format(name.replace(' ', '_'), 'jpg' if name in jpgs else 'png')
+  url = 'http://l5r.gamepedia.com/File:{}.{}'.format(name.replace(' ', '_'), 'jpg' if name in jpgs else 'png')
   try:
     parser = PNGPageParser()
     print 'GET ' + url
@@ -38,7 +38,7 @@ for (name, id) in cards:
     if parser.image_url:
       print '  GET ' + parser.image_url
       with open(os.path.join(sys.argv[2], id) + '.png', 'wb') as image:
-        shutil.copyfileobj(urlopen(parser.image_url), image)
+        shutil.copyfileobj(urlopen(Request(parser.image_url, None, {'User-Agent': user_agent})), image)
     else:
       not_found.append(name)
   except HTTPError as err:
