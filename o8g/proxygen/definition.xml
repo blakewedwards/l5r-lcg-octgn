@@ -204,6 +204,14 @@
     <block type="overlay" id="ring-fire" src="proxygen/images/ring-fire.png"><location x="370" y="527"/></block>
     <block type="overlay" id="ring-void" src="proxygen/images/ring-void.png"><location x="370" y="527"/></block>
     <block type="overlay" id="ring-water" src="proxygen/images/ring-water.png"><location x="370" y="527"/></block>
+
+    <block type="text" id="role-name">
+      <location x="100" y="325"/>
+      <text color="#000000" size="23" font="fonts/name.ttf"/>
+      <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
+    </block>
+
+    <block type="overlay" id="role-base-neutral" src="proxygen/images/role-base-neutral.png"><location x="0" y="0"/></block>
   </blocks>
 
   <template src="proxygen/images/empty.png">
@@ -406,6 +414,24 @@
       <link block="strength"><property name="Bonus Strength"/></link>
       <link block="text-top-name-top"><property name="Text"/></link>
       <link block="province-name"><property name="Name"/></link>
+    </textblocks>
+  </template>
+
+  <template src="proxygen/images/empty.png">
+    <matches><match name="Type" value="Role"/></matches>
+
+    <overlayblocks>
+      <conditional>
+        <switch property="Clan">
+          <case value="Neutral"><link block="role-base-neutral"/></case>
+        </switch>
+      </conditional>
+    </overlayblocks>
+
+    <textblocks>
+      <link block="text-name-top"><property name="Text"/></link>
+      <link block="role-name"><property name="Name"/></link>
+      <link block="traits-middle-name-middle"><property name="Traits"/></link>
     </textblocks>
   </template>
 </templates>

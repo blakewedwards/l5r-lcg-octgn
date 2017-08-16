@@ -139,8 +139,8 @@ ids = {
     '125': '708ff8aa-3b55-4a59-a13f-a9b2b0b63ae2',
     '126': 'ecab8b91-acd6-46f0-8f9b-991bfe1a599e',
     '127': '21bb93d6-537d-4084-bda1-e3647789fee8',
-    '128': '8dd56bff-5761-4075-9dde-2dba1452e6f6',
-    '129': 'eac25eba-25ae-4d38-b1f0-01cfe5cc35df',
+    '128': 'eac25eba-25ae-4d38-b1f0-01cfe5cc35df',
+    '129': '8dd56bff-5761-4075-9dde-2dba1452e6f6',
     '130': '8b4ece45-02c7-42a2-978b-d8ea103890d5',
     '131': 'c6a61750-9202-4c6d-b30b-ce843f1316a6',
     '132': '4754fed3-44b5-4d6f-bac9-e8dce9028712',
@@ -206,8 +206,8 @@ ids = {
     '192': 'b288d363-9dcf-4853-9b83-65c20b53863c',
     '193': '9131e723-ebd2-4154-b7a1-d2ab8731950d',
     '194': '98db54e5-2bc2-4bcf-bd55-a49b3783b387',
-    '195': '2add7f54-6d9e-44b3-b0aa-df45e4106382',
-    '196': '04b588fd-bb81-4222-88d4-44f0c1ee35a8',
+    '195': '04b588fd-bb81-4222-88d4-44f0c1ee35a8',
+    '196': '2add7f54-6d9e-44b3-b0aa-df45e4106382',
     '197': '5cf714bf-5dd7-44bb-906c-734182886b9d',
     '198': '3a4a2547-142c-4394-81fc-314fd3a14236',
     '199': 'a18a5893-9931-4cb5-a1e9-49c6e8a9fcb0',
@@ -216,21 +216,35 @@ ids = {
     '202': '6d8d67f8-38ea-4db2-a5d5-2f54b9493f33',
     '203': '3b85a2ef-1f9c-4c3f-bc17-f427effc1a14',
     '204': '84ed44dc-0324-4f88-90ff-1d4b0679be8d',
-    '205': '04ebdaa2-b46a-49c7-a0ba-1855504b4a12',
-    '206': 'b814b1f3-f7e9-462a-99ed-448937dfc1a8',
+    '205': 'b814b1f3-f7e9-462a-99ed-448937dfc1a8',
+    '206': '04ebdaa2-b46a-49c7-a0ba-1855504b4a12',
     '207': '4943895d-ab44-4571-ae49-2f51781469ad',
     '208': '485cc3e7-1fd1-4ba1-8a6d-3a2c476b9993',
     '209': '95b10d7c-092b-414d-af65-bc351d1ce8ab',
     '210': 'b618c2aa-9687-491a-aa7d-7e284264583c',
     '211': '613a8a9f-4b3f-4ea4-90ed-3d7423d8423a',
+    '212': '9859c9e7-ddb5-4239-aef2-591feb6a8ac7',
+    '213': '3589825a-aceb-42aa-8796-652803b56585',
+    '214A': 'f3307dcd-2e9f-4927-84af-7c5af05fdb19',
+    '214B': '276a3f10-2e2f-48eb-ba65-2f354274f98d',
+    '215A': 'ee1b351c-a755-403c-a3f4-c1b2c141e4cc',
+    '215B': '8b08da3c-3613-4edf-a3d4-a69aa54da11a',
+    '216A': '5eb460ba-ed48-4c9c-8c00-cfc21c1e6c5f',
+    '216B': '75f3b6ba-8745-4c90-873e-bd88e95bf8e2',
+    '217A': '4a7d2f30-6e0e-43b3-b8bb-a10c34d77097',
+    '217B': '8e5881ab-043e-4148-8052-ee8ce1860d8e',
+    '218A': '156cee09-4e74-4808-823d-ffe7213b47ca',
+    '218B': 'a43631fa-106d-4316-b9d3-d31fc532f165',
 }
 
-num_cards = 211
-if len(ids.keys()) != num_cards:
+num_cards = 218
+num_card_sides = num_cards + 5
+if len(ids.keys()) != num_card_sides:
   sys.exit('Invalid number of uuid keys')
 for key in ids.keys():
+  key = key.rstrip('AB')
   if int(key) < 1 or int(key) > num_cards:
-    sys.exit('Invalid card number in uuid keys')
+    sys.exit("Invalid card number '{}' in uuid keys".format(key))
 
 icon_regex = re.compile(r'\[\w+\]')
 
@@ -262,7 +276,8 @@ cards = SubElement(set, 'cards')
 
 with open(sys.argv[1], 'rb') as f:
   reader = csv.DictReader(f, delimiter=',', quotechar='"') # TODO: args needed?
-  for row in sorted(reader, key=lambda r: int(r['id']) if r['id'].strip() else num_cards+1):
+  # Mathematically base16 is nonsense but it happens to sort in the desired order with the letter suffixes
+  for row in sorted(reader, key=lambda r: int(r['id'], base=16) if r['id'].strip() else num_cards+9999):
     row = AttributeDict(row)
     if row.id:
       attr = {'id': ids[row.id], 'name': row.name}

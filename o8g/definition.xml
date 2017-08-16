@@ -15,9 +15,22 @@
   <scripts>
     <script src="scripts/actions.py"/>
   </scripts>
+  <events>
+    <event name="OnCardControllerChanged" action="card_controller_changed" />
+  </events>
   <proxygen definitionsrc="proxygen/definition.xml"/>
   <globalvariables>
     <globalvariable name="turn" value="1"/>
+    <globalvariable name="air_ring_x" value="0"/>
+    <globalvariable name="air_ring_y" value="0"/>
+    <globalvariable name="earth_ring_x" value="0"/>
+    <globalvariable name="earth_ring_y" value="0"/>
+    <globalvariable name="fire_ring_x" value="0"/>
+    <globalvariable name="fire_ring_y" value="0"/>
+    <globalvariable name="void_ring_x" value="0"/>
+    <globalvariable name="void_ring_y" value="0"/>
+    <globalvariable name="water_ring_x" value="0"/>
+    <globalvariable name="water_ring_y" value="0"/>
   </globalvariables>
   <card back="card/back.png" front="card/front.png" width="63" height="88">
     <property name="Clan" type="String" textKind="Enum"/>
@@ -37,7 +50,8 @@
     <property name="Bonus Military Skill" type="String"/>
     <property name="Bonus Political Skill" type="String"/>
     <property name="Deck" type="String" textKind="Enum"/>
-    <property name="Card Number" type="Integer"/>
+    <property name="Card Number" type="String"/>
+    <size name="first_player_token" back="card/first_player_token.png" front="card/first_player_token.png" width="42" height="69"/>
     <size name="honor_dial" back="card/honor_dial.png" front="card/honor_dial.png" width="63" height="88"/>
     <size name="imperial_favor" back="card/imperial_favor.png" front="card/imperial_favor.png" width="42" height="69"/>
     <size name="province" back="card/province.png" front="card/province.png" width="63" height="88"/>
@@ -51,26 +65,28 @@
     background="table/background.png"
     backgroundStyle="uniformToFill"
     ordered="False">
-    <groupaction menu="Pass" execute="pass_action" showIf="setup_not_required"/>
-    <groupaction menu="Set honor dial" execute="set_honor_dial" showIf="setup_not_required"/>
     <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
+    <groupaction menu="Pass" execute="pass_action" showIf="setup_not_required"/>
+    <groupaction menu="Give honor" execute="give_honor" showIf="setup_not_required"/>
+    <groupaction menu="Declare conflict" execute="declare_conflict" showIf="setup_not_required"/>
+    <groupaction menu="Claim ring" execute="claim_ring" showIf="setup_not_required"/>
     <groupaction menu="End turn" execute="end_turn" showIf="setup_not_required"/>
     <groupaction menu="Flip coin" execute="flip_coin" showIf="setup_not_required"/>
     <cardaction menu="Default" execute="table_default_card_action" default="True" showIf="lambda: False"/>
-    <cardaction menu="Add fate" execute="add_fate"/>
-    <cardaction menu="Remove fate" execute="remove_fate"/>
-    <cardaction menu="Honor" execute="honor"/>
-    <cardaction menu="Dishonor" execute="dishonor"/>
-    <cardaction menu="Bow/ready" execute="toggle_bow_ready"/>
-    <cardaction menu="Break/unbreak" execute="toggle_break"/>
-    <cardaction menu="Discard" execute="discard"/>
-    <cardaction menu="Flip" execute="flip"/>
-    <cardaction menu="Play" execute="play_dynasty"/>
-    <cardaction menu="Refill" execute="refill"/>
-    <cardaction menu="Replace" execute="replace"/>
-    <cardaction menu="Move to bottom of deck" execute="move_to_deck_bottom"/>
-    <!--cardaction menu="Add fate" execute="add_fate" showIf="is_character"/-->
-    <!--cardaction menu="Remove fate" execute="add_fate" showIf="is_character"/-->
+    <cardaction menu="Add fate" execute="add_fate" showIf="can_fate"/>
+    <cardaction menu="Remove fate" execute="remove_fate" showIf="can_fate"/>
+    <cardaction menu="Bow/ready" execute="toggle_bow_ready" showIf="can_bow"/>
+    <cardaction menu="Break/unbreak" execute="toggle_break" showIf="is_province"/>
+    <cardaction menu="Declare conflict" execute="declare_conflict_at" showIf="is_province"/>
+    <cardaction menu="Discard" execute="discard" showIf="has_deck"/>
+    <cardaction menu="Flip" execute="flip" showIf="can_flip"/>
+    <cardaction menu="Honor" execute="honor" showIf="can_honor"/>
+    <cardaction menu="Dishonor" execute="dishonor" showIf="can_honor"/>
+    <cardaction menu="Play" execute="play_dynasty" showIf="can_play"/>
+    <cardaction menu="Refill" execute="refill" showIf="is_province"/>
+    <cardaction menu="Replace" execute="replace" showIf="can_replace"/>
+    <cardaction menu="Select bid" execute="select_bid" showIf="is_honor_dial"/>
+    <cardaction menu="Move to bottom of deck" execute="move_to_deck_bottom" showIf="has_deck"/>
   </table>
   <player>
     <globalvariable name="setup_required" value="True"/>
@@ -82,19 +98,22 @@
       <groupaction menu="Random discard" execute="random_discard_from" showIf="setup_not_required"/>
       <cardaction menu="Play" execute="play_conflict" default="True" showIf="setup_not_required"/>
     </hand>
-    <group name="Dynasty Deck" icon="card/dynasty.png" visibility="none" width="63" height="88">
-      <groupaction menu="Shuffle" execute="shuffle"/>
-    </group>
-    <group name="Dynasty Discard" icon="card/dynasty.png" visibility="all" width="63" height="88"/>
     <group name="Conflict Deck" icon="card/conflict.png" visibility="none" width="63" height="88">
-      <groupaction menu="Search top X" execute="search_top"/>
-      <groupaction menu="Shuffle" execute="shuffle"/>
+      <groupaction menu="Draw" execute="draw" showIf="setup_not_required"/>
+      <groupaction menu="Search top" execute="search_top" showIf="setup_not_required"/>
+      <groupaction menu="Shuffle" execute="shuffle" showIf="setup_not_required"/>
     </group>
     <group name="Conflict Discard" icon="card/conflict.png" visibility="all" width="63" height="88"/>
+    <group name="Dynasty Deck" icon="card/dynasty.png" visibility="none" width="63" height="88">
+      <groupaction menu="Shuffle" execute="shuffle" showIf="setup_not_required"/>
+    </group>
+    <group name="Dynasty Discard" icon="card/dynasty.png" visibility="all" width="63" height="88"/>
+    <group name="Claimed Rings" icon="card/dynasty.png" width="63" height="88" visibility="all" collapsed="True"/>
   </player>
   <deck>
     <section name="Stronghold" group="Hand"/>
     <section name="Province Cards" group="Hand"/>
+    <section name="Role" group="Hand"/>
     <section name="Dynasty Deck" group="Dynasty Deck"/>
     <section name="Conflict Deck" group="Conflict Deck"/>
   </deck>
