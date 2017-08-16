@@ -3,7 +3,7 @@
     name="Legend of the Five Rings LCG"
     id="bb0f02e7-2a6f-4ae3-84a2-c501b4176844"
     octgnVersion="3.1.284.0"
-    version="0.0.1.0"
+    version="0.0.1.1"
     scriptVersion="3.1.0.2"
     markersize="16"
     setsurl="https://tinyurl.com/mab3ars"
@@ -65,27 +65,27 @@
     background="table/background.png"
     backgroundStyle="uniformToFill"
     ordered="False">
-    <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
-    <groupaction menu="Pass" execute="pass_action" showIf="setup_not_required"/>
-    <groupaction menu="Give honor" execute="give_honor" showIf="setup_not_required"/>
-    <groupaction menu="Declare conflict" execute="declare_conflict" showIf="setup_not_required"/>
-    <groupaction menu="Claim ring" execute="claim_ring" showIf="setup_not_required"/>
-    <groupaction menu="End turn" execute="end_turn" showIf="setup_not_required"/>
-    <groupaction menu="Flip coin" execute="flip_coin" showIf="setup_not_required"/>
+    <groupaction menu="Set up" execute="setup" showIf="setup_required" shortcut="CTRL+SHIFT+S" />
+    <groupaction menu="Pass" execute="pass_action" showIf="setup_not_required" shortcut="ALT+D" />
+    <groupaction menu="Give honor" execute="give_honor" showIf="setup_not_required" shortcut="CTRL+H" />
+    <groupaction menu="Declare conflict" execute="declare_conflict" showIf="setup_not_required" shortcut="F6" />
+    <groupaction menu="Claim ring" execute="claim_ring" showIf="setup_not_required" shortcut="F7" />
+    <groupaction menu="End turn" execute="end_turn" showIf="setup_not_required" shortcut="F12" />
+    <groupaction menu="Flip coin" execute="flip_coin" showIf="setup_not_required" shortcut="CTRL+F" />
     <cardaction menu="Default" execute="table_default_card_action" default="True" showIf="lambda: False"/>
-    <cardaction menu="Add fate" execute="add_fate" showIf="can_fate"/>
-    <cardaction menu="Remove fate" execute="remove_fate" showIf="can_fate"/>
-    <cardaction menu="Bow/ready" execute="toggle_bow_ready" showIf="can_bow"/>
-    <cardaction menu="Break/unbreak" execute="toggle_break" showIf="is_province"/>
-    <cardaction menu="Declare conflict" execute="declare_conflict_at" showIf="is_province"/>
-    <cardaction menu="Discard" execute="discard" showIf="has_deck"/>
-    <cardaction menu="Flip" execute="flip" showIf="can_flip"/>
-    <cardaction menu="Honor" execute="honor" showIf="can_honor"/>
-    <cardaction menu="Dishonor" execute="dishonor" showIf="can_honor"/>
-    <cardaction menu="Play" execute="play_dynasty" showIf="can_play"/>
-    <cardaction menu="Refill" execute="refill" showIf="is_province"/>
-    <cardaction menu="Replace" execute="replace" showIf="can_replace"/>
-    <cardaction menu="Select bid" execute="select_bid" showIf="is_honor_dial"/>
+    <cardaction menu="Add fate" execute="add_fate" showIf="can_fate" shortcut="F1" />
+    <cardaction menu="Remove fate" execute="remove_fate" showIf="can_fate" shortcut="F2" />
+    <cardaction menu="Bow/ready" execute="toggle_bow_ready" showIf="can_bow" shortcut="ALT+B" />
+    <cardaction menu="Break/unbreak" execute="toggle_break" showIf="is_province" shortcut="CTRL+B" />
+    <cardaction menu="Declare conflict" execute="declare_conflict_at" showIf="is_province" shortcut="F6" />
+    <cardaction menu="Discard" execute="discard" showIf="has_deck" shortcut="DEL" />
+    <cardaction menu="Flip" execute="flip" showIf="can_flip" shortcut="F8" />
+    <cardaction menu="Honor" execute="honor" showIf="can_honor" shortcut="F3" />
+    <cardaction menu="Dishonor" execute="dishonor" showIf="can_honor" shortcut="F4" />
+    <cardaction menu="Play" execute="play_dynasty" showIf="can_play" shortcut="CTRL+P" />
+    <cardaction menu="Refill" execute="refill" showIf="is_province" shortcut="CTRL+R" />
+    <cardaction menu="Replace" execute="replace" showIf="can_replace" shortcut="CTRL+T" />
+    <cardaction menu="Select bid" execute="select_bid" showIf="is_honor_dial" shortcut="F5" />
     <cardaction menu="Move to bottom of deck" execute="move_to_deck_bottom" showIf="has_deck"/>
   </table>
   <player>
