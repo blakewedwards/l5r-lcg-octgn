@@ -337,6 +337,7 @@ def flip(card, x=0, y=0):
     card.alternate = ALTERNATE_POLITICAL if not card.alternate else ''
     return
   card.isFaceUp = not card.isFaceUp
+  notify("{} flips {}.".format(me,card))
 
 def is_dynasty(card):
   return card.size == 'dynasty'
@@ -362,6 +363,12 @@ def has_deck(card, x=0, y=0):
 def discard(card, x=0, y=0):
   pile = get_discard_pile(card)
   if pile is not None:
+    if card.markers[HONORED]:
+      me.honor+=1
+      notify("{} gains 1 honor from {} honored status.".format(me, card))
+    if card.markers[DISHONORED]:
+      me.honor-=1
+      notify("{} loses 1 honor from {} dishonored status.".format(me, card))
     card.moveTo(pile)
   return pile
 
@@ -395,12 +402,24 @@ def random_discard_from(group):
 def can_play(card, x=0, y=0):
   return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_EVENT or c.type == TYPE_ATTACHMENT))
 
+def prompt_reduce_cost(cost):
+  reduc=askInteger("Reduce Cost by ?",0)
+  if reduc == None :
+    return
+  if reduc>cost: 
+    reduc=cost
+  cost-=reduc
+  return cost
+
 def play_conflict(card): #, x=0, y=0):
   mute()
   if card.cost == "":
     whisper('The card does not have a cost.')
     return
   cost=int(card.cost)
+  cost=prompt_reduce_cost(cost)
+  if cost == None :
+    return
   if me.Fate < cost:
     whisper("The card's cost cannot be paid.")
     return
@@ -445,6 +464,9 @@ def play_dynasty(card, x=0, y=0):
     whisper('The card does not have a cost.')
     return
   cost=int(card.cost)
+  cost=prompt_reduce_cost(cost)
+  if cost == None :
+    return
   if me.Fate < cost:
     whisper("The card's cost cannot be paid.")
     return
