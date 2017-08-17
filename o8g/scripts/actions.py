@@ -337,7 +337,6 @@ def flip(card, x=0, y=0):
     card.alternate = ALTERNATE_POLITICAL if not card.alternate else ''
     return
   card.isFaceUp = not card.isFaceUp
-  notify("{} flips {}.".format(me,card))
 
 def is_dynasty(card):
   return card.size == 'dynasty'
@@ -365,10 +364,8 @@ def discard(card, x=0, y=0):
   if pile is not None:
     if card.markers[HONORED]:
       me.honor+=1
-      notify("{} gains 1 honor from {} honored status.".format(me, card))
     if card.markers[DISHONORED]:
       me.honor-=1
-      notify("{} loses 1 honor from {} dishonored status.".format(me, card))
     card.moveTo(pile)
   return pile
 
