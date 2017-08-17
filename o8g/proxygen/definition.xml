@@ -206,12 +206,31 @@
     <block type="overlay" id="ring-water" src="proxygen/images/ring-water.png"><location x="370" y="527"/></block>
 
     <block type="text" id="role-name">
-      <location x="100" y="325"/>
+      <location x="100" y="430"/>
       <text color="#000000" size="23" font="fonts/name.ttf"/>
       <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
     </block>
 
+    <block type="text" id="text-role">
+      <location x="30" y="490"/>
+      <text color="#000000" size="20" font="fonts/arial.ttf"/>
+      <wordwrap height="75" width="360" align="center" valign="center" shrinktofit="True"/>
+    </block>
+
+    <block type="text" id="traits-role">
+      <location x="60" y="465"/>
+      <text color="#000000" size="20" font="fonts/arialbi.ttf"/>
+      <wordwrap height="34" width="300" align="center"/>
+    </block>
+
     <block type="overlay" id="role-base-neutral" src="proxygen/images/role-base-neutral.png"><location x="0" y="0"/></block>
+
+    <block type="overlay" id="role-air" src="proxygen/images/role-air.png"><location x="83" y="27"/></block>
+    <block type="overlay" id="role-earth" src="proxygen/images/role-earth.png"><location x="83" y="27"/></block>
+    <block type="overlay" id="role-fire" src="proxygen/images/role-fire.png"><location x="83" y="27"/></block>
+    <block type="overlay" id="role-void" src="proxygen/images/role-void.png"><location x="83" y="27"/></block>
+    <block type="overlay" id="role-water" src="proxygen/images/role-water.png"><location x="83" y="27"/></block>
+
   </blocks>
 
   <template src="proxygen/images/empty.png">
@@ -426,12 +445,21 @@
           <case value="Neutral"><link block="role-base-neutral"/></case>
         </switch>
       </conditional>
+      <conditional>
+        <switch property="Ring">
+          <case value="Air"><link block="role-air"/></case>
+          <case value="Earth"><link block="role-earth"/></case>
+          <case value="Fire"><link block="role-fire"/></case>
+          <case value="Void"><link block="role-void"/></case>
+          <case value="Water"><link block="role-water"/></case>
+        </switch>
+      </conditional>
     </overlayblocks>
 
     <textblocks>
-      <link block="text-name-top"><property name="Text"/></link>
+      <link block="text-role"><property name="Text"/></link>
       <link block="role-name"><property name="Name"/></link>
-      <link block="traits-middle-name-middle"><property name="Traits"/></link>
+      <link block="traits-role"><property name="Traits"/></link>
     </textblocks>
   </template>
 </templates>
