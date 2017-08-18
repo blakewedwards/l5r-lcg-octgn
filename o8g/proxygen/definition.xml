@@ -446,12 +446,12 @@
         </switch>
       </conditional>
       <conditional>
-        <switch property="Ring">
-          <case value="Air"><link block="role-air"/></case>
-          <case value="Earth"><link block="role-earth"/></case>
-          <case value="Fire"><link block="role-fire"/></case>
-          <case value="Void"><link block="role-void"/></case>
-          <case value="Water"><link block="role-water"/></case>
+        <switch property="Traits">
+          <case contains="Air."><link block="role-air"/></case>
+          <case contains="Earth."><link block="role-earth"/></case>
+          <case contains="Fire."><link block="role-fire"/></case>
+          <case contains="Void."><link block="role-void"/></case>
+          <case contains="Water."><link block="role-water"/></case>
         </switch>
       </conditional>
     </overlayblocks>
