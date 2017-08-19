@@ -23,7 +23,7 @@ FIRE_RING = '459e0ed9-1dac-4660-b9ba-c0e13bb7db3c'
 VOID_RING = '70643b2b-868c-4b2a-84e0-107e0d833ebd'
 WATER_RING = 'd5e3fa69-0ab9-4a26-9449-db60ac62e098'
 RINGS = [AIR_RING, EARTH_RING, FIRE_RING, VOID_RING, WATER_RING]
-RING_X = 325
+RING_X = 302.5
 RING_Y_START = -225
 RING_Y_GAP_RATIO = 1
 TYPE_ATTACHMENT = 'Attachment'
@@ -56,18 +56,18 @@ def play_conflict_position(width, height, gap, inverted):
   return (invert_x(x, width, inverted), invert_y(y, height, inverted))
 
 def honor_dial_position(width, height, gap, inverted):
-  (x, y) = (-4.5*width - 4*gap, height + 3*gap)
+  (x, y) = (-3.5*width - 3*gap, height + gap)
   return (invert_x(x, width, inverted), invert_y(y, height, inverted))
 
 # The leftmost province is index 0 and will hold the stronghold. Valid indicies are 0 to MAX_PROVINCES-1
 def province_position(index, width, height, gap, inverted):
   if index >= MAX_PROVINCES:
     raise ValueError('index must be less than the number of provinces')
-  (x, y) = (-2.5*width - 2*gap + index*(width+gap), (height + 2*gap))
+  (x, y) = (-2.5*width - 2*gap + index*(width+gap), (1.8*height + 2*gap))
   return (invert_x(x, width, inverted), invert_y(y, height, inverted))
 
 def role_position(width, height, gap, inverted):
-  (x, y) = (-3.5*width - 3*gap, (height + 2*gap))
+  (x, y) = (-3.5*width - 3*gap, (1.8*height + 2*gap))
   return (invert_x(x, width, inverted), invert_y(y, height, inverted))
 
 def height_offset(offset, inverted):
@@ -121,6 +121,9 @@ def setup_required(group, x=0, y=0):
 def setup_not_required(group, x=0, y=0):
   return not setup_required(group, x, y)
 
+def can_mulligan(group,x=0,y=0):
+  return bool(me.getGlobalVariable('can_mulligan')) and not setup_required(group,x,y)
+
 def ring_field(card, field):
   return card.name.lower() + '_' + field
 
@@ -171,10 +174,7 @@ def setup(group, x=0, y=0):
       stronghold.moveToTable(card_x, card_y + offset)
       stronghold.isFaceUp = True
       stronghold.anchor = True
-    else:
-      c = me.piles[DYNASTY].top()
-      c.moveToTable(card_x, card_y + offset, True)
-      c.peek()
+
 
   if role:
     (card_x, card_y) = role_position(width, height, gap, me.isInverted)
@@ -182,28 +182,80 @@ def setup(group, x=0, y=0):
     role.isFaceUp = True
     role.anchor = True
 
-  me.piles[DYNASTY].shuffle()
-  me.piles[CONFLICT].shuffle()
   me.honor = int(stronghold.properties[STARTING_HONOR])
-  me.fate = int(stronghold.properties[FATE_VALUE])
+  me.fate += int(stronghold.properties[FATE_VALUE])
   me.setGlobalVariable(PLAYER_FATE_VALUE, stronghold.properties[FATE_VALUE])
   (hd_x, hd_y) = honor_dial_position(width, height, gap, me.isInverted)
   table.create(HONOR_DIAL_1, hd_x, hd_y, persist=True).isFaceUp = True
-  # Current understanding is that dynasty are mulliganed first, so don't draw the hand immediately.
-  #for card in me.piles[CONFLICT].top(STARTING_HAND_SIZE):
-  #  card.moveTo(me.hand)
   # Shared resources, only set up by one player
+  notify('{} sets up.'.format(me))
   if not me.isInverted:
-    table.create(FIRST_PLAYER_TOKEN, 700, 0, persist=True).isFaceUp = True
-    table.create('b57c595e-d5ae-4fba-82c8-954a0b78c4a8', 668, 0, persist=True).isFaceUp = True
+    table.create('b57c595e-d5ae-4fba-82c8-954a0b78c4a8', RING_X+width+gap, 0, persist=True)
     ring_height = 0
     for i, ring_id in enumerate(RINGS):
       ring = table.create(ring_id, RING_X, RING_Y_START + i*ring_height*RING_Y_GAP_RATIO, persist=True)
       ring.isFaceUp = True
       ring_height = ring.height
       save_ring_position(ring)
-  notify('{} sets up.'.format(me))
+    fp=askChoice("Who'll be the first player ? ",['Me','My opponent'], customButtons =["Let the Kami decide"])
+    if fp != 1 and fp!=2 : 
+      fp = rnd(1,2)
+      notify("The Kami chose")
+    else: notify("{} decides to put".format(me))
+    if len(getPlayers()) == 1 : fp =1
+    notify("{} as first player".format(me if fp==1 else players[1]))
+    if fp==2 :
+      me.fate+=1
+    if fp==1 and len(getPlayers())!=1 : players[1].fate+=1
+    table.create(FIRST_PLAYER_TOKEN, RING_X+width+gap, 100 if fp==1 else -169, persist=True)
   me.setGlobalVariable('setup_required', '')
+
+def mulligan(group, x=0, y=0):
+  mute()
+  if bool(me.getGlobalVariable('setup_required')):
+    whisper('You should set up first')
+    return
+  if not bool(me.getGlobalVariable('can_mulligan')) :
+    whisper('You already did your mulligan')
+    return
+  notify('{} is mulliganing their dynasty cards.'.format(me))
+  me.piles[DYNASTY].shuffle()
+  me.piles[CONFLICT].shuffle()
+  c = me.piles[DYNASTY].top()
+  width=c.width
+  height=c.height
+  gap=width*CARD_GAP_RATIO
+  offset = height_offset(gap, me.isInverted)
+  dialog = cardDlg(me.piles[DYNASTY].top(4))
+  dialog.title = 'Select the cards you want to mulligan away'
+  dialog.min = 0
+  dialog.max = 4
+  cards = dialog.show()
+  if cards is not None: 
+    notify('{} mulligans {} card(s) away'.format(me,len(cards)))
+    for card in cards:
+      card.moveToBottom(me.piles[DYNASTY])
+  for i in range(1,5):
+      c = me.piles[DYNASTY].top()
+      (card_x, card_y) = province_position(i, width, height, gap, me.isInverted)
+      c.moveToTable(card_x, card_y + offset, True)
+  me.piles[DYNASTY].shuffle()
+  notify('{} is now mulliganing their conflict cards.'.format(me))
+  dialog = cardDlg(me.piles[CONFLICT].top(4))
+  dialog.title = 'Select the cards you want to mulligan away'
+  dialog.min = 0
+  dialog.max = 4
+  cards = dialog.show()
+  if cards is not None:
+    notify('{} mulligans {} card(s) away'.format(me,len(cards)))
+    for card in cards:
+      card.moveToBottom(me.piles[CONFLICT])
+  for card in me.piles[CONFLICT].top(4):
+    card.moveTo(me.hand)
+  notify('{} have done their mulligan'.format(me))
+  me.setGlobalVariable('can_mulligan', '')
+
+
 
 def unpack(item, f, default=True):
   if isinstance(item, list):
@@ -289,7 +341,10 @@ def table_default_card_action(card):
   if not card.isFaceUp:
     flip(card)
   else:
-    toggle_bow_ready(card)
+    if card.Type == TYPE_HONOR_DIAL:
+      select_bid(card)
+    else:
+      toggle_bow_ready(card)
 
 def can_honor(card, x=0, y=0):
   return unpack(card, lambda c: c.isFaceUp and c.type == TYPE_CHARACTER)
@@ -362,6 +417,10 @@ def has_deck(card, x=0, y=0):
 def discard(card, x=0, y=0):
   pile = get_discard_pile(card)
   if pile is not None:
+    if card.markers[HONORED]:
+      me.honor+=1
+    if card.markers[DISHONORED]:
+      me.honor-=1
     card.moveTo(pile)
   return pile
 
@@ -395,12 +454,24 @@ def random_discard_from(group):
 def can_play(card, x=0, y=0):
   return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_EVENT or c.type == TYPE_ATTACHMENT))
 
+def prompt_reduce_cost(cost):
+  reduc=askInteger("Reduce Cost by ?",0)
+  if reduc == None :
+    return
+  if reduc>cost: 
+    reduc=cost
+  cost-=reduc
+  return cost
+
 def play_conflict(card): #, x=0, y=0):
   mute()
   if card.cost == "":
     whisper('The card does not have a cost.')
     return
   cost=int(card.cost)
+  cost=prompt_reduce_cost(cost)
+  if cost == None :
+    return
   if me.Fate < cost:
     whisper("The card's cost cannot be paid.")
     return
@@ -445,6 +516,9 @@ def play_dynasty(card, x=0, y=0):
     whisper('The card does not have a cost.')
     return
   cost=int(card.cost)
+  cost=prompt_reduce_cost(cost)
+  if cost == None :
+    return
   if me.Fate < cost:
     whisper("The card's cost cannot be paid.")
     return
@@ -452,7 +526,7 @@ def play_dynasty(card, x=0, y=0):
   if num_fate is None:
     return
   x, y = card.position
-  card.moveToTable(x, y + invert_offset(-card.height - card.width*2*CARD_GAP_RATIO, me.isInverted))
+  card.moveToTable(x, y + invert_offset(-card.height - card.width*1.5*CARD_GAP_RATIO, me.isInverted))
   me.Fate -= cost + num_fate
   add_fate(card, quantity=num_fate)
   me.piles[DYNASTY].top().moveToTable(x, y, True)

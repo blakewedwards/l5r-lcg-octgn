@@ -2472,6 +2472,7 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Keeper. Air."/>
       <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win an [Air] conflict as the defending player - gain 1 fate."/>
+      <property name="Ring" value="Air"/>
       <property name="Card Number" value="214A"/>
     </card>
     <card id="276a3f10-2e2f-48eb-ba65-2f354274f98d" name="Seeker of Air">
@@ -2479,6 +2480,7 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Seeker. Air."/>
       <property name="Text" value="You may replace 1 province of any element with an additional [Air] province while deckbuilding.&#10;Reaction: After an [Air] province you control is revealed - gain 1 fate."/>
+      <property name="Ring" value="Air"/>
       <property name="Card Number" value="214B"/>
     </card>
     <card id="ee1b351c-a755-403c-a3f4-c1b2c141e4cc" name="Keeper of Earth">
@@ -2486,6 +2488,7 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Keeper. Earth."/>
       <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win an [Earth] conflict as the defending player - gain 1 fate."/>
+      <property name="Ring" value="Earth"/>
       <property name="Card Number" value="215A"/>
     </card>
     <card id="8b08da3c-3613-4edf-a3d4-a69aa54da11a" name="Seeker of Earth">
@@ -2493,6 +2496,7 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Seeker. Earth."/>
       <property name="Text" value="You may replace 1 province of any element with an additional [Earth] province while deckbuilding.&#10;Reaction: After an [Earth] province you control is revealed - gain 1 fate."/>
+      <property name="Ring" value="Earth"/>
       <property name="Card Number" value="215B"/>
     </card>
     <card id="5eb460ba-ed48-4c9c-8c00-cfc21c1e6c5f" name="Keeper of Fire">
@@ -2500,6 +2504,7 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Keeper. Fire."/>
       <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win a [Fire] conflict as the defending player - gain 1 fate."/>
+      <property name="Ring" value="Fire"/>
       <property name="Card Number" value="216A"/>
     </card>
     <card id="75f3b6ba-8745-4c90-873e-bd88e95bf8e2" name="Seeker of Fire">
@@ -2507,6 +2512,7 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Seeker. Fire."/>
       <property name="Text" value="You may replace 1 province of any element with an additional [Fire] province while deckbuilding.&#10;Reaction: After a [Fire] province you control is revealed - gain 1 fate."/>
+      <property name="Ring" value="Fire"/>
       <property name="Card Number" value="216B"/>
     </card>
     <card id="4a7d2f30-6e0e-43b3-b8bb-a10c34d77097" name="Keeper of Water">
@@ -2514,6 +2520,7 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Keeper. Water."/>
       <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win a [Water] conflict as the defending player - gain 1 fate."/>
+      <property name="Ring" value="Water"/>
       <property name="Card Number" value="217A"/>
     </card>
     <card id="8e5881ab-043e-4148-8052-ee8ce1860d8e" name="Seeker of Water">
@@ -2521,6 +2528,7 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Seeker. Water."/>
       <property name="Text" value="You may replace 1 province of any element with an additional [Water] province while deckbuilding.&#10;Reaction: After a [Water] province you control is revealed - gain 1 fate."/>
+      <property name="Ring" value="Water"/>
       <property name="Card Number" value="217B"/>
     </card>
     <card id="156cee09-4e74-4808-823d-ffe7213b47ca" name="Keeper of Void">
@@ -2528,6 +2536,7 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Keeper. Void."/>
       <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win a [Void] conflict as the defending player - gain 1 fate."/>
+      <property name="Ring" value="Void"/>
       <property name="Card Number" value="218A"/>
     </card>
     <card id="a43631fa-106d-4316-b9d3-d31fc532f165" name="Seeker of Void">
@@ -2535,6 +2544,7 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Seeker. Void."/>
       <property name="Text" value="You may replace 1 province of any element with an additional [Void] province while deckbuilding.&#10;Reaction: After a [Void] province you control is revealed - gain 1 fate."/>
+      <property name="Ring" value="Void"/>
       <property name="Card Number" value="218B"/>
     </card>
   </cards>
