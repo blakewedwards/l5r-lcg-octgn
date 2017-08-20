@@ -16,6 +16,7 @@ STARTING_HAND_SIZE = 4
 CARD_GAP_RATIO = 1.0/3.0 # Ratio to width for space inbetween cards
 HONOR_DIAL_1 = '4c4f1d22-f2e8-46ff-8446-9aa6ec0a45a6' # Font constantia 24
 HONOR_DIAL_CHOICES = 5
+IMPERIAL_FAVOR = 'b57c595e-d5ae-4fba-82c8-954a0b78c4a8'
 FIRST_PLAYER_TOKEN = 'a88f2213-7711-4699-a94e-23bf10ceedd6'
 AIR_RING = '6d19021d-9208-4f3e-8e36-dc2ea28d755e'
 EARTH_RING = '7a39169d-1c94-4a2a-9994-105a928dcc7e'
@@ -196,23 +197,34 @@ def setup(group, x=0, y=0):
   # Shared resources, only set up by one player
   notify('{} sets up.'.format(me))
   if not me.isInverted:
-    table.create('b57c595e-d5ae-4fba-82c8-954a0b78c4a8', RING_X+width+gap, 0, persist=True)
+    table.create(IMPERIAL_FAVOR, RING_X+2*width+2*gap, -69/2, persist=True)
     ring_height = 0
     for i, ring_id in enumerate(RINGS):
       ring = table.create(ring_id, RING_X, RING_Y_START + i*ring_height*RING_Y_GAP_RATIO, persist=True)
       ring_height = ring.height
       save_ring_position(ring)
-    fp=askChoice("Who'll be the first player ? ",['Me','My opponent'], customButtons =["Let the Kami decide"])
-    if fp != 1 and fp!=2 : 
-      fp = rnd(1,2)
-      notify("The Kami chose")
-    else: notify("{} decides to put".format(me))
-    if len(getPlayers()) == 1 : fp =1
-    notify("{} as first player".format(me if fp==1 else players[1]))
-    if fp==2 :
-      me.fate+=1
-    if fp==1 and len(getPlayers())!=1 : players[1].fate+=1
-    table.create(FIRST_PLAYER_TOKEN, RING_X+width+gap, 100 if fp==1 else -169, persist=True)
+
+    choice = askChoice('Select the first player', ['Me', 'Opponent', "Kami's choice"])
+    if choice != 1 and choice != 2:
+      source = 'The Kami choose'
+      choice = rnd(1, 2)
+    else:
+      source = '{} chooses'.format(me)
+
+    first_player = me
+    if len(getPlayers()) == 1:
+      second_player = None
+    else:
+      # Get the second player and swap if opponent was chosen
+      second_player = [player for player in getPlayers() if player != me][0]
+      if choice == 2:
+        (first_player, second_player) = (second_player, first_player)
+
+    notify('{} {} as the first player'.format(source, first_player))
+    if second_player:
+      second_player.fate += 1
+
+    table.create(FIRST_PLAYER_TOKEN, RING_X+width+gap, gap if first_player == me else -gap-69, persist=True)
   me.setGlobalVariable('setup_required', '')
 
 def mulligan(group, x=0, y=0):
