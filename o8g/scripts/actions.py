@@ -220,7 +220,7 @@ def setup(group, x=0, y=0):
       if choice == 2:
         (first_player, second_player) = (second_player, first_player)
 
-    notify('{} {} as the first player'.format(source, first_player))
+    notify('{} {} as the first player.'.format(source, first_player))
     if second_player:
       second_player.fate += 1
 
@@ -230,10 +230,10 @@ def setup(group, x=0, y=0):
 def mulligan(group, x=0, y=0):
   mute()
   if bool(me.getGlobalVariable('setup_required')):
-    whisper('You should set up first')
+    whisper('Set up is required.')
     return
   if not bool(me.getGlobalVariable('can_mulligan')) :
-    whisper('You already did your mulligan')
+    whisper('Mulligans may only be performed once.')
     return
   notify('{} is mulliganing their dynasty cards.'.format(me))
   me.piles[DYNASTY].shuffle()
@@ -244,33 +244,34 @@ def mulligan(group, x=0, y=0):
   gap = width*CARD_GAP_RATIO
   offset = height_offset(gap, me.isInverted)
   dialog = cardDlg(me.piles[DYNASTY].top(4))
-  dialog.title = 'Select the cards you want to mulligan away'
+  dialog.title = 'Select dynasty cards to mulligan'
   dialog.min = 0
   dialog.max = 4
   cards = dialog.show()
-  if cards is not None: 
-    notify('{} mulligans {} card(s) away'.format(me,len(cards)))
-    for card in cards:
-      card.moveToBottom(me.piles[DYNASTY])
-  for i in range(1,5):
-      c = me.piles[DYNASTY].top()
-      (card_x, card_y) = province_position(i, width, height, gap, me.isInverted)
-      c.moveToTable(card_x, card_y + offset, True)
+  if cards is None:
+    cards = []
+  notify('{} mulligans {} dynasty card(s).'.format(me, len(cards)))
+  for card in cards:
+    card.moveToBottom(me.piles[DYNASTY])
+  for i in range(1, 5):
+    c = me.piles[DYNASTY].top()
+    (card_x, card_y) = province_position(i, width, height, gap, me.isInverted)
+    c.moveToTable(card_x, card_y + offset, True)
   me.piles[DYNASTY].shuffle()
-  notify('{} is now mulliganing their conflict cards.'.format(me))
+  notify('{} is mulliganing their conflict cards.'.format(me))
   dialog = cardDlg(me.piles[CONFLICT].top(4))
-  dialog.title = 'Select the cards you want to mulligan away'
+  dialog.title = 'Select conflict cards to mulligan'
   dialog.min = 0
   dialog.max = 4
   cards = dialog.show()
-  if cards is not None:
-    notify('{} mulligans {} card(s) away'.format(me,len(cards)))
-    for card in cards:
-      card.moveToBottom(me.piles[CONFLICT])
+  if cards is None:
+    cards = []
+  notify('{} mulligans {} conflict card(s).'.format(me,len(cards)))
+  for card in cards:
+    card.moveToBottom(me.piles[CONFLICT])
   for card in me.piles[CONFLICT].top(4):
     card.moveTo(me.hand)
   me.piles[CONFLICT].shuffle()
-  notify('{} have done their mulligan'.format(me))
   me.setGlobalVariable('can_mulligan', '')
 
 def unpack(item, f, default=True):
