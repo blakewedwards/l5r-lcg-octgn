@@ -143,6 +143,11 @@ def setup(group, x=0, y=0):
   if not len(me.hand):
     whisper('A deck must be loaded prior to setting up.')
     return
+
+  # There's an extra shuffle here in case they don't use the mulligan action
+  me.piles[DYNASTY].shuffle()
+  me.piles[CONFLICT].shuffle()
+
   # Create the stronghold and 4 provinces in a line, with space for a row of cards above. Use the first card dimensions as reference
   width = me.hand[0].width
   height = me.hand[0].height
@@ -165,7 +170,9 @@ def setup(group, x=0, y=0):
     whisper('Set up requires a deck with at most one role in hand.')
     return
   role = role[0] if role else None
-  for i, card in enumerate(provinces): # TODO: Need random.shuffle
+  i = 0
+  while provinces: # Place provinces in random order so not always the same for a deck. Players can select their stronghold province manually
+    card = provinces.pop(rnd(0, len(provinces)-1))
     (card_x, card_y) = province_position(i, width, height, gap, me.isInverted)
     card.moveToTable(card_x, card_y, True)
     card.sendToBack()
@@ -173,21 +180,19 @@ def setup(group, x=0, y=0):
     card.anchor = True
     if i == 0:
       stronghold.moveToTable(card_x, card_y + offset)
-      stronghold.isFaceUp = True
       stronghold.anchor = True
-
+    i += 1
 
   if role:
     (card_x, card_y) = role_position(width, height, gap, me.isInverted)
     role.moveToTable(card_x, card_y)
-    role.isFaceUp = True
     role.anchor = True
 
   me.honor = int(stronghold.properties[STARTING_HONOR])
   me.fate += int(stronghold.properties[FATE_VALUE])
   me.setGlobalVariable(PLAYER_FATE_VALUE, stronghold.properties[FATE_VALUE])
   (hd_x, hd_y) = honor_dial_position(width, height, gap, me.isInverted)
-  table.create(HONOR_DIAL_1, hd_x, hd_y, persist=True).isFaceUp = True
+  table.create(HONOR_DIAL_1, hd_x, hd_y, persist=True)
   # Shared resources, only set up by one player
   notify('{} sets up.'.format(me))
   if not me.isInverted:
@@ -195,7 +200,6 @@ def setup(group, x=0, y=0):
     ring_height = 0
     for i, ring_id in enumerate(RINGS):
       ring = table.create(ring_id, RING_X, RING_Y_START + i*ring_height*RING_Y_GAP_RATIO, persist=True)
-      ring.isFaceUp = True
       ring_height = ring.height
       save_ring_position(ring)
     fp=askChoice("Who'll be the first player ? ",['Me','My opponent'], customButtons =["Let the Kami decide"])
@@ -253,6 +257,7 @@ def mulligan(group, x=0, y=0):
       card.moveToBottom(me.piles[CONFLICT])
   for card in me.piles[CONFLICT].top(4):
     card.moveTo(me.hand)
+  me.piles[CONFLICT].shuffle()
   notify('{} have done their mulligan'.format(me))
   me.setGlobalVariable('can_mulligan', '')
 
@@ -342,8 +347,12 @@ def table_default_card_action(card):
   if not card.isFaceUp:
     flip(card)
   else:
-    if card.Type == TYPE_HONOR_DIAL:
+    if card.type == TYPE_HONOR_DIAL:
       select_bid(card)
+    elif card.type == TYPE_RING or card.type == TYPE_IMPERIAL_FAVOR:
+      flip(card)
+    elif card.type == TYPE_FIRST_PLAYER_TOKEN:
+      pass
     else:
       toggle_bow_ready(card)
 
@@ -476,8 +485,7 @@ def play_conflict(card): #, x=0, y=0):
     if num_fate is None:
       return
   (x, y) = play_conflict_position(card.width, card.height, card.width*CARD_GAP_RATIO, me.isInverted)
-  card.moveToTable(x, y, True) # TODO: Why True and not False here?
-  card.isFaceUp = True
+  card.moveToTable(x, y)
   if card.type == TYPE_ATTACHMENT:
     card.sendToBack()
   me.Fate -= cost + num_fate
@@ -539,8 +547,7 @@ def resolve_regroup():
   for card in me.piles[CLAIMED_RINGS]:
     if card.type == TYPE_RING:
       x, y = load_ring_position(card)
-      card.moveToTable(x, y, False)
-      card.isFaceUp = True
+      card.moveToTable(x, y)
 
 def end_turn(table, x=0, y=0):
   mute()
