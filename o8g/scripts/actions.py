@@ -123,8 +123,8 @@ def setup_required(group, x=0, y=0):
 def setup_not_required(group, x=0, y=0):
   return not setup_required(group, x, y)
 
-def can_mulligan(group,x=0,y=0):
-  return bool(me.getGlobalVariable('can_mulligan')) and not setup_required(group,x,y)
+def can_mulligan(group, x=0, y=0):
+  return bool(me.getGlobalVariable('can_mulligan')) and not setup_required(group, x, y)
 
 def ring_field(card, field):
   return card.name.lower() + '_' + field
@@ -239,9 +239,9 @@ def mulligan(group, x=0, y=0):
   me.piles[DYNASTY].shuffle()
   me.piles[CONFLICT].shuffle()
   c = me.piles[DYNASTY].top()
-  width=c.width
-  height=c.height
-  gap=width*CARD_GAP_RATIO
+  width = c.width
+  height = c.height
+  gap = width*CARD_GAP_RATIO
   offset = height_offset(gap, me.isInverted)
   dialog = cardDlg(me.piles[DYNASTY].top(4))
   dialog.title = 'Select the cards you want to mulligan away'
@@ -272,8 +272,6 @@ def mulligan(group, x=0, y=0):
   me.piles[CONFLICT].shuffle()
   notify('{} have done their mulligan'.format(me))
   me.setGlobalVariable('can_mulligan', '')
-
-
 
 def unpack(item, f, default=True):
   if isinstance(item, list):
@@ -440,9 +438,9 @@ def discard(card, x=0, y=0):
   pile = get_discard_pile(card)
   if pile is not None:
     if card.markers[HONORED]:
-      me.honor+=1
+      me.honor += 1
     if card.markers[DISHONORED]:
-      me.honor-=1
+      me.honor -= 1
     card.moveTo(pile)
   return pile
 
@@ -471,22 +469,21 @@ def can_play(card, x=0, y=0):
   return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_EVENT or c.type == TYPE_ATTACHMENT))
 
 def prompt_reduce_cost(cost):
-  reduc=askInteger("Reduce Cost by ?",0)
-  if reduc == None :
+  reduction = askInteger('Reduce cost by what amount?', 0)
+  if reduction is None:
     return
-  if reduc>cost: 
-    reduc=cost
-  cost-=reduc
-  return cost
+  if reduction > cost:
+    reduction = cost
+  return cost - reduction
 
-def play_conflict(card): #, x=0, y=0):
+def play_conflict(card):
   mute()
   if card.cost == "":
     whisper('The card does not have a cost.')
     return
-  cost=int(card.cost)
-  cost=prompt_reduce_cost(cost)
-  if cost == None :
+  cost = int(card.cost)
+  cost = prompt_reduce_cost(cost)
+  if cost is None:
     return
   if me.Fate < cost:
     whisper("The card's cost cannot be paid.")
@@ -530,9 +527,9 @@ def play_dynasty(card, x=0, y=0):
   if card.cost == "":
     whisper('The card does not have a cost.')
     return
-  cost=int(card.cost)
-  cost=prompt_reduce_cost(cost)
-  if cost == None :
+  cost = int(card.cost)
+  cost = prompt_reduce_cost(cost)
+  if cost is None:
     return
   if me.Fate < cost:
     whisper("The card's cost cannot be paid.")
