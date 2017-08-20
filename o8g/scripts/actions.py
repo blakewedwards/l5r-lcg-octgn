@@ -424,12 +424,6 @@ def discard(card, x=0, y=0):
     card.moveTo(pile)
   return pile
 
-def move_to_deck_bottom(card, x=0, y=0):
-  pile = get_pile(card)
-  if pile is not None:
-    card.moveToBottom(pile)
-  return pile
-
 def can_replace(card, x=0, y=0):
   return unpack(card, lambda c: c.type == TYPE_CHARACTER or c.type == TYPE_HOLDING)
 
