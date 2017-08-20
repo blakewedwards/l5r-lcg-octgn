@@ -127,7 +127,12 @@ def can_mulligan(group, x=0, y=0):
   return bool(me.getGlobalVariable('can_mulligan')) and not setup_required(group, x, y)
 
 def ring_field(card, field):
-  return card.name.lower() + '_' + field
+  # Currently a bug in OCTGN where cards with alternate have no name, work around it
+  alternate = card.alternate
+  card.alternate = ''
+  name = card.name
+  card.alternate = alternate
+  return name.lower() + '_' + field
 
 def save_ring_position(card):
   setGlobalVariable(ring_field(card, 'x'), card.position[0])
@@ -351,7 +356,9 @@ def card_controller_changed(args):
   card = args.card
   if card.type == TYPE_RING and card.targetedBy and args.player == me:
     card.target(active=False)
+    alternate = card.alternate # Moving to a different group seems to lose the alternate, 
     card.moveTo(me.piles[CLAIMED_RINGS])
+    card.alternate = alternate
     notify('{} claims the {}.'.format(me, card))
 
 def table_default_card_action(card):
@@ -557,7 +564,9 @@ def resolve_regroup():
   for card in me.piles[CLAIMED_RINGS]:
     if card.type == TYPE_RING:
       x, y = load_ring_position(card)
+      alternate = card.alternate
       card.moveToTable(x, y)
+      card.alternate = alternate
 
 def end_turn(table, x=0, y=0):
   mute()
