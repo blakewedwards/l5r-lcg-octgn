@@ -23,7 +23,7 @@ FIRE_RING = '459e0ed9-1dac-4660-b9ba-c0e13bb7db3c'
 VOID_RING = '70643b2b-868c-4b2a-84e0-107e0d833ebd'
 WATER_RING = 'd5e3fa69-0ab9-4a26-9449-db60ac62e098'
 RINGS = [AIR_RING, EARTH_RING, FIRE_RING, VOID_RING, WATER_RING]
-RING_X = 302.5
+RING_X = 304.5 # 3.5 card widths (63) + 4 gaps (1/3 a width)
 RING_Y_START = -225
 RING_Y_GAP_RATIO = 1
 TYPE_ATTACHMENT = 'Attachment'
@@ -41,6 +41,7 @@ ALTERNATE_MILITARY = ''
 ALTERNATE_POLITICAL = 'Political'
 ALTERNATE_CLAIMED = 'Claimed'
 MAX_PROVINCES = 5
+NUM_HOME_ROWS = 2
 
 def invert_x(x, width, inverted):
   return (-x - width) if inverted else x
@@ -52,22 +53,22 @@ def invert_offset(offset, inverted):
   return offset*(-1 if inverted else 1)
 
 def play_conflict_position(width, height, gap, inverted):
-  (x, y) = (-2.5*width - 2*gap + 5*(width+gap), height + 2*gap)
+  (x, y) = (-2.5*width - 2*gap + 5*(width+gap), NUM_HOME_ROWS*height + (NUM_HOME_ROWS+1)*gap)
   return (invert_x(x, width, inverted), invert_y(y, height, inverted))
 
 def honor_dial_position(width, height, gap, inverted):
-  (x, y) = (-3.5*width - 3*gap, height + gap)
+  (x, y) = (-4.5*width - 4*gap, NUM_HOME_ROWS*height + (NUM_HOME_ROWS+1)*gap)
   return (invert_x(x, width, inverted), invert_y(y, height, inverted))
 
 # The leftmost province is index 0 and will hold the stronghold. Valid indicies are 0 to MAX_PROVINCES-1
 def province_position(index, width, height, gap, inverted):
   if index >= MAX_PROVINCES:
     raise ValueError('index must be less than the number of provinces')
-  (x, y) = (-2.5*width - 2*gap + index*(width+gap), (1.8*height + 2*gap))
+  (x, y) = (-2.5*width - 2*gap + index*(width+gap), (NUM_HOME_ROWS*height + (NUM_HOME_ROWS+1)*gap))
   return (invert_x(x, width, inverted), invert_y(y, height, inverted))
 
 def role_position(width, height, gap, inverted):
-  (x, y) = (-3.5*width - 3*gap, (1.8*height + 2*gap))
+  (x, y) = (-3.5*width - 3*gap, (NUM_HOME_ROWS*height + (NUM_HOME_ROWS+1)*gap))
   return (invert_x(x, width, inverted), invert_y(y, height, inverted))
 
 def height_offset(offset, inverted):
@@ -178,7 +179,7 @@ def setup(group, x=0, y=0):
 
   if role:
     (card_x, card_y) = role_position(width, height, gap, me.isInverted)
-    role.moveToTable(card_x, card_y + offset)
+    role.moveToTable(card_x, card_y)
     role.isFaceUp = True
     role.anchor = True
 
