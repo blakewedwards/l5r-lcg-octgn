@@ -85,6 +85,8 @@ def is_honor_dial(card, x=0, y=0):
 
 def select_bid(card, x=0, y=0):
   mute()
+  if not is_honor_dial(card, x, y):
+    return
   notify("{} is selecting their honor bid.".format(me))
   choice = askChoice('Select a bid', [str(c) for c in range(1, HONOR_DIAL_CHOICES + 1)])
   if choice == 0:
@@ -394,12 +396,16 @@ def can_honor(card, x=0, y=0):
   return unpack(card, lambda c: c.isFaceUp and c.type == TYPE_CHARACTER)
 
 def honor(card, x=0, y=0):
+  if not can_honor(card, x, y):
+    return
   if card.markers[DISHONORED]:
     card.markers[DISHONORED] = 0
   elif not card.markers[HONORED]:
     card.markers[HONORED] = 1
 
 def dishonor(card, x=0, y=0):
+  if not can_honor(card, x, y):
+    return
   if card.markers[HONORED]:
     card.markers[HONORED] = 0
   elif not card.markers[DISHONORED]:
@@ -409,9 +415,13 @@ def can_fate(card, x=0, y=0):
   return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_RING))
 
 def add_fate(card, x=0, y=0, quantity=1):
+  if not can_fate(card, x, y):
+    return
   card.markers[FATE] += quantity
 
 def remove_fate(card, x=0, y=0):
+  if not can_fate(card, x, y):
+    return
   card.markers[FATE] -= 1
 
 def can_bow(card, x=0, y=0):
@@ -419,11 +429,15 @@ def can_bow(card, x=0, y=0):
 
 def toggle_bow_ready(card, x=0, y=0):
   mute()
+  if not can_bow(card, x, y):
+    return
   card.orientation ^= Rot90
   notify('{} {} {}.'.format(me, 'bows' if card.orientation & Rot90 == Rot90 else 'readies', card))
 
 def toggle_break(card, x=0, y=0):
   mute()
+  if not is_province(card, x, y):
+    return
   card.orientation ^= Rot180
   notify('{} {} {}.'.format(me, 'breaks' if card.orientation & Rot180 == Rot180 else 'unbreaks', card))
 
@@ -431,6 +445,8 @@ def can_flip(card, x=0, y=0):
   return unpack(card, lambda c: c.type != TYPE_STRONGHOLD and c.type != TYPE_FIRST_PLAYER_TOKEN and c.type != TYPE_ROLE)
 
 def flip(card, x=0, y=0):
+  if not can_flip(card, x, y):
+    return
   if card.type == TYPE_RING or card.type == TYPE_IMPERIAL_FAVOR:
     card.isFaceUp = True
     card.alternate = ALTERNATE_POLITICAL if not card.alternate else ''
@@ -459,6 +475,8 @@ def has_deck(card, x=0, y=0):
   return unpack(card, lambda c: get_pile(c) is not None)
 
 def discard(card, x=0, y=0):
+  if not has_deck(card, x, y):
+    return
   pile = get_discard_pile(card)
   if pile is not None:
     if card.markers[HONORED]:
@@ -472,11 +490,15 @@ def can_replace(card, x=0, y=0):
   return unpack(card, lambda c: c.type == TYPE_CHARACTER or c.type == TYPE_HOLDING)
 
 def replace(card, x=0, y=0):
+  if not can_replace(card, x, y):
+    return
   card_x, card_y = card.position
   discard(card, x, y)
   me.piles[DYNASTY].top().moveToTable(card_x, card_y, True)
 
 def refill(card, x=0, y=0):
+  if not is_province(card, x, y):
+    return
   (x, y) = card.position
   me.piles[DYNASTY].top().moveToTable(x, y + invert_offset(card.width*CARD_GAP_RATIO, me.isInverted), True)
 
@@ -546,6 +568,8 @@ def notify_play(player, card, cost, num_fate):
 
 def play_dynasty(card, x=0, y=0, reduced=False):
   mute()
+  if not can_play(card, x, y):
+    return
   if not card.isFaceUp:
     whisper('The card is not face up.')
     return

@@ -87,8 +87,8 @@
     <cardaction menu="Play" execute="play_dynasty" showIf="can_play" shortcut="F7"/>
     <cardaction menu="Play (reduced)" execute="play_dynasty_reduced" showIf="can_play" shortcut="SHIFT+F7"/>
     <cardaction menu="Refill" execute="refill" showIf="is_province" shortcut="CTRL+R"/>
-    <cardaction menu="Replace" execute="replace" showIf="can_replace" shortcut="CTRL+T"/>
-    <cardaction menu="Select bid" execute="select_bid" showIf="is_honor_dial"/>
+    <cardaction menu="Replace" execute="replace" showIf="can_replace" shortcut="CTRL+S"/>
+    <cardaction menu="Select bid" execute="select_bid" showIf="is_honor_dial" shortcut="CTRL+D"/>
   </table>
   <player summary="  Honor: {#Honor}   Fate: {#Fate}   Hand: {#Hand}   Rings: {#Claimed Rings}  ">
     <globalvariable name="setup_required" value="True"/>
