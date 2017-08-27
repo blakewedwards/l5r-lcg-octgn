@@ -123,6 +123,9 @@ def give_honor(group, x=0, y=0):
   me.honor -= honor
   notify('{} gives {} honor to {}.'.format(me, honor, players[1]))
 
+def on_table_loaded():
+  notify('{} has version {}'.format(me, gameVersion))
+
 def setup_required(group, x=0, y=0):
   return bool(me.getGlobalVariable('setup_required'))
 

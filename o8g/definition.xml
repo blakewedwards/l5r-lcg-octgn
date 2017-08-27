@@ -17,6 +17,7 @@
   </scripts>
   <events>
     <event name="OnCardControllerChanged" action="card_controller_changed"/>
+    <event name="OnTableLoaded" action="on_table_loaded"/>
     <event name="OverrideCardsMoved" action="move_cards"/>
   </events>
   <proxygen definitionsrc="proxygen/definition.xml"/>
