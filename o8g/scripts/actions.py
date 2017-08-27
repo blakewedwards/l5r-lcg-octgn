@@ -620,7 +620,7 @@ def draw(group):
     card.moveTo(me.hand)
   notify('{} draws {} card(s) from their {}.'.format(me, num, group.name))
 
-def search_top(group):
+def search_top(group, shuffle=False):
   mute()
   num = askInteger('Search how many cards?', 2)
   if num is None:
@@ -636,19 +636,27 @@ def search_top(group):
   dialog.max = num
   cards = dialog.show()
 
+  i = 0
   if cards is not None:
-    num = 0
     for card in cards:
       (x, y) = play_conflict_position(card.width, card.height, card.width*CARD_GAP_RATIO, me.isInverted)
-      card.moveToTable(x + invert_offset(num*(card.width+card.width*CARD_GAP_RATIO), me.isInverted), y, True)
-      num += 1
+      card.moveToTable(x + invert_offset(i*(card.width+card.width*CARD_GAP_RATIO), me.isInverted), y, True)
+      i += 1
       card.peek()
       card.select()
   else:
     cards = []
 
-  group.shuffle()
-  notify('{} selects {} card(s) and shuffles their deck.'.format(me, len(cards)))
+  if shuffle:
+    group.shuffle()
+    notify('{} selects {} card(s) and shuffles their deck.'.format(me, len(cards)))
+  else:
+    for c in group.top(num-len(cards)):
+      c.moveToBottom(group)
+    notify('{} selects {} card(s) and moves the remaining to the bottom of their deck.'.format(me, len(cards)))
+
+def search_top_shuffle(group):
+  search_top(group, shuffle=True)
 
 def flip_coin(group, x=0, y=0):
   mute()
