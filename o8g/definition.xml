@@ -68,7 +68,7 @@
     ordered="False"
     visibility="undefined">
     <groupaction menu="Set up" execute="setup" showIf="setup_required" shortcut="CTRL+SHIFT+S"/>
-    <groupaction menu="Mulligan" execute="mulligan" showIf="can_mulligan"/>
+    <groupaction menu="Mulligan" execute="mulligan" showIf="can_mulligan" shortcut="CTRL+SHIFT+M"/>
     <groupaction menu="Pass" execute="pass_action" showIf="setup_not_required" shortcut="ALT+D"/>
     <groupaction menu="Give honor" execute="give_honor" showIf="setup_not_required" shortcut="CTRL+H"/>
     <groupaction menu="Declare conflict" execute="declare_conflict" showIf="setup_not_required" shortcut="F5"/>

@@ -76,6 +76,8 @@ def height_offset(offset, inverted):
   return offset * (-1 if inverted else 1)
 
 def pass_action(group, x=0, y=0):
+  if setup_required(group, x, y):
+    return
   notify("{} passes.".format(me))
 
 def is_honor_dial(card, x=0, y=0):
@@ -102,6 +104,8 @@ def gain_honor(honor):
 
 def give_honor(group, x=0, y=0):
   mute()
+  if setup_required(group, x, y):
+    return
   honor = askInteger('Give how much honor?', 0)
   if honor is None:
     return
@@ -143,8 +147,7 @@ def load_ring_position(card):
 
 def setup(group, x=0, y=0):
   mute()
-  if not bool(me.getGlobalVariable('setup_required')):
-    whisper('Set up is no longer required.')
+  if not setup_required(group, x, y):
     return
   if not len(me.hand):
     whisper('A deck must be loaded prior to setting up.')
@@ -234,11 +237,7 @@ def setup(group, x=0, y=0):
 
 def mulligan(group, x=0, y=0):
   mute()
-  if bool(me.getGlobalVariable('setup_required')):
-    whisper('Set up is required.')
-    return
-  if not bool(me.getGlobalVariable('can_mulligan')) :
-    whisper('Mulligans may only be performed once.')
+  if not can_mulligan(group, x, y):
     return
   notify('{} is mulliganing their dynasty cards.'.format(me))
   me.piles[DYNASTY].shuffle()
@@ -293,6 +292,8 @@ def is_province(card, x=0, y=0):
 
 def declare_conflict(group, x=0, y=0):
   mute()
+  if setup_required(group, x, y):
+    return
   targets = [c for c in group if c.targetedBy == me]
   if len(targets) != 1:
     whisper('A single province must be targeted to declare a conflict.')
@@ -341,6 +342,8 @@ def take_control(card):
 
 def claim_ring(group, x=0, y=0):
   mute()
+  if setup_required(group, x, y):
+    return
   targets = [c for c in group if c.type == TYPE_RING and c.targetedBy] # Doesn't matter who is targeting, either can claim
   if len(targets) != 1:
     whisper('A single ring must be targeted to be claimed.')
@@ -589,8 +592,10 @@ def resolve_regroup():
       card.moveToTable(x, y)
       card.alternate = alternate
 
-def end_turn(table, x=0, y=0):
+def end_turn(group, x=0, y=0):
   mute()
+  if setup_required(group, x, y):
+    return
   turn = int(getGlobalVariable(TURN))
   if not confirm('Resolve the turn {} regroup phase?'.format(turn)):
     return
@@ -660,4 +665,6 @@ def search_top_shuffle(group):
 
 def flip_coin(group, x=0, y=0):
   mute()
+  if setup_required(group, x, y):
+    return
   notify("{} flips a coin and gets {}.".format(me, 'heads' if rnd(1, 2) == 1 else 'tails'))
