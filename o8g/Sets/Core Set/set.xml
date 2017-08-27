@@ -189,7 +189,7 @@
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Action: During a conflict at this province, select one - switch the contested ring with an unclaimed ring (the conflict retains its type), or switch the conflict type (the conflict retains its ring)."/>
+      <property name="Text" value="Action: During a conflict at this province, select one - switch the contested ring with an unclaimed ring (the conflict retains its type), or switch the conflict type (the conflict retains its element)."/>
       <property name="Bonus Strength" value="4"/>
       <property name="Ring" value="Void"/>
       <property name="Card Number" value="12"/>
