@@ -311,23 +311,23 @@ def declare_conflict_at(card, x=0, y=0):
   if card.controller == me:
     whisper("The target of a conflict must be an opponent's province.")
     return
-  types = ['Military', ALTERNATE_POLITICAL]
-  colors = ['#D32E25', '#7E7AD0']
-  type = askChoice('Select a type', types, colors)
-  if type == 0:
-    return
-  type = types[type-1]
   unclaimed_rings = [c for c in table if c.type == TYPE_RING and c.alternate != ALTERNATE_CLAIMED]
   dialog = cardDlg(unclaimed_rings)
   dialog.title = 'Select a ring'
   ring = dialog.show()
   if ring is not None:
     ring = ring[0]
+
+    types = ['Military', ALTERNATE_POLITICAL]
+    colors = ['#D32E25', '#7E7AD0']
+    type = askChoice('Select a type', types, colors)
+    if type == 0:
+      return
+    type = types[type-1]
+
     ring.alternate = type if type == ALTERNATE_POLITICAL else ALTERNATE_MILITARY
     ring.target()
     card.target()
-    # TODO: Get conflict type
-    # TODO: Set ring alternate as contested
     fate = ring.markers[FATE]
     ring.markers[FATE] = 0
     me.fate += fate
