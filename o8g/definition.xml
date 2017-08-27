@@ -16,7 +16,8 @@
     <script src="scripts/actions.py"/>
   </scripts>
   <events>
-    <event name="OnCardControllerChanged" action="card_controller_changed" />
+    <event name="OnCardControllerChanged" action="card_controller_changed"/>
+    <event name="OverrideCardsMoved" action="move_cards"/>
   </events>
   <proxygen definitionsrc="proxygen/definition.xml"/>
   <globalvariables>

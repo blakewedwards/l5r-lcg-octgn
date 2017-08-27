@@ -356,10 +356,23 @@ def card_controller_changed(args):
   card = args.card
   if card.type == TYPE_RING and card.targetedBy and args.player == me:
     card.target(active=False)
-    alternate = card.alternate # Moving to a different group seems to lose the alternate, 
+    alternate = card.alternate # Moving to a different group loses the alternate, preserve for rings
     card.moveTo(me.piles[CLAIMED_RINGS])
     card.alternate = alternate
     notify('{} claims the {}.'.format(me, card))
+
+def move_cards(args):
+  for i, card in enumerate(args.cards):
+    alternate = card.alternate # Preserve the alternate state for rings
+
+    if args.toGroups[i] == table: # Dynasty cards should move to table facedown, unlike conflict which move as faceup
+      card.moveToTable(args.xs[i], args.ys[i], True if card.group == me.piles[DYNASTY] else not args.faceups[i])
+      card.index = args.indexs[i]
+    else:
+      card.moveTo(args.toGroups[i], args.indexs[i])
+
+    if card.type == TYPE_RING:
+      card.alternate = alternate
 
 def table_default_card_action(card):
   if not card.isFaceUp:
