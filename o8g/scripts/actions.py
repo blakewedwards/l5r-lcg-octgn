@@ -497,13 +497,14 @@ def prompt_reduce_cost(cost):
     reduction = cost
   return cost - reduction
 
-def play_conflict(card):
+def play_conflict(card, reduced=False):
   mute()
   if card.cost == "":
     whisper('The card does not have a cost.')
     return
   cost = int(card.cost)
-  cost = prompt_reduce_cost(cost)
+  if reduced:
+    cost = prompt_reduce_cost(cost)
   if cost is None:
     return
   if me.Fate < cost:
@@ -522,6 +523,9 @@ def play_conflict(card):
   add_fate(card, quantity=num_fate)
   notify_play(me, card, cost, num_fate)
 
+def play_conflict_reduced(card):
+  play_conflict(card, reduced=True)
+
 def prompt_add_fate(cost):
   num_fate = askInteger('Add how much fate?', 0)
   if num_fate is None:
@@ -537,7 +541,7 @@ def notify_play(player, card, cost, num_fate):
   else:
     notify('{} plays {} for {} fate.'.format(player, card.name, cost))
 
-def play_dynasty(card, x=0, y=0):
+def play_dynasty(card, x=0, y=0, reduced=False):
   mute()
   if not card.isFaceUp:
     whisper('The card is not face up.')
@@ -549,7 +553,8 @@ def play_dynasty(card, x=0, y=0):
     whisper('The card does not have a cost.')
     return
   cost = int(card.cost)
-  cost = prompt_reduce_cost(cost)
+  if reduced:
+    cost = prompt_reduce_cost(cost)
   if cost is None:
     return
   if me.Fate < cost:
@@ -564,6 +569,9 @@ def play_dynasty(card, x=0, y=0):
   add_fate(card, quantity=num_fate)
   me.piles[DYNASTY].top().moveToTable(x, y, True)
   notify_play(me, card, cost, num_fate)
+
+def play_dynasty_reduced(card, x=0, y=0):
+  play_dynasty(card, x, y, reduced=True)
 
 def resolve_regroup():
   mute()

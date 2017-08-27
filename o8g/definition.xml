@@ -85,6 +85,7 @@
     <cardaction menu="Honor" execute="honor" showIf="can_honor" shortcut="F3"/>
     <cardaction menu="Dishonor" execute="dishonor" showIf="can_honor" shortcut="F4"/>
     <cardaction menu="Play" execute="play_dynasty" showIf="can_play" shortcut="F7"/>
+    <cardaction menu="Play reduced" execute="play_dynasty_reduced" showIf="can_play" shortcut="SHIFT+F7"/>
     <cardaction menu="Refill" execute="refill" showIf="is_province" shortcut="CTRL+R"/>
     <cardaction menu="Replace" execute="replace" showIf="can_replace" shortcut="CTRL+T"/>
     <cardaction menu="Select bid" execute="select_bid" showIf="is_honor_dial"/>
@@ -99,6 +100,7 @@
       <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
       <groupaction menu="Random discard" execute="random_discard_from" showIf="setup_not_required"/>
       <cardaction menu="Play" execute="play_conflict" default="True" showIf="setup_not_required"/>
+      <cardaction menu="Play reduced" execute="play_conflict_reduced" showIf="setup_not_required"/>
     </hand>
     <group name="Conflict Deck" icon="card/conflict.png" visibility="none" width="63" height="88">
       <groupaction menu="Draw" execute="draw" default="True" showIf="setup_not_required"/>
