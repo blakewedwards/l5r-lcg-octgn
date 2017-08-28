@@ -4,7 +4,7 @@
   id="7a1d7bfd-db29-4812-8de1-01cf7ca73323"
   gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844"
   gameVersion="0.0.1.0"
-  version="1.0">
+  version="1.1">
   <markers>
     <marker id="054b9f42-ac6a-4cc2-9228-294d5df5fb7e" name="Dishonored"/>
     <marker id="1c469258-900d-44e7-b005-d3c5d0de3f95" name="Fate"/>
@@ -189,7 +189,7 @@
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Action: During a conflict at this province, select one - switch the contested ring with an unclaimed ring (the conflict retains its type), or switch the conflict type (the conflict retains its ring)."/>
+      <property name="Text" value="Action: During a conflict at this province, select one - switch the contested ring with an unclaimed ring (the conflict retains its type), or switch the conflict type (the conflict retains its element)."/>
       <property name="Bonus Strength" value="4"/>
       <property name="Ring" value="Void"/>
       <property name="Card Number" value="12"/>
@@ -216,7 +216,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="This province gets +5 during [Political] conflicts here."/>
+      <property name="Text" value="This province gets +5 strength during [Political] conflicts."/>
       <property name="Bonus Strength" value="5"/>
       <property name="Ring" value="Earth"/>
       <property name="Card Number" value="15"/>
@@ -234,7 +234,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="This province gets +5 during [Military] conflicts here."/>
+      <property name="Text" value="This province gets +5 strength during [Military] conflicts."/>
       <property name="Bonus Strength" value="5"/>
       <property name="Ring" value="Earth"/>
       <property name="Card Number" value="17"/>
@@ -288,7 +288,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Reaction: After this province is revealed - switch the conflict type. (The conflict retains its ring.)"/>
+      <property name="Text" value="Reaction: After this province is revealed - switch the conflict type. (The conflict retains its element.)"/>
       <property name="Bonus Strength" value="4"/>
       <property name="Ring" value="Water"/>
       <property name="Card Number" value="23"/>
@@ -656,7 +656,7 @@
       <property name="Cost" value="1"/>
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="3"/>
-      <property name="Glory" value="1"/>
+      <property name="Glory" value="0"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="54"/>
     </card>
@@ -688,9 +688,9 @@
       <property name="Clan" value="Dragon"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Duelist."/>
-      <property name="Text" value="While this character is attacking alone, your opponent cannot declare more than 1 defender."/>
+      <property name="Text" value="While this character is attacking alone, your opponent cannot declare more than one defender."/>
       <property name="Cost" value="2"/>
-      <property name="Military Skill" value="3"/>
+      <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
       <property name="Deck" value="Dynasty"/>
@@ -1611,7 +1611,7 @@
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Attachment"/>
       <property name="Traits" value="Jade. Weapon."/>
-      <property name="Text" value="Restricted. (No more than two restricted attachments per character.)&#10;Action: While attached character is participating in a conflict, bow this attachment, choose a participating character with lower [Military] skill - return all fate on that character to its owner's fate pool."/>
+      <property name="Text" value="Attach to a character you control. Restricted.&#10;Action: While attached character is participating in a conflict, bow this attachment. Choose a participating character with lower [Military] skill than attached character - return all fate on that character to its owner's fate pool."/>
       <property name="Cost" value="2"/>
       <property name="Bonus Military Skill" value="+3"/>
       <property name="Bonus Political Skill" value="+0"/>
@@ -1633,7 +1633,7 @@
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Action: Shuffle a card in one of your unbroken provinces back into your dynasty deck. Choose a holding in the dynasty discard pile - put that holding into play in that province."/>
+      <property name="Text" value="Action: Shuffle a card in one of your unbroken provinces back into your dynasty deck. Choose a holding in your dynasty discard pile - put that holding into play in that province."/>
       <property name="Cost" value="0"/>
       <property name="Influence Value" value="2"/>
       <property name="Deck" value="Conflict"/>
@@ -1867,7 +1867,7 @@
       <property name="Clan" value="Dragon"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Action: During a conflict - until the end of the conflict, character's in your opponents home cannot trigger abilities."/>
+      <property name="Text" value="Action: During a conflict - until the end of the conflict, characters in your opponent's home cannot trigger abilities."/>
       <property name="Cost" value="0"/>
       <property name="Influence Value" value="2"/>
       <property name="Deck" value="Conflict"/>
@@ -2208,7 +2208,7 @@
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Action: During a conflict, choose up to 2 [Scorpion] characters with total printed cost 6 or lower from your hand and/or provinces - put those character into play as participating characters."/>
+      <property name="Text" value="Action: During a conflict, choose up to 2 [Scorpion] characters with total printed cost 6 or lower from your hand and/or provinces - put those characters into play as participating characters."/>
       <property name="Cost" value="3"/>
       <property name="Influence Value" value="1"/>
       <property name="Deck" value="Conflict"/>
@@ -2435,7 +2435,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Action: During a [Military] conflict, choose a face-up character in one of your provinces - put that character into play, participating in the conflict."/>
+      <property name="Text" value="Action: During a [Military] conflict, choose a character in one of your provinces - put that character into play in the conflict."/>
       <property name="Cost" value="1"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="210"/>

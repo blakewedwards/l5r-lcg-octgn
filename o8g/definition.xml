@@ -3,7 +3,7 @@
     name="Legend of the Five Rings LCG"
     id="bb0f02e7-2a6f-4ae3-84a2-c501b4176844"
     octgnVersion="3.1.284.0"
-    version="0.0.1.0"
+    version="0.0.1.1"
     scriptVersion="3.1.0.2"
     markersize="16"
     setsurl="https://tinyurl.com/mab3ars"
@@ -16,7 +16,9 @@
     <script src="scripts/actions.py"/>
   </scripts>
   <events>
-    <event name="OnCardControllerChanged" action="card_controller_changed" />
+    <event name="OnCardControllerChanged" action="card_controller_changed"/>
+    <event name="OnTableLoaded" action="on_table_loaded"/>
+    <event name="OverrideCardsMoved" action="move_cards"/>
   </events>
   <proxygen definitionsrc="proxygen/definition.xml"/>
   <globalvariables>
@@ -67,7 +69,7 @@
     ordered="False"
     visibility="undefined">
     <groupaction menu="Set up" execute="setup" showIf="setup_required" shortcut="CTRL+SHIFT+S"/>
-    <groupaction menu="Mulligan" execute="mulligan" showIf="can_mulligan"/>
+    <groupaction menu="Mulligan" execute="mulligan" showIf="can_mulligan" shortcut="CTRL+SHIFT+M"/>
     <groupaction menu="Pass" execute="pass_action" showIf="setup_not_required" shortcut="ALT+D"/>
     <groupaction menu="Give honor" execute="give_honor" showIf="setup_not_required" shortcut="CTRL+H"/>
     <groupaction menu="Declare conflict" execute="declare_conflict" showIf="setup_not_required" shortcut="F5"/>
@@ -84,9 +86,10 @@
     <cardaction menu="Honor" execute="honor" showIf="can_honor" shortcut="F3"/>
     <cardaction menu="Dishonor" execute="dishonor" showIf="can_honor" shortcut="F4"/>
     <cardaction menu="Play" execute="play_dynasty" showIf="can_play" shortcut="F7"/>
+    <cardaction menu="Play (reduced)" execute="play_dynasty_reduced" showIf="can_play" shortcut="SHIFT+F7"/>
     <cardaction menu="Refill" execute="refill" showIf="is_province" shortcut="CTRL+R"/>
-    <cardaction menu="Replace" execute="replace" showIf="can_replace" shortcut="CTRL+T"/>
-    <cardaction menu="Select bid" execute="select_bid" showIf="is_honor_dial"/>
+    <cardaction menu="Replace" execute="replace" showIf="can_replace" shortcut="CTRL+S"/>
+    <cardaction menu="Select bid" execute="select_bid" showIf="is_honor_dial" shortcut="CTRL+D"/>
   </table>
   <player summary="  Honor: {#Honor}   Fate: {#Fate}   Hand: {#Hand}   Rings: {#Claimed Rings}  ">
     <globalvariable name="setup_required" value="True"/>
@@ -98,10 +101,12 @@
       <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
       <groupaction menu="Random discard" execute="random_discard_from" showIf="setup_not_required"/>
       <cardaction menu="Play" execute="play_conflict" default="True" showIf="setup_not_required"/>
+      <cardaction menu="Play (reduced)" execute="play_conflict_reduced" showIf="setup_not_required"/>
     </hand>
     <group name="Conflict Deck" icon="card/conflict.png" visibility="none" width="63" height="88">
       <groupaction menu="Draw" execute="draw" default="True" showIf="setup_not_required"/>
       <groupaction menu="Search top" execute="search_top" showIf="setup_not_required"/>
+      <groupaction menu="Search top (shuffle)" execute="search_top_shuffle" showIf="setup_not_required"/>
       <groupaction menu="Shuffle" execute="shuffle" showIf="setup_not_required"/>
     </group>
     <group name="Conflict Discard" icon="card/conflict.png" visibility="all" width="63" height="88"/>

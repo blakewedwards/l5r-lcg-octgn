@@ -77,6 +77,8 @@ def height_offset(offset, inverted):
   return offset * (-1 if inverted else 1)
 
 def pass_action(group, x=0, y=0):
+  if setup_required(group, x, y):
+    return
   notify("{} passes.".format(me))
 
 def is_honor_dial(card, x=0, y=0):
@@ -84,6 +86,8 @@ def is_honor_dial(card, x=0, y=0):
 
 def select_bid(card, x=0, y=0):
   mute()
+  if not is_honor_dial(card, x, y):
+    return
   notify("{} is selecting their honor bid.".format(me))
   choice = askChoice('Select a bid', [str(c) for c in range(1, HONOR_DIAL_CHOICES + 1)])
   if choice == 0:
@@ -103,6 +107,8 @@ def gain_honor(honor):
 
 def give_honor(group, x=0, y=0):
   mute()
+  if setup_required(group, x, y):
+    return
   honor = askInteger('Give how much honor?', 0)
   if honor is None:
     return
@@ -117,6 +123,9 @@ def give_honor(group, x=0, y=0):
   remoteCall(players[1], 'gain_honor', [honor])
   me.honor -= honor
   notify('{} gives {} honor to {}.'.format(me, honor, players[1]))
+
+def on_table_loaded():
+  notify('{} has version {}'.format(me, gameVersion))
 
 def setup_required(group, x=0, y=0):
   return bool(me.getGlobalVariable('setup_required'))
@@ -145,9 +154,8 @@ def load_ring_position(card):
 def setup(group, x=0, y=0):
   mute()
   deckcheck()
-  
-  if not bool(me.getGlobalVariable('setup_required')):
-    whisper('Set up is no longer required.')
+
+  if not setup_required(group, x, y):
     return
   if not len(me.hand):
     whisper('A deck must be loaded prior to setting up.')
@@ -237,11 +245,7 @@ def setup(group, x=0, y=0):
 
 def mulligan(group, x=0, y=0):
   mute()
-  if bool(me.getGlobalVariable('setup_required')):
-    whisper('Set up is required.')
-    return
-  if not bool(me.getGlobalVariable('can_mulligan')) :
-    whisper('Mulligans may only be performed once.')
+  if not can_mulligan(group, x, y):
     return
   notify('{} is mulliganing their dynasty cards.'.format(me))
   me.piles[DYNASTY].shuffle()
@@ -296,6 +300,8 @@ def is_province(card, x=0, y=0):
 
 def declare_conflict(group, x=0, y=0):
   mute()
+  if setup_required(group, x, y):
+    return
   targets = [c for c in group if c.targetedBy == me]
   if len(targets) != 1:
     whisper('A single province must be targeted to declare a conflict.')
@@ -311,23 +317,23 @@ def declare_conflict_at(card, x=0, y=0):
   if card.controller == me:
     whisper("The target of a conflict must be an opponent's province.")
     return
-  types = ['Military', ALTERNATE_POLITICAL]
-  colors = ['#D32E25', '#7E7AD0']
-  type = askChoice('Select a type', types, colors)
-  if type == 0:
-    return
-  type = types[type-1]
   unclaimed_rings = [c for c in table if c.type == TYPE_RING and c.alternate != ALTERNATE_CLAIMED]
   dialog = cardDlg(unclaimed_rings)
   dialog.title = 'Select a ring'
   ring = dialog.show()
   if ring is not None:
     ring = ring[0]
+
+    types = ['Military', ALTERNATE_POLITICAL]
+    colors = ['#D32E25', '#7E7AD0']
+    type = askChoice('Select a type', types, colors)
+    if type == 0:
+      return
+    type = types[type-1]
+
     ring.alternate = type if type == ALTERNATE_POLITICAL else ALTERNATE_MILITARY
     ring.target()
     card.target()
-    # TODO: Get conflict type
-    # TODO: Set ring alternate as contested
     fate = ring.markers[FATE]
     ring.markers[FATE] = 0
     me.fate += fate
@@ -344,6 +350,8 @@ def take_control(card):
 
 def claim_ring(group, x=0, y=0):
   mute()
+  if setup_required(group, x, y):
+    return
   targets = [c for c in group if c.type == TYPE_RING and c.targetedBy] # Doesn't matter who is targeting, either can claim
   if len(targets) != 1:
     whisper('A single ring must be targeted to be claimed.')
@@ -359,10 +367,23 @@ def card_controller_changed(args):
   card = args.card
   if card.type == TYPE_RING and card.targetedBy and args.player == me:
     card.target(active=False)
-    alternate = card.alternate # Moving to a different group seems to lose the alternate, 
+    alternate = card.alternate # Moving to a different group loses the alternate, preserve for rings
     card.moveTo(me.piles[CLAIMED_RINGS])
     card.alternate = alternate
     notify('{} claims the {}.'.format(me, card))
+
+def move_cards(args):
+  for i, card in enumerate(args.cards):
+    alternate = card.alternate # Preserve the alternate state for rings
+
+    if args.toGroups[i] == table: # Dynasty cards should move to table facedown, unlike conflict which move as faceup
+      card.moveToTable(args.xs[i], args.ys[i], True if card.group == me.piles[DYNASTY] else not args.faceups[i])
+      card.index = args.indexs[i]
+    else:
+      card.moveTo(args.toGroups[i], args.indexs[i])
+
+    if card.type == TYPE_RING:
+      card.alternate = alternate
 
 def table_default_card_action(card):
   if not card.isFaceUp:
@@ -381,12 +402,16 @@ def can_honor(card, x=0, y=0):
   return unpack(card, lambda c: c.isFaceUp and c.type == TYPE_CHARACTER)
 
 def honor(card, x=0, y=0):
+  if not can_honor(card, x, y):
+    return
   if card.markers[DISHONORED]:
     card.markers[DISHONORED] = 0
   elif not card.markers[HONORED]:
     card.markers[HONORED] = 1
 
 def dishonor(card, x=0, y=0):
+  if not can_honor(card, x, y):
+    return
   if card.markers[HONORED]:
     card.markers[HONORED] = 0
   elif not card.markers[DISHONORED]:
@@ -396,9 +421,13 @@ def can_fate(card, x=0, y=0):
   return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_RING))
 
 def add_fate(card, x=0, y=0, quantity=1):
+  if not can_fate(card, x, y):
+    return
   card.markers[FATE] += quantity
 
 def remove_fate(card, x=0, y=0):
+  if not can_fate(card, x, y):
+    return
   card.markers[FATE] -= 1
 
 def can_bow(card, x=0, y=0):
@@ -406,11 +435,15 @@ def can_bow(card, x=0, y=0):
 
 def toggle_bow_ready(card, x=0, y=0):
   mute()
+  if not can_bow(card, x, y):
+    return
   card.orientation ^= Rot90
   notify('{} {} {}.'.format(me, 'bows' if card.orientation & Rot90 == Rot90 else 'readies', card))
 
 def toggle_break(card, x=0, y=0):
   mute()
+  if not is_province(card, x, y):
+    return
   card.orientation ^= Rot180
   notify('{} {} {}.'.format(me, 'breaks' if card.orientation & Rot180 == Rot180 else 'unbreaks', card))
 
@@ -418,6 +451,8 @@ def can_flip(card, x=0, y=0):
   return unpack(card, lambda c: c.type != TYPE_STRONGHOLD and c.type != TYPE_FIRST_PLAYER_TOKEN and c.type != TYPE_ROLE)
 
 def flip(card, x=0, y=0):
+  if not can_flip(card, x, y):
+    return
   if card.type == TYPE_RING or card.type == TYPE_IMPERIAL_FAVOR:
     card.isFaceUp = True
     card.alternate = ALTERNATE_POLITICAL if not card.alternate else ''
@@ -446,6 +481,8 @@ def has_deck(card, x=0, y=0):
   return unpack(card, lambda c: get_pile(c) is not None)
 
 def discard(card, x=0, y=0):
+  if not has_deck(card, x, y):
+    return
   pile = get_discard_pile(card)
   if pile is not None:
     if card.markers[HONORED]:
@@ -459,11 +496,15 @@ def can_replace(card, x=0, y=0):
   return unpack(card, lambda c: c.type == TYPE_CHARACTER or c.type == TYPE_HOLDING)
 
 def replace(card, x=0, y=0):
+  if not can_replace(card, x, y):
+    return
   card_x, card_y = card.position
   discard(card, x, y)
   me.piles[DYNASTY].top().moveToTable(card_x, card_y, True)
 
 def refill(card, x=0, y=0):
+  if not is_province(card, x, y):
+    return
   (x, y) = card.position
   me.piles[DYNASTY].top().moveToTable(x, y + invert_offset(card.width*CARD_GAP_RATIO, me.isInverted), True)
 
@@ -487,13 +528,14 @@ def prompt_reduce_cost(cost):
     reduction = cost
   return cost - reduction
 
-def play_conflict(card):
+def play_conflict(card, reduced=False):
   mute()
   if card.cost == "":
     whisper('The card does not have a cost.')
     return
   cost = int(card.cost)
-  cost = prompt_reduce_cost(cost)
+  if reduced:
+    cost = prompt_reduce_cost(cost)
   if cost is None:
     return
   if me.Fate < cost:
@@ -512,6 +554,9 @@ def play_conflict(card):
   add_fate(card, quantity=num_fate)
   notify_play(me, card, cost, num_fate)
 
+def play_conflict_reduced(card):
+  play_conflict(card, reduced=True)
+
 def prompt_add_fate(cost):
   num_fate = askInteger('Add how much fate?', 0)
   if num_fate is None:
@@ -527,8 +572,10 @@ def notify_play(player, card, cost, num_fate):
   else:
     notify('{} plays {} for {} fate.'.format(player, card.name, cost))
 
-def play_dynasty(card, x=0, y=0):
+def play_dynasty(card, x=0, y=0, reduced=False):
   mute()
+  if not can_play(card, x, y):
+    return
   if not card.isFaceUp:
     whisper('The card is not face up.')
     return
@@ -539,7 +586,8 @@ def play_dynasty(card, x=0, y=0):
     whisper('The card does not have a cost.')
     return
   cost = int(card.cost)
-  cost = prompt_reduce_cost(cost)
+  if reduced:
+    cost = prompt_reduce_cost(cost)
   if cost is None:
     return
   if me.Fate < cost:
@@ -554,6 +602,9 @@ def play_dynasty(card, x=0, y=0):
   add_fate(card, quantity=num_fate)
   me.piles[DYNASTY].top().moveToTable(x, y, True)
   notify_play(me, card, cost, num_fate)
+
+def play_dynasty_reduced(card, x=0, y=0):
+  play_dynasty(card, x, y, reduced=True)
 
 def resolve_regroup():
   mute()
@@ -571,8 +622,10 @@ def resolve_regroup():
       card.moveToTable(x, y)
       card.alternate = alternate
 
-def end_turn(table, x=0, y=0):
+def end_turn(group, x=0, y=0):
   mute()
+  if setup_required(group, x, y):
+    return
   turn = int(getGlobalVariable(TURN))
   if not confirm('Resolve the turn {} regroup phase?'.format(turn)):
     return
@@ -602,7 +655,7 @@ def draw(group):
     card.moveTo(me.hand)
   notify('{} draws {} card(s) from their {}.'.format(me, num, group.name))
 
-def search_top(group):
+def search_top(group, shuffle=False):
   mute()
   num = askInteger('Search how many cards?', 2)
   if num is None:
@@ -618,22 +671,32 @@ def search_top(group):
   dialog.max = num
   cards = dialog.show()
 
+  i = 0
   if cards is not None:
-    num = 0
     for card in cards:
       (x, y) = play_conflict_position(card.width, card.height, card.width*CARD_GAP_RATIO, me.isInverted)
-      card.moveToTable(x + invert_offset(num*(card.width+card.width*CARD_GAP_RATIO), me.isInverted), y, True)
-      num += 1
+      card.moveToTable(x + invert_offset(i*(card.width+card.width*CARD_GAP_RATIO), me.isInverted), y, True)
+      i += 1
       card.peek()
       card.select()
   else:
     cards = []
 
-  group.shuffle()
-  notify('{} selects {} card(s) and shuffles their deck.'.format(me, len(cards)))
+  if shuffle:
+    group.shuffle()
+    notify('{} selects {} card(s) and shuffles their deck.'.format(me, len(cards)))
+  else:
+    for c in group.top(num-len(cards)):
+      c.moveToBottom(group)
+    notify('{} selects {} card(s) and moves the remaining to the bottom of their deck.'.format(me, len(cards)))
+
+def search_top_shuffle(group):
+  search_top(group, shuffle=True)
 
 def flip_coin(group, x=0, y=0):
   mute()
+  if setup_required(group, x, y):
+    return
   notify("{} flips a coin and gets {}.".format(me, 'heads' if rnd(1, 2) == 1 else 'tails'))
 
 def deckcheck():
