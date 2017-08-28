@@ -101,7 +101,7 @@
       <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
       <groupaction menu="Random discard" execute="random_discard_from" showIf="setup_not_required"/>
       <cardaction menu="Play" execute="play_conflict" default="True" showIf="setup_not_required"/>
-      <cardaction menu="Play reduced" execute="play_conflict_reduced" showIf="setup_not_required"/>
+      <cardaction menu="Play (reduced)" execute="play_conflict_reduced" showIf="setup_not_required"/>
     </hand>
     <group name="Conflict Deck" icon="card/conflict.png" visibility="none" width="63" height="88">
       <groupaction menu="Draw" execute="draw" default="True" showIf="setup_not_required"/>
