@@ -87,8 +87,8 @@
     <cardaction menu="Honor" execute="honor" showIf="can_honor" shortcut="F3"/>
     <cardaction menu="Dishonor" execute="dishonor" showIf="can_honor" shortcut="F4"/>
     <cardaction menu="Swap stronghold province" execute="swap_stronghold_province" showIf="is_province" shortcut="ALT+S"/>
-    <cardaction menu="Play" execute="play_dynasty" showIf="can_play" shortcut="F7"/>
-    <cardaction menu="Play (reduced)" execute="play_dynasty_reduced" showIf="can_play" shortcut="SHIFT+F7"/>
+    <cardaction menu="Play" execute="play_dynasty" showIf="can_play_dynasty" shortcut="F7"/>
+    <cardaction menu="Play (reduced)" execute="play_dynasty_reduced" showIf="can_play_dynasty" shortcut="SHIFT+F7"/>
     <cardaction menu="Refill" execute="refill" showIf="is_province" shortcut="CTRL+R"/>
     <cardaction menu="Replace" execute="replace" showIf="can_replace" shortcut="CTRL+S"/>
     <cardaction menu="Select bid" execute="select_bid" showIf="is_honor_dial" shortcut="CTRL+D"/>

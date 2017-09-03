@@ -537,7 +537,7 @@ def discard(card, x=0, y=0):
   return pile
 
 def can_replace(card, x=0, y=0):
-  return unpack(card, lambda c: c.type == TYPE_CHARACTER or c.type == TYPE_HOLDING)
+  return unpack(card, is_in_province)
 
 def replace(card, x=0, y=0):
   if not can_replace(card, x, y):
@@ -561,7 +561,10 @@ def random_discard_from(group):
   if pile is not None:
     notify("{} randomly moves {} to {}'s {}.".format(me, card, me, pile.name))
 
-def can_play(card, x=0, y=0):
+def can_play_dynasty(card, x=0, y=0):
+  return unpack(card, lambda c: c.isFaceUp and c.type == TYPE_CHARACTER and is_in_province(c))
+
+def can_play_conflict(card, x=0, y=0):
   return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_EVENT or c.type == TYPE_ATTACHMENT))
 
 def prompt_reduce_cost(cost):
@@ -574,6 +577,9 @@ def prompt_reduce_cost(cost):
 
 def play_conflict(card, reduced=False):
   mute()
+  if not can_play_conflict(card):
+    whisper('The card cannot be played.')
+    return
   if card.cost == "":
     whisper('The card does not have a cost.')
     return
@@ -618,7 +624,7 @@ def notify_play(player, card, cost, num_fate):
 
 def play_dynasty(card, x=0, y=0, reduced=False):
   mute()
-  if not can_play(card, x, y):
+  if not can_play_dynasty(card, x, y):
     return
   if not card.isFaceUp:
     whisper('The card is not face up.')
