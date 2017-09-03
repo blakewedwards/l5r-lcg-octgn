@@ -14,6 +14,7 @@
     iconurl="http://i.imgur.com/PgP90M6.jpg">
   <scripts>
     <script src="scripts/actions.py"/>
+    <script src="scripts/octgnlib.py"/>
   </scripts>
   <events>
     <event name="OnCardControllerChanged" action="card_controller_changed"/>
@@ -85,6 +86,7 @@
     <cardaction menu="Flip" execute="flip" showIf="can_flip" shortcut="F8"/>
     <cardaction menu="Honor" execute="honor" showIf="can_honor" shortcut="F3"/>
     <cardaction menu="Dishonor" execute="dishonor" showIf="can_honor" shortcut="F4"/>
+    <cardaction menu="Swap stronghold province" execute="swap_stronghold_province" showIf="is_province" shortcut="ALT+S"/>
     <cardaction menu="Play" execute="play_dynasty" showIf="can_play" shortcut="F7"/>
     <cardaction menu="Play (reduced)" execute="play_dynasty_reduced" showIf="can_play" shortcut="SHIFT+F7"/>
     <cardaction menu="Refill" execute="refill" showIf="is_province" shortcut="CTRL+R"/>

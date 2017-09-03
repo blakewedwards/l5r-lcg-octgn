@@ -54,6 +54,37 @@ def invert_y(y, height, inverted):
 def invert_offset(offset, inverted):
   return offset*(-1 if inverted else 1)
 
+def controlled_cards(group, player=me):
+  cards = collections.defaultdict(list)
+  for c in group:
+    if c.controller == player:
+      cards[c.type].append(c)
+  return cards
+
+def swap_stronghold_province(card, x=0, y=0):
+  mute()
+  if not is_province(card):
+    return
+  cards = controlled_cards(table)
+  if not cards[TYPE_STRONGHOLD]:
+    whisper('A stronghold must be present.')
+    return
+  stronghold = cards[TYPE_STRONGHOLD][0]
+  closest_province = closest(stronghold.position, cards[TYPE_PROVINCE])
+  if not closest_province:
+    whisper('A province must be present.')
+    return
+  dist = distance(stronghold.position, closest_province.position)
+  if dist > 1.5*CARD_GAP_RATIO*card.width:
+    whisper('A stronghold province must be present.')
+    return
+  closest_province_position = closest_province.position
+  closest_province.moveToTable(card.position[0], card.position[1])
+  closest_province.sendToBack()
+  card.moveToTable(closest_province_position[0], closest_province_position[1])
+  card.sendToBack()
+  notify('{} swaps {} with their stronghold province.'.format(me, card))
+
 def play_conflict_position(width, height, gap, inverted):
   (x, y) = (-2.5*width - 2*gap + 5*(width+gap), NUM_HOME_ROWS*height + (NUM_HOME_ROWS+1)*gap)
   return (invert_x(x, width, inverted), invert_y(y, height, inverted))
@@ -248,7 +279,7 @@ def mulligan(group, x=0, y=0):
   if not can_mulligan(group, x, y):
     return
   notify('{} is mulliganing their dynasty cards.'.format(me))
-  me.piles[DYNASTY].shuffle()
+  me.piles[DYNASTY].shuffle() # TODO: Why do this extra time, difficult to verify behaviour
   me.piles[CONFLICT].shuffle()
   c = me.piles[DYNASTY].top()
   width = c.width
@@ -711,7 +742,7 @@ def deckcheck():
   ClanName = ''
   RoleName = ''
   InfluenceClanName = ''
-  
+
   for card in me.hand:
     if card.type == TYPE_STRONGHOLD:
       StrongholdCount += 1
@@ -722,131 +753,130 @@ def deckcheck():
     elif card.type != TYPE_PROVINCE:
       ok = False
       whisper("You have a card in your hand that is not a stronghold, role or province, please put it in the appropriate deck.")
-  
+
   if StrongholdCount != 1:
     ok = False
     whisper("You should have exactly 1 stronghold card in your hand.")
   if RoleCount > 1:
     ok = False
     whisper("You can only use 1 role.")
-  
+
   #Provinces
   nameCounts = collections.defaultdict(int)
   ringCounts = collections.defaultdict(int)
   provinces = [c for c in me.hand if c.type == TYPE_PROVINCE]
-  
+
   if len(provinces) != MAX_PROVINCES:
     ok = False
     whisper("You must have exactly 5 provinces.")
-  
+
   for card in provinces:
     if card.Clan != 'Neutral' and ClanName not in card.Clan:
       ok = False
       notify("{}'s provinces contain a card from another clan. Name is {}.".format(me,card))
-    
+
     nameCounts[card.name] += 1
-    
+
     if nameCounts[card.name] > 1:
       ok = False
       notify("{} has {} copies of {}, but can have only 1.".format(me, nameCounts[card.name], card))
-    
+
     ringCounts[card.Ring] += 1
-    
+
     if RoleName == "Seeker of {}".format(card.Ring):
       limit = 2
     else:
       limit = 1
-    
+
     if ringCounts[card.Ring] > limit:
       ok = False
       notify("{} has {} {} provinces, but can have only {}".format(me, ringCounts[card.Ring], card.Ring, limit))
-  
+
   #Dynasty deck
   me.piles[DYNASTY].addViewer(me)
-  
+
   if len(me.piles[DYNASTY]) < 40:
     ok = False
     notify("{}'s dynasty deck must contain at least 40 cards".format(me))
   if len(me.piles[DYNASTY]) > 45:
     ok = False
     notify("{}'s dynasty deck must contain at most 45 cards".format(me))
-  
+
   for card in me.piles[DYNASTY]:
     if card.type != TYPE_CHARACTER and card.type != TYPE_HOLDING:
       ok = False
       notify("{}'s dynasty deck must contain only characters and holdings. Name is {}.".format(me,card))
-    
+
     if card.Clan != 'Neutral' and ClanName not in card.Clan:
       notify("{}'s dynasty deck contain a card from another clan. Name is {}.".format(me,card))
-    
+
     if card.name == 'Seeker Initiate' and not RoleName.startswith('Seeker'):
       ok = False
       notify("Seeker Initiate requires a Seeker role.")
-    
+
     if card.name == 'Keeper Initiate' and not RoleName.startswith('Keeper'):
       ok = False
       notify("Keeper Initiate requires a Keeper role.")
-    
+
     nameCounts[card.name] += 1
-    
+
     if nameCounts[card.name] > 3:
       ok = False
       notify("{} has {} copies of {}, but can have only 3.".format(me, nameCounts[card.name], card))
-  
+
   me.piles[DYNASTY].removeViewer(me)
-  
+
   #Conflict deck
   me.piles[CONFLICT].addViewer(me)
-  
+
   if len(me.piles[CONFLICT]) < 40:
     ok = False
     notify("{}'s conflict deck must contain at least 40 cards".format(me))
   if len(me.piles[CONFLICT]) > 45:
     ok = False
     notify("{}'s conflict deck must contain at most 45 cards".format(me))
-  
+
   for card in me.piles[CONFLICT]:
     if card.type != TYPE_CHARACTER and card.type != TYPE_ATTACHMENT and card.type != TYPE_EVENT:
       ok = False
       notify("{}'s conflict deck must contain only characters, attachments and events. Name is {}.".format(me,card))
-    
+
     if card.type == TYPE_CHARACTER:
       ConflictCharCount += 1
-    
+
     if card.Clan != 'Neutral' and ClanName not in card.Clan:
       if card.properties[INFLUENCE_VALUE] == '':
         ok = False
         notify("{}'s conflict deck contains an out-of-clan card with no influence cost. Name is {}.".format(me,card))
       else:
         InfluenceCount += int(card.properties[INFLUENCE_VALUE])
-      
+
       if InfluenceClanName == '':
         InfluenceClanName = card.Clan
       elif InfluenceClanName not in card.Clan:
         notify("{}'s conflict deck contains out-of-clan cards from more than 1 clan.".format(me))
-    
+
     nameCounts[card.name] += 1
-    
+
     if nameCounts[card.name] > 3:
       ok = False
       notify("{} has {} copies of {}, but can have only 3.".format(me, nameCounts[card.name], card))
-    
+
     if ConflictCharCount > 10:
      ok = False
      notify("{}'s conflict deck contains {} character, but can have only 10".format(me, ConflictCharCount))
-  
+
   if RoleName.startswith('Keeper'):
     InfluenceLimit = 13
   else:
     InfluenceLimit = 10
-  
+
   if InfluenceCount > InfluenceLimit:
     ok = False
     notify("{}'s conflict deck contains out-of-clan cards with {} influence, but can have only {}".format(me, InfluenceCount, InfluenceLimit))
   me.piles[CONFLICT].removeViewer(me)
-  
+
   if ok:
     notify("Deck of {} is OK".format(me))
   else:
     notify("Deck of {} is NOT OK".format(me))
-
