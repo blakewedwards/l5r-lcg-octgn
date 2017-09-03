@@ -61,6 +61,14 @@ def controlled_cards(group, player=me):
       cards[c.type].append(c)
   return cards
 
+def within_province_distance(card1, card2):
+  return distance(card1.position, card2.position) < 2.0*card1.width/3.0
+
+def is_in_province(card, x=0, y=0):
+  if card.type != TYPE_CHARACTER and card.type != TYPE_HOLDING:
+    return False
+  return any([within_province_distance(card, province) for province in controlled_cards(table)[TYPE_PROVINCE]])
+
 def swap_stronghold_province(card, x=0, y=0):
   mute()
   if not is_province(card):
@@ -74,8 +82,7 @@ def swap_stronghold_province(card, x=0, y=0):
   if not closest_province:
     whisper('A province must be present.')
     return
-  dist = distance(stronghold.position, closest_province.position)
-  if dist > 1.5*CARD_GAP_RATIO*card.width:
+  if not within_province_distance(stronghold, closest_province):
     whisper('A stronghold province must be present.')
     return
   closest_province_position = closest_province.position
@@ -426,6 +433,10 @@ def table_default_card_action(card):
       flip(card)
     elif card.type == TYPE_FIRST_PLAYER_TOKEN:
       pass
+    elif card.type == TYPE_PROVINCE:
+      toggle_break(card)
+    elif card.type == TYPE_CHARACTER and is_in_province(card):
+      play_dynasty(card)
     else:
       toggle_bow_ready(card)
 
