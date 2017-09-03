@@ -64,7 +64,18 @@ def controlled_cards(group, player=me):
 def within_province_distance(card1, card2):
   return distance(card1.position, card2.position) < 2.0*card1.width/3.0
 
-def is_in_province(card, x=0, y=0):
+# A loose definition of in play. Everything on the table is in play except for characters in a province
+# and facedown cards that aren't a province.
+def in_play(card, x=0, y=0):
+  if card.group != table:
+    return False
+  if not card.isFaceUp:
+    return card.type == TYPE_PROVINCE # Only facedown cards in play are provinces.
+  if card.type == TYPE_CHARACTER:
+    return not in_province(card)
+  return True
+
+def in_province(card, x=0, y=0):
   if card.type != TYPE_CHARACTER and card.type != TYPE_HOLDING:
     return False
   return any([within_province_distance(card, province) for province in controlled_cards(table)[TYPE_PROVINCE]])
@@ -435,13 +446,13 @@ def table_default_card_action(card):
       pass
     elif card.type == TYPE_PROVINCE:
       toggle_break(card)
-    elif card.type == TYPE_CHARACTER and is_in_province(card):
+    elif card.type == TYPE_CHARACTER and in_province(card):
       play_dynasty(card)
     else:
       toggle_bow_ready(card)
 
 def can_honor(card, x=0, y=0):
-  return unpack(card, lambda c: c.isFaceUp and c.type == TYPE_CHARACTER)
+  return unpack(card, lambda c: c.isFaceUp and c.type == TYPE_CHARACTER and in_play(c))
 
 def honor(card, x=0, y=0):
   if not can_honor(card, x, y):
@@ -460,7 +471,7 @@ def dishonor(card, x=0, y=0):
     card.markers[DISHONORED] = 1
 
 def can_fate(card, x=0, y=0):
-  return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_RING))
+  return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_RING) and in_play(c))
 
 def add_fate(card, x=0, y=0, quantity=1):
   if not can_fate(card, x, y):
@@ -473,7 +484,7 @@ def remove_fate(card, x=0, y=0):
   card.markers[FATE] -= 1
 
 def can_bow(card, x=0, y=0):
-  return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_ATTACHMENT or c.type == TYPE_STRONGHOLD))
+  return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_ATTACHMENT or c.type == TYPE_STRONGHOLD) and in_play(c))
 
 def toggle_bow_ready(card, x=0, y=0):
   mute()
@@ -537,7 +548,7 @@ def discard(card, x=0, y=0):
   return pile
 
 def can_replace(card, x=0, y=0):
-  return unpack(card, is_in_province)
+  return unpack(card, in_province)
 
 def replace(card, x=0, y=0):
   if not can_replace(card, x, y):
@@ -562,7 +573,7 @@ def random_discard_from(group):
     notify("{} randomly moves {} to {}'s {}.".format(me, card, me, pile.name))
 
 def can_play_dynasty(card, x=0, y=0):
-  return unpack(card, lambda c: c.isFaceUp and c.type == TYPE_CHARACTER and is_in_province(c))
+  return unpack(card, lambda c: c.isFaceUp and c.type == TYPE_CHARACTER and in_province(c))
 
 def can_play_conflict(card, x=0, y=0):
   return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_EVENT or c.type == TYPE_ATTACHMENT))
