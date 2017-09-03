@@ -485,8 +485,10 @@ def flip(card, x=0, y=0):
   if not can_flip(card, x, y):
     return
   if card.type == TYPE_RING or card.type == TYPE_IMPERIAL_FAVOR:
+    mute()
     card.isFaceUp = True
     card.alternate = ALTERNATE_POLITICAL if not card.alternate else ''
+    notify("{} turns '{}' to {}.".format(me, card, ALTERNATE_POLITICAL if card.alternate else 'Military'))
     return
   card.isFaceUp = not card.isFaceUp
 
