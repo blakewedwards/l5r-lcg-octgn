@@ -14,6 +14,8 @@
     iconurl="http://i.imgur.com/PgP90M6.jpg">
   <scripts>
     <script src="scripts/actions.py"/>
+    <script src="scripts/events.py"/>
+    <script src="scripts/l5r.py"/>
     <script src="scripts/octgnlib.py"/>
   </scripts>
   <events>
