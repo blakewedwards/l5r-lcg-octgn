@@ -20,6 +20,7 @@
   </scripts>
   <events>
     <event name="OnCardControllerChanged" action="card_controller_changed"/>
+    <event name="OnDeckLoaded" action="on_deck_loaded"/>
     <event name="OnTableLoaded" action="on_table_loaded"/>
     <event name="OverrideCardsMoved" action="move_cards"/>
   </events>

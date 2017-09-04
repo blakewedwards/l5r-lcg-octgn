@@ -202,7 +202,6 @@ def load_ring_position(card):
 
 def setup(group, x=0, y=0):
   mute()
-  validate_deck()
 
   if not setup_required(group, x, y):
     return
