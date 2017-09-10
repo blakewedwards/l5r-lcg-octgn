@@ -89,6 +89,8 @@
     <cardaction menu="Flip" execute="flip" showIf="can_flip" shortcut="F8"/>
     <cardaction menu="Honor" execute="honor" showIf="can_honor" shortcut="F3"/>
     <cardaction menu="Dishonor" execute="dishonor" showIf="can_honor" shortcut="F4"/>
+    <cardaction menu="Add token" execute="add_token" showIf="can_token" shortcut="CTRL+M"/>
+    <cardaction menu="Remove token" execute="remove_token" showIf="can_token" shortcut="ALT+M"/>
     <cardaction menu="Swap stronghold province" execute="swap_stronghold_province" showIf="is_province" shortcut="ALT+S"/>
     <cardaction menu="Play" execute="play_dynasty" showIf="can_play_dynasty" shortcut="F7"/>
     <cardaction menu="Play (reduced)" execute="play_dynasty_reduced" showIf="can_play_dynasty" shortcut="SHIFT+F7"/>
@@ -109,7 +111,7 @@
       <cardaction menu="Play (reduced)" execute="play_conflict_reduced" showIf="setup_not_required"/>
     </hand>
     <group name="Conflict Deck" icon="card/conflict.png" visibility="none" width="63" height="88">
-      <groupaction menu="Draw" execute="draw" default="True" showIf="setup_not_required"/>
+      <groupaction menu="Draw" execute="draw" default="True" showIf="setup_not_required" shortcut="F10"/>
       <groupaction menu="Search top" execute="search_top" showIf="setup_not_required"/>
       <groupaction menu="Search top (shuffle)" execute="search_top_shuffle" showIf="setup_not_required"/>
       <groupaction menu="Shuffle" execute="shuffle" showIf="setup_not_required"/>

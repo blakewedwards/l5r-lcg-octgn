@@ -64,6 +64,9 @@ def controlled_cards(group, player=me):
 def within_province_distance(card1, card2):
   return distance(card1.position, card2.position) < 2.0*card1.width/3.0
 
+def can_token(card, x=0, y=0):
+  return unpack(card, lambda c: in_play(c) and (c.type != TYPE_PROVINCE or c.isFaceUp))
+
 # A loose definition of in play. Everything on the table is in play except for characters in a province
 # and facedown cards that aren't a province.
 def in_play(card, x=0, y=0):
@@ -73,7 +76,7 @@ def in_play(card, x=0, y=0):
     return card.type == TYPE_PROVINCE # Only facedown cards in play are provinces.
   if card.type == TYPE_CHARACTER:
     return not in_province(card)
-  return True
+  return card.type != TYPE_HONOR_DIAL and card.type != TYPE_FIRST_PLAYER_TOKEN and card.type != TYPE_IMPERIAL_FAVOR
 
 def in_province(card, x=0, y=0):
   if card.type != TYPE_CHARACTER and card.type != TYPE_HOLDING:
@@ -472,6 +475,22 @@ def dishonor(card, x=0, y=0):
   elif not card.markers[DISHONORED]:
     card.markers[DISHONORED] = 1
 
+def add_token(card, x=0, y=0):
+  if not can_token(card):
+    return
+  marker, quantity = askMarker()
+  if quantity == 0 or marker is None:
+    return
+  card.markers[marker] += quantity
+
+def remove_token(card, x=0, y=0):
+  if not can_token(card):
+    return
+  marker, quantity = askMarker()
+  if quantity == 0 or marker is None:
+    return
+  card.markers[marker] -= quantity
+
 def can_fate(card, x=0, y=0):
   return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_RING) and in_play(c))
 
@@ -715,6 +734,8 @@ def shuffle(group):
 
 def draw(group):
   mute()
+  if setup_required(group):
+    return
   num = askInteger('Draw how many cards?', 1)
   if num is None:
     return
