@@ -288,7 +288,10 @@ def setup(group, x=0, y=0):
     if second_player:
       second_player.fate += 1
 
-    table.create(FIRST_PLAYER_TOKEN, RING_X+width+gap, gap if first_player == me else -gap-69, persist=True)
+    fpt = table.create(FIRST_PLAYER_TOKEN, RING_X+width+gap, gap if first_player == me else -gap-69, persist=True)
+    if first_player != me:
+      fpt.controller = first_player
+
   me.setGlobalVariable('setup_required', '')
 
 def mulligan(group, x=0, y=0):
@@ -666,6 +669,9 @@ def play_dynasty(card, x=0, y=0, reduced=False):
 def play_dynasty_reduced(card, x=0, y=0):
   play_dynasty(card, x, y, reduced=True)
 
+def has_initiative(group, x=0, y=0):
+  return bool([c for c in group if c.controller == me and c.type == TYPE_FIRST_PLAYER_TOKEN])
+
 def resolve_regroup():
   mute()
   cards = (card for card in table if card.controller == me and card.isFaceUp)
@@ -686,6 +692,8 @@ def end_turn(group, x=0, y=0):
   mute()
   if setup_required(group, x, y):
     return
+  if not has_initiative(group):
+    return
   turn = int(getGlobalVariable(TURN))
   if not confirm('Resolve the turn {} regroup phase?'.format(turn)):
     return
@@ -693,8 +701,10 @@ def end_turn(group, x=0, y=0):
   resolve_regroup()
   if len(getPlayers()) != 1:
     remoteCall(players[1], 'resolve_regroup', [])
-
-  # TODO: Test if they have initiative, or don't show the action if not?
+    for c in group:
+      if c.controller == me and c.type == TYPE_FIRST_PLAYER_TOKEN:
+        c.moveToTable(c.position[0], -c.position[1]-69)
+        c.controller = players[1]
 
   notify('{} resolves the turn {} regroup phase.'.format(me, turn))
   turn += 1

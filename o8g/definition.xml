@@ -78,7 +78,7 @@
     <groupaction menu="Give honor" execute="give_honor" showIf="setup_not_required" shortcut="CTRL+H"/>
     <groupaction menu="Declare conflict" execute="declare_conflict" showIf="setup_not_required" shortcut="F5"/>
     <groupaction menu="Claim ring" execute="claim_ring" showIf="setup_not_required" shortcut="F6"/>
-    <groupaction menu="End turn" execute="end_turn" showIf="setup_not_required" shortcut="F12"/>
+    <groupaction menu="End turn" execute="end_turn" showIf="has_initiative" shortcut="F12"/>
     <groupaction menu="Flip coin" execute="flip_coin" showIf="setup_not_required" shortcut="CTRL+F"/>
     <cardaction menu="Default" execute="table_default_card_action" default="True" showIf="lambda: False"/>
     <cardaction menu="Add fate" execute="add_fate" showIf="can_fate" shortcut="F1"/>
