@@ -31,38 +31,51 @@
     </card>
     <card id="b57c595e-d5ae-4fba-82c8-954a0b78c4a8" name="Imperial Favor" size="imperial_favor">
       <property name="Type" value="Imperial Favor"/>
+      <property name="Bonus Military Skill" value="+1"/>
       <alternate name="Imperial Favor" type="Political">
         <property name="Type" value="Imperial Favor"/>
+        <property name="Bonus Military Skill" value=""/>
+        <property name="Bonus Political Skill" value="+1"/>
       </alternate>
     </card>
     <card id="6d19021d-9208-4f3e-8e36-dc2ea28d755e" name="Air Ring">
       <property name="Type" value="Ring"/>
+      <property name="Text" value="The attacking player takes 1 honor from his or her opponent, or gains 2 honor from the general token pool."/>
       <alternate name="Air Ring" type="Political">
         <property name="Type" value="Ring"/>
+        <property name="Text" value="The attacking player takes 1 honor from his or her opponent, or gains 2 honor from the general token pool."/>
       </alternate>
     </card>
     <card id="7a39169d-1c94-4a2a-9994-105a928dcc7e" name="Earth Ring">
       <property name="Type" value="Ring"/>
+      <property name="Text" value="The attacking player draws 1 card from his or her conflict deck and discards 1 card at random from his or her opponent's hand."/>
       <alternate name="Earth Ring" type="Political">
         <property name="Type" value="Ring"/>
+        <property name="Text" value="The attacking player draws 1 card from his or her conflict deck and discards 1 card at random from his or her opponent's hand."/>
       </alternate>
     </card>
     <card id="459e0ed9-1dac-4660-b9ba-c0e13bb7db3c" name="Fire Ring">
       <property name="Type" value="Ring"/>
+      <property name="Text" value="The attacking player chooses a character in play and chooses to honor or dishonor that character."/>
       <alternate name="Fire Ring" type="Political">
         <property name="Type" value="Ring"/>
+        <property name="Text" value="The attacking player chooses a character in play and chooses to honor or dishonor that character."/>
       </alternate>
     </card>
     <card id="70643b2b-868c-4b2a-84e0-107e0d833ebd" name="Void Ring">
       <property name="Type" value="Ring"/>
+      <property name="Text" value="The attacking player chooses a character and removes 1 fate from that character."/>
       <alternate name="Void Ring" type="Political">
         <property name="Type" value="Ring"/>
+        <property name="Text" value="The attacking player chooses a character and removes 1 fate from that character."/>
       </alternate>
     </card>
     <card id="d5e3fa69-0ab9-4a26-9449-db60ac62e098" name="Water Ring">
       <property name="Type" value="Ring"/>
+      <property name="Text" value="The attacking player either chooses a character and readies it, or chooses a character with no fate on it and bows it."/>
       <alternate name="Water Ring" type="Political">
         <property name="Type" value="Ring"/>
+        <property name="Text" value="The attacking player either chooses a character and readies it, or chooses a character with no fate on it and bows it."/>
       </alternate>
     </card>
     <card id="9ff46167-1893-45bc-87f6-266f77be7789" name="Shiro Nishiyama">
