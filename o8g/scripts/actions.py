@@ -428,11 +428,15 @@ def card_controller_changed(args):
 
 def move_cards(args):
   for i, card in enumerate(args.cards):
+    from_group = card.group
     alternate = card.alternate # Preserve the alternate state for rings
 
     if args.toGroups[i] == table: # Dynasty cards should move to table facedown, unlike conflict which move as faceup
-      card.moveToTable(args.xs[i], args.ys[i], True if card.group == me.piles[DYNASTY] else not args.faceups[i])
-      card.index = args.indexs[i]
+      card.moveToTable(args.xs[i], args.ys[i], True if from_group == me.piles[DYNASTY] else not args.faceups[i])
+      if card.type == TYPE_ATTACHMENT and from_group != table:
+        card.sendToBack()
+      else:
+        card.index = args.indexs[i]
     else:
       card.moveTo(args.toGroups[i], args.indexs[i])
 
