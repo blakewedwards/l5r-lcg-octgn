@@ -44,6 +44,7 @@ ALTERNATE_CLAIMED = 'Claimed'
 MAX_PROVINCES = 5
 NUM_HOME_ROWS = 2
 INFLUENCE_VALUE = 'Influence Value'
+UNIQUE = 'Unique'
 
 def invert_x(x, width, inverted):
   return (-x - width) if inverted else x
@@ -352,6 +353,9 @@ def unpack(item, f, default=True):
 def is_province(card, x=0, y=0):
   return unpack(card, lambda c: c.type == TYPE_PROVINCE)
 
+def is_character(card, x=0, y=0):
+  return unpack(card, lambda c: c.type == TYPE_CHARACTER)
+
 def declare_conflict(group, x=0, y=0):
   mute()
   if setup_required(group, x, y):
@@ -571,6 +575,22 @@ def discard(card, x=0, y=0):
       me.honor -= 1
     card.moveTo(pile)
   return pile
+
+def discard_unique(card, x=0, y=0):
+  if not can_play_dynasty(card) and (card.group != me.hand or not is_character(card)):
+    return
+  if card.unique != UNIQUE:
+    whisper('The card is not unique.')
+    return
+  in_play_card = [c for c in table if c.name == card.name and c.controller == me and in_play(c)]
+  if not in_play_card:
+    whisper('The card does not have a copy in play.')
+    return
+  if in_province(card):
+    replace(card)
+  else:
+    discard(card)
+  add_fate(in_play_card[0])
 
 def can_replace(card, x=0, y=0):
   return unpack(card, in_province)
