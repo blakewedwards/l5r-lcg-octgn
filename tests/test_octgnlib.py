@@ -1,7 +1,7 @@
 import os
 import sys
 import unittest
-sys.path.append(os.path.join('..', 'o8g', 'scripts'))
+sys.path.append(os.path.join('o8g', 'scripts'))
 from octgnlib import distance, closest
 
 class TestOctgnLib(unittest.TestCase):
