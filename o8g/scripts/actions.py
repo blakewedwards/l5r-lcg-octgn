@@ -162,7 +162,7 @@ def give_honor(group, x=0, y=0):
   mute()
   if setup_required(group, x, y):
     return
-  honor = askInteger('Give how much honor?', 0)
+  honor = askInteger('Give how much honor?', 1)
   if honor is None:
     return
   if honor == 0:
