@@ -479,6 +479,8 @@ def table_default_card_action(card):
       toggle_break(card)
     elif card.type == TYPE_CHARACTER and in_province(card):
       play_dynasty(card)
+    elif card.type == TYPE_EVENT:
+      discard(card)
     else:
       toggle_bow_ready(card)
 
