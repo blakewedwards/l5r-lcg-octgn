@@ -40,7 +40,6 @@ TYPE_ROLE = 'Role'
 TYPE_STRONGHOLD = 'Stronghold'
 ALTERNATE_MILITARY = ''
 ALTERNATE_POLITICAL = 'Political'
-ALTERNATE_CLAIMED = 'Claimed'
 MAX_PROVINCES = 5
 NUM_HOME_ROWS = 2
 INFLUENCE_VALUE = 'Influence Value'
@@ -176,6 +175,25 @@ def give_honor(group, x=0, y=0):
   remoteCall(players[1], 'gain_honor', [honor])
   me.honor -= honor
   notify('{} gives {} honor to {}.'.format(me, honor, players[1]))
+
+def spend_fate_to_unclaimed_ring(group, x=0, y=0):
+  fate = askInteger('Spend how much fate?', 1)
+  if fate is None or fate == 0:
+    return
+  if me.Fate < fate:
+    whisper("The cost cannot be paid.")
+    return
+  unclaimed_rings = [c for c in table if c.type == TYPE_RING and c.targetedBy is None] # Filter out targeted rings as contested
+  dialog = cardDlg(unclaimed_rings)
+  dialog.title = 'Select a ring'
+  ring = dialog.show()
+  if ring is not None:
+    ring = ring[0]
+    me.Fate -= fate
+    if ring.controller == me:
+      add_fate(ring, quantity=fate)
+    else:
+      remoteCall(ring.controller, 'add_fate', [ring, 0, 0, fate])
 
 def on_table_loaded():
   notify('{} has version {}'.format(me, gameVersion))
@@ -375,7 +393,7 @@ def declare_conflict_at(card, x=0, y=0):
   if card.controller == me:
     whisper("The target of a conflict must be an opponent's province.")
     return
-  unclaimed_rings = [c for c in table if c.type == TYPE_RING and c.alternate != ALTERNATE_CLAIMED]
+  unclaimed_rings = [c for c in table if c.type == TYPE_RING]
   dialog = cardDlg(unclaimed_rings)
   dialog.title = 'Select a ring'
   ring = dialog.show()
