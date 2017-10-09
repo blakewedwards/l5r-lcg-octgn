@@ -231,6 +231,14 @@
     <block type="overlay" id="role-void" src="proxygen/images/role-void.png"><location x="83" y="27"/></block>
     <block type="overlay" id="role-water" src="proxygen/images/role-water.png"><location x="83" y="27"/></block>
 
+    <block type="overlay" id="blank" src="proxygen/images/blank.png">
+      <location x="0" y="0"/>
+    </block>
+    <block type="text" id="error-name">
+      <location x="100" y="265"/>
+      <text color="#000000" size="23" font="fonts/name.ttf"/>
+      <wordwrap height="34" width="230" align="center" valign="center" shrinktofit="True"/>
+    </block>
   </blocks>
 
   <template src="proxygen/images/empty.png">
@@ -460,6 +468,17 @@
       <link block="text-role"><property name="Text"/></link>
       <link block="role-name"><property name="Name"/></link>
       <link block="traits-role"><property name="Traits"/></link>
+    </textblocks>
+  </template>
+
+  <template src="proxygen/images/empty.png" default="True">
+    <matches><match name="" value=""/></matches>
+
+    <overlayblocks>
+      <link block="blank"/>
+    </overlayblocks>
+    <textblocks>
+      <link block="error-name"><property name="Name"/></link>
     </textblocks>
   </template>
 </templates>

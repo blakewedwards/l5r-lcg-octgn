@@ -4,11 +4,13 @@
   id="7a1d7bfd-db29-4812-8de1-01cf7ca73323"
   gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844"
   gameVersion="0.0.1.0"
-  version="1.0">
+  version="1.2">
   <markers>
     <marker id="054b9f42-ac6a-4cc2-9228-294d5df5fb7e" name="Dishonored"/>
     <marker id="1c469258-900d-44e7-b005-d3c5d0de3f95" name="Fate"/>
     <marker id="af5fc343-121e-4ecc-9d21-f3886644b473" name="Honored"/>
+    <marker id="61598b8d-fe90-47d1-b3da-d177ca379b2f" name="Military"/>
+    <marker id="3b61f2ca-ef39-4d34-b4e1-f6c09e483477" name="Political"/>
   </markers>
   <cards>
     <card id="a88f2213-7711-4699-a94e-23bf10ceedd6" name="First Player Token" size="first_player_token">
@@ -31,38 +33,51 @@
     </card>
     <card id="b57c595e-d5ae-4fba-82c8-954a0b78c4a8" name="Imperial Favor" size="imperial_favor">
       <property name="Type" value="Imperial Favor"/>
+      <property name="Bonus Military Skill" value="+1"/>
       <alternate name="Imperial Favor" type="Political">
         <property name="Type" value="Imperial Favor"/>
+        <property name="Bonus Military Skill" value=""/>
+        <property name="Bonus Political Skill" value="+1"/>
       </alternate>
     </card>
     <card id="6d19021d-9208-4f3e-8e36-dc2ea28d755e" name="Air Ring">
       <property name="Type" value="Ring"/>
+      <property name="Text" value="The attacking player takes 1 honor from his or her opponent, or gains 2 honor from the general token pool."/>
       <alternate name="Air Ring" type="Political">
         <property name="Type" value="Ring"/>
+        <property name="Text" value="The attacking player takes 1 honor from his or her opponent, or gains 2 honor from the general token pool."/>
       </alternate>
     </card>
     <card id="7a39169d-1c94-4a2a-9994-105a928dcc7e" name="Earth Ring">
       <property name="Type" value="Ring"/>
+      <property name="Text" value="The attacking player draws 1 card from his or her conflict deck and discards 1 card at random from his or her opponent's hand."/>
       <alternate name="Earth Ring" type="Political">
         <property name="Type" value="Ring"/>
+        <property name="Text" value="The attacking player draws 1 card from his or her conflict deck and discards 1 card at random from his or her opponent's hand."/>
       </alternate>
     </card>
     <card id="459e0ed9-1dac-4660-b9ba-c0e13bb7db3c" name="Fire Ring">
       <property name="Type" value="Ring"/>
+      <property name="Text" value="The attacking player chooses a character in play and chooses to honor or dishonor that character."/>
       <alternate name="Fire Ring" type="Political">
         <property name="Type" value="Ring"/>
+        <property name="Text" value="The attacking player chooses a character in play and chooses to honor or dishonor that character."/>
       </alternate>
     </card>
     <card id="70643b2b-868c-4b2a-84e0-107e0d833ebd" name="Void Ring">
       <property name="Type" value="Ring"/>
+      <property name="Text" value="The attacking player chooses a character and removes 1 fate from that character."/>
       <alternate name="Void Ring" type="Political">
         <property name="Type" value="Ring"/>
+        <property name="Text" value="The attacking player chooses a character and removes 1 fate from that character."/>
       </alternate>
     </card>
     <card id="d5e3fa69-0ab9-4a26-9449-db60ac62e098" name="Water Ring">
       <property name="Type" value="Ring"/>
+      <property name="Text" value="The attacking player either chooses a character and readies it, or chooses a character with no fate on it and bows it."/>
       <alternate name="Water Ring" type="Political">
         <property name="Type" value="Ring"/>
+        <property name="Text" value="The attacking player either chooses a character and readies it, or chooses a character with no fate on it and bows it."/>
       </alternate>
     </card>
     <card id="9ff46167-1893-45bc-87f6-266f77be7789" name="Shiro Nishiyama">
@@ -189,7 +204,7 @@
       <property name="Clan" value="Phoenix"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Action: During a conflict at this province, select one - switch the contested ring with an unclaimed ring (the conflict retains its type), or switch the conflict type (the conflict retains its ring)."/>
+      <property name="Text" value="Action: During a conflict at this province, select one - switch the contested ring with an unclaimed ring (the conflict retains its type), or switch the conflict type (the conflict retains its element)."/>
       <property name="Bonus Strength" value="4"/>
       <property name="Ring" value="Void"/>
       <property name="Card Number" value="12"/>
@@ -216,7 +231,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="This province gets +5 during [Political] conflicts here."/>
+      <property name="Text" value="This province gets +5 strength during [Political] conflicts."/>
       <property name="Bonus Strength" value="5"/>
       <property name="Ring" value="Earth"/>
       <property name="Card Number" value="15"/>
@@ -234,7 +249,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="This province gets +5 during [Military] conflicts here."/>
+      <property name="Text" value="This province gets +5 strength during [Military] conflicts."/>
       <property name="Bonus Strength" value="5"/>
       <property name="Ring" value="Earth"/>
       <property name="Card Number" value="17"/>
@@ -288,7 +303,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Province"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Reaction: After this province is revealed - switch the conflict type. (The conflict retains its ring.)"/>
+      <property name="Text" value="Reaction: After this province is revealed - switch the conflict type. (The conflict retains its element.)"/>
       <property name="Bonus Strength" value="4"/>
       <property name="Ring" value="Water"/>
       <property name="Card Number" value="23"/>
@@ -656,7 +671,7 @@
       <property name="Cost" value="1"/>
       <property name="Military Skill" value="3"/>
       <property name="Political Skill" value="3"/>
-      <property name="Glory" value="1"/>
+      <property name="Glory" value="0"/>
       <property name="Deck" value="Dynasty"/>
       <property name="Card Number" value="54"/>
     </card>
@@ -688,9 +703,9 @@
       <property name="Clan" value="Dragon"/>
       <property name="Type" value="Character"/>
       <property name="Traits" value="Bushi. Duelist."/>
-      <property name="Text" value="While this character is attacking alone, your opponent cannot declare more than 1 defender."/>
+      <property name="Text" value="While this character is attacking alone, your opponent cannot declare more than one defender."/>
       <property name="Cost" value="2"/>
-      <property name="Military Skill" value="3"/>
+      <property name="Military Skill" value="2"/>
       <property name="Political Skill" value="2"/>
       <property name="Glory" value="1"/>
       <property name="Deck" value="Dynasty"/>
@@ -1611,7 +1626,7 @@
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Attachment"/>
       <property name="Traits" value="Jade. Weapon."/>
-      <property name="Text" value="Restricted. (No more than two restricted attachments per character.)&#10;Action: While attached character is participating in a conflict, bow this attachment, choose a participating character with lower [Military] skill - return all fate on that character to its owner's fate pool."/>
+      <property name="Text" value="Attach to a character you control. Restricted.&#10;Action: While attached character is participating in a conflict, bow this attachment. Choose a participating character with lower [Military] skill than attached character - return all fate on that character to its owner's fate pool."/>
       <property name="Cost" value="2"/>
       <property name="Bonus Military Skill" value="+3"/>
       <property name="Bonus Political Skill" value="+0"/>
@@ -1633,7 +1648,7 @@
       <property name="Clan" value="Crab"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Action: Shuffle a card in one of your unbroken provinces back into your dynasty deck. Choose a holding in the dynasty discard pile - put that holding into play in that province."/>
+      <property name="Text" value="Action: Shuffle a card in one of your unbroken provinces back into your dynasty deck. Choose a holding in your dynasty discard pile - put that holding into play in that province."/>
       <property name="Cost" value="0"/>
       <property name="Influence Value" value="2"/>
       <property name="Deck" value="Conflict"/>
@@ -1867,7 +1882,7 @@
       <property name="Clan" value="Dragon"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Action: During a conflict - until the end of the conflict, character's in your opponents home cannot trigger abilities."/>
+      <property name="Text" value="Action: During a conflict - until the end of the conflict, characters in your opponent's home cannot trigger abilities."/>
       <property name="Cost" value="0"/>
       <property name="Influence Value" value="2"/>
       <property name="Deck" value="Conflict"/>
@@ -2208,7 +2223,7 @@
       <property name="Clan" value="Scorpion"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Action: During a conflict, choose up to 2 [Scorpion] characters with total printed cost 6 or lower from your hand and/or provinces - put those character into play as participating characters."/>
+      <property name="Text" value="Action: During a conflict, choose up to 2 [Scorpion] characters with total printed cost 6 or lower from your hand and/or provinces - put those characters into play as participating characters."/>
       <property name="Cost" value="3"/>
       <property name="Influence Value" value="1"/>
       <property name="Deck" value="Conflict"/>
@@ -2435,7 +2450,7 @@
       <property name="Clan" value="Neutral"/>
       <property name="Type" value="Event"/>
       <property name="Traits" value=""/>
-      <property name="Text" value="Action: During a [Military] conflict, choose a face-up character in one of your provinces - put that character into play, participating in the conflict."/>
+      <property name="Text" value="Action: During a [Military] conflict, choose a character in one of your provinces - put that character into play in the conflict."/>
       <property name="Cost" value="1"/>
       <property name="Deck" value="Conflict"/>
       <property name="Card Number" value="210"/>
@@ -2472,7 +2487,6 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Keeper. Air."/>
       <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win an [Air] conflict as the defending player - gain 1 fate."/>
-      <property name="Ring" value="Air"/>
       <property name="Card Number" value="214A"/>
     </card>
     <card id="276a3f10-2e2f-48eb-ba65-2f354274f98d" name="Seeker of Air">
@@ -2480,7 +2494,6 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Seeker. Air."/>
       <property name="Text" value="You may replace 1 province of any element with an additional [Air] province while deckbuilding.&#10;Reaction: After an [Air] province you control is revealed - gain 1 fate."/>
-      <property name="Ring" value="Air"/>
       <property name="Card Number" value="214B"/>
     </card>
     <card id="ee1b351c-a755-403c-a3f4-c1b2c141e4cc" name="Keeper of Earth">
@@ -2488,7 +2501,6 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Keeper. Earth."/>
       <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win an [Earth] conflict as the defending player - gain 1 fate."/>
-      <property name="Ring" value="Earth"/>
       <property name="Card Number" value="215A"/>
     </card>
     <card id="8b08da3c-3613-4edf-a3d4-a69aa54da11a" name="Seeker of Earth">
@@ -2496,7 +2508,6 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Seeker. Earth."/>
       <property name="Text" value="You may replace 1 province of any element with an additional [Earth] province while deckbuilding.&#10;Reaction: After an [Earth] province you control is revealed - gain 1 fate."/>
-      <property name="Ring" value="Earth"/>
       <property name="Card Number" value="215B"/>
     </card>
     <card id="5eb460ba-ed48-4c9c-8c00-cfc21c1e6c5f" name="Keeper of Fire">
@@ -2504,7 +2515,6 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Keeper. Fire."/>
       <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win a [Fire] conflict as the defending player - gain 1 fate."/>
-      <property name="Ring" value="Fire"/>
       <property name="Card Number" value="216A"/>
     </card>
     <card id="75f3b6ba-8745-4c90-873e-bd88e95bf8e2" name="Seeker of Fire">
@@ -2512,7 +2522,6 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Seeker. Fire."/>
       <property name="Text" value="You may replace 1 province of any element with an additional [Fire] province while deckbuilding.&#10;Reaction: After a [Fire] province you control is revealed - gain 1 fate."/>
-      <property name="Ring" value="Fire"/>
       <property name="Card Number" value="216B"/>
     </card>
     <card id="4a7d2f30-6e0e-43b3-b8bb-a10c34d77097" name="Keeper of Water">
@@ -2520,7 +2529,6 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Keeper. Water."/>
       <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win a [Water] conflict as the defending player - gain 1 fate."/>
-      <property name="Ring" value="Water"/>
       <property name="Card Number" value="217A"/>
     </card>
     <card id="8e5881ab-043e-4148-8052-ee8ce1860d8e" name="Seeker of Water">
@@ -2528,7 +2536,6 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Seeker. Water."/>
       <property name="Text" value="You may replace 1 province of any element with an additional [Water] province while deckbuilding.&#10;Reaction: After a [Water] province you control is revealed - gain 1 fate."/>
-      <property name="Ring" value="Water"/>
       <property name="Card Number" value="217B"/>
     </card>
     <card id="156cee09-4e74-4808-823d-ffe7213b47ca" name="Keeper of Void">
@@ -2536,7 +2543,6 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Keeper. Void."/>
       <property name="Text" value="Increase your deckbuilding influence value by 3.&#10;Reaction: After you win a [Void] conflict as the defending player - gain 1 fate."/>
-      <property name="Ring" value="Void"/>
       <property name="Card Number" value="218A"/>
     </card>
     <card id="a43631fa-106d-4316-b9d3-d31fc532f165" name="Seeker of Void">
@@ -2544,7 +2550,6 @@
       <property name="Type" value="Role"/>
       <property name="Traits" value="Seeker. Void."/>
       <property name="Text" value="You may replace 1 province of any element with an additional [Void] province while deckbuilding.&#10;Reaction: After a [Void] province you control is revealed - gain 1 fate."/>
-      <property name="Ring" value="Void"/>
       <property name="Card Number" value="218B"/>
     </card>
   </cards>

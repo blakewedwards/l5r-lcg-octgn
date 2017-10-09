@@ -279,6 +279,9 @@ with open(sys.argv[1], 'rb') as f:
   # Mathematically base16 is nonsense but it happens to sort in the desired order with the letter suffixes
   for row in sorted(reader, key=lambda r: int(r['id'], base=16) if r['id'].strip() else num_cards+9999):
     row = AttributeDict(row)
+    if row.set != 'Core Set':
+      continue
+
     if row.id:
       attr = {'id': ids[row.id], 'name': row.name}
       if row.deck:
@@ -287,7 +290,7 @@ with open(sys.argv[1], 'rb') as f:
         attr['size'] = row.type.lower()
       card = SubElement(cards, 'card', attr)
 
-      add_property(card, 'Clan', row.clan.capitalize() if row.clan else 'Neutral')
+      add_property(card, 'Clan', row.clan.capitalize() if row.clan and row.type.capitalize() != 'Role' else 'Neutral')
       add_property(card, 'Type', row.type.capitalize())
 
       if row.unique == '1':

@@ -3,20 +3,26 @@
     name="Legend of the Five Rings LCG"
     id="bb0f02e7-2a6f-4ae3-84a2-c501b4176844"
     octgnVersion="3.1.284.0"
-    version="0.0.1.0"
+    version="0.0.1.4"
     scriptVersion="3.1.0.2"
     markersize="16"
     setsurl="https://tinyurl.com/mab3ars"
-    gameurl="http://octgngames.com/l5r-lcg"
+    gameurl="http://octgngames.com/l5rlcg"
     authors="Intolerance"
     description="Legend of the Five Rings: The Card Game is a player-influenced LCG that sees two players take on the role of one of the seven Great Clans of Rokugan, vying for military and political control of the land while maintaining Rokugan society’s strict code of honor."
     tags="legend five rings l5r lcg ffg fantasy flight games"
     iconurl="http://i.imgur.com/PgP90M6.jpg">
   <scripts>
     <script src="scripts/actions.py"/>
+    <script src="scripts/events.py"/>
+    <script src="scripts/l5r.py"/>
+    <script src="scripts/octgnlib.py"/>
   </scripts>
   <events>
-    <event name="OnCardControllerChanged" action="card_controller_changed" />
+    <event name="OnCardControllerChanged" action="card_controller_changed"/>
+    <event name="OnDeckLoaded" action="on_deck_loaded"/>
+    <event name="OnTableLoaded" action="on_table_loaded"/>
+    <event name="OverrideCardsMoved" action="move_cards"/>
   </events>
   <proxygen definitionsrc="proxygen/definition.xml"/>
   <globalvariables>
@@ -66,29 +72,34 @@
     backgroundStyle="uniformToFill"
     ordered="False"
     visibility="undefined">
-    <groupaction menu="Set up" execute="setup" showIf="setup_required" shortcut="CTRL+SHIFT+S" />
-    <groupaction menu="Mulligan" execute="mulligan" showIf="can_mulligan" />
-    <groupaction menu="Pass" execute="pass_action" showIf="setup_not_required" shortcut="ALT+D" />
-    <groupaction menu="Give honor" execute="give_honor" showIf="setup_not_required" shortcut="CTRL+H" />
-    <groupaction menu="Declare conflict" execute="declare_conflict" showIf="setup_not_required" shortcut="F5" />
-    <groupaction menu="Claim ring" execute="claim_ring" showIf="setup_not_required" shortcut="F6" />
-    <groupaction menu="End turn" execute="end_turn" showIf="setup_not_required" shortcut="F12" />
-    <groupaction menu="Flip coin" execute="flip_coin" showIf="setup_not_required" shortcut="CTRL+F" />
+    <groupaction menu="Set up" execute="setup" showIf="setup_required" shortcut="CTRL+SHIFT+S"/>
+    <groupaction menu="Mulligan" execute="mulligan" showIf="can_mulligan" shortcut="CTRL+SHIFT+M"/>
+    <groupaction menu="Pass" execute="pass_action" showIf="setup_not_required" shortcut="ALT+D"/>
+    <groupaction menu="Give honor" execute="give_honor" showIf="setup_not_required" shortcut="CTRL+H"/>
+    <groupaction menu="Declare conflict" execute="declare_conflict" showIf="setup_not_required" shortcut="F5"/>
+    <groupaction menu="Claim ring" execute="claim_ring" showIf="setup_not_required" shortcut="F6"/>
+    <groupaction menu="End turn" execute="end_turn" showIf="has_initiative" shortcut="F12"/>
+    <groupaction menu="Flip coin" execute="flip_coin" showIf="setup_not_required" shortcut="CTRL+F"/>
     <cardaction menu="Default" execute="table_default_card_action" default="True" showIf="lambda: False"/>
-    <cardaction menu="Add fate" execute="add_fate" showIf="can_fate" shortcut="F1" />
-    <cardaction menu="Remove fate" execute="remove_fate" showIf="can_fate" shortcut="F2" />
-    <cardaction menu="Bow/ready" execute="toggle_bow_ready" showIf="can_bow" shortcut="ALT+B" />
-    <cardaction menu="Break/unbreak" execute="toggle_break" showIf="is_province" shortcut="CTRL+B" />
-    <cardaction menu="Discard" execute="discard" showIf="has_deck" shortcut="DEL" />
-    <cardaction menu="Flip" execute="flip" showIf="can_flip" shortcut="F8" />
-    <cardaction menu="Honor" execute="honor" showIf="can_honor" shortcut="F3" />
-    <cardaction menu="Dishonor" execute="dishonor" showIf="can_honor" shortcut="F4" />
-    <cardaction menu="Play" execute="play_dynasty" showIf="can_play" shortcut="F7" />
-    <cardaction menu="Refill" execute="refill" showIf="is_province" shortcut="CTRL+R" />
-    <cardaction menu="Replace" execute="replace" showIf="can_replace" shortcut="CTRL+T" />
-    <cardaction menu="Select bid" execute="select_bid" showIf="is_honor_dial"/>
+    <cardaction menu="Add fate" execute="add_fate" showIf="can_fate" shortcut="F1"/>
+    <cardaction menu="Remove fate" execute="remove_fate" showIf="can_fate" shortcut="F2"/>
+    <cardaction menu="Bow/ready" execute="toggle_bow_ready" showIf="can_bow" shortcut="ALT+B"/>
+    <cardaction menu="Break/unbreak" execute="toggle_break" showIf="is_province" shortcut="CTRL+B"/>
+    <cardaction menu="Discard" execute="discard" showIf="has_deck" shortcut="DEL"/>
+    <cardaction menu="Discard (unique)" execute="discard_unique" showIf="can_play_dynasty" shortcut="SHIFT+DEL"/>
+    <cardaction menu="Flip" execute="flip" showIf="can_flip" shortcut="F8"/>
+    <cardaction menu="Honor" execute="honor" showIf="can_honor" shortcut="F3"/>
+    <cardaction menu="Dishonor" execute="dishonor" showIf="can_honor" shortcut="F4"/>
+    <cardaction menu="Add token" execute="add_token" showIf="can_token" shortcut="CTRL+M"/>
+    <cardaction menu="Remove token" execute="remove_token" showIf="can_token" shortcut="ALT+M"/>
+    <cardaction menu="Swap stronghold province" execute="swap_stronghold_province" showIf="is_province" shortcut="ALT+S"/>
+    <cardaction menu="Play" execute="play_dynasty" showIf="can_play_dynasty" shortcut="F7"/>
+    <cardaction menu="Play (reduced)" execute="play_dynasty_reduced" showIf="can_play_dynasty" shortcut="SHIFT+F7"/>
+    <cardaction menu="Refill" execute="refill" showIf="is_province" shortcut="CTRL+R"/>
+    <cardaction menu="Replace" execute="replace" showIf="can_replace" shortcut="CTRL+S"/>
+    <cardaction menu="Select bid" execute="select_bid" showIf="is_honor_dial" shortcut="CTRL+D"/>
   </table>
-  <player summary="{#Fate} Fate/ {#Honor} Clan Honor/ {#Hand} Conflict Cards/ {#Claimed Rings} Claimed Rings/">
+  <player summary="  Honor: {#Honor}   Fate: {#Fate}   Hand: {#Hand}   Rings: {#Claimed Rings}  ">
     <globalvariable name="setup_required" value="True"/>
     <globalvariable name="can_mulligan" value="True"/>
     <globalvariable name="fate_value" value="0"/>
@@ -98,10 +109,13 @@
       <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
       <groupaction menu="Random discard" execute="random_discard_from" showIf="setup_not_required"/>
       <cardaction menu="Play" execute="play_conflict" default="True" showIf="setup_not_required"/>
+      <cardaction menu="Play (reduced)" execute="play_conflict_reduced" showIf="setup_not_required"/>
+      <cardaction menu="Discard (unique)" execute="discard_unique" showIf="is_character" shortcut="SHIFT+DEL"/>
     </hand>
     <group name="Conflict Deck" icon="card/conflict.png" visibility="none" width="63" height="88">
-      <groupaction menu="Draw" execute="draw" default="True" showIf="setup_not_required"/>
+      <groupaction menu="Draw" execute="draw" default="True" showIf="setup_not_required" shortcut="F10"/>
       <groupaction menu="Search top" execute="search_top" showIf="setup_not_required"/>
+      <groupaction menu="Search top (shuffle)" execute="search_top_shuffle" showIf="setup_not_required"/>
       <groupaction menu="Shuffle" execute="shuffle" showIf="setup_not_required"/>
     </group>
     <group name="Conflict Discard" icon="card/conflict.png" visibility="all" width="63" height="88"/>
