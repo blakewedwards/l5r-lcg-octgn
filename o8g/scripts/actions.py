@@ -644,7 +644,7 @@ def can_play_conflict(card, x=0, y=0):
   return unpack(card, lambda c: c.isFaceUp and (c.type == TYPE_CHARACTER or c.type == TYPE_EVENT or c.type == TYPE_ATTACHMENT))
 
 def prompt_reduce_cost(cost):
-  reduction = askInteger('Reduce cost by what amount?', 0)
+  reduction = askInteger('Reduce cost by what amount?', 1)
   if reduction is None:
     return
   if reduction > cost:
