@@ -338,10 +338,14 @@ def mulligan(group, x=0, y=0):
   notify('{} mulligans {} dynasty card(s).'.format(me, len(cards)))
   for card in cards:
     card.moveToBottom(me.piles[DYNASTY])
-  for i in range(1, 5):
-    c = me.piles[DYNASTY].top()
-    (card_x, card_y) = province_position(i, width, height, gap, me.isInverted)
+  dynasty_cards = me.piles[DYNASTY].top(4)
+  dynasty_card_names = []
+  for i, c in enumerate(dynasty_cards):
+    (card_x, card_y) = province_position(i+1, width, height, gap, me.isInverted)
     c.moveToTable(card_x, card_y + offset, True)
+    c.peek()
+    dynasty_card_names.append(c.Name)
+  whisper('Dynasty cards are {}, and {}.'.format(", ".join(dynasty_card_names[:-1]), dynasty_card_names[-1]))
   me.piles[DYNASTY].shuffle()
   notify('{} is mulliganing their conflict cards.'.format(me))
   dialog = cardDlg(me.piles[CONFLICT].top(4))
