@@ -24,6 +24,22 @@
     <event name="OnTableLoaded" action="on_table_loaded"/>
     <event name="OverrideCardsMoved" action="move_cards"/>
   </events>
+  <symbols>
+    <symbol src="symbols/crab.png" id="crab" name="Crab" />
+    <symbol src="symbols/dragon.png" id="dragon" name="Dragon" />
+    <symbol src="symbols/phoenix.png" id="phoenix" name="Phoenix" />
+    <symbol src="symbols/scorpion.png" id="scorpion" name="Scorpion" />
+    <symbol src="symbols/lion.png" id="lion" name="Lion" />
+    <symbol src="symbols/unicorn.png" id="unicorn" name="Unicorn" />
+    <symbol src="symbols/crane.png" id="crane" name="Crane" />
+    <symbol src="symbols/military.png" id="military" name="Military" />
+    <symbol src="symbols/political.png" id="political" name="Political" />
+    <symbol src="symbols/void.png" id="void" name="Void" />
+    <symbol src="symbols/water.png" id="water" name="Water" />
+    <symbol src="symbols/fire.png" id="fire" name="Fire" />
+    <symbol src="symbols/earth.png" id="earth" name="Earth" />
+    <symbol src="symbols/wind.png" id="wind" name="Wind" />
+  </symbols>
   <proxygen definitionsrc="proxygen/definition.xml"/>
   <globalvariables>
     <globalvariable name="turn" value="1"/>
@@ -44,7 +60,7 @@
     <property name="Influence Value" type="String"/>
     <property name="Cost" type="String"/>
     <property name="Traits" type="String" textKind="Tokens"/>
-    <property name="Text" type="String"/>
+    <property name="Text" type="RichText"/>
     <property name="Ring" type="String"/>
     <property name="Unique" type="String"/>
     <property name="Military Skill" type="String"/>
