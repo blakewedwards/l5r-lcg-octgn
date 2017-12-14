@@ -1,0 +1,70 @@
+﻿<xml>
+  <game cardsUrl="https://api.fiveringsdb.com/cards"
+        packsUrl="https://api.fiveringsdb.com/packs"
+        gameGuid="bb0f02e7-2a6f-4ae3-84a2-c501b4176844"
+        packId="id"
+        cardNumber="position"
+        cardOctgnNumber="Card Number"
+        cardName="name"
+        cardPackId="pack_code"
+        cardId="octgn_id"
+        cardImage="image_url"
+        />
+  <images>
+    <image name="FiveringsDB" url="{0}" />
+  </images>
+  <properties>
+    <property octgn_name="Clan" type="property" value="clan" capitalize="True" />
+    <property octgn_name="Text" type="property" value="text" isRich="True"/>
+    <property octgn_name="Type" type="property" value="type" capitalize="True" />
+    <property octgn_name="Traits" type="property" value="traits" capitalize="True" delimiter=". " />
+    <property octgn_name="Ring" type="property" value="element" capitalize="True" />
+    <property octgn_name="Card Number" type="property" value="position" />
+    <property octgn_name="Cost" type="property" value="cost" />
+    <property octgn_name="Military Skill" type="property" value="military" />
+    <property octgn_name="Military Skill" type="property" value="military_bonus" />
+    <property octgn_name="Political Skill" type="property" value="political" />
+    <property octgn_name="Political Skill" type="property" value="political_skill" />
+    <property octgn_name="Bonus Strength" type="property" value="strength" />
+    <property octgn_name="Bonus Strength" type="property" value="strength_bonus" />
+    <property octgn_name="Glory" type="property" value="glory" />
+    <property octgn_name="Deck" type="property" value="side" capitalize="True" />
+    <property octgn_name="Unique" type="property" value="unicity" >
+      <replace match="true" value="Unique" />
+      <replace match="false" value="" />
+    </property>
+    <property octgn_name="Influence Value" type="property" value="influence_cost" />
+    <property octgn_name="Influence Value" type="property" value="influence_pool" />
+    <property octgn_name="Starting Honor" type="property" value="honor" />
+    <property octgn_name="Fate Value" type="property" value="fate" />
+  </properties>
+  <sizes>
+    <size name="dynasty">
+      <match property="side" value="dynasty"/>
+    </size>
+    <size name="conflict">
+      <match property="side" value="conflict"/>
+    </size>
+    <size name="province">
+      <match property="side" value="province"/>
+    </size>
+  </sizes>
+  <symbols>
+    <symbol match="[clan-crab]" id="crab" name="[Crab]" />
+    <symbol match="[clan-dragon]" id="dragon" name="[Dragon]" />
+    <symbol match="[clan-phoenix]" id="phoenix" name="[Phoenix]" />
+    <symbol match="[clan-scorpion]" id="scorpion" name="[Scorpion]" />
+    <symbol match="[clan-lion]" id="lion" name="[Lion]" />
+    <symbol match="[clan-unicorn]" id="unicorn" name="[Unicorn]" />
+    <symbol match="[clan-crane]" id="crane" name="[Crane]" />
+    <symbol match="[conflict-military]" id="military" name="[Military]" />
+    <symbol match="[conflict-political]" id="political" name="[Political]" />
+    <symbol match="[element-void]" id="void" name="[Void]" />
+    <symbol match="[element-water]" id="water" name="[Water]" />
+    <symbol match="[element-fire]" id="fire" name="[Fire]" />
+    <symbol match="[element-earth]" id="earth" name="[Earth]" />
+    <symbol match="[element-wind]" id="wind" name="[Wind]" />
+  </symbols>
+  <replaces>
+  </replaces>
+</xml>
