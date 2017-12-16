@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <set name="Into the Forbidden City" id="840be9ee-a905-4316-8a25-1b814986f173" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
   <cards>
-    <card name="Ageless Crone" id="c90bca27-60b9-41ef-bdb9-b11b70dc3109">
+    <card name="Ageless Crone" id="c90bca27-60b9-41ef-bdb9-b11b70dc3109" size="conflict">
       <property name="Clan" value="Lion" />
       <property name="Text">During a conflict in which this character is participating, increase the cost for each player to play each event by 1.</property>
       <property name="Type" value="Character" />
@@ -15,7 +15,7 @@
       <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
-    <card name="Back-Alley Hideaway" id="b6111945-6e48-463b-8f7f-acb8035a9faf">
+    <card name="Back-Alley Hideaway" id="b6111945-6e48-463b-8f7f-acb8035a9faf" size="dynasty">
       <property name="Clan" value="Scorpion" />
       <property name="Text">
         <b>Interrupt:</b> When a <s value="scorpion">[Scorpion]</s> character you control leaves play – attach that character to this holding facedown instead of placing it in its owner's discard pile.
@@ -27,7 +27,7 @@
       <property name="Deck" value="Dynasty" />
       <property name="Unique" value="False" />
     </card>
-    <card name="Bayushi Kachiko" id="3fdf3da1-12ee-4c94-b746-458b5aed0397">
+    <card name="Bayushi Kachiko" id="3fdf3da1-12ee-4c94-b746-458b5aed0397" size="conflict">
       <property name="Clan" value="Scorpion" />
       <property name="Text">
         <b>Action:</b> While this character is participating in a <s value="political">[Political]</s> conflict, choose a participating character with lower <s value="political">[Political]</s> than this character – move the chosen character home. Then, you may bow it.</property>
@@ -41,7 +41,7 @@
       <property name="Deck" value="Conflict" />
       <property name="Unique" value="True" />
     </card>
-    <card name="Benten's Touch" id="20fbf9fa-7702-44b1-acb8-5068d388251e">
+    <card name="Benten's Touch" id="20fbf9fa-7702-44b1-acb8-5068d388251e" size="conflict">
       <property name="Clan" value="Phoenix" />
       <property name="Text">
         <b>Action:</b> During a conflict, bow a <i>(friendly)</i><s value="phoenix">[Phoenix]</s><i>Shugenja</i> character. Choose a participating character you control – honor that character.</property>
@@ -53,7 +53,7 @@
       <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
-    <card name="Censure" id="ff8434e0-7363-4d38-8f2e-871113f1613b">
+    <card name="Censure" id="ff8434e0-7363-4d38-8f2e-871113f1613b" size="conflict">
       <property name="Clan" value="Neutral" />
       <property name="Text">Play only if you have the Imperial Favor.
 <b>Interrupt:</b> When the effects of an event would initiate – cancel those effects.</property>
@@ -65,7 +65,7 @@
       <property name="Unique" value="False" />
       <property name="Influence Value" value="0" />
     </card>
-    <card name="Chasing the Sun" id="81a67e36-0a73-43f8-82e6-fabd67e71b56">
+    <card name="Chasing the Sun" id="81a67e36-0a73-43f8-82e6-fabd67e71b56" size="conflict">
       <property name="Clan" value="Unicorn" />
       <property name="Text">
         <i>Seeker</i> role only.
@@ -78,7 +78,7 @@
       <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
-    <card name="Child of the Plains" id="99bea6e4-5ee4-48c9-b8a4-daf19fd96ea3">
+    <card name="Child of the Plains" id="99bea6e4-5ee4-48c9-b8a4-daf19fd96ea3" size="dynasty">
       <property name="Clan" value="Unicorn" />
       <property name="Text">
         <b>Reaction:</b> After a province this character is attacking is revealed – the attacker has the first action opportunity this conflict.</property>
@@ -92,7 +92,7 @@
       <property name="Deck" value="Dynasty" />
       <property name="Unique" value="False" />
     </card>
-    <card name="Chisei District" id="c8227c2c-aecf-4484-977f-8f1f1a5569cf">
+    <card name="Chisei District" id="c8227c2c-aecf-4484-977f-8f1f1a5569cf" size="dynasty">
       <property name="Clan" value="Crane" />
       <property name="Text">Limit 1 per deck.
 <s value="military">[Military]</s> conflicts cannot be declared against this holding's province.</property>
@@ -103,7 +103,7 @@
       <property name="Deck" value="Dynasty" />
       <property name="Unique" value="True" />
     </card>
-    <card name="Enigmatic Magistrate" id="278f45b5-8563-4ce3-a000-1b24519f5cc0">
+    <card name="Enigmatic Magistrate" id="278f45b5-8563-4ce3-a000-1b24519f5cc0" size="dynasty">
       <property name="Clan" value="Dragon" />
       <property name="Text">While this character is attacking, only characters that have an odd printed cost count their skill toward the resolution of this conflict.</property>
       <property name="Type" value="Character" />
@@ -116,7 +116,7 @@
       <property name="Deck" value="Dynasty" />
       <property name="Unique" value="False" />
     </card>
-    <card name="Feast or Famine" id="edd24316-b484-4720-9e98-7e37d2c0ea43">
+    <card name="Feast or Famine" id="edd24316-b484-4720-9e98-7e37d2c0ea43" size="province">
       <property name="Clan" value="Neutral" />
       <property name="Text">
         <i>Fire</i> role only.
@@ -128,7 +128,7 @@
       <property name="Deck" value="Province" />
       <property name="Unique" value="False" />
     </card>
-    <card name="Hiruma Skirmisher" id="e5381318-3c8c-4239-a00c-1dd6868a1964">
+    <card name="Hiruma Skirmisher" id="e5381318-3c8c-4239-a00c-1dd6868a1964" size="conflict">
       <property name="Clan" value="Crab" />
       <property name="Text">
         <b>Reaction:</b> After you play this character – it gains covert until the end of the phase.</property>
@@ -142,7 +142,7 @@
       <property name="Unique" value="False" />
       <property name="Influence Value" value="2" />
     </card>
-    <card name="Kakita Yoshi" id="5c4a29c3-9405-4ca8-b666-1e5cf02a42bb">
+    <card name="Kakita Yoshi" id="5c4a29c3-9405-4ca8-b666-1e5cf02a42bb" size="dynasty">
       <property name="Clan" value="Crane" />
       <property name="Text">
         <b>Action:</b> While this character is participating in a conflict, discard the Imperial Favor – draw 3 cards. Reduce the cost of each event you play during this conflict by 2.</property>
@@ -156,7 +156,7 @@
       <property name="Deck" value="Dynasty" />
       <property name="Unique" value="True" />
     </card>
-    <card name="Mantra of Water" id="d974750b-6699-419d-b49f-201a77c1dd43">
+    <card name="Mantra of Water" id="d974750b-6699-419d-b49f-201a77c1dd43" size="conflict">
       <property name="Clan" value="Dragon" />
       <property name="Text">
         <b>Reaction:</b> After your opponent declares a <s value="water">[Water]</s> conflict, choose a <i>Monk</i> character or a character with a <i>Monk</i> attachment – ready that character and draw 1 card.</property>
@@ -168,7 +168,7 @@
       <property name="Unique" value="False" />
       <property name="Influence Value" value="2" />
     </card>
-    <card name="Misinformation" id="92759058-ca1a-4117-901b-11b191e2b5ad">
+    <card name="Misinformation" id="92759058-ca1a-4117-901b-11b191e2b5ad" size="conflict">
       <property name="Clan" value="Scorpion" />
       <property name="Text">
         <b>Action:</b> During a conflict, if your honor bid is at least 2 higher than your opponent's – each participating character your opponent controls gets -1<s value="military">[Military]</s> and -1<s value="political">[Political]</s> until the end of the conflict.</property>
@@ -179,7 +179,7 @@
       <property name="Unique" value="False" />
       <property name="Influence Value" value="2" />
     </card>
-    <card name="Prodigy of the Waves" id="3051ec67-f28b-490e-90c3-170ad8fb4de6">
+    <card name="Prodigy of the Waves" id="3051ec67-f28b-490e-90c3-170ad8fb4de6" size="dynasty">
       <property name="Clan" value="Phoenix" />
       <property name="Text">
         <b>Action:</b> While the <s value="water">[Water]</s> ring is claimed – ready this character.</property>
@@ -193,7 +193,7 @@
       <property name="Deck" value="Dynasty" />
       <property name="Unique" value="False" />
     </card>
-    <card name="Public Forum" id="24e10db7-1638-48a8-be1b-5a11e553e19b">
+    <card name="Public Forum" id="24e10db7-1638-48a8-be1b-5a11e553e19b" size="province">
       <property name="Clan" value="Neutral" />
       <property name="Text">Cannot be a stronghold province.
 <b>Interrupt:</b> When this province would be broken, if there are no honor tokens on it – place 1 honor token on it instead.</property>
@@ -204,7 +204,7 @@
       <property name="Deck" value="Province" />
       <property name="Unique" value="False" />
     </card>
-    <card name="Seal of the Crab" id="3eb40e76-7454-4c62-8a70-c2195c43544e">
+    <card name="Seal of the Crab" id="3eb40e76-7454-4c62-8a70-c2195c43544e" size="conflict">
       <property name="Clan" value="Crab" />
       <property name="Text">Attached character gains the <s value="crab">[Crab]</s> clan symbol and the <i>Berserker</i> trait.</property>
       <property name="Type" value="Attachment" />
@@ -216,7 +216,7 @@
       <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
-    <card name="Tattered Missive" id="cafd9d0a-1c5b-4593-b324-74538c21dc84">
+    <card name="Tattered Missive" id="cafd9d0a-1c5b-4593-b324-74538c21dc84" size="conflict">
       <property name="Clan" value="Neutral" />
       <property name="Text">Attach to a <i>Courtier</i> character you control.
 <b>Action:</b> Bow attached character – search the top 5 cards of your conflict deck for a card, reveal it, and add it to your hand. Shuffle.</property>
@@ -229,7 +229,7 @@
       <property name="Unique" value="False" />
       <property name="Influence Value" value="0" />
     </card>
-    <card name="Test of Courage" id="971a6787-f4e9-40e0-85d1-f197d91f490e">
+    <card name="Test of Courage" id="971a6787-f4e9-40e0-85d1-f197d91f490e" size="conflict">
       <property name="Clan" value="Lion" />
       <property name="Text">
         <b>Action:</b> During a conflict, if your honor bid is lower than your opponent's, choose a <s value="lion">[Lion]</s> character you control – move that character to the conflict. Then, honor it.</property>
@@ -240,7 +240,7 @@
       <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
-    <card name="War Dog Master" id="80f7220b-627c-4ff9-8db6-5896d8a9a292">
+    <card name="War Dog Master" id="80f7220b-627c-4ff9-8db6-5896d8a9a292" size="dynasty">
       <property name="Clan" value="Unicorn" />
       <property name="Text">
         <b>Reaction:</b> After this character is declared as an attacker, discard the top card of your dynasty deck – this character gets +X<s value="military">[Military]</s> until the end of the conflict. X is the printed cost of the discarded card.</property>

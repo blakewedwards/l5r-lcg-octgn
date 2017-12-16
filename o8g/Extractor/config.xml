@@ -40,13 +40,19 @@
   </properties>
   <sizes>
     <size name="dynasty">
-      <match property="side" value="dynasty"/>
+      <match property="Deck" value="Dynasty"/>
     </size>
     <size name="conflict">
-      <match property="side" value="conflict"/>
+      <match property="Deck" value="Conflict"/>
     </size>
     <size name="province">
-      <match property="side" value="province"/>
+      <match property="Deck" value="Province"/>
+    </size>
+    <size name="province">
+      <match property="Deck" value="Role"/>
+    </size>
+    <size name="province">
+      <match property="Deck" value="Stronghold"/>
     </size>
   </sizes>
   <symbols>
