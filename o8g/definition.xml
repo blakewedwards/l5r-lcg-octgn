@@ -38,7 +38,7 @@
     <symbol src="symbols/water.png" id="water" name="Water" />
     <symbol src="symbols/fire.png" id="fire" name="Fire" />
     <symbol src="symbols/earth.png" id="earth" name="Earth" />
-    <symbol src="symbols/wind.png" id="wind" name="Wind" />
+    <symbol src="symbols/wind.png" id="air" name="Air" />
   </symbols>
   <proxygen definitionsrc="proxygen/definition.xml"/>
   <globalvariables>
