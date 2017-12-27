@@ -9,7 +9,6 @@
       <property name="Card Number" value="98" />
       <property name="Cost" value="4" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="3" />
     </card>
     <card name="Consumed by Five Fires" id="77d16c40-40f5-45fd-b794-89919e505be1" size="conflict">
@@ -22,7 +21,6 @@
       <property name="Card Number" value="96" />
       <property name="Cost" value="5" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="2" />
     </card>
     <card name="Crisis Breaker" id="b55a8b3d-0534-4f37-b9e9-d2e1a0d3be5a" size="dynasty">
@@ -38,7 +36,6 @@
       <property name="Political Skill" value="1" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Cunning Magistrate" id="b4ff941b-400f-4189-a820-89ae270c56bc" size="conflict">
       <property name="Clan" value="Scorpion" />
@@ -51,7 +48,6 @@
       <property name="Political Skill" value="2" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Fair Accord" id="df56ce66-d6fe-4d66-9b5f-b0fcb0661b09" size="conflict">
       <property name="Clan" value="Crab" />
@@ -61,13 +57,12 @@
       <property name="Card Number" value="91" />
       <property name="Cost" value="0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="2" />
     </card>
     <card name="Henshin Disciple" id="faf4ee8e-7064-421a-98a9-1c3b4008cfdc" size="dynasty">
       <property name="Clan" value="Phoenix" />
       <property name="Text">While you have claimed or are contesting:
-- the [element-air] ring, this character gets +2<s value="political">[Political]</s>.
+- the <s value="air">[Air]</s> ring, this character gets +2<s value="political">[Political]</s>.
 - the <s value="earth">[Earth]</s> ring, this character gets +2<s value="military">[Military]</s>.
 - the <s value="fire">[Fire]</s> ring, this character gains pride.</property>
       <property name="Type" value="Character" />
@@ -78,7 +73,6 @@
       <property name="Political Skill" value="2" />
       <property name="Glory" value="2" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Itinerant Philosopher" id="42b05869-dd6f-4d95-b4a8-26bc47f8aa4a" size="dynasty">
       <property name="Clan" value="Dragon" />
@@ -92,7 +86,6 @@
       <property name="Political Skill" value="1" />
       <property name="Glory" value="2" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Massing at Twilight" id="e18f7537-cb8a-4f89-8875-f936d8af309b" size="province">
       <property name="Clan" value="Neutral" />
@@ -104,7 +97,6 @@ While resolving conflicts at this province, each character counts its combined <
       <property name="Card Number" value="81" />
       <property name="Bonus Strength" value="8" />
       <property name="Deck" value="Province" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Master Of Gisei Toshi" id="ff27079d-1381-4a7f-beb7-bb93922a644e" size="dynasty">
       <property name="Clan" value="Phoenix" />
@@ -118,7 +110,6 @@ While resolving conflicts at this province, each character counts its combined <
       <property name="Political Skill" value="4" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Miwaku Kabe Guard" id="362a107e-9871-4e4a-9781-2de360784d01" size="dynasty">
       <property name="Clan" value="Lion" />
@@ -131,7 +122,6 @@ While resolving conflicts at this province, each character counts its combined <
       <property name="Political Skill" value="0" />
       <property name="Glory" value="2" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Moto Juro" id="9b8cced5-587d-4667-ab11-f5f37c7b0f00" size="dynasty">
       <property name="Clan" value="Unicorn" />
@@ -145,7 +135,7 @@ While resolving conflicts at this province, each character counts its combined <
       <property name="Political Skill" value="2" />
       <property name="Glory" value="2" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Origami Master" id="54c648ef-8a8c-49f1-a860-45d53cebc9cc" size="dynasty">
       <property name="Clan" value="Crane" />
@@ -159,17 +149,16 @@ While resolving conflicts at this province, each character counts its combined <
       <property name="Political Skill" value="4" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Ride Them Down" id="5ce1fc64-dcaf-49ec-8ea5-2a46f31f1222" size="conflict">
       <property name="Clan" value="Unicorn" />
       <property name="Text">
-        <b>Action:</b> During a conflict, discard the Imperial Favor – set the base strength of the attacked province to 1.</property>
+        <b>Action:</b> During a conflict, discard the Imperial Favor – set the base strength of the attacked province to 1 until the end of the conflict.
+<i>Errata from RRG v1.1</i></property>
       <property name="Type" value="Event" />
       <property name="Card Number" value="99" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="3" />
     </card>
     <card name="Seal of the Lion" id="438b6334-20ec-47fd-9e83-07ef5f26e196" size="conflict">
@@ -179,9 +168,9 @@ While resolving conflicts at this province, each character counts its combined <
       <property name="Traits" value="Item. Seal" />
       <property name="Card Number" value="95" />
       <property name="Cost" value="0" />
-      <property name="Military Skill" value="+1" />
+      <property name="Bonus Military Skill" value="+1" />
+      <property name="Bonus Political Skill" value="+0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="Seppun Ishikawa" id="7a26907a-7870-4794-b77a-7d6426d9b790" size="dynasty">
@@ -195,7 +184,7 @@ While resolving conflicts at this province, each character counts its combined <
       <property name="Political Skill" value="2" />
       <property name="Glory" value="2" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Test of Skill" id="682600df-7368-4013-8b45-cc759019eb30" size="conflict">
       <property name="Clan" value="Crane" />
@@ -206,7 +195,6 @@ While resolving conflicts at this province, each character counts its combined <
       <property name="Card Number" value="93" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="2" />
     </card>
     <card name="The Stone of Sorrows" id="23ba9c95-8e83-4ad0-8e63-0bc533c59f09" size="conflict">
@@ -218,9 +206,10 @@ While attached character is ready, opponents cannot remove or gain fate from rin
       <property name="Traits" value="Item" />
       <property name="Card Number" value="94" />
       <property name="Cost" value="2" />
-      <property name="Military Skill" value="+1" />
+      <property name="Bonus Military Skill" value="+1" />
+      <property name="Bonus Political Skill" value="+1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
       <property name="Influence Value" value="2" />
     </card>
     <card name="Waning Hostilities" id="03c12c1f-7431-47c8-a214-09f9c5d6f800" size="conflict">
@@ -231,7 +220,6 @@ While attached character is ready, opponents cannot remove or gain fate from rin
       <property name="Card Number" value="100" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="0" />
     </card>
     <card name="Yasuki Taka" id="91cfd0b7-fa5f-471f-9f6d-09bf2d142a61" size="dynasty">
@@ -239,19 +227,19 @@ While attached character is ready, opponents cannot remove or gain fate from rin
       <property name="Text">
         <b>Reaction:</b> After a <s value="crab">[Crab]</s> character leaves play during the conflict phase – gain 1 fate. (Unlimited.)</property>
       <property name="Type" value="Character" />
-      <property name="Traits" value="Wily-Trader. Daimyo" />
+      <property name="Traits" value="Wily-Trader. Daimyō" />
       <property name="Card Number" value="83" />
       <property name="Cost" value="5" />
       <property name="Military Skill" value="3" />
       <property name="Political Skill" value="4" />
       <property name="Glory" value="2" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Young Harrier" id="b93409f5-a56f-448c-a6b8-3cf410dbaf69" size="conflict">
       <property name="Clan" value="Crane" />
       <property name="Text">
-        <b>Action:</b> Dishonor this character – each <s value="crane">[Crane]</s> character you control cannot be dishonored until the end of the conflict.</property>
+        <b>Action:</b> Dishonor this character – each <s value="crane">[Crane]</s> character you control cannot be dishonored until the end of the phase.</property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Bushi. Scout. Shinobi" />
       <property name="Card Number" value="92" />
@@ -260,7 +248,6 @@ While attached character is ready, opponents cannot remove or gain fate from rin
       <property name="Political Skill" value="1" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
   </cards>

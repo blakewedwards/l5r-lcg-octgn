@@ -41,7 +41,6 @@
         <property name="Bonus Political Skill" value="+1"/>
       </alternate>
     </card>
-    <!--
     <card id="6d19021d-9208-4f3e-8e36-dc2ea28d755e" name="Air Ring">
       <property name="Type" value="Ring"/>
       <property name="Text" >The attacking player takes 1 honor from his or her opponent, or gains 2 honor from the general token pool.</property>
@@ -81,6 +80,6 @@
         <property name="Type" value="Ring"/>
         <property name="Text" >The attacking player either chooses a character and readies it, or chooses a character with no fate on it and bows it.</property>
       </alternate>
-    </card> -->
+    </card>
   </cards>
 </set>

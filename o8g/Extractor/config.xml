@@ -17,21 +17,26 @@
     <property octgn_name="Clan" type="property" value="clan" capitalize="True" />
     <property octgn_name="Text" type="property" value="text" isRich="True"/>
     <property octgn_name="Type" type="property" value="type" capitalize="True" />
-    <property octgn_name="Traits" type="property" value="traits" capitalize="True" delimiter=". " />
+    <property octgn_name="Traits" type="property" value="traits" capitalize="True" delimiter=". " >
+        <replace match="yojimbo" value="Yōjimbō" />
+        <replace match="meishodo" value="Meishōdō" />
+        <replace match="kiho" value="Kihō" />
+        <replace match="daimyo" value="Daimyō" />
+    </property>
     <property octgn_name="Ring" type="property" value="element" capitalize="True" />
     <property octgn_name="Card Number" type="property" value="position" />
     <property octgn_name="Cost" type="property" value="cost" />
     <property octgn_name="Military Skill" type="property" value="military" />
-    <property octgn_name="Military Skill" type="property" value="military_bonus" />
+    <property octgn_name="Bonus Military Skill" type="property" value="military_bonus" />
     <property octgn_name="Political Skill" type="property" value="political" />
-    <property octgn_name="Political Skill" type="property" value="political_skill" />
+    <property octgn_name="Bonus Political Skill" type="property" value="political_bonus" />
     <property octgn_name="Bonus Strength" type="property" value="strength" />
     <property octgn_name="Bonus Strength" type="property" value="strength_bonus" />
     <property octgn_name="Glory" type="property" value="glory" />
     <property octgn_name="Deck" type="property" value="side" capitalize="True" />
     <property octgn_name="Unique" type="property" value="unicity" >
-      <replace match="true" value="Unique" />
-      <replace match="false" value="" />
+      <replace match="True" value="Unique" />
+      <replace match="False" value="" />
     </property>
     <property octgn_name="Influence Value" type="property" value="influence_cost" />
     <property octgn_name="Influence Value" type="property" value="influence_pool" />
@@ -69,7 +74,7 @@
     <symbol match="[element-water]" id="water" name="[Water]" />
     <symbol match="[element-fire]" id="fire" name="[Fire]" />
     <symbol match="[element-earth]" id="earth" name="[Earth]" />
-    <symbol match="[element-wind]" id="wind" name="[Wind]" />
+    <symbol match="[element-air]" id="air" name="[Air]" />
   </symbols>
   <replaces>
   </replaces>

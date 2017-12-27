@@ -12,7 +12,7 @@
       <property name="Political Skill" value="1" />
       <property name="Glory" value="2" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Frostbitten Crossing" id="618a0084-3686-4816-8b71-f1b06c6b65d3" size="province">
       <property name="Clan" value="Neutral" />
@@ -24,7 +24,6 @@
       <property name="Card Number" value="21" />
       <property name="Bonus Strength" value="4" />
       <property name="Deck" value="Province" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Harmonize" id="5e52beea-4b6d-47d1-8b3a-65a5821cd18f" size="conflict">
       <property name="Clan" value="Phoenix" />
@@ -35,7 +34,6 @@
       <property name="Card Number" value="37" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="High Kick" id="1420b354-2b8b-4eeb-99a8-71e74fa0c8d6" size="conflict">
@@ -47,7 +45,6 @@
       <property name="Card Number" value="34" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="2" />
     </card>
     <card name="Ide Tadaji" id="24080cb8-2db5-41f3-9968-a1671eb09d5a" size="dynasty">
@@ -55,14 +52,14 @@
       <property name="Text">
         <b>Action:</b> While this character is participating in a conflict, choose a ready non-participating character with printed cost 2 or lower controller by each player – move each chosen character to the conflict.</property>
       <property name="Type" value="Character" />
-      <property name="Traits" value="Courtier. Daimyo" />
+      <property name="Traits" value="Courtier. Daimyō" />
       <property name="Card Number" value="29" />
       <property name="Cost" value="4" />
       <property name="Military Skill" value="1" />
       <property name="Political Skill" value="4" />
       <property name="Glory" value="2" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Ikoma Ujiaki" id="0b565cbf-3e39-439f-ab3e-b9e58983cb27" size="dynasty">
       <property name="Clan" value="Lion" />
@@ -76,7 +73,7 @@
       <property name="Political Skill" value="5" />
       <property name="Glory" value="2" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Kabuki Hero" id="08938639-07dc-4f26-8f0d-52d20a8c9f89" size="dynasty">
       <property name="Clan" value="Crane" />
@@ -90,7 +87,6 @@
       <property name="Political Skill" value="2" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Kakita Blade" id="58a9cc08-2b87-42df-8b06-615afbefbd1d" size="conflict">
       <property name="Clan" value="Crane" />
@@ -101,9 +97,9 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
       <property name="Traits" value="Weapon" />
       <property name="Card Number" value="33" />
       <property name="Cost" value="1" />
-      <property name="Military Skill" value="+2" />
+      <property name="Bonus Military Skill" value="+2" />
+      <property name="Bonus Political Skill" value="+0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="2" />
     </card>
     <card name="Kamayari" id="18a6d38a-8cca-45f0-bc7f-00d0f799edb7" size="conflict">
@@ -115,9 +111,9 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
       <property name="Traits" value="Weapon" />
       <property name="Card Number" value="35" />
       <property name="Cost" value="2" />
-      <property name="Military Skill" value="+3" />
+      <property name="Bonus Military Skill" value="+3" />
+      <property name="Bonus Political Skill" value="+0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="2" />
     </card>
     <card name="Magnificent Lighthouse" id="1fba0f3d-0999-4b75-b3d7-7835ab4faf9f" size="dynasty">
@@ -129,7 +125,6 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
       <property name="Card Number" value="27" />
       <property name="Bonus Strength" value="+2" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Miwaku Kabe" id="d4af79df-8f49-4bc9-b92b-1221ae967080" size="dynasty">
       <property name="Clan" value="Neutral" />
@@ -140,7 +135,7 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
       <property name="Card Number" value="30" />
       <property name="Bonus Strength" value="+3" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Northern Wall Sensei" id="43856f95-9c58-4ee6-9aae-28377371b109" size="dynasty">
       <property name="Clan" value="Dragon" />
@@ -155,7 +150,6 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
       <property name="Political Skill" value="2" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Pathfinder's Blade" id="3d0bc6bc-87e2-4908-b89d-01ea96bc1893" size="conflict">
       <property name="Clan" value="Crab" />
@@ -166,9 +160,9 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
       <property name="Traits" value="Weapon" />
       <property name="Card Number" value="31" />
       <property name="Cost" value="0" />
-      <property name="Military Skill" value="+1" />
+      <property name="Bonus Military Skill" value="+1" />
+      <property name="Bonus Political Skill" value="+0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="Policy Debate" id="18c738fa-0eba-48e9-bbad-4ac32f8a05fa" size="conflict">
@@ -179,7 +173,6 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
       <property name="Card Number" value="40" />
       <property name="Cost" value="0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="0" />
     </card>
     <card name="Raise the Alarm" id="fe8edc3c-5d73-45e7-a635-40ed814d6f08" size="conflict">
@@ -190,7 +183,6 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
       <property name="Card Number" value="32" />
       <property name="Cost" value="0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="2" />
     </card>
     <card name="Riot in the Streets" id="23f3cdef-fac3-4f63-81dc-6fb33f1aeadf" size="province">
@@ -202,7 +194,6 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
       <property name="Card Number" value="22" />
       <property name="Bonus Strength" value="4" />
       <property name="Deck" value="Province" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Seal of the Scorpion" id="e83f6a37-5b1e-4b4b-9904-9666f4ee17f4" size="conflict">
       <property name="Clan" value="Scorpion" />
@@ -211,9 +202,9 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
       <property name="Traits" value="Item. Seal" />
       <property name="Card Number" value="38" />
       <property name="Cost" value="0" />
-      <property name="Military Skill" value="+0" />
+      <property name="Bonus Military Skill" value="+0" />
+      <property name="Bonus Political Skill" value="+1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="Shinjo Saddle" id="34e4c115-7a71-44e0-b802-39d14af42afc" size="conflict">
@@ -225,9 +216,9 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
       <property name="Traits" value="Item" />
       <property name="Card Number" value="39" />
       <property name="Cost" value="1" />
-      <property name="Military Skill" value="+1" />
+      <property name="Bonus Military Skill" value="+1" />
+      <property name="Bonus Political Skill" value="+0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="Shrine Maiden" id="071b1e53-17d0-44c3-90f3-1615fa6bb740" size="conflict">
@@ -242,7 +233,6 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
       <property name="Political Skill" value="1" />
       <property name="Glory" value="0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="Stoic Magistrate" id="a93568bc-aac7-4908-8a0f-6afce0bcb707" size="dynasty">
@@ -256,7 +246,6 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
       <property name="Political Skill" value="2" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
   </cards>
 </set>

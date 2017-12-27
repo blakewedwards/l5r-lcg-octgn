@@ -12,7 +12,7 @@
       <property name="Political Skill" value="4" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Akodo Toshiro" id="81a965a8-4e47-4aa2-b550-d8bb5148337b" size="dynasty">
       <property name="Clan" value="Lion" />
@@ -26,7 +26,7 @@
       <property name="Political Skill" value="1" />
       <property name="Glory" value="2" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Backhanded Compliment" id="10a3c6e7-b2c6-4bcc-b450-4f50e5b930b7" size="conflict">
       <property name="Clan" value="Scorpion" />
@@ -37,7 +37,6 @@
       <property name="Card Number" value="78" />
       <property name="Cost" value="0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="Before the Throne" id="bafe0b49-cd45-493d-9a6e-8b1426ae9c70" size="province">
@@ -50,7 +49,6 @@
       <property name="Card Number" value="61" />
       <property name="Bonus Strength" value="5" />
       <property name="Deck" value="Province" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Centipede Tattoo" id="f74b1fe5-9156-47b8-bc51-55cefa904c31" size="conflict">
       <property name="Clan" value="Dragon" />
@@ -61,9 +59,9 @@ Attached character does not bow as a result of conflict resolution in conflicts 
       <property name="Traits" value="Tattoo" />
       <property name="Card Number" value="75" />
       <property name="Cost" value="0" />
-      <property name="Military Skill" value="+0" />
+      <property name="Bonus Military Skill" value="+0" />
+      <property name="Bonus Political Skill" value="+0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="2" />
     </card>
     <card name="Curry Favor" id="54faad3d-1e57-4afa-90d0-a1cefba84031" size="conflict">
@@ -74,7 +72,6 @@ Attached character does not bow as a result of conflict resolution in conflicts 
       <property name="Card Number" value="74" />
       <property name="Cost" value="0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="Doji Shizue" id="ea146331-3032-4db8-a0f1-9d0688eceb3f" size="dynasty">
@@ -88,7 +85,7 @@ Attached character does not bow as a result of conflict resolution in conflicts 
       <property name="Political Skill" value="2" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Fawning Diplomat" id="b2f6e942-d9e2-4a96-95dd-23af8b1289e4" size="dynasty">
       <property name="Clan" value="Scorpion" />
@@ -102,7 +99,6 @@ Attached character does not bow as a result of conflict resolution in conflicts 
       <property name="Political Skill" value="3" />
       <property name="Glory" value="0" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Gaijin Customs" id="925350a6-b66a-440d-8294-0ab2787f44bd" size="conflict">
       <property name="Clan" value="Unicorn" />
@@ -112,7 +108,6 @@ Attached character does not bow as a result of conflict resolution in conflicts 
       <property name="Card Number" value="79" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="Guard Duty" id="5caf8a2b-b6da-4e9d-81f8-ee5393beb967" size="conflict">
@@ -123,9 +118,9 @@ Attached character does not bow as a result of conflict resolution in conflicts 
       <property name="Type" value="Attachment" />
       <property name="Card Number" value="76" />
       <property name="Cost" value="1" />
-      <property name="Military Skill" value="+0" />
+      <property name="Bonus Military Skill" value="+0" />
+      <property name="Bonus Political Skill" value="+0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="Guardians of the Seikitsu" id="747a4c41-4998-4d42-a060-6708c5f25e45" size="province">
@@ -138,7 +133,6 @@ Attached character does not bow as a result of conflict resolution in conflicts 
       <property name="Card Number" value="62" />
       <property name="Bonus Strength" value="5" />
       <property name="Deck" value="Province" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Haughty Magistrate" id="990baf07-9e0e-4a00-b0fa-7793fd634410" size="dynasty">
       <property name="Clan" value="Phoenix" />
@@ -151,7 +145,6 @@ Attached character does not bow as a result of conflict resolution in conflicts 
       <property name="Political Skill" value="2" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Implacable Magistrate" id="d40d6af2-ae1b-4d32-89d5-342c11d3fd75" size="dynasty">
       <property name="Clan" value="Lion" />
@@ -164,12 +157,12 @@ Attached character does not bow as a result of conflict resolution in conflicts 
       <property name="Political Skill" value="2" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Kaiu Inventor" id="8d6e0e82-3ac1-4363-aae5-b9af5c4a606a" size="dynasty">
       <property name="Clan" value="Crab" />
       <property name="Text">
-        <b>Action:</b> Choose a holding you control – you may trigger each of that holding's triggered abilities an additional time each round (or specified period).</property>
+        <b>Action:</b> Choose a holding you control – you may trigger each of that holding's triggered abilities an additional time this round (or specified period).
+<i>Errata from RRG v1.1</i></property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Bushi. Engineer" />
       <property name="Card Number" value="63" />
@@ -178,7 +171,6 @@ Attached character does not bow as a result of conflict resolution in conflicts 
       <property name="Political Skill" value="1" />
       <property name="Glory" value="0" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Mountaintop Statuary" id="d1f740f6-6f89-40cb-8b9a-e634b305aecf" size="dynasty">
       <property name="Clan" value="Dragon" />
@@ -190,19 +182,20 @@ Attached character does not bow as a result of conflict resolution in conflicts 
       <property name="Card Number" value="66" />
       <property name="Bonus Strength" value="+1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Pit Trap" id="56899d38-7462-4e1a-bb5b-313bef9a2a1c" size="conflict">
       <property name="Clan" value="Crab" />
-      <property name="Text">Attach to an attacking character.
-Attached character does not ready during the regroup phase.</property>
+      <property name="Text">Attach to a character.
+Play only on a character that is attacking.
+Attached character does not ready during the regroup phase.
+<i>Errata from RRG v1.1</i></property>
       <property name="Type" value="Attachment" />
       <property name="Traits" value="Item. Trap" />
       <property name="Card Number" value="73" />
       <property name="Cost" value="3" />
-      <property name="Military Skill" value="-1" />
+      <property name="Bonus Military Skill" value="-1" />
+      <property name="Bonus Political Skill" value="-1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="3" />
     </card>
     <card name="Seal of the Phoenix" id="5cf3366c-8772-46c3-8921-1049fac8c094" size="conflict">
@@ -212,9 +205,9 @@ Attached character does not ready during the regroup phase.</property>
       <property name="Traits" value="Item. Seal" />
       <property name="Card Number" value="77" />
       <property name="Cost" value="0" />
-      <property name="Military Skill" value="+0" />
+      <property name="Bonus Military Skill" value="+0" />
+      <property name="Bonus Political Skill" value="+1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="The Imperial Palace" id="46aef3ac-3a15-4c0e-8ecf-3b156038cef6" size="dynasty">
@@ -226,7 +219,7 @@ This holding adds +3 to your side during each glory count.</property>
       <property name="Card Number" value="72" />
       <property name="Bonus Strength" value="+2" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Utaku Mediator" id="3653a5ea-d8d9-410c-ae71-c4eb8c4fca66" size="dynasty">
       <property name="Clan" value="Unicorn" />
@@ -239,7 +232,6 @@ This holding adds +3 to your side during each glory count.</property>
       <property name="Political Skill" value="1" />
       <property name="Glory" value="0" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Way of the Chrysanthemum" id="3f89c497-b455-43b5-a962-bf0cde3b9df8" size="conflict">
       <property name="Clan" value="Neutral" />
@@ -250,7 +242,6 @@ This holding adds +3 to your side during each glory count.</property>
       <property name="Card Number" value="80" />
       <property name="Cost" value="2" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="0" />
     </card>
   </cards>

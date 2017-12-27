@@ -12,7 +12,6 @@ During conflicts at this province, each player cannot spend fate from his or her
       <property name="Card Number" value="1" />
       <property name="Bonus Strength" value="3" />
       <property name="Deck" value="Province" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Disdainful Remark" id="75a3b565-9a25-442a-a1b4-f206894bbc91" size="conflict">
       <property name="Clan" value="Crane" />
@@ -23,7 +22,6 @@ During conflicts at this province, each player cannot spend fate from his or her
       <property name="Card Number" value="13" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="Doji Representative" id="9b14fe5b-d4ff-473e-84d9-a58fe9a3edb3" size="dynasty">
@@ -38,7 +36,6 @@ During conflicts at this province, each player cannot spend fate from his or her
       <property name="Political Skill" value="3" />
       <property name="Glory" value="2" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Embrace the Void" id="a0132cd4-3fda-400c-a8bb-7f73ff60ca3a" size="conflict">
       <property name="Clan" value="Phoenix" />
@@ -48,9 +45,9 @@ During conflicts at this province, each player cannot spend fate from his or her
       <property name="Traits" value="Spell. Void" />
       <property name="Card Number" value="16" />
       <property name="Cost" value="0" />
-      <property name="Military Skill" value="+0" />
+      <property name="Bonus Military Skill" value="+0" />
+      <property name="Bonus Political Skill" value="+0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="2" />
     </card>
     <card name="Finger of Jade" id="bf0e3622-c4c4-4248-a857-58ce8830e3e5" size="conflict">
@@ -61,9 +58,9 @@ During conflicts at this province, each player cannot spend fate from his or her
       <property name="Traits" value="Item. Jade" />
       <property name="Card Number" value="20" />
       <property name="Cost" value="1" />
-      <property name="Military Skill" value="+0" />
+      <property name="Bonus Military Skill" value="+0" />
+      <property name="Bonus Political Skill" value="+0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="0" />
     </card>
     <card name="Gifted Tactician" id="1e4b6579-8127-4ba6-983b-a40cf741ddfc" size="dynasty">
@@ -78,7 +75,6 @@ During conflicts at this province, each player cannot spend fate from his or her
       <property name="Political Skill" value="1" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Goblin Sneak" id="ffdec4ea-2d87-4b0c-ae93-88f62426a3a5" size="conflict">
       <property name="Clan" value="Neutral" />
@@ -91,7 +87,6 @@ During conflicts at this province, each player cannot spend fate from his or her
       <property name="Military Skill" value="1" />
       <property name="Glory" value="0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="0" />
     </card>
     <card name="Hito District" id="eba86295-56e0-400b-bace-84f3e096e3ea" size="dynasty">
@@ -103,7 +98,7 @@ During conflicts at this province, each player cannot spend fate from his or her
       <property name="Card Number" value="8" />
       <property name="Bonus Strength" value="+1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Isawa Kaede" id="6ab68839-3ccc-47a6-a7d1-4f0cf973c63e" size="dynasty">
       <property name="Clan" value="Phoenix" />
@@ -117,7 +112,7 @@ While this character is attacking, the contested ring gains the <s value="void">
       <property name="Political Skill" value="4" />
       <property name="Glory" value="3" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Jade Masterpiece" id="161e03ed-eab6-4f28-b268-1c807050f157" size="conflict">
       <property name="Clan" value="Dragon" />
@@ -127,9 +122,10 @@ While this character is attacking, the contested ring gains the <s value="void">
       <property name="Traits" value="Item. Jade" />
       <property name="Card Number" value="14" />
       <property name="Cost" value="1" />
-      <property name="Military Skill" value="+0" />
+      <property name="Bonus Military Skill" value="+0" />
+      <property name="Bonus Political Skill" value="+1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
       <property name="Influence Value" value="2" />
     </card>
     <card name="Karada District" id="23888f92-a80a-45ac-8b53-0384f7619ff9" size="dynasty">
@@ -141,7 +137,7 @@ While this character is attacking, the contested ring gains the <s value="void">
       <property name="Card Number" value="4" />
       <property name="Bonus Strength" value="+1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Kitsuki Yaruma" id="de2c5961-336c-46f1-bfca-53fea54af708" size="dynasty">
       <property name="Clan" value="Dragon" />
@@ -155,7 +151,7 @@ While this character is attacking, the contested ring gains the <s value="void">
       <property name="Political Skill" value="4" />
       <property name="Glory" value="2" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="True" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Meek Informant" id="f2507df8-f15b-4f43-9106-3c353b0dfc25" size="conflict">
       <property name="Clan" value="Scorpion" />
@@ -168,7 +164,6 @@ While this character is attacking, the contested ring gains the <s value="void">
       <property name="Political Skill" value="1" />
       <property name="Glory" value="0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="Seal of the Crane" id="65525cd5-eef0-42ea-a666-a2360b6c852c" size="conflict">
@@ -178,9 +173,9 @@ While this character is attacking, the contested ring gains the <s value="void">
       <property name="Traits" value="Item. Seal" />
       <property name="Card Number" value="12" />
       <property name="Cost" value="0" />
-      <property name="Military Skill" value="+0" />
+      <property name="Bonus Military Skill" value="+0" />
+      <property name="Bonus Political Skill" value="+1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="Smoke and Mirrors" id="b40a840f-50f4-4046-a1cf-f4bce945ebfd" size="conflict">
@@ -192,7 +187,6 @@ While this character is attacking, the contested ring gains the <s value="void">
       <property name="Card Number" value="18" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="2" />
     </card>
     <card name="Staunch Hida" id="5aab59f2-2731-4c45-8ba3-40d50d467813" size="dynasty">
@@ -200,13 +194,12 @@ While this character is attacking, the contested ring gains the <s value="void">
       <property name="Text">
         <b>Reaction:</b> After this character wins a conflict as a defender – resolve the ring effect of that conflict as if you were the attacking player. (Max 1 per conflict)</property>
       <property name="Type" value="Character" />
-      <property name="Traits" value="Bushi. Yojimbo" />
+      <property name="Traits" value="Bushi. Yōjimbō" />
       <property name="Card Number" value="3" />
       <property name="Cost" value="2" />
       <property name="Military Skill" value="2" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Swift Magistrate" id="47d032fa-44e5-4ffe-9701-26e45b7a01e5" size="dynasty">
       <property name="Clan" value="Unicorn" />
@@ -219,7 +212,6 @@ While this character is attacking, the contested ring gains the <s value="void">
       <property name="Political Skill" value="2" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Tears of Amaterasu" id="bee26c53-2ed1-41c9-9a68-b470f0d697f9" size="province">
       <property name="Clan" value="Neutral" />
@@ -232,7 +224,6 @@ While this character is attacking, the contested ring gains the <s value="void">
       <property name="Card Number" value="2" />
       <property name="Bonus Strength" value="4" />
       <property name="Deck" value="Province" />
-      <property name="Unique" value="False" />
     </card>
     <card name="Time for War" id="dff0bc61-10a0-4008-ab3e-03921375f0f5" size="conflict">
       <property name="Clan" value="Lion" />
@@ -243,7 +234,6 @@ While this character is attacking, the contested ring gains the <s value="void">
       <property name="Card Number" value="15" />
       <property name="Cost" value="0" />
       <property name="Deck" value="Conflict" />
-      <property name="Unique" value="False" />
       <property name="Influence Value" value="1" />
     </card>
     <card name="Windswept Yurt" id="d0e54131-4da7-477c-8ab8-85cd0968b59c" size="dynasty">
@@ -254,7 +244,6 @@ While this character is attacking, the contested ring gains the <s value="void">
       <property name="Card Number" value="11" />
       <property name="Bonus Strength" value="+1" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="False" />
     </card>
   </cards>
 </set>
