@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Tears of Amaterasu" id="84b585e5-12b1-4a6f-ab58-e995eb79795b" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
+  <cards>
+    <card name="Blood of Onnotangu" id="e46dd33c-0879-4f0a-b464-46117b864db2" size="province">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <i>Seeker</i> role only.
+During conflicts at this province, each player cannot spend fate from his or her fate pool.</property>
+      <property name="Type" value="Province" />
+      <property name="Traits" value="Shrine" />
+      <property name="Ring" value="Fire" />
+      <property name="Card Number" value="1" />
+      <property name="Bonus Strength" value="3" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Disdainful Remark" id="75a3b565-9a25-442a-a1b4-f206894bbc91" size="conflict">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <i>Keeper</i> role only.
+<b>Action:</b> During a conflict, if you control a participating <i>Courtier</i> character – until the end of the conflict, the attacked province gets +X strength. X is equal to the number of cards in your opponent's hand.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="13" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Doji Representative" id="9b14fe5b-d4ff-473e-84d9-a58fe9a3edb3" size="dynasty">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <b>Action:</b> During a conflict – move this character home.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier" />
+      <property name="Card Number" value="5" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Embrace the Void" id="a0132cd4-3fda-400c-a8bb-7f73ff60ca3a" size="conflict">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">Play only if you control a <i>Shugenja</i> character.
+<b>Interrupt:</b> When 1 or more fate would be removed from attached character – instead, move that fate to your fate pool.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Spell. Void" />
+      <property name="Card Number" value="16" />
+      <property name="Cost" value="0" />
+      <property name="Bonus Military Skill" value="+0" />
+      <property name="Bonus Political Skill" value="+0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Finger of Jade" id="bf0e3622-c4c4-4248-a857-58ce8830e3e5" size="conflict">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">Attach to a character you control.
+<b>Interrupt:</b> When the effects of a card ability that targets attached character would initiate, sacrifice this attachment – cancel those effects.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Item. Jade" />
+      <property name="Card Number" value="20" />
+      <property name="Cost" value="1" />
+      <property name="Bonus Military Skill" value="+0" />
+      <property name="Bonus Political Skill" value="+0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="0" />
+    </card>
+    <card name="Gifted Tactician" id="1e4b6579-8127-4ba6-983b-a40cf741ddfc" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <b>Reaction:</b> After this character wins a <s value="military">[Military]</s> conflict – draw 1 card.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Commander" />
+      <property name="Card Number" value="7" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Goblin Sneak" id="ffdec4ea-2d87-4b0c-ae93-88f62426a3a5" size="conflict">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <b>Reaction:</b> After this character enters play – place 1 fate from an opponent's fate pool on it.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Goblin. Shadowlands" />
+      <property name="Card Number" value="19" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="0" />
+    </card>
+    <card name="Hito District" id="eba86295-56e0-400b-bace-84f3e096e3ea" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">Limit 1 per deck.
+<s value="political">[Political]</s> conflicts cannot be declared against this holding's province.</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Imperial" />
+      <property name="Card Number" value="8" />
+      <property name="Bonus Strength" value="+1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Isawa Kaede" id="6ab68839-3ccc-47a6-a7d1-4f0cf973c63e" size="dynasty">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">Immune to opponent's ring effects.
+While this character is attacking, the contested ring gains the <s value="void">[Void]</s> element. If this character wins the conflict as an attacker, instead of choosing an element to resolve, resolve each of that ring's effects.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Void" />
+      <property name="Card Number" value="9" />
+      <property name="Cost" value="5" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="4" />
+      <property name="Glory" value="3" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Jade Masterpiece" id="161e03ed-eab6-4f28-b268-1c807050f157" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Action:</b> Bow this attachment. Choose an unclaimed ring – move 1 fate from the chosen ring to another unclaimed ring.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Item. Jade" />
+      <property name="Card Number" value="14" />
+      <property name="Cost" value="1" />
+      <property name="Bonus Military Skill" value="+0" />
+      <property name="Bonus Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Unique" value="Unique" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Karada District" id="23888f92-a80a-45ac-8b53-0384f7619ff9" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Limit 1 per deck.
+<b>Action:</b> Give an opponent 1 fate. Choose an attachment on a character that player controls – take control of that attachment and attach it to an eligible character you control, if able. Otherwise, discard it.</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Imperial" />
+      <property name="Card Number" value="4" />
+      <property name="Bonus Strength" value="+1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Kitsuki Yaruma" id="de2c5961-336c-46f1-bfca-53fea54af708" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">Courtesy. No <i>Poison</i> attachments.
+<b>Reaction:</b> After this character enters play, choose an unbroken province – turn that province facedown.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier" />
+      <property name="Card Number" value="6" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="4" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Meek Informant" id="f2507df8-f15b-4f43-9106-3c353b0dfc25" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Reaction:</b> After you play this character – look at an opponent's hand.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Peasant. Shinobi" />
+      <property name="Card Number" value="17" />
+      <property name="Cost" value="1" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Seal of the Crane" id="65525cd5-eef0-42ea-a666-a2360b6c852c" size="conflict">
+      <property name="Clan" value="Crane" />
+      <property name="Text">Attached character gains the <s value="crane">[Crane]</s> clan symbol and the <i>Duelist</i> trait.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Item. Seal" />
+      <property name="Card Number" value="12" />
+      <property name="Cost" value="0" />
+      <property name="Bonus Military Skill" value="+0" />
+      <property name="Bonus Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Smoke and Mirrors" id="b40a840f-50f4-4046-a1cf-f4bce945ebfd" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> During a conflict, choose any number of attacking <i>Shinobi</i> characters you control – move each chosen character home.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Technique" />
+      <property name="Card Number" value="18" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Staunch Hida" id="5aab59f2-2731-4c45-8ba3-40d50d467813" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Reaction:</b> After this character wins a conflict as a defender – resolve the ring effect of that conflict as if you were the attacking player. (Max 1 per conflict)</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Yōjimbō" />
+      <property name="Card Number" value="3" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Swift Magistrate" id="47d032fa-44e5-4ffe-9701-26e45b7a01e5" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">While this character is attacking, each other character that has 1 or more fate on it does not count its skill toward the resolution of this conflict.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Imperial. Magistrate" />
+      <property name="Card Number" value="10" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Tears of Amaterasu" id="bee26c53-2ed1-41c9-9a68-b470f0d697f9" size="province">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <i>Keeper</i> role only.
+<b>Reaction:</b> After this province is revealed – gain 1 fate for each attacking character.</property>
+      <property name="Type" value="Province" />
+      <property name="Traits" value="Shrine" />
+      <property name="Ring" value="Void" />
+      <property name="Card Number" value="2" />
+      <property name="Bonus Strength" value="4" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Time for War" id="dff0bc61-10a0-4008-ab3e-03921375f0f5" size="conflict">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <i>Seeker</i> role only.
+<b>Reaction:</b> After you lose a <s value="political">[Political]</s> conflict, choose a <i>Bushi</i> character you control – put a <i>Weapon</i> attachment with printed cost 3 or lower into play from your hand or conflict discard pile, attached to that character.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="15" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Windswept Yurt" id="d0e54131-4da7-477c-8ab8-85cd0968b59c" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">
+        <b>Action:</b> Sacrifice this holding, select one – each player gains 2 fate or each player gains 2 honor. Refill this province faceup.</property>
+      <property name="Type" value="Holding" />
+      <property name="Card Number" value="11" />
+      <property name="Bonus Strength" value="+1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+  </cards>
+</set>
