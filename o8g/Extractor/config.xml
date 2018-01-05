@@ -17,19 +17,22 @@
     <property octgn_name="Clan" type="property" value="clan" capitalize="True" />
     <property octgn_name="Text" type="property" value="text" isRich="True"/>
     <property octgn_name="Type" type="property" value="type" capitalize="True" />
-    <property octgn_name="Traits" type="property" value="traits" capitalize="True" delimiter=". " >
-        <replace match="yojimbo" value="Yōjimbō" />
-        <replace match="meishodo" value="Meishōdō" />
-        <replace match="kiho" value="Kihō" />
-        <replace match="daimyo" value="Daimyō" />
+    <property octgn_name="Traits">
+       <run type="property" value="traits" capitalize="True" delimiter=". ">
+          <replace match="yojimbo" value="Yōjimbō" />
+          <replace match="meishodo" value="Meishōdō" />
+          <replace match="kiho" value="Kihō" />
+          <replace match="daimyo" value="Daimyō" />
+       </run>
+       <run type="string" value="." />
     </property>
     <property octgn_name="Ring" type="property" value="element" capitalize="True" />
     <property octgn_name="Card Number" type="property" value="position" />
     <property octgn_name="Cost" type="property" value="cost" />
     <property octgn_name="Military Skill" type="property" value="military" />
-    <property octgn_name="Bonus Military Skill" type="property" value="military_bonus" />
+    <property octgn_name="Military Skill" type="property" value="military_bonus" />
     <property octgn_name="Political Skill" type="property" value="political" />
-    <property octgn_name="Bonus Political Skill" type="property" value="political_bonus" />
+    <property octgn_name="Political Skill" type="property" value="political_bonus" />
     <property octgn_name="Bonus Strength" type="property" value="strength" />
     <property octgn_name="Bonus Strength" type="property" value="strength_bonus" />
     <property octgn_name="Glory" type="property" value="glory" />
