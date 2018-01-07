@@ -1,127 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <set name="The Chrysanthemum Throne" id="f50670c5-bb01-4db3-aa42-cf0366334e90" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
   <cards>
-    <card name="Agasha Sumiko" id="361a7405-6bb9-4e69-be45-4d2dc3be5c67" size="dynasty">
-      <property name="Clan" value="Dragon" />
-      <property name="Text">While you have the Imperial Favor, this character does not bow as a result of conflict resolution while attacking.</property>
-      <property name="Type" value="Character" />
-      <property name="Traits" value="Bushi. Champion" />
-      <property name="Card Number" value="65" />
-      <property name="Cost" value="5" />
-      <property name="Military Skill" value="4" />
-      <property name="Political Skill" value="4" />
-      <property name="Glory" value="1" />
-      <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="Unique" />
-    </card>
-    <card name="Akodo Toshiro" id="81a965a8-4e47-4aa2-b550-d8bb5148337b" size="dynasty">
-      <property name="Clan" value="Lion" />
-      <property name="Text">
-        <b>Action:</b> While this character is attacking – it gets +5<s value="military">[Military]</s> until the end of the conflict. Provinces cannot be broken during this conflict. At the end of the conflict, if you do not control a <i>Commander</i> character, discard this character.</property>
-      <property name="Type" value="Character" />
-      <property name="Traits" value="Bushi" />
-      <property name="Card Number" value="67" />
-      <property name="Cost" value="2" />
-      <property name="Military Skill" value="2" />
-      <property name="Political Skill" value="1" />
-      <property name="Glory" value="2" />
-      <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="Unique" />
-    </card>
-    <card name="Backhanded Compliment" id="10a3c6e7-b2c6-4bcc-b450-4f50e5b930b7" size="conflict">
-      <property name="Clan" value="Scorpion" />
-      <property name="Text">
-        <i>Keeper</i> role only.
-<b>Action:</b> Choose a player – that player draws 1 card and loses 1 honor.</property>
-      <property name="Type" value="Event" />
-      <property name="Card Number" value="78" />
-      <property name="Cost" value="0" />
-      <property name="Deck" value="Conflict" />
-      <property name="Influence Value" value="1" />
-    </card>
     <card name="Before the Throne" id="bafe0b49-cd45-493d-9a6e-8b1426ae9c70" size="province">
       <property name="Clan" value="Neutral" />
       <property name="Text">Cannot be the stronghold province.
 <b>Interrupt:</b> When this province is broken – take 2 honor from your opponent.</property>
       <property name="Type" value="Province" />
-      <property name="Traits" value="Imperial" />
+      <property name="Traits" value="Imperial." />
       <property name="Ring" value="Air" />
       <property name="Card Number" value="61" />
       <property name="Bonus Strength" value="5" />
       <property name="Deck" value="Province" />
-    </card>
-    <card name="Centipede Tattoo" id="f74b1fe5-9156-47b8-bc51-55cefa904c31" size="conflict">
-      <property name="Clan" value="Dragon" />
-      <property name="Text">
-        <i>Monk</i> character only. Attached character gains the <i>Tattooed</i> trait.
-Attached character does not bow as a result of conflict resolution in conflicts in which it lost.</property>
-      <property name="Type" value="Attachment" />
-      <property name="Traits" value="Tattoo" />
-      <property name="Card Number" value="75" />
-      <property name="Cost" value="0" />
-      <property name="Bonus Military Skill" value="+0" />
-      <property name="Bonus Political Skill" value="+0" />
-      <property name="Deck" value="Conflict" />
-      <property name="Influence Value" value="2" />
-    </card>
-    <card name="Curry Favor" id="54faad3d-1e57-4afa-90d0-a1cefba84031" size="conflict">
-      <property name="Clan" value="Crane" />
-      <property name="Text">
-        <b>Reaction:</b> After a character you control bows as a result of conflict resolution from the second conflict you declared this round – ready that character.</property>
-      <property name="Type" value="Event" />
-      <property name="Card Number" value="74" />
-      <property name="Cost" value="0" />
-      <property name="Deck" value="Conflict" />
-      <property name="Influence Value" value="1" />
-    </card>
-    <card name="Doji Shizue" id="ea146331-3032-4db8-a0f1-9d0688eceb3f" size="dynasty">
-      <property name="Clan" value="Crane" />
-      <property name="Text">During the fate phase, if you have the Imperial Favor, this character cannot lose fate or be discarded.</property>
-      <property name="Type" value="Character" />
-      <property name="Traits" value="Courtier. Storyteller" />
-      <property name="Card Number" value="64" />
-      <property name="Cost" value="2" />
-      <property name="Military Skill" value="1" />
-      <property name="Political Skill" value="2" />
-      <property name="Glory" value="1" />
-      <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="Unique" />
-    </card>
-    <card name="Fawning Diplomat" id="b2f6e942-d9e2-4a96-95dd-23af8b1289e4" size="dynasty">
-      <property name="Clan" value="Scorpion" />
-      <property name="Text">
-        <b>Interrupt:</b> When this character leaves play – claim the Imperial Favor.</property>
-      <property name="Type" value="Character" />
-      <property name="Traits" value="Courtier" />
-      <property name="Card Number" value="70" />
-      <property name="Cost" value="3" />
-      <property name="Military Skill" value="1" />
-      <property name="Political Skill" value="3" />
-      <property name="Glory" value="0" />
-      <property name="Deck" value="Dynasty" />
-    </card>
-    <card name="Gaijin Customs" id="925350a6-b66a-440d-8294-0ab2787f44bd" size="conflict">
-      <property name="Clan" value="Unicorn" />
-      <property name="Text">
-        <b>Action:</b> If you control a <s value="unicorn">[Unicorn]</s> card, choose a non-<s value="unicorn">[Unicorn]</s> character – ready the chosen character.</property>
-      <property name="Type" value="Event" />
-      <property name="Card Number" value="79" />
-      <property name="Cost" value="1" />
-      <property name="Deck" value="Conflict" />
-      <property name="Influence Value" value="1" />
-    </card>
-    <card name="Guard Duty" id="5caf8a2b-b6da-4e9d-81f8-ee5393beb967" size="conflict">
-      <property name="Clan" value="Lion" />
-      <property name="Text">
-        <i>Keeper</i> role only.
-<b>Action:</b> If attached character is defending – honor it.</property>
-      <property name="Type" value="Attachment" />
-      <property name="Card Number" value="76" />
-      <property name="Cost" value="1" />
-      <property name="Bonus Military Skill" value="+0" />
-      <property name="Bonus Political Skill" value="+0" />
-      <property name="Deck" value="Conflict" />
-      <property name="Influence Value" value="1" />
     </card>
     <card name="Guardians of the Seikitsu" id="747a4c41-4998-4d42-a060-6708c5f25e45" size="province">
       <property name="Clan" value="Neutral" />
@@ -134,37 +23,13 @@ Attached character does not bow as a result of conflict resolution in conflicts 
       <property name="Bonus Strength" value="5" />
       <property name="Deck" value="Province" />
     </card>
-    <card name="Haughty Magistrate" id="990baf07-9e0e-4a00-b0fa-7793fd634410" size="dynasty">
-      <property name="Clan" value="Phoenix" />
-      <property name="Text">While this character is attacking, characters with lower glory than this character do not count their skill toward the resolution of this conflict.</property>
-      <property name="Type" value="Character" />
-      <property name="Traits" value="Bushi. Imperial. Magistrate" />
-      <property name="Card Number" value="69" />
-      <property name="Cost" value="3" />
-      <property name="Military Skill" value="2" />
-      <property name="Political Skill" value="2" />
-      <property name="Glory" value="1" />
-      <property name="Deck" value="Dynasty" />
-    </card>
-    <card name="Implacable Magistrate" id="d40d6af2-ae1b-4d32-89d5-342c11d3fd75" size="dynasty">
-      <property name="Clan" value="Lion" />
-      <property name="Text">While this character is attacking, only this character and honored characters count their skill toward the resolution of this conflit.</property>
-      <property name="Type" value="Character" />
-      <property name="Traits" value="Bushi. Imperial. Magistrate" />
-      <property name="Card Number" value="68" />
-      <property name="Cost" value="3" />
-      <property name="Military Skill" value="2" />
-      <property name="Political Skill" value="2" />
-      <property name="Glory" value="1" />
-      <property name="Deck" value="Dynasty" />
-    </card>
     <card name="Kaiu Inventor" id="8d6e0e82-3ac1-4363-aae5-b9af5c4a606a" size="dynasty">
       <property name="Clan" value="Crab" />
       <property name="Text">
         <b>Action:</b> Choose a holding you control – you may trigger each of that holding's triggered abilities an additional time this round (or specified period).
 <i>Errata from RRG v1.1</i></property>
       <property name="Type" value="Character" />
-      <property name="Traits" value="Bushi. Engineer" />
+      <property name="Traits" value="Bushi. Engineer." />
       <property name="Card Number" value="63" />
       <property name="Cost" value="2" />
       <property name="Military Skill" value="2" />
@@ -172,16 +37,116 @@ Attached character does not bow as a result of conflict resolution in conflicts 
       <property name="Glory" value="0" />
       <property name="Deck" value="Dynasty" />
     </card>
+    <card name="Doji Shizue" id="ea146331-3032-4db8-a0f1-9d0688eceb3f" size="dynasty">
+      <property name="Clan" value="Crane" />
+      <property name="Text">During the fate phase, if you have the Imperial Favor, this character cannot lose fate or be discarded.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier. Storyteller." />
+      <property name="Card Number" value="64" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Agasha Sumiko" id="361a7405-6bb9-4e69-be45-4d2dc3be5c67" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">While you have the Imperial Favor, this character does not bow as a result of conflict resolution while attacking.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Champion." />
+      <property name="Card Number" value="65" />
+      <property name="Cost" value="5" />
+      <property name="Military Skill" value="4" />
+      <property name="Political Skill" value="4" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
     <card name="Mountaintop Statuary" id="d1f740f6-6f89-40cb-8b9a-e634b305aecf" size="dynasty">
       <property name="Clan" value="Dragon" />
       <property name="Text">
         <b>Reaction:</b> After this holding is turned faceup – move it onto your stronghold province.
 <b>Action:</b> During a conflict at this province, sacrifice this holding. Choose an attacking character with printed cost 2 or lower – move that character home.</property>
       <property name="Type" value="Holding" />
-      <property name="Traits" value="Temple" />
+      <property name="Traits" value="Temple." />
       <property name="Card Number" value="66" />
       <property name="Bonus Strength" value="+1" />
       <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Akodo Toshiro" id="81a965a8-4e47-4aa2-b550-d8bb5148337b" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <b>Action:</b> While this character is attacking – it gets +5<s value="military">[Military]</s> until the end of the conflict. Provinces cannot be broken during this conflict. At the end of the conflict, if you do not control a <i>Commander</i> character, discard this character.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi." />
+      <property name="Card Number" value="67" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Implacable Magistrate" id="d40d6af2-ae1b-4d32-89d5-342c11d3fd75" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">While this character is attacking, only this character and honored characters count their skill toward the resolution of this conflit.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Imperial. Magistrate." />
+      <property name="Card Number" value="68" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Haughty Magistrate" id="990baf07-9e0e-4a00-b0fa-7793fd634410" size="dynasty">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">While this character is attacking, characters with lower glory than this character do not count their skill toward the resolution of this conflict.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Imperial. Magistrate." />
+      <property name="Card Number" value="69" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Fawning Diplomat" id="b2f6e942-d9e2-4a96-95dd-23af8b1289e4" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Interrupt:</b> When this character leaves play – claim the Imperial Favor.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="70" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Utaku Mediator" id="3653a5ea-d8d9-410c-ae71-c4eb8c4fca66" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">This character gets +1 <s value="military">[Military]</s> and +1 <s value="political">[Political]</s> while you do not have the Imperial Favor.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="71" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="0" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="The Imperial Palace" id="46aef3ac-3a15-4c0e-8ecf-3b156038cef6" size="dynasty">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">Limit 1 per deck.
+This holding adds +3 to your side during each glory count.</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Imperial." />
+      <property name="Card Number" value="72" />
+      <property name="Bonus Strength" value="+2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Pit Trap" id="56899d38-7462-4e1a-bb5b-313bef9a2a1c" size="conflict">
       <property name="Clan" value="Crab" />
@@ -190,55 +155,90 @@ Play only on a character that is attacking.
 Attached character does not ready during the regroup phase.
 <i>Errata from RRG v1.1</i></property>
       <property name="Type" value="Attachment" />
-      <property name="Traits" value="Item. Trap" />
+      <property name="Traits" value="Item. Trap." />
       <property name="Card Number" value="73" />
       <property name="Cost" value="3" />
-      <property name="Bonus Military Skill" value="-1" />
-      <property name="Bonus Political Skill" value="-1" />
+      <property name="Military Skill" value="-1" />
+      <property name="Political Skill" value="-1" />
       <property name="Deck" value="Conflict" />
       <property name="Influence Value" value="3" />
+    </card>
+    <card name="Curry Favor" id="54faad3d-1e57-4afa-90d0-a1cefba84031" size="conflict">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <b>Reaction:</b> After a character you control bows as a result of conflict resolution from the second conflict you declared this round – ready that character.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="74" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Centipede Tattoo" id="f74b1fe5-9156-47b8-bc51-55cefa904c31" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <i>Monk</i> character only. Attached character gains the <i>Tattooed</i> trait.
+Attached character does not bow as a result of conflict resolution in conflicts in which it lost.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Tattoo." />
+      <property name="Card Number" value="75" />
+      <property name="Cost" value="0" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Guard Duty" id="5caf8a2b-b6da-4e9d-81f8-ee5393beb967" size="conflict">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <i>Keeper</i> role only.
+<b>Action:</b> If attached character is defending – honor it.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Card Number" value="76" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
     </card>
     <card name="Seal of the Phoenix" id="5cf3366c-8772-46c3-8921-1049fac8c094" size="conflict">
       <property name="Clan" value="Phoenix" />
       <property name="Text">Attached character gains the <s value="phoenix">[Phoenix]</s> clan symbol and the <i>Scholar</i> trait.</property>
       <property name="Type" value="Attachment" />
-      <property name="Traits" value="Item. Seal" />
+      <property name="Traits" value="Item. Seal." />
       <property name="Card Number" value="77" />
       <property name="Cost" value="0" />
-      <property name="Bonus Military Skill" value="+0" />
-      <property name="Bonus Political Skill" value="+1" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+1" />
       <property name="Deck" value="Conflict" />
       <property name="Influence Value" value="1" />
     </card>
-    <card name="The Imperial Palace" id="46aef3ac-3a15-4c0e-8ecf-3b156038cef6" size="dynasty">
-      <property name="Clan" value="Neutral" />
-      <property name="Text">Limit 1 per deck.
-This holding adds +3 to your side during each glory count.</property>
-      <property name="Type" value="Holding" />
-      <property name="Traits" value="Imperial" />
-      <property name="Card Number" value="72" />
-      <property name="Bonus Strength" value="+2" />
-      <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="Unique" />
+    <card name="Backhanded Compliment" id="10a3c6e7-b2c6-4bcc-b450-4f50e5b930b7" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <i>Keeper</i> role only.
+<b>Action:</b> Choose a player – that player draws 1 card and loses 1 honor.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="78" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
     </card>
-    <card name="Utaku Mediator" id="3653a5ea-d8d9-410c-ae71-c4eb8c4fca66" size="dynasty">
+    <card name="Gaijin Customs" id="925350a6-b66a-440d-8294-0ab2787f44bd" size="conflict">
       <property name="Clan" value="Unicorn" />
-      <property name="Text">This character gets +1 <s value="military">[Military]</s> and +1 <s value="political">[Political]</s> while you do not have the Imperial Favor.</property>
-      <property name="Type" value="Character" />
-      <property name="Traits" value="Courtier" />
-      <property name="Card Number" value="71" />
+      <property name="Text">
+        <b>Action:</b> If you control a <s value="unicorn">[Unicorn]</s> card, choose a non-<s value="unicorn">[Unicorn]</s> character – ready the chosen character.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="79" />
       <property name="Cost" value="1" />
-      <property name="Military Skill" value="0" />
-      <property name="Political Skill" value="1" />
-      <property name="Glory" value="0" />
-      <property name="Deck" value="Dynasty" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
     </card>
     <card name="Way of the Chrysanthemum" id="3f89c497-b455-43b5-a962-bf0cde3b9df8" size="conflict">
       <property name="Clan" value="Neutral" />
       <property name="Text">
         <b>Reaction:</b> After 1 or more honor is given to you from an honor bid – gain that much honor. (Max 1 per round.)</property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="Imperial. Philosophy" />
+      <property name="Traits" value="Imperial. Philosophy." />
       <property name="Card Number" value="80" />
       <property name="Cost" value="2" />
       <property name="Deck" value="Conflict" />

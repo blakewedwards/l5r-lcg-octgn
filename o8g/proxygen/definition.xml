@@ -370,8 +370,8 @@
       <link block="text-name-left"><property name="Text"/></link>
       <link block="attachment-name"><property name="Name"/></link>
       <link block="traits-middle-name-left"><property name="Traits"/></link>
-      <link block="military-skill"><property name="Bonus Military Skill"/></link>
-      <link block="political-skill"><property name="Bonus Political Skill"/></link>
+      <link block="military-skill"><property name="Military Skill"/></link>
+      <link block="political-skill"><property name="Political Skill"/></link>
       <link block="deck"><property name="Deck"/></link>
     </textblocks>
   </template>

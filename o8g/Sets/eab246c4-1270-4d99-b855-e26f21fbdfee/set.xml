@@ -34,11 +34,11 @@
     </card>
     <card id="b57c595e-d5ae-4fba-82c8-954a0b78c4a8" name="Imperial Favor" size="imperial_favor">
       <property name="Type" value="Imperial Favor"/>
-      <property name="Bonus Military Skill" value="+1"/>
+      <property name="Military Skill" value="+1"/>
       <alternate name="Imperial Favor" type="Political">
         <property name="Type" value="Imperial Favor"/>
-        <property name="Bonus Military Skill" value=""/>
-        <property name="Bonus Political Skill" value="+1"/>
+        <property name="Military Skill" value=""/>
+        <property name="Political Skill" value="+1"/>
       </alternate>
     </card>
     <card id="6d19021d-9208-4f3e-8e36-dc2ea28d755e" name="Air Ring">

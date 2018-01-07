@@ -3,7 +3,7 @@
     name="Legend of the Five Rings LCG"
     id="bb0f02e7-2a6f-4ae3-84a2-c501b4176844"
     octgnVersion="3.1.295.0"
-    version="0.5.0.0"
+    version="0.5.1.0"
     scriptVersion="3.1.0.2"
     markersize="16"
     setsurl="https://tinyurl.com/mab3ars"
@@ -69,8 +69,6 @@
     <property name="Bonus Strength" type="String"/>
     <property name="Starting Honor" type="String"/>
     <property name="Fate Value" type="String"/>
-    <property name="Bonus Military Skill" type="String"/>
-    <property name="Bonus Political Skill" type="String"/>
     <property name="Deck" type="String" textKind="Enum"/>
     <property name="Card Number" type="String"/>
     <size name="first_player_token" back="card/first_player_token.png" front="card/first_player_token.png" width="42" height="69"/>
