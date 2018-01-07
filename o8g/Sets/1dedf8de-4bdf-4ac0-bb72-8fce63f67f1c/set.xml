@@ -1,24 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <set name="Fate Has No Secrets" id="1dedf8de-4bdf-4ac0-bb72-8fce63f67f1c" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
   <cards>
-    <card name="Waning Hostilities" id="03c12c1f-7431-47c8-a214-09f9c5d6f800" size="conflict">
-      <property name="Clan" value="Neutral" />
-      <property name="Text">
-        <b>Reaction:</b> After the conflict phase begins – each player has only one opportunity to declare a conflict this phase.</property>
-      <property name="Type" value="Event" />
-      <property name="Traits" value="." />
-      <property name="Card Number" value="100" />
-      <property name="Cost" value="1" />
-      <property name="Deck" value="Conflict" />
-      <property name="Influence Value" value="0" />
-    </card>
     <card name="Massing at Twilight" id="e18f7537-cb8a-4f89-8875-f936d8af309b" size="province">
       <property name="Clan" value="Neutral" />
       <property name="Text">
         <i>Void</i> role only.
 While resolving conflicts at this province, each character counts its combined <s value="military">[Military]</s> and <s value="political">[Political]</s> skill.</property>
       <property name="Type" value="Province" />
-      <property name="Traits" value="." />
       <property name="Ring" value="Void" />
       <property name="Card Number" value="81" />
       <property name="Bonus Strength" value="8" />
@@ -150,7 +138,6 @@ While resolving conflicts at this province, each character counts its combined <
       <property name="Text">
         <b>Action:</b> During the dynasty phase, discard the Imperial Favor – gain 2 fate.</property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="91" />
       <property name="Cost" value="0" />
       <property name="Deck" value="Conflict" />
@@ -176,7 +163,6 @@ While resolving conflicts at this province, each character counts its combined <
         <i>Seeker</i> role only.
 <b>Action:</b> Name a card type. Reveal the top 3 cards of your conflict deck (top 4 cards instead if you control a <i>Duelist</i> character) – add up to 2 revealed cards of that type to your hand and discard the rest.</property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="93" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Conflict" />
@@ -238,7 +224,6 @@ While attached character is ready, opponents cannot remove or gain fate from rin
       <property name="Text">
         <b>Action:</b> During a conflict, choose a participating character – bow that character, move it home, dishonor it, and remove 1 fate from it. Until the end of the phase, treat its printed text box as if it were blank (except for <i>Traits</i>).</property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="98" />
       <property name="Cost" value="4" />
       <property name="Deck" value="Conflict" />
@@ -250,11 +235,20 @@ While attached character is ready, opponents cannot remove or gain fate from rin
         <b>Action:</b> During a conflict, discard the Imperial Favor – set the base strength of the attacked province to 1 until the end of the conflict.
 <i>Errata from RRG v1.1</i></property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="99" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Conflict" />
       <property name="Influence Value" value="3" />
+    </card>
+    <card name="Waning Hostilities" id="03c12c1f-7431-47c8-a214-09f9c5d6f800" size="conflict">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <b>Reaction:</b> After the conflict phase begins – each player has only one opportunity to declare a conflict this phase.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="100" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="0" />
     </card>
   </cards>
 </set>

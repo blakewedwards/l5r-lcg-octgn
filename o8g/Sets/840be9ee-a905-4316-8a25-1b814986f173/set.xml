@@ -7,7 +7,6 @@
         <i>Fire</i> role only.
 <b>Interrupt:</b> When this province is broken, choose an opponent's character – move each fate from that character to a character you control with no fate.</property>
       <property name="Type" value="Province" />
-      <property name="Traits" value="." />
       <property name="Ring" value="Fire" />
       <property name="Card Number" value="41" />
       <property name="Bonus Strength" value="3" />
@@ -18,7 +17,6 @@
       <property name="Text">Cannot be a stronghold province.
 <b>Interrupt:</b> When this province would be broken, if there are no honor tokens on it – place 1 honor token on it instead.</property>
       <property name="Type" value="Province" />
-      <property name="Traits" value="." />
       <property name="Ring" value="Earth" />
       <property name="Card Number" value="42" />
       <property name="Bonus Strength" value="3" />
@@ -164,7 +162,6 @@
       <property name="Text">
         <b>Action:</b> During a conflict, if your honor bid is lower than your opponent's, choose a <s value="lion">[Lion]</s> character you control – move that character to the conflict. Then, honor it.</property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="54" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Conflict" />
@@ -200,7 +197,6 @@
       <property name="Text">
         <b>Action:</b> During a conflict, if your honor bid is at least 2 higher than your opponent's – each participating character your opponent controls gets -1<s value="military">[Military]</s> and -1<s value="political">[Political]</s> until the end of the conflict.</property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="57" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Conflict" />

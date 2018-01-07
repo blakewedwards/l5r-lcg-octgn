@@ -193,7 +193,6 @@
       <property name="Text">
         <b>Action:</b> During a <s value="military">[Military]</s> conflict, choose a character that is participating on your side alone – until the end of the conflict, that character gets +3<s value="military">[Military]</s>. You may remove 1 fate from that character to resolve this ability twice.</property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="116" />
       <property name="Cost" value="0" />
       <property name="Deck" value="Conflict" />
@@ -246,7 +245,6 @@ Attach to a character you control.
       <property name="Text">
         <b>Action:</b> Remove 1 fate from each character. Draw 1 card. (Max 1 per round.)</property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="120" />
       <property name="Cost" value="3" />
       <property name="Deck" value="Conflict" />

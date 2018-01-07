@@ -7,7 +7,6 @@
         <i>Air</i> role only.
 <b>Action:</b> During a conflict at this province, choose a participating character – discard each attachment on that character.</property>
       <property name="Type" value="Province" />
-      <property name="Traits" value="." />
       <property name="Ring" value="Air" />
       <property name="Card Number" value="21" />
       <property name="Bonus Strength" value="4" />
@@ -18,7 +17,6 @@
       <property name="Text">
         <b>Action:</b> During a conflict at this province, if you control 3 or more participating <i>Bushi</i> characters, choose a participating character – bow that character.</property>
       <property name="Type" value="Province" />
-      <property name="Traits" value="." />
       <property name="Ring" value="Water" />
       <property name="Card Number" value="22" />
       <property name="Bonus Strength" value="4" />
@@ -144,7 +142,6 @@
       <property name="Text">
         <b>Action:</b> During a <s value="military">[Military]</s> conflict in which you are the defending player – turn the dynasty card in the attacked province faceup. Then, if that card is a character, put it into play as a defender.</property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="32" />
       <property name="Cost" value="0" />
       <property name="Deck" value="Conflict" />
@@ -209,7 +206,6 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
         <i>Keeper</i> role only.
 <b>Action:</b> During a conflict in which you are the defending player, choose a defending character and an attacking character with equal or lower printed cost – move each chosen character home.</property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="37" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Conflict" />
@@ -246,7 +242,6 @@ Attached character gets +2<s value="political">[Political]</s> while it is invol
       <property name="Text">
         <b>Action:</b> During a conflict, choose a participating character you control and a participating character your opponent controls – your character challenges the opponent's character to a <s value="political">[Political]</s> duel. The controller of the losing character reveals his or her hand. That player's opponent chooses and discards 1 card from it.</property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="40" />
       <property name="Cost" value="0" />
       <property name="Deck" value="Conflict" />

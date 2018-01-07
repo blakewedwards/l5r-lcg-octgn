@@ -18,13 +18,12 @@
     <property octgn_name="Text" type="property" value="text" isRich="True"/>
     <property octgn_name="Type" type="property" value="type" capitalize="True" />
     <property octgn_name="Traits">
-       <run type="property" value="traits" capitalize="True" delimiter=". ">
+       <run type="property" value="traits" format="{0}." capitalize="True" delimiter=" ">
           <replace match="yojimbo" value="Yōjimbō" />
           <replace match="meishodo" value="Meishōdō" />
           <replace match="kiho" value="Kihō" />
           <replace match="daimyo" value="Daimyō" />
        </run>
-       <run type="string" value="." />
     </property>
     <property octgn_name="Ring" type="property" value="element" capitalize="True" />
     <property octgn_name="Card Number" type="property" value="position" />

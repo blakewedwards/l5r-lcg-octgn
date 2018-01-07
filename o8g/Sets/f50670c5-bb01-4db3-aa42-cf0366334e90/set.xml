@@ -18,7 +18,6 @@
         <i>Earth</i> role only.
 <b>Reaction:</b> After this province is revealed – bow each character with printed cost 2 or lower.</property>
       <property name="Type" value="Province" />
-      <property name="Traits" value="." />
       <property name="Ring" value="Earth" />
       <property name="Card Number" value="62" />
       <property name="Bonus Strength" value="5" />
@@ -169,7 +168,6 @@ Attached character does not ready during the regroup phase.
       <property name="Text">
         <b>Reaction:</b> After a character you control bows as a result of conflict resolution from the second conflict you declared this round – ready that character.</property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="74" />
       <property name="Cost" value="0" />
       <property name="Deck" value="Conflict" />
@@ -195,7 +193,6 @@ Attached character does not bow as a result of conflict resolution in conflicts 
         <i>Keeper</i> role only.
 <b>Action:</b> If attached character is defending – honor it.</property>
       <property name="Type" value="Attachment" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="76" />
       <property name="Cost" value="1" />
       <property name="Military Skill" value="+0" />
@@ -221,7 +218,6 @@ Attached character does not bow as a result of conflict resolution in conflicts 
         <i>Keeper</i> role only.
 <b>Action:</b> Choose a player – that player draws 1 card and loses 1 honor.</property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="78" />
       <property name="Cost" value="0" />
       <property name="Deck" value="Conflict" />
@@ -232,7 +228,6 @@ Attached character does not bow as a result of conflict resolution in conflicts 
       <property name="Text">
         <b>Action:</b> If you control a <s value="unicorn">[Unicorn]</s> card, choose a non-<s value="unicorn">[Unicorn]</s> character – ready the chosen character.</property>
       <property name="Type" value="Event" />
-      <property name="Traits" value="." />
       <property name="Card Number" value="79" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Conflict" />
