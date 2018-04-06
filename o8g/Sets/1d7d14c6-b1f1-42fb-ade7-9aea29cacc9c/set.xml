@@ -27,20 +27,6 @@ While resolving a conflict at this province, characters count their glory instea
       <property name="Deck" value="Province" />
       <property name="Unique" value="Unique" />
     </card>
-    <card name="Shiba Tetsu" id="d9d2e203-9dc0-478f-882e-0efc955e1f5c" size="dynasty">
-      <property name="Clan" value="Phoenix" />
-      <property name="Text">
-        <b>Reaction:</b> After you play a <i>Spell</i> card during a conflict – until the end of the conflict, this character gets +1<s value="military">[Military]</s> and +1<s value="political">[Political]</s>. (Unlimited.)</property>
-      <property name="Type" value="Character" />
-      <property name="Traits" value="Bushi." />
-      <property name="Card Number" value="3" />
-      <property name="Cost" value="2" />
-      <property name="Military Skill" value="2" />
-      <property name="Political Skill" value="1" />
-      <property name="Glory" value="1" />
-      <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="Unique" />
-    </card>
     <card name="Support of the Phoenix" id="dad94d54-a775-4aab-a15d-0318f219048b" size="province">
       <property name="Clan" value="Neutral" />
       <property name="Text">Increase your deckbuilding influence value by 8. You may only spend influence on <s value="phoenix">[Phoenix]</s> clan cards.</property>
@@ -71,6 +57,20 @@ While resolving a conflict at this province, characters count their glory instea
       <property name="Political Skill" value="1" />
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Shiba Tetsu" id="d9d2e203-9dc0-478f-882e-0efc955e1f5c" size="dynasty">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <b>Reaction:</b> After you play a <i>Spell</i> card during a conflict – until the end of the conflict, this character gets +1<s value="military">[Military]</s> and +1<s value="political">[Political]</s>. (Unlimited.)</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi." />
+      <property name="Card Number" value="6" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
     </card>
     <card name="Inquisitive Ishika" id="1df60fd1-f41f-4116-8fc9-3e7078073297" size="dynasty">
       <property name="Clan" value="Phoenix" />
