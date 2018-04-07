@@ -448,7 +448,7 @@ Sincerity. <i>(When this character leaves play, draw 1 card.)</i></property>
       <property name="Type" value="Holding" />
       <property name="Traits" value="Ritual." />
       <property name="Card Number" value="39" />
-      <property name="Bonus Strength" value="0" />
+      <property name="Bonus Strength" value="+0" />
       <property name="Deck" value="Dynasty" />
     </card>
     <card name="Asahina Artisan" id="f364aac3-9e20-4b59-bebc-19627b0ba91d" size="dynasty">
@@ -1146,7 +1146,7 @@ You cannot place fate on this character when it is played from one of your provi
       <property name="Type" value="Holding" />
       <property name="Traits" value="Library. Shrine." />
       <property name="Card Number" value="94" />
-      <property name="Bonus Strength" value="0" />
+      <property name="Bonus Strength" value="+0" />
       <property name="Deck" value="Dynasty" />
     </card>
     <card name="Bayushi Liar" id="3fc9117d-1c7c-444e-94e1-19698ce6190a" size="dynasty">

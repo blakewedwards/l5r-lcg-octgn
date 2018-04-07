@@ -7,5 +7,12 @@
       <set id="the-chrysanthemum-throne" number="05" value="f50670c5-bb01-4db3-aa42-cf0366334e90" />
       <set id="fate-has-no-secrets" number="06" value="1dedf8de-4bdf-4ac0-bb72-8fce63f67f1c" />
       <set id="meditations-on-the-ephemeral" number="07" value="ad787b57-f3c4-4460-9e00-de66e416b571" />
+      <set id="disciples-of-the-void" number="08" value="1d7d14c6-b1f1-42fb-ade7-9aea29cacc9c" />
+      <set id="breath-of-the-kami" number="09" value="61b04f91-a4f7-4a60-951a-71e80ce93128" />
+      <set id="tainted-lands" number="10" value="9853be0f-8305-4623-aa72-b0b606c2cb83" />
+      <set id="the-fires-within" number="11" value="5d97d674-c034-417b-b60f-c6a5224a9d50" />
+      <set id="the-ebb-and-flow" number="12" value="51d86652-0627-4aac-9ace-381e73a2b6d7" />
+      <set id="all-and-nothing" number="13" value="a265ba70-0fbf-4257-8664-8d5054b0a784" />
+      <set id="elements-unbound" number="14" value="048f7b98-7a9a-4180-abac-2dff5751c12b" />
   </sets>
 </xml>
