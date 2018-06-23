@@ -112,7 +112,7 @@ While resolving a conflict at this province, characters count their glory instea
     </card>
     <card name="Isawa Tadaka" id="24e82b93-8b87-4176-a975-55495c36216d" size="dynasty">
       <property name="Clan" value="Phoenix" />
-      <property name="Text">Each opponent cannot play copies of event cards that are in his or her conflict discard pile unless the [ring-earth] ring is in that player's claimed ring pool.</property>
+      <property name="Text">Each opponent cannot play copies of event cards that are in his or her conflict discard pile unless the <s value="earth">[Earth]</s> ring is in that player's claimed ring pool.</property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Shugenja. Earth. Elemental-Master." />
       <property name="Card Number" value="10" />
@@ -216,7 +216,8 @@ While resolving a conflict at this province, characters count their glory instea
     </card>
     <card name="Kaito Kosori" id="1aa07e96-51cb-415b-a748-0dc259b0ae71" size="conflict">
       <property name="Clan" value="Phoenix" />
-      <property name="Text">During each <s value="air">[Air]</s> conflict, if you control at least 1 participating character and if this character is in your home area, it contributes its skill to your side.</property>
+      <property name="Text">During each <s value="air">[Air]</s> conflict, if you control at least 1 participating character and if this character is in your home area and ready, it contributes its skill to your side.
+<i>Errata from RRG v1.3</i></property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Monk. Shugenja. Air." />
       <property name="Card Number" value="18" />
@@ -301,7 +302,8 @@ Attached character gets +2<s value="military">[Military]</s> while the <s value=
     <card name="Yogo Kikuyo" id="2a8078d4-65eb-48be-8ac1-fb3dba2f5521" size="conflict">
       <property name="Clan" value="Scorpion" />
       <property name="Text">
-        <b>Interrupt:</b> When the effects of a <i>Spell</i> event your opponent plays during a conflict would initiate, put this character into play – cancel those effects.</property>
+        <b>Interrupt:</b> When the effects of a <i>Spell</i> event your opponent plays during a conflict would initiate, put this character into play from your hand – cancel those effects.
+<i>Errata from RRG v1.3</i></property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Shugenja. Earth." />
       <property name="Card Number" value="25" />

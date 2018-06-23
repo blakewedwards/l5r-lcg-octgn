@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Breath of the Kami" id="61b04f91-a4f7-4a60-951a-71e80ce93128" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
+  <cards>
+    <card name="Hisu Mori Toride" id="9cd38603-49fd-4b4d-9b3f-4fdc3d3521fa" size="province">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <b>Reaction:</b> After you win a <s value="military">[Military]</s> conflict by 5 or more skill, bow this stronghold and sacrifice a <i>(friendly)</i><i>Bushi</i> character – you may declare an additional <s value="military">[Military]</s> conflict this phase.</property>
+      <property name="Type" value="Stronghold" />
+      <property name="Traits" value="Fort." />
+      <property name="Card Number" value="1" />
+      <property name="Bonus Strength" value="+2" />
+      <property name="Deck" value="Province" />
+      <property name="Influence Value" value="9" />
+      <property name="Starting Honor" value="11" />
+      <property name="Fate Value" value="7" />
+    </card>
+    <card name="Sacred Sanctuary" id="7ecbae76-1aa4-4369-a242-af3e5d1e71f0" size="province">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Reaction:</b> After an attack is declared at this province, choose a <i>Monk</i> character you control – ready that character. Until the end of the conflict, that character cannot be bowed by opponents' card effects or as a result of conflict resolution.</property>
+      <property name="Type" value="Province" />
+      <property name="Traits" value="Temple." />
+      <property name="Ring" value="Air" />
+      <property name="Card Number" value="2" />
+      <property name="Bonus Strength" value="2" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Demonstrating Excellence" id="a9a0a79f-d4f6-4a9e-88fc-9d5a848d6f2d" size="province">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">This province gets +2 strength while you have an <i>Air</i> role.
+<b>Interrupt:</b> When this province is broken – gain 1 fate and draw 1 card.</property>
+      <property name="Type" value="Province" />
+      <property name="Ring" value="Air" />
+      <property name="Card Number" value="3" />
+      <property name="Bonus Strength" value="3" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Third Tower Guard" id="18073eea-0b7f-44f0-adad-eed09ff40a28" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">This character gets +2<s value="military">[Military]</s> while you have claimed the <s value="earth">[Earth]</s> or <s value="water">[Water]</s> ring.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi." />
+      <property name="Card Number" value="4" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Hiruma Outpost" id="c6bc8de9-be26-4fa1-8a57-7770c799d97b" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">While this card is in an unbroken province, it gains: "<b>Reaction:</b> After an opponent declares a conflict against a province that does not have a holding in it – that opponent loses 1 honor."</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Outpost." />
+      <property name="Card Number" value="5" />
+      <property name="Bonus Strength" value="+2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Fū Sui Disciple" id="0073f803-32ef-421d-b1f9-c26fd9d575fa" size="dynasty">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <b>Action:</b> The player that has the <s value="air">[Air]</s> ring in his or her claimed ring pool chooses an ordinary character he or she controls. You select one – honor or dishonor that character.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Air." />
+      <property name="Card Number" value="6" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Matsu Seventh Legion" id="59032f89-db10-40fa-ae7f-47bf10ab6509" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">No attachments except <i>Weapon</i>.
+While this character is attacking, each <i>Courtier</i> character cannot be declared as a defender.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Army. Cavalry." />
+      <property name="Card Number" value="7" />
+      <property name="Cost" value="5" />
+      <property name="Military Skill" value="7" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Isawa Uona" id="0a90afc6-392c-4b16-8178-3a759183bac1" size="dynasty">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <b>Reaction:</b> After you play an <i>Air</i> card during a conflict, choose a non-unique participating character – bow that character.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Air." />
+      <property name="Card Number" value="8" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Soshi Shadowshaper" id="9c67c350-1237-4f55-a82b-8b2783db6f85" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> During the conflict phase, lose 1 honor. Choose a character with cost 2 or lower that has entered play from a player’s hand this phase – return that character to its owner’s hand.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Air. Shadow." />
+      <property name="Card Number" value="9" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Heartless Intimidator" id="6d69646a-9f81-4008-8086-a7f09e6e00c0" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Reaction:</b> After an opponent loses 1 or more honor – discard the top card of that player’s conflict deck. (Unlimited.)</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="10" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Shinjo Shono" id="fa80626a-8ba1-48f2-9776-966463bb98fd" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">Pride.
+<b>Action:</b> While this character is participating in a conflict, if you control more participating characters than your opponent – each participating <i>Cavalry</i> character you control gets +1<s value="military">[Military]</s> and +1<s value="political">[Political]</s> until the end of the conflict.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Cavalry. Commander." />
+      <property name="Card Number" value="11" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="4" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Shiotome Encampment" id="d27f8a13-4128-48ac-9695-96f6d9038754" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">
+        <b>Action:</b> If you have a <s value="military">[Military]</s> ring in your claimed ring pool, choose a <i>Cavalry</i> character – ready that character.</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Battlefield." />
+      <property name="Card Number" value="12" />
+      <property name="Bonus Strength" value="+0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Kudaka" id="f78429d0-2dc2-4da7-b792-9c0cdd5612cb" size="dynasty">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <b>Reaction:</b> After you claim the <s value="air">[Air]</s> ring – gain 1 fate and draw 1 card. (Limit twice per round.)</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Air. Mantis-Clan." />
+      <property name="Card Number" value="13" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="4" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Formal Invitation" id="4be4945e-af17-49e7-bf53-39f2dde7c8a1" size="conflict">
+      <property name="Clan" value="Crane" />
+      <property name="Text">Attach to a character with glory 2 or higher.
+<b>Action:</b> During a <s value="political">[Political]</s> conflict – move attached character to the conflict.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Item." />
+      <property name="Card Number" value="14" />
+      <property name="Cost" value="0" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+    <card name="The Mirror's Gaze" id="e18596a0-9c96-4a1d-8507-636cd3831f1f" size="conflict">
+      <property name="Clan" value="Crane" />
+      <property name="Text">Attach to a <i>Shugenja</i> character you control.
+<b>Reaction:</b> After the effects of an opponent's event resolve – resolve that event again as if you had just played it, ignoring costs and triggering conditions. You may choose new targets.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Spell. Air." />
+      <property name="Card Number" value="15" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Ancient Master" id="faaaae75-b961-43b2-a8f4-1433fc205419" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">You may play this character as an attachment with the text: "<b>Reaction:</b> After attached character is declared as an attacker or defender – search the top 5 cards of your conflict deck for a <i>Kihō</i> or <i>Tattoo</i> card, reveal it, and add it to your hand. Shuffle.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Monk. Tattooed." />
+      <property name="Card Number" value="16" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Hurricane Punch" id="e82ee9eb-90ef-47d5-a5c3-49a6c4d33686" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Action:</b> During a conflict, choose a participating <i>Monk</i> character – that character gets +2<s value="military">[Military]</s> until the end of the conflict. Draw 1 card.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Kihō. Air." />
+      <property name="Card Number" value="17" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Even the Odds" id="5596239a-eac7-4761-ada8-7b855fe64329" size="conflict">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <b>Action:</b> During a conflict, if you control fewer participating characters than your opponent, choose a character you control – move that character to the conflict. If that character is a <i>Commander</i>, honor it.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Tactic." />
+      <property name="Card Number" value="18" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Winds of Change" id="4f1bcaac-c92d-42ee-9323-4d2fd209376a" size="conflict">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <i>Air</i> role only.
+<b>Action:</b> Return the <s value="air">[Air]</s> ring from a claimed ring pool to the unclaimed ring pool.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Spell. Air." />
+      <property name="Card Number" value="19" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Maze of Illusion" id="134e396b-6bda-405b-a042-4a1f15d5a1d0" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> During a conflict, choose a participating character controlled by an opponent – secretly select a number on your honor dial. Then, the chosen character’s controller guesses whether this number is even or odd. Reveal your dial (cannot be modified). If they are wrong, bow and dishonor that character.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Spell. Air." />
+      <property name="Card Number" value="20" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+  </cards>
+</set>
