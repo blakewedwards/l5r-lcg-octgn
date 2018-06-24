@@ -151,9 +151,9 @@ This holding adds +3 to your side during each glory count.</property>
     <card name="Pit Trap" id="56899d38-7462-4e1a-bb5b-313bef9a2a1c" size="conflict">
       <property name="Clan" value="Crab" />
       <property name="Text">Attach to a character.
-Play only on a character that is attacking.
+Play only on an attacking character.
 Attached character does not ready during the regroup phase.
-<i>Errata from RRG v1.1</i></property>
+<i>Errata from RRG v1.2</i></property>
       <property name="Type" value="Attachment" />
       <property name="Traits" value="Item. Trap." />
       <property name="Card Number" value="73" />
