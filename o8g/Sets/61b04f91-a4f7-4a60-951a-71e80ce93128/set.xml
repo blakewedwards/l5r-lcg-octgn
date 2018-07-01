@@ -97,7 +97,7 @@ While this character is attacking, each <i>Courtier</i> character cannot be decl
     <card name="Soshi Shadowshaper" id="9c67c350-1237-4f55-a82b-8b2783db6f85" size="dynasty">
       <property name="Clan" value="Scorpion" />
       <property name="Text">
-        <b>Action:</b> During the conflict phase, lose 1 honor. Choose a character with cost 2 or lower that has entered play from a player’s hand this phase – return that character to its owner’s hand.</property>
+        <b>Action:</b> During the conflict phase, lose 1 honor. Choose a character with cost 2 or lower that has entered play from a player's hand this phase – return that character to its owner's hand.</property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Shugenja. Air. Shadow." />
       <property name="Card Number" value="9" />
@@ -110,7 +110,7 @@ While this character is attacking, each <i>Courtier</i> character cannot be decl
     <card name="Heartless Intimidator" id="6d69646a-9f81-4008-8086-a7f09e6e00c0" size="dynasty">
       <property name="Clan" value="Scorpion" />
       <property name="Text">
-        <b>Reaction:</b> After an opponent loses 1 or more honor – discard the top card of that player’s conflict deck. (Unlimited.)</property>
+        <b>Reaction:</b> After an opponent loses 1 or more honor – discard the top card of that player's conflict deck. (Unlimited.)</property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Courtier." />
       <property name="Card Number" value="10" />
@@ -234,7 +234,7 @@ While this character is attacking, each <i>Courtier</i> character cannot be decl
     <card name="Maze of Illusion" id="134e396b-6bda-405b-a042-4a1f15d5a1d0" size="conflict">
       <property name="Clan" value="Scorpion" />
       <property name="Text">
-        <b>Action:</b> During a conflict, choose a participating character controlled by an opponent – secretly select a number on your honor dial. Then, the chosen character’s controller guesses whether this number is even or odd. Reveal your dial (cannot be modified). If they are wrong, bow and dishonor that character.</property>
+        <b>Action:</b> During a conflict, choose a participating character controlled by an opponent – secretly select a number on your honor dial. Then, the chosen character's controller guesses whether this number is even or odd. Reveal your dial (cannot be modified). If they are wrong, bow and dishonor that character.</property>
       <property name="Type" value="Event" />
       <property name="Traits" value="Spell. Air." />
       <property name="Card Number" value="20" />

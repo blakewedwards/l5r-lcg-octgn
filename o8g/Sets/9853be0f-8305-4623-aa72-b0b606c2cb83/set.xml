@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Tainted Lands" id="9853be0f-8305-4623-aa72-b0b606c2cb83" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
+  <cards>
+    <card name="Teachings of the Elements" id="9b4fc879-ad9b-4c3b-b0a1-5e6d2f01b09c" size="province">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">This province gets +1 strength for each claimed ring.</property>
+      <property name="Type" value="Province" />
+      <property name="Ring" value="Earth" />
+      <property name="Card Number" value="21" />
+      <property name="Bonus Strength" value="5" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Border Fortress" id="50320e5e-dee7-4a01-a66d-1269d67f30c3" size="province">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">
+        <b>Action:</b> During a conflict at this province, choose a facedown province – reveal that province.</property>
+      <property name="Type" value="Province" />
+      <property name="Traits" value="Fort." />
+      <property name="Ring" value="Air" />
+      <property name="Card Number" value="22" />
+      <property name="Bonus Strength" value="4" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Upholding Authority" id="b93c2d7f-6aa3-4ba5-81b9-fde267f78b15" size="province">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">This province gets +2 strength while you have an <i>Earth</i> role.
+<b>Interrupt:</b> When this province is broken – the attacking player reveals his or her hand. Choose a card in their hand and discard any number of copies of that card from their hand.</property>
+      <property name="Type" value="Province" />
+      <property name="Ring" value="Earth" />
+      <property name="Card Number" value="23" />
+      <property name="Bonus Strength" value="3" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Apprentice Earthcaller" id="d62880d6-9751-4feb-b98f-b839de0b9210" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Action:</b> During a conflict, choose an attacking character without attachments – until the end of the conflict, set that character's skill values to its printed values.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Earth." />
+      <property name="Card Number" value="24" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Kuni Yori" id="435e1e08-9aec-4b52-a309-92d523fb7fe5" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">During <s value="earth">[Earth]</s> conflicts, each character you control gets +1<s value="military">[Military]</s> and +1<s value="political">[Political]</s>.
+<b>Action:</b> During a conflict, lose 1 honor. Choose a player – that player discards 1 card at random from his or her hand.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Earth. Daimyō." />
+      <property name="Card Number" value="25" />
+      <property name="Cost" value="5" />
+      <property name="Military Skill" value="4" />
+      <property name="Political Skill" value="4" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Asahina Takako" id="afad3beb-1e75-4fee-9526-39f727ddab06" size="dynasty">
+      <property name="Clan" value="Crane" />
+      <property name="Text">You may look at facedown cards in each province you control.
+<b>Action:</b> Choose a card in one of your provinces – switch that card with a card in another of your provinces or discard it.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Air." />
+      <property name="Card Number" value="26" />
+      <property name="Cost" value="4" />
+      <property name="Political Skill" value="5" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Bonsai Garden" id="2cebae59-f13b-4b47-bc16-9f08c2fa0508" size="dynasty">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <b>Action:</b> During an <s value="air">[Air]</s> conflict – gain 1 honor.</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Garden." />
+      <property name="Card Number" value="27" />
+      <property name="Bonus Strength" value="+0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Impulsive Novice" id="04f9263b-b953-4c82-b047-6e76feceed24" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">This characters gets +1<s value="military">[Military]</s> and +1<s value="political">[Political]</s> while you have claimed the <s value="fire">[Fire]</s> or <s value="void">[Void]</s> ring.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Monk." />
+      <property name="Card Number" value="28" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Court Novice" id="ca440bd5-7aa7-44a9-a74c-8819b202d5eb" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">This character gets +2<s value="political">[Political]</s> while you have claimed the <s value="air">[Air]</s> or <s value="water">[Water]</s> ring.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="29" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Sneaky Shinjo" id="9b76ec7f-cba6-4786-b149-4621a0e49a0e" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">
+        <b>Reaction:</b> After you pass in the dynasty phase – play this character from your province.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi." />
+      <property name="Card Number" value="30" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Marauding Oni" id="16179751-a041-4b9e-84d5-548f85e68202" size="dynasty">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">This character cannot be honored or dishonored.
+<b>Forced Reaction:</b> After this character is declared as an attacked or defender – lose 1 honor. (Unlimited.)</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Oni. Shadowlands." />
+      <property name="Card Number" value="31" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="4" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Spreading the Darkness" id="2a94f5c2-c637-4774-ba75-d34a804a0061" size="conflict">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Action:</b> Lose 2 honor. Choose a participating character you control – until the end of the conflict, that character gets +4<s value="military">[Military]</s> and cannot be targeted by opponents' card abilities.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Maho. Spell. Earth." />
+      <property name="Card Number" value="32" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Adopted Kin" id="7695293b-7e73-43c2-9a15-aaee548382e5" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <i>Fire</i> role only. Limit 1 per character.
+Each other attachment on attached character gains ancestral.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Condition." />
+      <property name="Card Number" value="33" />
+      <property name="Cost" value="0" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Ikoma Reservist" id="1f6b2834-02ff-431a-969a-8c56721f0ebf" size="conflict">
+      <property name="Clan" value="Lion" />
+      <property name="Text">This character gets 2<s value="military">[Military]</s> while you have claimed the <s value="fire">[Fire]</s> or <s value="water">[Water]</s> ring.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi." />
+      <property name="Card Number" value="34" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Writ of Authority" id="48d5f6bb-0807-4755-b338-b3291424a104" size="conflict">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <i>Earth</i> role only. Restricted.
+If an opponent is more honorable than you, discard this attachment.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Item." />
+      <property name="Card Number" value="35" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+3" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Feral Ningyo" id="e3053e7a-ef2d-4170-ab70-afc47fae29f4" size="conflict">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <b>Action:</b> During a <s value="water">[Water]</s> conflict – put this character into play from your hand in the conflict. At the end of the conflict, shuffle it into your conflict deck.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Creature." />
+      <property name="Card Number" value="36" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+    <card name="Oracle of Stone" id="c1b7a38b-b8a9-412e-88f3-68e6201b45e7" size="conflict">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <b>Action:</b> Each player draws 2 cards. Then, each player discards 2 cards.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Spell. Earth." />
+      <property name="Card Number" value="37" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Tainted Koku" id="73cb40f2-ea25-4cc3-aed1-6ac1f2f1ba43" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Interrupt:</b> When attached character leaves play – move this attachment to another character controlled by the same player.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Poison." />
+      <property name="Card Number" value="38" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="-1" />
+      <property name="Political Skill" value="-1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Press of Battle" id="494e917a-e07a-4984-b873-048b43491b75" size="conflict">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">
+        <i>Water</i> role only.
+<b>Action:</b> During a <s value="military">[Military]</s> conflict, if you control more participating characters than your opponent, choose a non-unique participating character – bow that character.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="39" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Sabotage" id="b22ca7c0-c12e-4e3f-af08-567000c6e781" size="conflict">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <i>Earth</i> role only.
+<b>Action:</b> During a <s value="military">[Military]</s> conflict, choose a card in an opponent’s province – discard that card.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="40" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="0" />
+    </card>
+  </cards>
+</set>
