@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="The Fires Within" id="5d97d674-c034-417b-b60f-c6a5224a9d50" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
+  <cards>
+    <card name="Abandoning Honor" id="de1694ce-9fe9-4e1e-8d7f-8f7da1576d90" size="province">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">This province gets +2 strength while you have a <i>Fire</i> role.
+<b>Interrupt:</b> When this province is broken, choose a dishonored character – discard that character.</property>
+      <property name="Type" value="Province" />
+      <property name="Ring" value="Fire" />
+      <property name="Card Number" value="41" />
+      <property name="Bonus Strength" value="3" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Hiruma Kogoe" id="f0626bdf-6566-48e9-8120-057bef369f43" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Sincerity.
+<b>Reaction:</b> After the draw phase begins, if you have lower honor than an opponent – look at the top 3 cards of your conflict deck and put them back in any order.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Scout." />
+      <property name="Card Number" value="42" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Sadane Student" id="30aae222-5347-41f6-898c-42ba99f7a8eb" size="dynasty">
+      <property name="Clan" value="Crane" />
+      <property name="Text">This character gets +2<s value="political">[Political]</s> while you have claimed the <s value="air">[Air]</s> or <s value="fire">[Fire]</s> ring.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="43" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Master Alchemist" id="946836fa-e553-4ab7-a18c-606c609a314a" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Action:</b> During a conflict, spend 1 fate to the <s value="fire">[Fire]</s> ring. Choose a character – honor or dishonor that character.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Fire." />
+      <property name="Card Number" value="44" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="The Wrath of the Kami" id="bc55ad20-ba87-4eb0-9b0d-69bf1df4b8a6" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">Limit 1 per deck.
+<b>Action:</b> During a conflict at this province, lose 1 honor – this province gets +1 strength until the end of the conflict. (Unlimited.)</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Shrine." />
+      <property name="Card Number" value="45" />
+      <property name="Bonus Strength" value="+1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Ikoma Ikehata" id="b6c7b420-fd13-4ec6-808b-ba4f9dffa3e8" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">Covert.
+<b>Reaction</b>: After this character wins a <s value="political">[Political]</s> conflict, choose a character you control – honor that character. Draw 1 card.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="46" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Ancestral Armory" id="3328f921-1c28-4512-be9d-550f2f6109ac" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <b>Action:</b> Sacrifice this holding, choose a <i>Weapon</i> attachment in your discard pile – return that attachment to your hand.</property>
+      <property name="Type" value="Holding" />
+      <property name="Card Number" value="47" />
+      <property name="Bonus Strength" value="+2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Chikai Order Protector" id="5274da24-6bf8-445e-8753-97a710748e1f" size="dynasty">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">While this character is defending, if you control a participating <i>Courtier</i> or <i>Shugenja</i> character, this character does not bow as a result of conflict resolution.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Yōjimbō." />
+      <property name="Card Number" value="48" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="4" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Soshi Shiori" id="a1c7c7fa-a662-4acd-a238-da2d847c682a" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Reaction:</b> After you win a conflict, choose a player – that player loses 1 honor. (Unlimited.)</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Air. Daimyō." />
+      <property name="Card Number" value="49" />
+      <property name="Cost" value="5" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="5" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Battle Maiden Recruit" id="4c125990-b3c5-4ef8-9894-955c09cba72e" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">This character gets +2<s value="military">[Military]</s> while you have claimed the <s value="water">[Water]</s> or <s value="void">[Void]</s> ring.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Battle-Maiden. Cavalry." />
+      <property name="Card Number" value="50" />
+      <property name="Cost" value="0" />
+      <property name="Military Skill" value="0" />
+      <property name="Political Skill" value="0" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Wicked Tetsubō" id="59e6587f-4fec-48df-966b-921c9edf9b2f" size="conflict">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Attach to a <i>Berserker</i> character.
+Restricted.
+<b>Action:</b> During a conflict in which attached character is attacking, choose a defending character and select either <s value="military">[Military]</s> or <s value="political">[Political]</s> – set that character's selected skill to 0 until the end of the conflict.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Weapon." />
+      <property name="Card Number" value="51" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="+1" />
+      <property name="Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Icon of Favor" id="99f70ebc-ff34-4f3c-bbc0-b3a45f57e61c" size="conflict">
+      <property name="Clan" value="Crane" />
+      <property name="Text">While you have the Imperial Favor, attached character gets +1 glory.
+<b>Reaction:</b> After you win a <s value="fire">[Fire]</s> conflict, honor attached character.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Item." />
+      <property name="Card Number" value="52" />
+      <property name="Cost" value="0" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Insult to Injury" id="9cfe4eda-3412-4225-8d32-7ff483f02757" size="conflict">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <b>Reaction:</b> After a <i>Duelist</i> character you control wins a duel – dishonor the losing character.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="53" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Smoke" id="ceee8f6c-3808-437b-b27f-0bfc30afa298" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Action:</b> While attached character is participating in a conflict, bow and sacrifice this attachment – until the end of the conflict, each non-unique participating character gets -2<s value="military">[Military]</s>.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Spell. Fire." />
+      <property name="Card Number" value="54" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="+1" />
+      <property name="Political Skill" value="+0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Jurōjin's Curse" id="0d68790e-f1a9-4a87-b84d-e5d315cdd041" size="conflict">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <i>Void</i> role only. <b>Forced Interrupt:</b> When the fate phase ends, if attached character is ready – resolve a second fate phase after this one. (Max 1 per round.)</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Spell. Void. Curse." />
+      <property name="Card Number" value="55" />
+      <property name="Cost" value="0" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Infiltrator" id="5563365a-bd89-40ed-b20f-30330b6af8ae" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">Play only if the bid on your honor dial is higher than an opponent's.
+<b>Action:</b> During a conflict, look at the top card of an opponent's conflict deck – either immediately play that card as if it were in your hand or discard it.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Follower." />
+      <property name="Card Number" value="56" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Shiksha Scout" id="aab33fbd-98cd-48f1-809a-3fa3d6d3109f" size="conflict">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">While this character is participating in a conflict, you are considered to control an additional character in this conflict.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Creature. Scout." />
+      <property name="Card Number" value="57" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Invocation of Ash" id="2c8353b9-ced8-4573-b896-94f8bb86e7d7" size="conflict">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">
+        <b>Action:</b> Lose 1 honor. Choose a character you control – move this attachment to that character. Then, remove 1 fate from that character.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Spell. Fire. Meishōdō." />
+      <property name="Card Number" value="58" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="+2" />
+      <property name="Political Skill" value="+2" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+    <card name="Breach of Etiquette" id="e19e3de6-f601-4a23-913f-7f47bbce5dc8" size="conflict">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <b>Action:</b> During a <s value="political">[Political]</s> conflict – until the end of the conflict, each time a player triggers an ability on a non-<i>Courtier</i> character, he or she loses 1 honor (Max 1 per conflict.)</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="59" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="0" />
+    </card>
+    <card name="Mantis Seafarer" id="9e5e9539-3971-4fdc-b01c-c6404177706f" size="conflict">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <i>Air</i> role only.
+<b>Reaction</b>: After this character wins a conflict, lose 1 honor – gain 1 fate. (Unlimited.)</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Mantis-Clan." />
+      <property name="Card Number" value="60" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="0" />
+    </card>
+  </cards>
+</set>
