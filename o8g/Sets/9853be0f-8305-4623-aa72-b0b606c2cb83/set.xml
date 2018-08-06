@@ -104,7 +104,6 @@
       <property name="Political Skill" value="1" />
       <property name="Glory" value="0" />
       <property name="Deck" value="Dynasty" />
-      <property name="Unique" value="Unique" />
     </card>
     <card name="Sneaky Shinjo" id="9b76ec7f-cba6-4786-b149-4621a0e49a0e" size="dynasty">
       <property name="Clan" value="Unicorn" />
@@ -236,7 +235,7 @@ If an opponent is more honorable than you, discard this attachment.</property>
       <property name="Clan" value="Neutral" />
       <property name="Text">
         <i>Earth</i> role only.
-<b>Action:</b> During a <s value="military">[Military]</s> conflict, choose a card in an opponent’s province – discard that card.</property>
+<b>Action:</b> During a <s value="military">[Military]</s> conflict, choose a card in an opponent's province – discard that card.</property>
       <property name="Type" value="Event" />
       <property name="Card Number" value="40" />
       <property name="Cost" value="0" />
