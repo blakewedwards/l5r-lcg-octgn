@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Underhand of the Emperor" id="422c97c9-6fa1-43ef-9ba7-5d2ea6c5314c" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
+  <cards>
+    <card name="Kyūden Bayushi" id="4abdfe13-e180-4205-a61b-d6d70de62242" size="province">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> Bow this stronghold and choose a dishonored character you control – ready that character. If you have 6 or fewer honor, that character gets +1<s value="military">[Military]</s> and +1<s value="political">[Political]</s> until the end of the phase.</property>
+      <property name="Type" value="Stronghold" />
+      <property name="Traits" value="Palace." />
+      <property name="Card Number" value="1" />
+      <property name="Bonus Strength" value="+2" />
+      <property name="Deck" value="Province" />
+      <property name="Influence Value" value="9" />
+      <property name="Starting Honor" value="9" />
+      <property name="Fate Value" value="7" />
+    </card>
+    <card name="Brother’s Gift Dōjō" id="d0e6112e-5418-4e6e-9102-eff97d3c02e0" size="province">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> During a conflict, lose 1 honor and choose a participating character you control – move that character home. (Limit twice per round.)</property>
+      <property name="Type" value="Province" />
+      <property name="Traits" value="Dojo." />
+      <property name="Ring" value="Void" />
+      <property name="Card Number" value="2" />
+      <property name="Bonus Strength" value="4" />
+      <property name="Deck" value="Province" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Support of the Scorpion" id="609fd180-d544-461f-be02-27512de99fd4" size="province">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">Increase your deckbuilding influence value by 8. You may only spend influence on <s value="scorpion">[Scorpion]</s> clan cards.</property>
+      <property name="Type" value="Role" />
+      <property name="Traits" value="Scorpion." />
+      <property name="Card Number" value="3" />
+      <property name="Deck" value="Role" />
+    </card>
+    <card name="Alibi Artist" id="b6482118-f49a-4c91-942f-2de844c8713c" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> If you have 6 or fewer honor – look at the top 2 caards of your conflict deck. Put 1 of those cards into your hand and the other on the bottom of your conflict deck.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier. Shinobi." />
+      <property name="Card Number" value="4" />
+      <property name="Cost" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Shosuro Takao" id="131604ec-0f32-48d1-ae5f-d4e3c65a4695" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> While a dishonored character is participating in a conflict – move this character into or out of that conflict.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Shadow. Shinobi." />
+      <property name="Card Number" value="5" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Insolent Rival" id="e0b2ada2-d9c9-46e0-8ff1-500dc66ec7d4" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">While the bid on your honor dial is higher than an opponent's, this character gets +2 <s value="military">[Military]</s> and +2 <s value="political">[Political]</s>.
+<b>Action:</b> While this character is participating in a conflict, choose a participating character controlled by an opponent – challenge that character to a <s value="military">[Military]</s> duel. Dishonor the loser of the duel.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Duelist." />
+      <property name="Card Number" value="6" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Soshi Aoi" id="11c02a01-0813-42b2-a3dd-cd4f17bca1c4" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> Lose 1 honor and choose a character you control. Select one – until the end of the phase that character gets +1<s value="military">[Military]</s> and gains the <i>Bushi</i> trait, or until the end of the phase that character gets +1<s value="political">[Political]</s> and gains the <i>Courtier</i> trait.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Air." />
+      <property name="Card Number" value="7" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Bayushi Aramoro" id="ef897b02-b619-4e70-8501-44fae7c209e5" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> While this character is participating in a <s value="military">[Military]</s> conflict, dishonor this character and choose a participating character controlled by your opponent – until the end of the conflict, that character gets -2<s value="military">[Military]</s> and is discarded if its <s value="military">[Military]</s> skill is 0.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Shinobi." />
+      <property name="Card Number" value="8" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="5" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Ignoble Enforcers" id="c5a02b62-9e37-4b95-b325-4d305b79bfb4" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Reaction:</b> After you play this character, you may lose up to 3 honor – for each honor you lost by this ability, put 1 fate on this character.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi." />
+      <property name="Card Number" value="9" />
+      <property name="Cost" value="5" />
+      <property name="Military Skill" value="4" />
+      <property name="Political Skill" value="4" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Bayushi's Whisperers" id="066bd865-c061-4619-a0af-d81cc18b6c31" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">No attachments.
+<b>Action:</b> During a conflict – look at an opponent’s hand, then name a card. That player cannot play copies of the named card this phase.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Informant." />
+      <property name="Card Number" value="10" />
+      <property name="Cost" value="6" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="6" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Court of Deception" id="4c665293-0c93-4aca-8fcf-97c6fe696f9d" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> If you have 6 or fewer honor, choose a dishonored character in you home area – discard that character's status token.</property>
+      <property name="Type" value="Holding" />
+      <property name="Card Number" value="11" />
+      <property name="Bonus Strength" value="+1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Yasuki Oguri" id="94815043-dfed-410c-965e-0157fd173a29" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Covert.
+<b>Reaction:</b> After an opponent plays an event during a conflict in which this character is defending – until the end of the conflict, this character gets +1<s value="military">[Military]</s> and +1<s value="political">[Political]</s>. (Unlimited.)</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="12" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Kitsuki Shomon" id="7cb51244-e6f6-4be0-868a-0a5d5e76fd94" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Interrupt:</b> When another character you control would be dishonored – instead, dishonor this character. Then, ready this character.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Duelist." />
+      <property name="Card Number" value="13" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Akodo Kage" id="17017627-550e-492c-ba79-5b3ab44add06" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <b>Reaction:</b> After honor dials are revealed for an honor bid, if your bid is lower than an opponent's and you are more honorable than that opponent – set that opponent's honor dial to be equal to yours.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="14" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="4" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Asako Maezawa" id="f41f8fd9-3612-4af0-96fb-fa2ed3af7497" size="dynasty">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <b>Action:</b> While this character is participating in a conflict, if you count more current glory than your opponent among ready participating characters, choose a participating character – double that character’s base <s value="political">[Political]</s> until the end of the conflict.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="15" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Utaku Tetsuko" id="a08e6481-8bee-4086-9586-f29eff4e8d19" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">While this character is attacking, increase the cost for your opponent to play cards from his or her hand by 1.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Cavalry. Imperial. Magistrate." />
+      <property name="Card Number" value="16" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Seppun Truthseeker" id="a0473b16-25f0-4381-95f9-4e6014d731dd" size="dynasty">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <b>Forced Interrupt:</b> When this character leaves play – each player draws 2 cards.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier. Imperial." />
+      <property name="Card Number" value="17" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Opium Wastrel" id="cec89bfc-b376-447b-a3f0-24bb1d32665a" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">Play only if you are less honorable than an opponent.
+<b>Reaction:</b> After this character enters play during a conflict, choose a participating character – set that character’s glory to 0 until the end of the conflict.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Peasant." />
+      <property name="Card Number" value="18" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Bayushi Collector" id="a9eec47f-b68d-4058-84d5-9bfb4d362b40" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> Choose an attachment attached to a dishonored character – discard both that attachment and that character’s status token.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="19" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Liar's Mask" id="19007442-e309-48df-8c3c-27ad39dd6b01" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">Play only if your have 6 or fewer honor.
+<b>Action:</b> Discard a status token from attached character.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Item. Mask." />
+      <property name="Card Number" value="20" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="+1" />
+      <property name="Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Stolen Breath" id="61561164-e7a2-4337-81b1-bd2fccb7d4bb" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">This attachment cannot be played during a conflict.
+Attached character cannot participate in <s value="political">[Political]</s> conflicts.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Poison." />
+      <property name="Card Number" value="21" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Duty" id="c9519429-4497-4bee-bf02-fa5976050ce2" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">Limit 1 per deck.
+<b>Interrupt:</b> When the effect of a card ability, ring effect, or framework step would cause you to lose your last honor – cancel that effect, then gain 1 honor.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Philosophy." />
+      <property name="Card Number" value="22" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+    </card>
+    <card name="From the Shadows" id="6a3707b8-4385-492e-a960-9f1810b2bc7a" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">Play only if you are less honorable than an opponent.
+<b>Action:</b> During a conflict – put a <i>Shinobi</i> character into play from your hand or provinces in the conflict. That character enters play dishonored.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="23" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Make an Opening" id="487bc82b-e03a-42b2-9aa7-a2738ad7b010" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which you control a participating character, choose a participating character controlled by your opponent – that character gets –X<s value="military">[Military]</s> and –X<s value="political">[Political]</s> until the end of the conflict, where X is the difference between the bid on your honor dial and that of your opponent.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="24" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Stolen Secrets" id="d0d5974b-cd7a-40ae-a7e4-0b0cebb6bbba" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b>  During a <s value="political">[Political]</s> conflict, remove 1 fate from a <i>(friendly)</i> participating character – search the top 4 cards of your opponent’s conflict deck for a card, remove it from the game facedown, and put the other cards back on top in any order. While removed from the game, you may play that card as if it were in your hand.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="25" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+    <card name="Doji Fumiki" id="fb3989ae-739f-4707-bdca-ed4c87fc58b4" size="conflict">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which this character is participating, choose a dishonored participating character – bow that character.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="26" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="0" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Conflict" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Offer Testimony" id="0d94f4af-b473-4b35-ae21-d02be1b87584" size="conflict">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <b>Action:</b> During a <s value="political">[Political]</s> conflict, you and your opponent each chooses a ready participating character he or she controls – each of those players simultaneously reveals a card from his or her hand. Each player who reveals the lowest cost card bows his or her chosen character.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="27" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="0" />
+    </card>
+    <card name="Peasant's Advice" id="a9d156cb-d121-41c0-8f01-114dc5fb71eb" size="conflict">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <b>Action:</b> During the conflict phase, dishonor a <i>(friendly)</i> character and choose a province – look at that province if it is facedown. You may shuffle a faceup card in that province into its owner’s dynasty deck.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="28" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="0" />
+    </card>
+  </cards>
+</set>
