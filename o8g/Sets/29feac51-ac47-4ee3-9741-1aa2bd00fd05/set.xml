@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Rokugan at War" id="29feac51-ac47-4ee3-9741-1aa2bd00fd05" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
+  <cards>
+    <card name="Ninkatoshi" id="75c7a77e-ff76-4255-ae18-86195c7443e3" size="province">
+      <property name="Clan" value="Lion" />
+      <property name="Text">Eminent. <i>(This province starts the game faceup and cannot be turned facedown. It cannot be a stronghold province.)</i>
+Each other province gets -1 strength if controlled by an opponent and +1 strength if controlled by you or a teammate.</property>
+      <property name="Type" value="Province" />
+      <property name="Traits" value="City." />
+      <property name="Ring" value="EarthWater" />
+      <property name="Card Number" value="4" />
+      <property name="Bonus Strength" value="4" />
+      <property name="Deck" value="Province" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="City of the Rich Frog" id="5244393f-f841-4e41-9bdb-1fe7d9ee556e" size="province">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">Eminent. <i>(This province starts the game faceup and cannot be turned facedown. It cannot be a stronghold province.)</i>
+After setup, fill this province to 3 cards. When you would refill this province, refill it to 3 cards instead of 1.</property>
+      <property name="Type" value="Province" />
+      <property name="Traits" value="City." />
+      <property name="Ring" value="EarthVoid" />
+      <property name="Card Number" value="6" />
+      <property name="Bonus Strength" value="3" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Kakita Yoshi" id="2d83564e-9b91-40e1-9234-03dc1ee6453e" size="dynasty">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <b>Reaction:</b> After this character wins a <s value="political">[Political]</s> conflict as the attacker, choose up to X characters, where X is the number of faceup provinces you control - dishonor each of those characters.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier. Daimyō. Imperial." />
+      <property name="Card Number" value="8" />
+      <property name="Cost" value="5" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="6" />
+      <property name="Glory" value="3" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="A Season of War" id="337621d5-7479-4ef8-bc82-1869370e2982" size="dynasty">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">Rally. <i>(After this card is revealed in a province, add the top card of your dynasty deck to the province, faceup.)</i><b>Action:</b> Discard each card in each province, refilling each province faceup. End the dynasty phase. Then there is an additional dynasty phase, during which players do not collect fate.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="14" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Educated Heimin" id="98bfa9d0-42cd-40f6-9e42-8ba545c78d16" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">Attach to an unbroken province you control.
+Each time you would refill attached province with a card, instead look at the top 2 cards of your dynasty deck (4 cards instead if attached province is facedown), refill the province with 1 of those cards and discard the rest.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Follower." />
+      <property name="Card Number" value="17" />
+      <property name="Cost" value="0" />
+      <property name="Military Skill" value="-" />
+      <property name="Political Skill" value="-" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+    <card name="Paralyzing Delicacy" id="dd426fbf-c456-402f-a6ab-37798da91dec" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> During a conflict, choose a participating character – that character gets -1 <s value="military">[Military]</s> until the end of the conflict for each facedown card in its controller's provinces.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Poison." />
+      <property name="Card Number" value="21" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+  </cards>
+</set>

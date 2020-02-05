@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Seekers of Wisdom" id="d45da83a-841c-46c0-b63d-b77f94189f1a" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
+  <cards>
+    <card name="High House of Light" id="26e5ed39-ab2a-495c-8f2e-e04ed8407b54" size="province">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Action:</b> During a conflict, bow this stronghold. Choose a participating <i>Monk</i> character you control - that character cannot be chosen as the target of an opponent's event during this conflict. If you have played 5 or more cards in this conflict, also move 1 fate from a ring to this character.</property>
+      <property name="Type" value="Stronghold" />
+      <property name="Traits" value="Temple." />
+      <property name="Card Number" value="1" />
+      <property name="Bonus Strength" value="+3" />
+      <property name="Deck" value="Province" />
+      <property name="Unique" value="Unique" />
+      <property name="Influence Value" value="7" />
+      <property name="Starting Honor" value="11" />
+      <property name="Fate Value" value="7" />
+    </card>
+    <card name="Fuchi Mura" id="cdb9b205-ece6-4f8c-8a55-d1d39e6a9840" size="province">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Reaction:</b> After an attack is declared against this province – place 1 fate on each unclaimed ring.</property>
+      <property name="Type" value="Province" />
+      <property name="Traits" value="Village." />
+      <property name="Ring" value="Void" />
+      <property name="Card Number" value="2" />
+      <property name="Bonus Strength" value="3" />
+      <property name="Deck" value="Province" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Support of the Dragon" id="a8a57ec4-4f27-458c-bbe8-c339e8163630" size="province">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">Increase your deckbuilding influence value by 8. You may only spend influence on <s value="dragon">[Dragon]</s> clan cards.</property>
+      <property name="Type" value="Role" />
+      <property name="Traits" value="Dragon." />
+      <property name="Card Number" value="3" />
+      <property name="Deck" value="Role" />
+    </card>
+    <card name="Taoist Adept" id="26dd6165-9daf-4d00-8301-f626233ac24e" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Action:</b> During a conflict, initiate a <s value="military">[Military]</s> duel - resolve the duel. The controller of the duel's winner may place 1 fate on an unclaimed ring.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Monk. Duelist." />
+      <property name="Card Number" value="4" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Perceptive Kitsuki" id="2f670d87-d02f-488d-b5c1-a9c28f804097" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which this character is participating, return a ring in your claimed ring pool to the unclaimed ring pool - look at your opponent's hand.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="5" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Austere Exemplar" id="71a252e4-54bb-40e6-9b69-30d41125b79c" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which this character is attacking, spend 1 fate to an unclaimed ring - take 3 actions. (Max 1 per conflict.)</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Monk. Tattooed." />
+      <property name="Card Number" value="6" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Togashi Gaijutsu" id="e1576676-24e3-40d0-9c90-284a29c6492d" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Reaction:</b> After you play a <i>Tattoo</i> attachment on a character - ready that character.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Monk. Tattooed." />
+      <property name="Card Number" value="7" />
+      <property name="Cost" value="3" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Mirumoto Masashige" id="795c3745-c7e8-45a8-a437-2b6e66b370f4" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Reaction:</b> After the conflict phase begins, if an opponent controls more characters than you, choose a character you control - honor that character.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Daimyō. Duelist." />
+      <property name="Card Number" value="8" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="4" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Monastery Protector" id="7b47e89b-89b5-40a0-8a5e-5b7da4e40ed0" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">No attachments except <i>Monk</i> or <i>Tattoo</i>.
+As an additional cost to choose a <i>Tattooed</i> character you control as a target of an event, the opponent playing that event must pay 1 additional fate.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Monk. Tattooed." />
+      <property name="Card Number" value="9" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Togashi Mitsu" id="ae01e865-6480-4e76-92e8-22863fbf6d31" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">This character cannot be evaded by the covert keyword.
+<b>Action:</b> During a conflict in which this character is participating, if you have played 5 or more cards in the conflict, choose a ring - resolve that ring's effects as if you were the attacking player.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Monk. Tattooed." />
+      <property name="Card Number" value="10" />
+      <property name="Cost" value="5" />
+      <property name="Military Skill" value="4" />
+      <property name="Political Skill" value="5" />
+      <property name="Glory" value="3" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Togashi Hoshi" id="e1ea2a44-1911-4d20-afe6-1724280b799a" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">No attachments except <i>Monk</i> or <i>Tattoo</i>.
+<b>Action:</b> Detach an attachment from a character you control and turn it into a character. If that card has the printed attachment card type, its <s value="military">[Military]</s> and <s value="political">[Political]</s> skills are equal to its printed <s value="military">[Military]</s> and <s value="political">[Political]</s> modifiers and it has 0 glory.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Monk. Creature. Fire. Mythic." />
+      <property name="Card Number" value="11" />
+      <property name="Cost" value="6" />
+      <property name="Military Skill" value="5" />
+      <property name="Political Skill" value="5" />
+      <property name="Glory" value="3" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Shintao Monastery" id="86f7a4d5-236f-4962-9eab-8e81ebe917aa" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">You are considered to have played an additional card in each conflict.</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Temple." />
+      <property name="Card Number" value="12" />
+      <property name="Bonus Strength" value="+2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Asahina Maeko" id="6cbc17f3-29cf-43fd-8c77-34294089f521" size="dynasty">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <b>Action:</b> During a conflict - increase the cost for each player to play cards by 1 until the end of the conflict.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Air." />
+      <property name="Card Number" value="13" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Matsu Koso" id="1df0ed4a-3eda-4b90-bd8a-33c1de7d58ec" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which this character is participating - each participating character gets -X<s value="military">[Military]</s> until the end of the conflict, where X is that character's printed <s value="political">[Political]</s> skill.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Berserker." />
+      <property name="Card Number" value="14" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="3" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Asako Togama" id="b8629586-2ba1-4010-8ca7-de4eddb5424f" size="dynasty">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which this character is participating, choose an unclaimed ring - switch that ring with a ring in your claimed ring pool and gain all fate on it. <i>(Retain the ring's conflict type.)</i></property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier. Daimyō. Scholar." />
+      <property name="Card Number" value="15" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="5" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Bayushi Gensato" id="bee33d3d-3f6e-4fed-a5d6-47e2968bad68" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> During a conflict, initiate a <s value="military">[Military]</s> duel - resolve the duel, ignoring the skill modifiers of attachments until the end of the duel. Bow the duel's loser and dishonor the duel's winner.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Duelist." />
+      <property name="Card Number" value="16" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Iuchi Rimei" id="53309e01-640c-4ca2-adb2-b6435077b6cb" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">
+        <b>Action:</b> Choose an attachment an opponent controls with printed cost 1 or less - move it from the character it is on to another character controlled by the same player.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Water." />
+      <property name="Card Number" value="17" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Ichirō" id="c0777177-3452-457a-a644-922ae1805923" size="dynasty">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">Each character with 1 or more attachments cannot be honored or dishonored.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Heretic. Ronin." />
+      <property name="Card Number" value="18" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Togashi Acolyte" id="3ebc10fa-65d2-4ca8-a70d-93c9ae27bad8" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">You may play this character as an attachment with the text: "<b>Reaction:</b> After you play a card during a conflict in which attached character is participating - attached character gets +1<s value="military">[Military]</s> and +1<s value="political">[Political]</s> until the end of the conflict. (Unlimited.)</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Monk. Tattooed." />
+      <property name="Card Number" value="19" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Vine Tattoo" id="90eb96a2-4603-4549-aed1-14685dea7545" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">Attach to a character you control. Attached character gains the <i>Tattooed</i> trait.
+Attached character cannot be chosen as the target of keywords or abilities triggered from characters with an equal or higher printed cost.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Tattoo." />
+      <property name="Card Number" value="20" />
+      <property name="Cost" value="0" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="An Ocean in a Drop" id="4b430348-ea5f-4fc6-8096-84022b5eb796" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which attached character is participating, sacrifice this attachment and choose a player - that player puts his or her hand on the bottom of his or her conflict deck in a random order and draws that many cards.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Spell. Water." />
+      <property name="Card Number" value="21" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Niten" id="d9a9f5ba-4f4b-44fa-94e1-96c7b474a345" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">Attach to a <s value="dragon">[Dragon]</s> character.
+<b>Action:</b> During a conflict in which attached character is participating, return this attachment to your hand - put an attachment from your hand into play attached to the same character. (Max 1 per round.)</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Item. Philosophy." />
+      <property name="Card Number" value="22" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="+1" />
+      <property name="Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Dragon Tattoo" id="7fe2dcd9-bd84-4b19-a297-04c1b92f8738" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">Attach to a character you control. Attached character gains the <i>Tattooed</i> trait.
+Restricted.
+<b>Reaction:</b> After you play an event that chooses attached character as a target - play that event again <i>(paying all costs)</i>. You may choose new targets. Remove that event from the game.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Tattoo." />
+      <property name="Card Number" value="23" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="+2" />
+      <property name="Political Skill" value="+0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+    <card name="Iron Foundations Stance" id="e75192de-b4b6-416c-978e-a076b63f0972" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Action:</b> During a conflict, choose a participating <i>Monk</i> character you control – until the end of the conflict, that character cannot be bowed or moved home by opponents' card effects. If you have played another <i>Kihō</i> in this conflict, draw 1 card.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Kihō. Earth." />
+      <property name="Card Number" value="24" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Wildfire Kick" id="92d2f1f6-b4d3-48f8-a2eb-65ea20fa0bbe" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which you have played 3 or more cards, choose a participating <i>Monk</i> character you control - each participating character your opponent controls with <s value="military">[Military]</s> skill equal to or lower than the chosen character gets -2<s value="military">[Military]</s> and -2<s value="political">[Political]</s> until the end of the conflict.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Kihō. Fire." />
+      <property name="Card Number" value="25" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Hida Kotoe" id="c5a77ef1-d527-4d1c-a777-8ef33b720ec3" size="conflict">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Reaction:</b> After this character wins a conflict as the defender, choose an attachment - discard it.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi." />
+      <property name="Card Number" value="26" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Unique" value="Unique" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Elegant Tessen" id="63911281-727f-49b0-a0d7-a99f0173e3cc" size="conflict">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">Restricted. <i>(No more than two restricted attachments per character.)</i><b>Reaction:</b> After this attachments enters play, if it is on a character with printed cost 2 or less - ready attached character.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Weapon." />
+      <property name="Card Number" value="27" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="+1" />
+      <property name="Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="0" />
+    </card>
+    <card name="Four Temples Advisor" id="393f0fed-394c-417f-854a-cd33b41f8426" size="conflict">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">Restricted.
+<b>Reaction:</b> After you gain fate from a ring - draw 1 card. (Unlimited.)</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Brotherhood. Follower." />
+      <property name="Card Number" value="28" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+2" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="0" />
+    </card>
+  </cards>
+</set>

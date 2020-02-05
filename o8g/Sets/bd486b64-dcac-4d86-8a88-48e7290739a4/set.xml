@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Shoju's Duty" id="bd486b64-dcac-4d86-8a88-48e7290739a4" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
+  <cards>
+    <card name="Gallant Quartermaster" id="85aa835a-4aa8-46b3-b9de-490d2e0453c1" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Interrupt:</b> When this character is sacrificed - gain 2 fate.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="111" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="0" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Yasuki Hatsu" id="4617d6c8-228d-4abc-b54a-b4fc08f72679" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which this character is participating, if you are less honorable than your opponent - search the top 5 cards of your conflict deck for an attachment, reveal it, and add it to your hand. Shuffle.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="112" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Daidoji Harrier" id="e4bbc248-b050-4834-b54d-a9be95fbf197" size="dynasty">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <b>Reaction:</b> After this character wins a <s value="military">[Military]</s> conflict, your opponent chooses 2 cards in his or her hand - reveal those cards. You choose and discard one of them.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Shinobi." />
+      <property name="Card Number" value="113" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Hitsu-do Disciple" id="2d26e048-ad78-454a-b108-fe595179f998" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Action:</b> During a <s value="military">[Military]</s> conflict in which this character is participating, if you have played 3 or more cards during this conflict, choose another participating character - dishonor that character.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Monk. Tattooed." />
+      <property name="Card Number" value="114" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Togashi Ichi" id="7ec0b32f-c635-41aa-8007-5d848004e533" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">Disguised <i>Monk</i>.
+<b>Action:</b> During a conflict in which this character is attacking, if 10 or more cards have been played during this conflict and if the attacked province is not a stronghold province - break that province.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Monk. Tattooed." />
+      <property name="Card Number" value="115" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="4" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Hero of Three Trees" id="3f1befc0-28f0-4b04-b7ef-7423a1c05413" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which this character is participating, if you have fewer cards in your hand than your opponent, select one - either gain 1 honor, or the attacked province gets -1 strength until the end of the conflict (to a minimum of 0).</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi." />
+      <property name="Card Number" value="116" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Persuasive Counselor" id="4366818f-16e7-482f-be90-f1703d3a4f44" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which this character is participating - each event you play during this conflict cannot be canceled.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="117" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="4" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Student of Esoterica" id="b7c46097-36b3-4a5c-b224-8326ed600ce3" size="dynasty">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">You may spend fate from this character to pay for <i>Spell</i> cards.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Earth. Scholar." />
+      <property name="Card Number" value="118" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="3" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Inferno Guard Invoker" id="eea4eda7-fc78-40a5-a458-f7e348bbf8fc" size="dynasty">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <b>Action:</b> During a <s value="military">[Military]</s> conflict, choose a participating character you control - honor that character. If a province is broken during this conflict, sacrifice that character at the end of the conflict.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Fire." />
+      <property name="Card Number" value="119" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="4" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Chrysanthemum Steward" id="6256f274-5da8-4d10-b107-32b3df264665" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which this character is participating, choose a card in your opponent's conflict discard pile - put that card on top of its owner's conflict deck.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier. Imperial." />
+      <property name="Card Number" value="120" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Bayushi Shoju" id="42880e01-423b-438d-b8f5-e48d15660c2e" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">Your opponents cannot have the Imperial Favor.
+<b>Forced Reaction:</b> After the conflict phase begins - each player draws 2 cards and loses 1 honor.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier. Champion. Imperial." />
+      <property name="Card Number" value="121" />
+      <property name="Cost" value="5" />
+      <property name="Political Skill" value="7" />
+      <property name="Glory" value="4" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Golden Plains Raider" id="92c8eb94-7b04-431d-a279-819505cf2119" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">
+        <b>Reaction:</b> After this character wins a conflict as an attacker, choose a faceup card in a province controlled by your opponent - discard that card.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi." />
+      <property name="Card Number" value="122" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="0" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Moto Outrider" id="04ced7d3-95c2-44bd-bbb1-d1baf46409a1" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">
+        <b>Action:</b> During a <s value="military">[Military]</s> conflict in which this character is participating - ready this character.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Cavalry." />
+      <property name="Card Number" value="123" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Root Out Heresy" id="c4f9c181-99ea-47fa-b630-35ee86218737" size="conflict">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Action:</b> During a <s value="political">[Political]</s> conflict - discard a random card from your opponent's hand. Until the end of the conflict, reduce the strength of the attacked province by X, where X is the cost of the discarded card.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="124" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+    <card name="Kakita's Final Stance" id="4b2863f0-28d9-4d32-83f9-161073028d00" size="conflict">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <b>Action:</b> During a <s value="military">[Military]</s> conflict, choose a participating character - until the end of the conflict, that character cannot be bowed by opponent's card effects. If it is involved in a duel during this conflict, it does not bow as a result of this conflict's resolution.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Technique." />
+      <property name="Card Number" value="125" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Mantra of Air" id="0e389e27-27d3-4c9b-80ec-82e177b17dab" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Reaction:</b> After an opponent declares a <s value="air">[Air]</s> conflict, choose a <i>Monk</i> character or a character with a <i>Monk</i> attachment – honor that character and draw 1 card.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Kihō. Air." />
+      <property name="Card Number" value="126" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="In Service to My Lord" id="b624b477-740a-47e6-88ef-5ecfed599550" size="conflict">
+      <property name="Clan" value="Lion" />
+      <property name="Text">This card can be played from your discard pile.
+<b>Action:</b> Bow a <i>(friendly)</i> non-unique character and choose a unique character - ready the chosen character. Put this card on the bottom of its owner's conflict deck.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Tactic." />
+      <property name="Card Number" value="127" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Cloak of Night" id="cb0f1b28-5f58-4ce3-9ad6-42d995da06c8" size="conflict">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">Play only if you control a <i>Shugenja</i> character.
+<b>Action:</b> During a conflict, choose a participating character - until the end of the conflict, that character gets +3 glory and cannot be chosen as the target of opponent's card abilities.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Spell. Air." />
+      <property name="Card Number" value="128" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Castigated" id="87c18235-c370-4262-9581-ec9da5103857" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">Play only during a <s value="political">[Political]</s> conflict, only on a participating character, and only if you control an <i>Imperial</i> character.
+If attached character's <s value="political">[Political]</s> skill is 0, discard it. <i>(Do not discard if its skill is a dash.)</i></property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Condition. Imperial." />
+      <property name="Card Number" value="129" />
+      <property name="Cost" value="0" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Know the Terrain" id="172f0737-ca62-44fe-ae7a-5f009646ddeb" size="conflict">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">
+        <b>Interrupt:</b> When an attack is declared against a non-stronghold facedown province you control, before revealing that province - switch it with another facedown non-stronghold province you control.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="130" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+  </cards>
+</set>

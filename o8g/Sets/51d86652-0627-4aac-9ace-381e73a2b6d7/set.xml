@@ -24,7 +24,8 @@
     <card name="Ikebana Artisan" id="27044ce5-fbe4-4137-80f7-6057c791fc54" size="dynasty">
       <property name="Clan" value="Crane" />
       <property name="Text">
-        <b>Interrupt:</b> When you would lose 1 honor for an unopposed conflict – lose 1 fate instead. (Unlimited.)</property>
+        <b>Interrupt:</b> When you would lose 1 honor for an unopposed conflict – cancel that honor loss. Then, lose 1 fate. (Unlimited.)
+<i>Errata from RRG v1.7</i></property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Courtier." />
       <property name="Card Number" value="63" />
@@ -86,7 +87,7 @@ While the <s value="fire">[Fire]</s> ring is unclaimed, this character gets +2<s
       <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
     </card>
-    <card name="Hidden Moon Dojo" id="c6a97c78-565a-4149-b65e-c0d4c347de17" size="dynasty">
+    <card name="Hidden Moon Dōjō" id="c6a97c78-565a-4149-b65e-c0d4c347de17" size="dynasty">
       <property name="Clan" value="Scorpion" />
       <property name="Text">Limit 1 per deck.
 You may play cards in adjacent provinces as if they were in your hand.
@@ -126,7 +127,7 @@ You may play cards in adjacent provinces as if they were in your hand.
     </card>
     <card name="Nezumi Infiltrator" id="20bb0100-8388-473c-937f-161be21c5346" size="conflict">
       <property name="Clan" value="Crab" />
-      <property name="Text">Immune to <i>Shadownlands</i> and <i>Mahō</i> card effects.
+      <property name="Text">Immune to <i>Shadowlands</i> and <i>Mahō</i> card effects.
 <b>Reaction:</b> After this character enters play during a conflict – until the end of the conflict, raise or lower the strength of the attacked province by 1 (to a minimum of 1). (Max 1 per conflict.)</property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Creature. Scout." />
@@ -176,8 +177,10 @@ You may play cards in adjacent provinces as if they were in your hand.
     </card>
     <card name="Hawk Tattoo" id="96503db5-2d6d-43cf-b39c-160d811ba1ec" size="conflict">
       <property name="Clan" value="Dragon" />
-      <property name="Text">Attached character gains <i>Tattooed</i>.
-<b>Reaction:</b> After you play this attachment during a conflict – move attached character to the conflict. If attached character is a <i>Monk</i>, you may take another action after this one.</property>
+      <property name="Text">Attach to a character you control.
+Attached character gains <i>Tattooed</i>.
+<b>Reaction:</b> After you play this attachment during a conflict – move attached character to the conflict. If attached character is a <i>Monk</i>, you may take another action after this one.
+<i>Errata from RRG v1.6</i></property>
       <property name="Type" value="Attachment" />
       <property name="Traits" value="Tattoo." />
       <property name="Card Number" value="75" />

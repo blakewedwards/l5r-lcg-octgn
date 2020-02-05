@@ -191,7 +191,8 @@ While you are less honorable than an opponent, attached character gets +1<s valu
     <card name="Mantra of Earth" id="fc37da33-36fc-4b48-8ea4-e48cacb93647" size="conflict">
       <property name="Clan" value="Dragon" />
       <property name="Text">
-        <b>Reaction:</b> After an opponent declares an <s value="earth">[Earth]</s> conflict, choose a <i>Monk</i> character or a character with a <i>Monk</i> attachment – until the end of the conflict, opponents' card effects cannot target that character. Draw 1 card.</property>
+        <b>Reaction:</b> After an opponent declares an <s value="earth">[Earth]</s> conflict, choose a <i>Monk</i> character or a character with a <i>Monk</i> attachment – until the end of the conflict, opponents’ card abilities cannot choose that character as a target. Draw 1 card.
+<i>Errata from RRG v1.7</i></property>
       <property name="Type" value="Event" />
       <property name="Traits" value="Kihō. Earth." />
       <property name="Card Number" value="116" />

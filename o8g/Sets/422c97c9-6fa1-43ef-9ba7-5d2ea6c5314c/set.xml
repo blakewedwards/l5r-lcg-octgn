@@ -37,7 +37,7 @@
     <card name="Alibi Artist" id="b6482118-f49a-4c91-942f-2de844c8713c" size="dynasty">
       <property name="Clan" value="Scorpion" />
       <property name="Text">
-        <b>Action:</b> If you have 6 or fewer honor – look at the top 2 caards of your conflict deck. Put 1 of those cards into your hand and the other on the bottom of your conflict deck.</property>
+        <b>Action:</b> If you have 6 or fewer honor – look at the top 2 cards of your conflict deck. Put 1 of those cards into your hand and the other on the bottom of your conflict deck.</property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Courtier. Shinobi." />
       <property name="Card Number" value="4" />

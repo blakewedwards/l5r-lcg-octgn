@@ -4,7 +4,8 @@
     <card name="Kyūden Isawa" id="0e1da26d-944f-4436-8485-ef0bffb8d431" size="province">
       <property name="Clan" value="Phoenix" />
       <property name="Text">
-        <b>Action:</b> During a conflict, bow this stronghold – play a <i>Spell</i> event from your conflict discard pile as if it were in your hand. Remove that event from the game.</property>
+        <b>Action:</b> During a conflict, bow this stronghold and discard a <i>Spell</i> event from your hand – play a <i>Spell</i> event from your conflict discard pile as if it were in your hand. Remove that event from the game.
+<i>Errata from the Imperial Law (2020-01-06)</i></property>
       <property name="Type" value="Stronghold" />
       <property name="Traits" value="Library. Palace." />
       <property name="Card Number" value="1" />
@@ -112,7 +113,7 @@ While resolving a conflict at this province, characters count their glory instea
     </card>
     <card name="Isawa Tadaka" id="24e82b93-8b87-4176-a975-55495c36216d" size="dynasty">
       <property name="Clan" value="Phoenix" />
-      <property name="Text">Each opponent cannot play copies of event cards that are in his or her conflict discard pile unless the <s value="earth">[Earth]</s> ring is in that player's claimed ring pool.</property>
+      <property name="Text">Each opponent cannot play copies of event cards that are in his or her conflict discard pile unless the <s value="earth">[Earth]</s> ring is in the player's claimed ring pool.</property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Shugenja. Earth. Elemental-Master." />
       <property name="Card Number" value="10" />

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Spreading Shadows" id="93666d59-0c41-4b25-ac0d-1cffddf7d5ca" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
+  <cards>
+    <card name="Seven Stings Keep" id="0cf66e98-1b0b-4aaa-a5ba-33f4efae383a" size="province">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Interrupt:</b> When you declare a conflict, choose a number greater than 0 and bow this stronghold – your opponent declares defenders for this conflict. Then declare the conflict <i>(choosing attackers, ring, conflict type, and province)</i>. You must declare a number of attackers equal to the number you chose.</property>
+      <property name="Type" value="Stronghold" />
+      <property name="Traits" value="Castle." />
+      <property name="Card Number" value="25" />
+      <property name="Bonus Strength" value="+2" />
+      <property name="Deck" value="Province" />
+      <property name="Influence Value" value="10" />
+      <property name="Starting Honor" value="10" />
+      <property name="Fate Value" value="7" />
+    </card>
+    <card name="Shinsei's Last Hope" id="ccb5ccb6-e343-41ac-8f24-8ef7e2e5411e" size="province">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Eminent. <i>(This province starts the game faceup and cannot be turned facedown. It cannot be a stronghold province.)</i>
+Each character played from this province costs 2 less to play and enters play dishonored.</property>
+      <property name="Type" value="Province" />
+      <property name="Traits" value="Village." />
+      <property name="Ring" value="EarthWater" />
+      <property name="Card Number" value="26" />
+      <property name="Bonus Strength" value="3" />
+      <property name="Deck" value="Province" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Dispatch to Nowhere" id="9ed533ce-36e2-4fc0-b442-63860b4f1dbc" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> Choose a character with no fate - discard that character.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="34" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Traveling Philosopher" id="e9cbf8bd-076e-4af0-9568-0c2c4171b309" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Interrupt:</b> When this character leaves play, choose an unbroken province you control – turn that province facedown.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Monk." />
+      <property name="Card Number" value="34" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Inspired Visionary" id="4fe25330-5808-4934-b303-8285d6a90746" size="dynasty">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <b>Reaction:</b> After the fate phase begins, bow this character and choose an attachment – shuffle that attachment into its owner's conflict deck. That player draws 1 card.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Air." />
+      <property name="Card Number" value="36" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Disciple of Shinsei" id="45664822-4e9a-4d8f-a3b6-3678cf3ad2bb" size="dynasty">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <b>Interrupt:</b> When this character leaves play, choose an attachment – discard it.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Monk. Brotherhood." />
+      <property name="Card Number" value="39" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Twilight Rider" id="5a95cfad-c2b4-4ea9-8bbe-ab3dafdea074" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">Rally. <i>(After this card is revealed in a province, add the top card of your dynasty deck to the province, faceup.)</i><b>Reaction:</b> After this character moves to a conflict, choose a character – ready that character.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Cavalry. Scout." />
+      <property name="Card Number" value="39" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Highlight the Flaws" id="54bb33a2-8155-4575-87c2-98df47137c98" size="conflict">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <i>Fire</i> role only.
+<b>Interrupt:</b> When the effects of a province's triggered ability would initiate – cancel those effects.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="43" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+  </cards>
+</set>

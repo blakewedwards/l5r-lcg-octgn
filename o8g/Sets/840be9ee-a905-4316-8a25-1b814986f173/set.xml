@@ -5,7 +5,8 @@
       <property name="Clan" value="Neutral" />
       <property name="Text">
         <i>Fire</i> role only.
-<b>Interrupt:</b> When this province is broken, choose an opponent's character – move each fate from that character to a character you control with no fate.</property>
+<b>Interrupt:</b> When this province is broken, choose an opponent's character – move 1 fate from that character to a character you control.
+<i>Errata from RRG v11</i></property>
       <property name="Type" value="Province" />
       <property name="Ring" value="Fire" />
       <property name="Card Number" value="41" />
