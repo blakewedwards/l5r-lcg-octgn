@@ -140,7 +140,7 @@
     <card name="Raise the Alarm" id="fe8edc3c-5d73-45e7-a635-40ed814d6f08" size="conflict">
       <property name="Clan" value="Crab" />
       <property name="Text">
-        <b>Action:</b> During a <s value="military">[Military]</s> conflict in which you are the defending player – turn the dynasty card in the attacked province faceup. Then, if that card is a character, put it into play as a defender.</property>
+        <b>Action:</b> During a <s value="military">[Military]</s> conflict in which you are the defending player – turn a dynasty card in the attacked province faceup. Then, if that card is a character, put it into play as a defender.</property>
       <property name="Type" value="Event" />
       <property name="Card Number" value="32" />
       <property name="Cost" value="0" />

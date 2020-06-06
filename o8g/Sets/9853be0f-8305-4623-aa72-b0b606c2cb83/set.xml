@@ -83,7 +83,7 @@
     </card>
     <card name="Impulsive Novice" id="04f9263b-b953-4c82-b047-6e76feceed24" size="dynasty">
       <property name="Clan" value="Dragon" />
-      <property name="Text">This characters gets +1<s value="military">[Military]</s> and +1<s value="political">[Political]</s> while you have claimed the <s value="fire">[Fire]</s> or <s value="void">[Void]</s> ring.</property>
+      <property name="Text">This character gets +1<s value="military">[Military]</s> and +1<s value="political">[Political]</s> while you have claimed the <s value="fire">[Fire]</s> or <s value="void">[Void]</s> ring.</property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Monk." />
       <property name="Card Number" value="28" />

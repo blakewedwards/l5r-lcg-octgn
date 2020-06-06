@@ -30,5 +30,8 @@
       <set id="clan-war" number="28" value="b42e7a11-4889-4af0-b2d0-6ef13e49f73a" />
       <set id="rokugan-at-war" number="29" value="29feac51-ac47-4ee3-9741-1aa2bd00fd05" />
       <set id="spreading-shadows" number="30" value="93666d59-0c41-4b25-ac0d-1cffddf7d5ca" />
+      <set id="in-pursuit-of-truth" number="31" value="968fff8d-7530-45e1-9939-5a63ab725382" />
+      <set id="campaigns-of-conquest" number="32" value="25a17ddd-9c9c-40ea-9132-f080b272b68b" />
+      <set id="as-honor-demands" number="33" value="fd5e6c4e-4cb9-465a-85c0-657d487ff4b3" />
   </sets>
 </xml>

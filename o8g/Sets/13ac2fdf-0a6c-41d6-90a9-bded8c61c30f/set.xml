@@ -340,7 +340,8 @@ Limit 1 <i>Battlefield</i> attachment per province.
     </card>
     <card name="Those Who Serve" id="f19b451f-0889-408f-824f-581ea7ea8750" size="conflict">
       <property name="Clan" value="Neutral" />
-      <property name="Text">Limited. <i>(No more than one limited card can be played by each player each round.)</i><b>Action:</b> During the dynasty phase - reduce the cost for each character you play this phase by 1 <i>(to a minimum of 0)</i>.</property>
+      <property name="Text">Limited. <i>(No more than one limited card can be played by each player each round.)</i><b>Action:</b> During the dynasty phase - reduce the cost for each character you play this phase by 1 <i>(to a minimum of 1)</i>.
+<i>Errata from Imperial Law (2020-04-06).</i></property>
       <property name="Type" value="Event" />
       <property name="Traits" value="Philosophy." />
       <property name="Card Number" value="28" />

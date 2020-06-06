@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="In Pursuit of Truth" id="968fff8d-7530-45e1-9939-5a63ab725382" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
+  <cards>
+    <card name="Tsuma" id="7c03608e-5c79-42f3-a196-3564cac1a821" size="province">
+      <property name="Clan" value="Crane" />
+      <property name="Text">Eminent. <i>(This province starts the game faceup and cannot be turned facedown. It cannot be a stronghold province.)</i>
+Each character played from this province enters play honored.</property>
+      <property name="Type" value="Province" />
+      <property name="Traits" value="City." />
+      <property name="Ring" value="AirFire" />
+      <property name="Card Number" value="49" />
+      <property name="Bonus Strength" value="3" />
+      <property name="Deck" value="Province" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Silent Ones Monastery" id="e9c87ae8-055c-43d9-8b45-ec94d85c5692" size="province">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">Eminent. <i>(This province starts the game faceup and cannot be turned facedown. It cannot be a stronghold province.)</i>
+Each opponent cannot gain more than 2 honor each phase.</property>
+      <property name="Type" value="Province" />
+      <property name="Traits" value="Temple." />
+      <property name="Ring" value="AirWater" />
+      <property name="Card Number" value="50" />
+      <property name="Bonus Strength" value="5" />
+      <property name="Deck" value="Province" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Courteous Greeting" id="b65afd6d-388a-41fb-949f-733dfa9c5edc" size="province">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <b>Action:</b> During a conflict at an <s value="earth">[Earth]</s> province, choose an attacking character and a defending character - bow those characters.</property>
+      <property name="Type" value="Province" />
+      <property name="Ring" value="Earth" />
+      <property name="Card Number" value="51" />
+      <property name="Bonus Strength" value="4" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Blatant Swindler" id="0ad25b91-6c48-43e9-98ee-1d43851fdc67" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <i>Seeker</i> role only.
+<b>Action:</b> During a conflict in which this character is particpating, give your opponent 1 honor. That player chooses a participating character they control - move that character home.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier. Merchant." />
+      <property name="Card Number" value="52" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Third Whisker Sneak" id="c469aa90-2166-412b-99f3-cbc2862597d2" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Immune to <i>Shadowlands</i> and <i>Mahō</i> card effects.
+<b>Reaction:</b> After this character wins an unopposed conflict - search the top X cards of your conflict deck for a card and add it to your hand. X is equal to the number of unbroken provinces you control. Shuffle.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Creature. Nezumi. Scout." />
+      <property name="Card Number" value="53" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Asahina Augur" id="f59a0cbf-5fb5-4156-82a2-c81029c58460" size="dynasty">
+      <property name="Clan" value="Crane" />
+      <property name="Text">You may look at facedown cards in your provinces.
+<b>Action:</b> Choose a card in your provinces - discard that card. (Limit 3 times per round.)</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Air." />
+      <property name="Card Number" value="54" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="0" />
+      <property name="Political Skill" value="0" />
+      <property name="Glory" value="3" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Shrewd Investigator" id="6351f263-f3b4-4ab6-8fb9-3094bcdd452c" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which this character is participating - look at X random cards in your opponent's hand. X is equal to the number of facedown provinces you control.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="55" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="0" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Kitsuki Chiari" id="a302c2fd-5ae8-42f5-9591-d7c3859104d7" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">No <i>Poison</i> attachments.
+<b>Reaction:</b> After a province you control is revealed, choose an opponent and name a card - reveal 4 random cards in that opponent's hand and discard each copy of the named card revealed this way.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="56" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Master Tactician" id="cea46652-fd49-4786-a293-92ce5d446cd2" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">During conflicts in which this character is participating, if there is a <i>Battlefield</i> in play, you may look at and play the top card of your conflict deck as if it were in your hand. You cannot play more than 3 cards per round this way.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Commander." />
+      <property name="Card Number" value="57" />
+      <property name="Cost" value="5" />
+      <property name="Military Skill" value="5" />
+      <property name="Political Skill" value="5" />
+      <property name="Glory" value="3" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Student of the Tao" id="121af467-6d17-42f6-989f-997b22367389" size="dynasty">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">Rally. <i>(After this card is revealed in a province, add the top card of your dynasty deck to the province, faceup.)</i><b>Action:</b> During a conflict at a <s value="void">[Void]</s> province, choose a character you do not control - move that character home.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Void. Scholar." />
+      <property name="Card Number" value="58" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="3" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Cursecatcher" id="8fd20edb-5493-43bf-b124-269b51c3cc2f" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <i>Seeker</i> role only.
+<b>Interrupt:</b> When the effects of a province's triggered ability would initiate, if that province has any facedown cards in it - cancel those effects.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Air." />
+      <property name="Card Number" value="59" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Scholar of Old Rempet" id="97204d7a-9e33-4e14-be3a-c4dbb42eb00b" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">Rally. <i>(After this card is revealed in a province, add the top card of your dynasty deck to the province, faceup.)</i><b>Action:</b> During a conflict, lose 1 honor. Choose a non-unique character - that character is immune to events until the end of the conflict.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Water. Scholar." />
+      <property name="Card Number" value="60" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="0" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Lost Papers" id="fd373939-0efe-4ab6-a2ce-f1692a9806d0" size="dynasty">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">Rally. <i>(After this card is revealed in a province, add the top card of your dynasty deck to the province, faceup.)</i><b>Reaction:</b> After this card is revealed in a province, choose a character with the most fate on it among characters in play - bow that character.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="61" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Return From Shadows" id="f9f340e5-cbd5-448b-ac59-1c29ca3f41a6" size="conflict">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Reaction:</b> After you win a conflict unopposed, choose a province the defending player controls - put a dishonored status token on it and reveal it, if able. While a province has a dishonored status token, treat its printed text box as if it were blank (except for <i>Traits</i>). (Max 1 per conflict.)</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="62" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+    <card name="The Wealth of the Crane" id="935d77b7-0558-4296-96ee-50b1d8b533d7" size="conflict">
+      <property name="Clan" value="Crane" />
+      <property name="Text">Reduce the cost to play this card by 1 for each faceup province you control.
+<b>Action:</b> Look at the top 10 cards of your dynasty deck. Put 1 of those cards into each of your non-stronghold provinces faceup. Shuffle. (Max 1 per phase.)</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="63" />
+      <property name="Cost" value="5" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+    <card name="Mantra of Void" id="d35aaab0-3887-4802-b8bf-1355974c116e" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Reaction:</b> After an opponent declares a <s value="void">[Void]</s> conflict, choose a <i>Monk</i> character or a character with a <i>Monk</i> attachment – until the end of the conflict, reduce the cost to play attachments on that character by 1. Draw 1 card.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Kihō. Void." />
+      <property name="Card Number" value="64" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Makeshift War Camp" id="87a17a24-8e8b-49ea-a694-6c392b58ca93" size="conflict">
+      <property name="Clan" value="Lion" />
+      <property name="Text">Attach to an unbroken province.
+Limit 1 <i>Battlefield</i> attachment per province.
+During a conflict at attached province, each participating character you control gets +2<s value="military">[Military]</s>.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Battlefield." />
+      <property name="Card Number" value="65" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="-" />
+      <property name="Political Skill" value="-" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+    <card name="Shori" id="69c4b307-c797-4fc9-bff6-38c009ba50ee" size="conflict">
+      <property name="Clan" value="Lion" />
+      <property name="Text">Attach to a unique <s value="lion">[Lion]</s> character.
+Ancestral. Restricted.
+If attached character has the <i>Champion</i> trait, it gains "You may declare an additional <s value="military">[Military]</s> conflict each conflict phase."</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Weapon." />
+      <property name="Card Number" value="66" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="+4" />
+      <property name="Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Studious" id="909fd8cd-17d5-416e-9f6f-7a7be8b47548" size="conflict">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">Attach to a <i>Scholar</i> character.
+Attached character gains sincerity and "<b>Reaction:</b> After this character wins a conflict - draw 1 card."</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Condition." />
+      <property name="Card Number" value="67" />
+      <property name="Cost" value="0" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Study the Natural World" id="5ea47fad-0f37-41a6-9309-34caa18cd142" size="conflict">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which you control an attacking <i>Scholar</i> character - the contested ring gains each of the attacked province's elements. If you win the conflict, you may resolve each of the contested ring's effects.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="68" />
+      <property name="Cost" value="2" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Way With Words" id="cfe5d88c-b670-4d4f-ad5a-dc7afab5037c" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <i>Water</i> role only.
+Attached character gains: "<b>Reaction:</b> After this character wins a <s value="political">[Political]</s> conflict - take 1 honor from your opponent."</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Technique." />
+      <property name="Card Number" value="69" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="+0" />
+      <property name="Political Skill" value="+1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Hunting Falcon" id="e9d7fdb1-6934-4dc8-9b6a-e9bbe9982bc7" size="conflict">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">
+        <b>Reaction:</b> After this attachment enters play, choose a facedown province - look at that province.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Creature." />
+      <property name="Card Number" value="70" />
+      <property name="Cost" value="0" />
+      <property name="Military Skill" value="+1" />
+      <property name="Political Skill" value="+0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+  </cards>
+</set>

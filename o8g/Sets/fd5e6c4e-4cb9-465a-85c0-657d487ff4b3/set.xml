@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="As Honor Demands" id="fd5e6c4e-4cb9-465a-85c0-657d487ff4b3" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
+  <cards>
+    <card name="Seven Fold Palace" id="803f4e2c-f4a9-40c9-9bc6-6911ff251160" size="province">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <b>Reaction:</b> After an honored character you control wins a conflict as the attacker, bow this stronghold - gain 2 honor.</property>
+      <property name="Type" value="Stronghold" />
+      <property name="Traits" value="Palace." />
+      <property name="Card Number" value="93" />
+      <property name="Bonus Strength" value="+1" />
+      <property name="Deck" value="Province" />
+      <property name="Unique" value="Unique" />
+      <property name="Influence Value" value="10" />
+      <property name="Starting Honor" value="10" />
+      <property name="Fate Value" value="7" />
+    </card>
+    <card name="Honor's Reward" id="68dc24c0-347a-446c-9702-ec0a9f597c5a" size="province">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <b>Action:</b> During a conflict at an <s value="fire">[Fire]</s> province, choose a participating character - that character gets +3 glory until the end of the conflict.</property>
+      <property name="Type" value="Province" />
+      <property name="Ring" value="Fire" />
+      <property name="Card Number" value="95" />
+      <property name="Bonus Strength" value="5" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Master of the Court" id="20d5669a-4a29-4b28-9660-02ce01bf4e7b" size="dynasty">
+      <property name="Clan" value="Crane" />
+      <property name="Text">Covert. <i>(When this character attacks, choose one character without covert. That character cannot be declared as a defender.)</i><b>Interrupt:</b> When the effects of an event would initiate, discard an honored status token from this character - cancel those effects.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="98" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="4" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Asako Lawmaster" id="99ac6d66-d8f6-4f2c-bfd8-841ced1a63f5" size="dynasty">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <b>Reaction:</b> After you pass on declaring a conflict - gain 1 honor.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="102" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="4" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Endless Archives" id="32afd336-9fd8-4d74-9fdd-5e460b7a1757" size="dynasty">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <b>Reaction:</b> After you pass on declaring a conflict - put an honor token on this holding. Then, put X cards from your hand on the bottom of your conflict deck and draw that many cards, where X is the number of honor tokens on this holding. Any player may trigger this ability. (Unlimited.)</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Library." />
+      <property name="Card Number" value="103" />
+      <property name="Bonus Strength" value="+1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Shinjo Altansarnai" id="297833d9-052d-4ec4-a18e-ea22b33c77fb" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">
+        <b>Action:</b> During a <s value="military">[Military]</s> conflict in which this character is participating - search the top 8 cards of your dynasty deck for a non-unique character with printed cost 3 or lower and put that character into play in the conflict. Shuffle.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Cavalry. Champion." />
+      <property name="Card Number" value="105" />
+      <property name="Cost" value="5" />
+      <property name="Military Skill" value="5" />
+      <property name="Political Skill" value="4" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Elegance and Grace" id="d70ce260-7de6-4d50-b956-a9c5bb6d52ba" size="conflict">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <b>Action:</b> Choose up to 2 honored characters with total printed cost of 6 or less - ready each of those characters.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="108" />
+      <property name="Cost" value="2" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+    <card name="Soshi Diviner" id="35e74dd6-9e53-4fd5-bcc1-20082c5eea97" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> During a conflict, choose a card in a non-stronghold province - move that card to another non-stronghold province controlled by the same player.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Air." />
+      <property name="Card Number" value="112" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+  </cards>
+</set>

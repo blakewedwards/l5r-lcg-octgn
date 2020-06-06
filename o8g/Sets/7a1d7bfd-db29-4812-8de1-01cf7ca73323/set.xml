@@ -74,8 +74,7 @@
     <card name="City of the Open Hand" id="8fc39443-2135-40fb-bece-3889c3dde8a0" size="province">
       <property name="Clan" value="Scorpion" />
       <property name="Text">
-        <b>Action:</b> If you are less honorable than an opponent, bow this stronghold and select one – either that opponent loses 1 honor, or you gain 1 honor.
-<i>Errata from RRG v9</i></property>
+        <b>Action:</b> If you are less honorable than an opponent, bow this stronghold – take 1 honor from that player.</property>
       <property name="Type" value="Stronghold" />
       <property name="Traits" value="City." />
       <property name="Card Number" value="6" />
@@ -143,8 +142,9 @@
     </card>
     <card name="Kuroi Mori" id="99c8a45a-e16a-406b-9029-acf90e0c49bd" size="province">
       <property name="Clan" value="Phoenix" />
-      <property name="Text">
-        <b>Action:</b> During a conflict at this province, select one – switch the contested ring with an unclaimed ring <i>(the conflict retains its type)</i>, or switch the conflict type <i>(the conflict retains its element)</i>.</property>
+      <property name="Text">Cannot be a stronghold province.
+<b>Action:</b> During a conflict at this province, select one – switch the contested ring with an unclaimed ring <i>(the conflict retains its type)</i>, or switch the conflict type <i>(the conflict retains its element)</i>.
+<i>Errata from Imperial Law (2020-04-06).</i></property>
       <property name="Type" value="Province" />
       <property name="Ring" value="Void" />
       <property name="Card Number" value="12" />

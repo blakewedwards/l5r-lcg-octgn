@@ -553,7 +553,7 @@ Then, you do each option once for each opponent that selected that option.</prop
       <property name="Cost" value="1" />
       <property name="Military Skill" value="1" />
       <property name="Political Skill" value="1" />
-      <property name="Glory" value="0" />
+      <property name="Glory" value="1" />
       <property name="Deck" value="Dynasty" />
     </card>
     <card name="Shosuro Actor" id="ff28c5f0-50f8-4c43-aa56-c9af67515da0" size="dynasty">
@@ -680,7 +680,7 @@ Then, you do each option once for each opponent that selected that option.</prop
     </card>
     <card name="Cunning Confidant" id="90787190-48ed-49eb-88a2-dab041d3a6b6" size="dynasty">
       <property name="Clan" value="Neutral" />
-      <property name="Text">While participating in a conflict against a player with more claimed rings than you, that character gets +2<s value="political">[Political]</s>.</property>
+      <property name="Text">While participating in a conflict against a player with more claimed rings than you, this character gets +2<s value="political">[Political]</s>.</property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Courtier. Fox-Clan." />
       <property name="Card Number" value="61" />
@@ -692,7 +692,7 @@ Then, you do each option once for each opponent that selected that option.</prop
     </card>
     <card name="Insightful Gatekeeper" id="4759eb3f-7970-46d0-81e3-5db2bfc88c19" size="dynasty">
       <property name="Clan" value="Neutral" />
-      <property name="Text">While participating in a conflict against a player with more claimed rings than you, that character gets +2<s value="military">[Military]</s>.</property>
+      <property name="Text">While participating in a conflict against a player with more claimed rings than you, this character gets +2<s value="military">[Military]</s>.</property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Bushi. Dragonfly-Clan." />
       <property name="Card Number" value="62" />
@@ -1001,7 +1001,7 @@ This character cannot participate in conflicts against its owner.</property>
     <card name="Diversionary Maneuver" id="15453889-68b2-42ba-b13c-e8a93762c900" size="conflict">
       <property name="Clan" value="Unicorn" />
       <property name="Text">
-        <b>Action:</b> During a <s value="military">[Military]</s> conflict in which you are the attacking player, choose an eligible province not currently being attacked - bow and move home each participating. Move the conflict to the chosen province and reveal it, if able. Move any number of ready characters you control to the conflict, then your opponent does so as well.</property>
+        <b>Action:</b> During a <s value="military">[Military]</s> conflict in which you are the attacking player, choose an eligible province not currently being attacked - bow and move home each participating character. Move the conflict to the chosen province and reveal it, if able. Move any number of ready characters you control to the conflict, then your opponent does so as well.</property>
       <property name="Type" value="Event" />
       <property name="Traits" value="Tactic." />
       <property name="Card Number" value="90" />

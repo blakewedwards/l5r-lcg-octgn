@@ -1,6 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <set name="Rokugan at War" id="29feac51-ac47-4ee3-9741-1aa2bd00fd05" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
   <cards>
+    <card name="Shrug Off Despair" id="183fded8-4fae-4e2e-b81f-585c05cebd84" size="province">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Cannot be a stronghold province.
+<b>Action:</b> During a conflict at another province you control - move the contested ring to this province. It is now the attacked province.</property>
+      <property name="Type" value="Province" />
+      <property name="Ring" value="Void" />
+      <property name="Card Number" value="1" />
+      <property name="Bonus Strength" value="6" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Pledge of Loyalty" id="2ce5b02f-0fdd-4d1a-ad81-3c408daa8351" size="province">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <b>Interrupt:</b> When an honored character you control would leave play - discard its honored status token instead.</property>
+      <property name="Type" value="Province" />
+      <property name="Ring" value="Earth" />
+      <property name="Card Number" value="2" />
+      <property name="Bonus Strength" value="3" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Sharing Shinsei's Wisdom" id="0c06be0b-c0ba-45c5-b6cf-3adca04270a2" size="province">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Reaction:</b> After this province is revealed, choose a character – move 1 fate from that character to another character controlled by the same player.</property>
+      <property name="Type" value="Province" />
+      <property name="Ring" value="Water" />
+      <property name="Card Number" value="3" />
+      <property name="Bonus Strength" value="4" />
+      <property name="Deck" value="Province" />
+    </card>
     <card name="Ninkatoshi" id="75c7a77e-ff76-4255-ae18-86195c7443e3" size="province">
       <property name="Clan" value="Lion" />
       <property name="Text">Eminent. <i>(This province starts the game faceup and cannot be turned facedown. It cannot be a stronghold province.)</i>
@@ -10,6 +40,18 @@ Each other province gets -1 strength if controlled by an opponent and +1 strengt
       <property name="Ring" value="EarthWater" />
       <property name="Card Number" value="4" />
       <property name="Bonus Strength" value="4" />
+      <property name="Deck" value="Province" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Kakudaira" id="2027144f-5a45-4c6a-9b4f-99b9f1aa0925" size="province">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">Eminent. <i>(This province starts the game faceup and cannot be turned facedown. It cannot be a stronghold province.)</i>
+After each phase begins, reveal each facedown card in this province.</property>
+      <property name="Type" value="Province" />
+      <property name="Traits" value="City." />
+      <property name="Ring" value="AirVoid" />
+      <property name="Card Number" value="5" />
+      <property name="Bonus Strength" value="5" />
       <property name="Deck" value="Province" />
       <property name="Unique" value="Unique" />
     </card>
@@ -23,6 +65,14 @@ After setup, fill this province to 3 cards. When you would refill this province,
       <property name="Card Number" value="6" />
       <property name="Bonus Strength" value="3" />
       <property name="Deck" value="Province" />
+    </card>
+    <card name="Recalled Defenses" id="c2393aee-dd74-43e1-bdd5-73d3fffcda31" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Rally. <i>(After this card is revealed in a province, add the top card of your dynasty deck to the province faceup.)</i><b>Action:</b> Move a card from one of your provinces to your stronghold province.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="7" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Dynasty" />
     </card>
     <card name="Kakita Yoshi" id="2d83564e-9b91-40e1-9234-03dc1ee6453e" size="dynasty">
       <property name="Clan" value="Crane" />
@@ -38,6 +88,67 @@ After setup, fill this province to 3 cards. When you would refill this province,
       <property name="Deck" value="Dynasty" />
       <property name="Unique" value="Unique" />
     </card>
+    <card name="Cycle of Rebirth" id="683f6408-3ea4-4b96-956a-166f3197fb94" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Action:</b> Choose a card in a province - shuffle this card and that card into their owner's decks. Refill each province emptied by this effect faceup. (Max 1 per round.)</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="9" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Akodo Reserve Company" id="540916a2-1a44-4c03-9b6c-69a04e7ea000" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">No attachments except <i>Weapon</i>. Rally.
+<b>Action:</b> During a conflict, if there is a <i>Battlefield</i> in play, choose a participating character you control - move this character to the conflict. If you do, move the chosen character home.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Army." />
+      <property name="Card Number" value="10" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="5" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Garanto Guardian" id="39008b45-8905-4aab-a882-6709fcf13c7f" size="dynasty">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <b>Reaction:</b> After this character wins a conflict as the defender - resolve a ring effect that matches the attacked province's element as if you were the attacking player.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi." />
+      <property name="Card Number" value="11" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="4" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="3" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Governor's Spy" id="5c8b4b38-6180-495a-b9e1-c419344fd84e" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which this character is participating, choose a player - turn each card in that player's provinces facedown. Then, look at them and put each of those cards into one of that player's provinces, such that each province ends up with at least one card.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="12" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="4" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="White Horde Vanguard" id="48acc9ad-22ce-49cc-b0e3-d160974d6171" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">No attachments except <i>Weapon</i>.
+During the first conflict each round, opponents' card effects cannot bow this character or move it.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Army. Cavalry." />
+      <property name="Card Number" value="13" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="5" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
     <card name="A Season of War" id="337621d5-7479-4ef8-bc82-1869370e2982" size="dynasty">
       <property name="Clan" value="Neutral" />
       <property name="Text">Rally. <i>(After this card is revealed in a province, add the top card of your dynasty deck to the province, faceup.)</i><b>Action:</b> Discard each card in each province, refilling each province faceup. End the dynasty phase. Then there is an additional dynasty phase, during which players do not collect fate.</property>
@@ -45,6 +156,28 @@ After setup, fill this province to 3 cards. When you would refill this province,
       <property name="Card Number" value="14" />
       <property name="Cost" value="1" />
       <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Our Foe Does Not Wait" id="564f29cc-3521-4465-a207-a8c7291b4e45" size="conflict">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <i>Earth</i> role only.
+<b>Reaction:</b> After you pass on declaring a conflict, choose an unbroken non-stronghold province you control - search the top 8 cards of your dynasty deck for a card and put it into that province faceup. Shuffle. (Max 1 per conflict opportunity.)</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="15" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Captivating Story" id="69bdbe07-5444-4b1d-8bed-de76ed043d7a" size="conflict">
+      <property name="Clan" value="Crane" />
+      <property name="Text">
+        <i>Water</i> role only.
+<b>Action:</b> During a conflict, choose a character that is participating alone on your side - that character gets +1<s value="political">[Political]</s> until the end of the conflict for each faceup province you control. You may remove 1 fate from that character. If you do, honor it.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="16" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
     </card>
     <card name="Educated Heimin" id="98bfa9d0-42cd-40f6-9e42-8ba545c78d16" size="conflict">
       <property name="Clan" value="Dragon" />
@@ -59,6 +192,49 @@ Each time you would refill attached province with a card, instead look at the to
       <property name="Deck" value="Conflict" />
       <property name="Influence Value" value="3" />
     </card>
+    <card name="Serene Ise Zumi" id="02f9c08b-0764-4f58-8b7c-49bcebb5dff6" size="conflict">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">Sincerity. <i>(When this character leaves play, draw 1 card.)</i>
+You may play this character as an attachment on a character you control, reducing its cost by 2. If you do, it loses sincerity and gains the text: "<b>Action:</b> During a conflict - move attached character home."</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Monk. Tattooed." />
+      <property name="Card Number" value="18" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Prepared Ambush" id="9e58d000-72e7-4263-bf90-604564ee0e0e" size="conflict">
+      <property name="Clan" value="Lion" />
+      <property name="Text">Attach to an unbroken province.
+Limit 1 <i>Battlefield</i> attachment per province.
+During a conflict at attached province, you may play each character in your provinces as if it were in your hand. Each character played this way must enter play in the conflict.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Battlefield." />
+      <property name="Card Number" value="19" />
+      <property name="Cost" value="0" />
+      <property name="Military Skill" value="-" />
+      <property name="Political Skill" value="-" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Wandering Mediator" id="badccaee-4fb8-49ee-9700-40cb3e33a283" size="conflict">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">
+        <i>Air</i> role only.
+<b>Action:</b> During a conflict at an <s value="air">[Air]</s> province, select one - either move this character to the conflict, or move it home.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="20" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="0" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
     <card name="Paralyzing Delicacy" id="dd426fbf-c456-402f-a6ab-37798da91dec" size="conflict">
       <property name="Clan" value="Scorpion" />
       <property name="Text">
@@ -69,6 +245,45 @@ Each time you would refill attached province with a card, instead look at the to
       <property name="Cost" value="0" />
       <property name="Deck" value="Conflict" />
       <property name="Influence Value" value="2" />
+    </card>
+    <card name="Countryside Trader" id="9757ba0d-df26-422d-a2c7-200ef32141be" size="conflict">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which this character is attacking, spend 1 fate and choose a triggered ability printed on the attacked province - resolve that ability as if you controlled the province, ignoring all triggering conditions.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier. Merchant." />
+      <property name="Card Number" value="22" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Scouted Terrain" id="462eb541-a3fa-49a0-8720-2873cd56f552" size="conflict">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">
+        <i>Void</i> role only.
+<b>Action:</b> During the conflict phase, choose an opponent. If that opponent controls at least 4 faceup provinces - you may attack that player's stronghold this phase.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="23" />
+      <property name="Cost" value="4" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Field of Ruin" id="9967d7e7-8091-44c8-b317-05abc85d0de5" size="conflict">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">Reduce the cost to play this card by 1 if it is played on a broken province.
+Attach to a province. Limit 1 <i>Battlefield</i> attachment per province.
+<b>Reaction:</b> After the conflict phase begins - discard each card in attached province.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Battlefield." />
+      <property name="Card Number" value="24" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="-" />
+      <property name="Political Skill" value="-" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="0" />
     </card>
   </cards>
 </set>
