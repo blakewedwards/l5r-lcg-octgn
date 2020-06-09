@@ -83,7 +83,7 @@
     </card>
     <card name="Impulsive Novice" id="04f9263b-b953-4c82-b047-6e76feceed24" size="dynasty">
       <property name="Clan" value="Dragon" />
-      <property name="Text">This characters gets +1<s value="military">[Military]</s> and +1<s value="political">[Political]</s> while you have claimed the <s value="fire">[Fire]</s> or <s value="void">[Void]</s> ring.</property>
+      <property name="Text">This character gets +1<s value="military">[Military]</s> and +1<s value="political">[Political]</s> while you have claimed the <s value="fire">[Fire]</s> or <s value="void">[Void]</s> ring.</property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Monk." />
       <property name="Card Number" value="28" />
@@ -199,7 +199,8 @@ If an opponent is more honorable than you, discard this attachment.</property>
     <card name="Oracle of Stone" id="c1b7a38b-b8a9-412e-88f3-68e6201b45e7" size="conflict">
       <property name="Clan" value="Phoenix" />
       <property name="Text">
-        <b>Action:</b> Each player draws 2 cards. Then, each player discards 2 cards.</property>
+        <b>Action:</b> Each player draws 2 cards. Then, each player discards 2 cards from his or her hand.
+<i>Errata from RRG v1.7</i></property>
       <property name="Type" value="Event" />
       <property name="Traits" value="Spell. Earth." />
       <property name="Card Number" value="37" />

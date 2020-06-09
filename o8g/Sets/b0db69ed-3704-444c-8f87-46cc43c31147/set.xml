@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Defenders of Rokugan" id="b0db69ed-3704-444c-8f87-46cc43c31147" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
+  <cards>
+    <card name="Kyūden Hida" id="8fe0dbe0-9670-4de9-b143-19938c394c5d" size="province">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Action:</b> During the dynasty phase, bow this stronghold - look at the top 3 cards of your dynasty deck. You may play a character from among those cards as if it were in your provinces. Discard the rest.</property>
+      <property name="Type" value="Stronghold" />
+      <property name="Traits" value="Castle." />
+      <property name="Card Number" value="1" />
+      <property name="Bonus Strength" value="+2" />
+      <property name="Deck" value="Province" />
+      <property name="Unique" value="Unique" />
+      <property name="Influence Value" value="10" />
+      <property name="Starting Honor" value="11" />
+      <property name="Fate Value" value="7" />
+    </card>
+    <card name="Kuni Wasteland" id="4e24a70f-6a92-42fb-9a55-17cfa1a2f25c" size="province">
+      <property name="Clan" value="Crab" />
+      <property name="Text">During a conflict at this province, your opponent cannot trigger character abilities or initiate keywords from characters he or she controls. <i>(Covert is initiated before this province is revealed.)</i></property>
+      <property name="Type" value="Province" />
+      <property name="Traits" value="Wasteland." />
+      <property name="Ring" value="Fire" />
+      <property name="Card Number" value="2" />
+      <property name="Bonus Strength" value="4" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Support of the Crab" id="9cd1c651-8ee9-4d17-9995-84f3438b40f9" size="province">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">Increase your deckbuilding influence value by 8. You may only spend influence on <s value="crab">[Crab]</s> clan cards.</property>
+      <property name="Type" value="Role" />
+      <property name="Traits" value="Crab." />
+      <property name="Card Number" value="3" />
+      <property name="Deck" value="Role" />
+    </card>
+    <card name="Purifier Apprentice" id="349edd67-ad8b-4ed1-a438-d8a3296f3606" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Reaction:</b> After you win a conflict as the defending player - your opponent loses 1 honor.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Earth." />
+      <property name="Card Number" value="4" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="0" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Hida Sukune" id="ae15253a-a320-4c83-8c53-82b72e569a24" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which this character is defending - draw 1 card and discard 1 card from your hand. (Limit once per conflict.)</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Commander." />
+      <property name="Card Number" value="5" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Shadowlands Hunter" id="5a585c2d-e8bd-4719-92cf-fb0cae5d85fb" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Each conflict this character wins while attacking is considered to be unopposed.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Scout." />
+      <property name="Card Number" value="6" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="0" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Hida O-Ushi" id="144414ba-bc57-4e8d-aa3f-ad3664a5188c" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Reaction:</b> After you win a conflict as the defending player - you may declare an additional <s value="military">[Military]</s> conflict this phase. (Max 1 per phase.)</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi." />
+      <property name="Card Number" value="7" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Unyielding Sensei" id="f8f7c87b-220d-42b3-9b56-bb6dabe9c2c1" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Action:</b> Choose an unbroken province you control with a holding - look at the top 2 cards of your dynasty deck. You may put a character card from among them into the province faceup. <i>(Do not discard the other cards in the province.)</i></property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi." />
+      <property name="Card Number" value="8" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="4" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Favorable Dealbroker" id="d5cc1a3b-152e-4c95-a52e-388094a010cc" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Reaction:</b> After this character enters play - search your dynasty deck for a character with printed cost 1 and put it into play. Shuffle.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier. Merchant." />
+      <property name="Card Number" value="9" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Kaiu Shihobu" id="99ce58ea-b90c-4ded-98d9-d278e829ea65" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Reaction:</b> After this character enters play - search your dynasty deck for any number of holdings, reveal them, and put them facedown underneath your stronghold province <i>(out of play)</i>. Shuffle.
+<b>Action:</b> Put a facedown holding under your stronghold province into play in an unbroken non-stronghold province you control, discarding each other card in that province.
+<i>Errata from the Imperial Law (2020-01-06)</i></property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Daimyō. Engineer." />
+      <property name="Card Number" value="10" />
+      <property name="Cost" value="5" />
+      <property name="Military Skill" value="5" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Kaiu Siege Force" id="5a95f635-4bfe-429a-9667-e6575964b16b" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">No attachments.
+<b>Action:</b> Put a <i>(friendly)</i> holding on the bottom of your dynasty deck - ready this character.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Army. Engineer." />
+      <property name="Card Number" value="11" />
+      <property name="Cost" value="6" />
+      <property name="Military Skill" value="7" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Kaiu Forges" id="db2d448e-852f-4171-8814-2b78833b02cb" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Limit 1 per deck.
+<b>Action:</b> Choose a province you control - search the top 10 cards of your dynasty deck for a holding and switch it with a <i>Kaiu Wall</i> holding in that province. Shuffle. <i>(The new holding is faceup.)</i></property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Kaiu-Wall." />
+      <property name="Card Number" value="12" />
+      <property name="Bonus Strength" value="+3" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Northern Curtain Wall" id="2ef6c078-46b4-4d3b-840c-d1a4aa61d1de" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Limit 1 per deck.
+Each <i>Kaiu Wall</i> holding in each adjacent province gets +2 bonus strength.</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Kaiu-Wall." />
+      <property name="Card Number" value="13" />
+      <property name="Bonus Strength" value="+4" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="River of the Last Stand" id="fd18f446-3397-49a3-a1a3-4bcf4e2bd9ad" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Limit 1 per deck.
+<b>Action:</b> During a conflict at a province you control with a <i>Kaiu Wall</i> holding - your opponent discards 2 random cards from his or her hand and draws 1 card.</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Kaiu-Wall. River." />
+      <property name="Card Number" value="14" />
+      <property name="Bonus Strength" value="+0" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Seventh Tower" id="92bddf89-c022-44fc-9997-2a4f45c13514" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Limit 1 per deck.
+<b>Reaction:</b> After you win a conflict as the defending player, if the attacked province has a <i>Kaiu Wall</i> holding - Resolve the ring effect of the contested ring as if you were the attacking player.</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Kaiu-Wall." />
+      <property name="Card Number" value="15" />
+      <property name="Bonus Strength" value="+2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Third Whisker Warrens" id="85fdbed4-7103-4135-ad02-e2592e52efff" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Limit 1 per deck.
+During each conflict at a province you control with a <i>Kaiu Wall</i> holding, you may look at and play the top card of your dynasty deck as if it were in your hand.</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Kaiu-Wall." />
+      <property name="Card Number" value="16" />
+      <property name="Bonus Strength" value="+1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Watchtower of Valor" id="8a8aef3f-0526-4cda-9d99-bb5acd401d37" size="dynasty">
+      <property name="Clan" value="Crab" />
+      <property name="Text">Limit 1 per deck.
+<b>Reaction:</b> After you win a conflict as the defending player, if the attacked province has a <i>Kaiu Wall</i> holding - draw 1 card. (Unlimited.)</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Kaiu-Wall." />
+      <property name="Card Number" value="17" />
+      <property name="Bonus Strength" value="+1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Daidoji Netsu" id="9ba8acbd-3c8b-487c-a261-9b6cbcfd8feb" size="dynasty">
+      <property name="Clan" value="Crane" />
+      <property name="Text">Other character cannot leave play during the conflict phase, except by the effects of keywords.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Commander." />
+      <property name="Card Number" value="18" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Agasha Hiyori" id="d0512699-e7be-4e04-868e-df363ce323e2" size="dynasty">
+      <property name="Clan" value="Dragon" />
+      <property name="Text">
+        <b>Reaction:</b> After a phase begins, spend 1 fate to an unclaimed ring and choose an attachment on a character - until the end of the phase, treat that attachment as if its printed text bow were blank (except for <i>Traits</i>) and as if it had no skill modifiers.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Fire." />
+      <property name="Card Number" value="19" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Matsu Agetoki" id="7293dafe-1e80-4d25-8b21-5cacef69cc5a" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which this character is attacking, if you are more honorable than your opponent - move the contested ring to another eligible province and reveal that province, if able. It is now the attacked province.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Cavalry. Commander." />
+      <property name="Card Number" value="20" />
+      <property name="Cost" value="3" />
+      <property name="Military Skill" value="4" />
+      <property name="Political Skill" value="2" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Yogo Asami" id="9f668d70-e9ff-4909-ad71-e97d05874b2e" size="dynasty">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">Bayushi Kachiko cannot be chosen as the target of abilities triggered by an opponent.
+<b>Action:</b> During a conflict in which this character is participating, bow it and choose a participating character – That character gets -2<s value="military">[Military]</s> until the end of the conflict.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Courtier." />
+      <property name="Card Number" value="21" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="0" />
+      <property name="Political Skill" value="3" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Shinjo Yasamura" id="9b19c4fa-bcdb-4e72-89bb-2f87f6fea5ec" size="dynasty">
+      <property name="Clan" value="Unicorn" />
+      <property name="Text">Covert. <i>(When this character attacks, choose one character without covert. That character cannot be declared as a defender.)</i><b>Reaction:</b> After this character evades a character using covert - that character cannot be declared as a defender this phase.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Cavalry." />
+      <property name="Card Number" value="22" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="0" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Moto Eviscerator" id="efcc107d-4eaa-4d7e-911b-8f25948a38f0" size="dynasty">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <b>Action:</b> During a conflict, lose 1 honor - move this character to the conflict.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Cavalry. Shadowlands." />
+      <property name="Card Number" value="23" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="3" />
+      <property name="Political Skill" value="0" />
+      <property name="Glory" value="1" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Kansen Haunt" id="6b7004a5-c442-4c72-8ae8-52a6bfcc048f" size="dynasty">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <b>Reaction:</b> After you claim a ring during a conflict in which you are the defending player, if you are less honorable than an opponent, lose 2 honor - resolve that ring's effect as if you were the attacking player.</property>
+      <property name="Type" value="Holding" />
+      <property name="Traits" value="Shadowlands." />
+      <property name="Card Number" value="24" />
+      <property name="Bonus Strength" value="-2" />
+      <property name="Deck" value="Dynasty" />
+    </card>
+    <card name="Reinforced Plate" id="28016cd3-9dc9-4769-8d87-081322640cc0" size="conflict">
+      <property name="Clan" value="Crab" />
+      <property name="Text">While attached character is participating in a <s value="military">[Military]</s> conflict, it is immune to the effects of opponents' events.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Armor." />
+      <property name="Card Number" value="25" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="+1" />
+      <property name="Political Skill" value="+0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+    <card name="Subterranean Guile" id="84bc3750-7883-4758-8e68-4245a3794074" size="conflict">
+      <property name="Clan" value="Crab" />
+      <property name="Text">During <s value="military">[Military]</s> conflicts, if you control a holding on an unbroken province, attached character gains covert.</property>
+      <property name="Type" value="Attachment" />
+      <property name="Traits" value="Technique." />
+      <property name="Card Number" value="26" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="+1" />
+      <property name="Political Skill" value="+0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="1" />
+    </card>
+    <card name="Fruitful Respite" id="4d2f215e-7ec2-4a3e-8418-5ded6dc4a542" size="conflict">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Reaction:</b> After an opponent passes on declaring a conflict, if he or she controls 1 or more ready characters - gain 2 fate.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="27" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+    <card name="Siege Warfare" id="15954ce7-624b-4de4-8369-e13a548e689a" size="conflict">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Action:</b> During a conflict in which you are attacking, if you control a holding – until the end of the conflict, the attacked province gets -2 strength <i>(to a minimum of 0)</i>.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Tactic." />
+      <property name="Card Number" value="28" />
+      <property name="Cost" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Desolation" id="57ca56ad-21b6-4199-85f1-a9bfc7ad652a" size="conflict">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Action:</b> Lose 2 honor. Choose an opponent – until the end of the phase, treat each of that opponent's provinces as if its printed text box were blank (except for <i>Traits</i>), including provinces that are revealed later this phase.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Spell. Earth." />
+      <property name="Card Number" value="29" />
+      <property name="Cost" value="2" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="The Strength of the Mountain" id="6226494b-7b01-4ab0-be34-2b78a05a32ba" size="conflict">
+      <property name="Clan" value="Crab" />
+      <property name="Text">
+        <b>Action:</b> During a conflict - until the end of the conflict, each defending character cannot be bowed or moved home by opponents' card effects and does not bow as the result of conflict resolution.</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Philosophy." />
+      <property name="Card Number" value="30" />
+      <property name="Cost" value="3" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="4" />
+    </card>
+    <card name="Isawa Eju" id="990f2ecc-243c-4e25-b141-69316f86c4c7" size="conflict">
+      <property name="Clan" value="Phoenix" />
+      <property name="Text">Courtesy. Sincerity.
+<b>Action:</b> If you have claimed the <s value="air">[Air]</s> ring, choose a province - discard each card in that province and refill it faceup. (Limit 3 times per round.)</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Shugenja. Air. Elemental-Master." />
+      <property name="Card Number" value="31" />
+      <property name="Cost" value="4" />
+      <property name="Military Skill" value="1" />
+      <property name="Political Skill" value="4" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Conflict" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Slovenly Scavenger" id="a27f7280-061e-4f2a-b2a2-b4dd4128e7fa" size="conflict">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <b>Reaction:</b> After this character wins a conflict, sacrifice it. Choose a discard pile – shuffle that discard pile into its owner's corresponding deck.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Goblin. Shadowlands." />
+      <property name="Card Number" value="32" />
+      <property name="Cost" value="1" />
+      <property name="Military Skill" value="1" />
+      <property name="Glory" value="0" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="0" />
+    </card>
+  </cards>
+</set>

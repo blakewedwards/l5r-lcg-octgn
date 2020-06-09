@@ -15,5 +15,23 @@
       <set id="all-and-nothing" number="13" value="a265ba70-0fbf-4257-8664-8d5054b0a784" />
       <set id="elements-unbound" number="14" value="048f7b98-7a9a-4180-abac-2dff5751c12b" />
       <set id="underhand-of-the-emperor" number="15" value="422c97c9-6fa1-43ef-9ba7-5d2ea6c5314c" />
+      <set id="children-of-the-empire" number="16" value="26d6bae7-7d4d-4017-bbf4-1db8e3ae10d2" />
+      <set id="warriors-of-the-wind" number="17" value="24682b0a-860a-4176-b513-d678c9f2b7f9" />
+      <set id="masters-of-the-court" number="18" value="9077409a-0796-4fe8-8b71-1972162dc3e2" />
+      <set id="for-the-empire" number="19" value="2228b8ec-ddad-43a2-a95c-77eaa901f100" />
+      <set id="bonds-of-blood" number="20" value="babe9edf-3f74-419c-bd7f-87f871f39f01" />
+      <set id="justice-for-satsume" number="21" value="c6b9da06-fbfb-4843-8ad3-0437e935fb22" />
+      <set id="the-children-of-heaven" number="22" value="a7172fb3-e0cd-4b4b-9ff1-5c50a0b0aa19" />
+      <set id="a-champion-s-foresight" number="23" value="f485472e-3ad7-4736-b340-24c3c7d92ae7" />
+      <set id="shoju-s-duty" number="24" value="bd486b64-dcac-4d86-8a88-48e7290739a4" />
+      <set id="the-emperor-s-legion" number="27" value="13ac2fdf-0a6c-41d6-90a9-bded8c61c30f" />
+      <set id="defenders-of-rokugan" number="26" value="b0db69ed-3704-444c-8f87-46cc43c31147" />
+      <set id="seekers-of-wisdom" number="25" value="d45da83a-841c-46c0-b63d-b77f94189f1a" />
+      <set id="clan-war" number="28" value="b42e7a11-4889-4af0-b2d0-6ef13e49f73a" />
+      <set id="rokugan-at-war" number="29" value="29feac51-ac47-4ee3-9741-1aa2bd00fd05" />
+      <set id="spreading-shadows" number="30" value="93666d59-0c41-4b25-ac0d-1cffddf7d5ca" />
+      <set id="in-pursuit-of-truth" number="31" value="968fff8d-7530-45e1-9939-5a63ab725382" />
+      <set id="campaigns-of-conquest" number="32" value="25a17ddd-9c9c-40ea-9132-f080b272b68b" />
+      <set id="as-honor-demands" number="33" value="fd5e6c4e-4cb9-465a-85c0-657d487ff4b3" />
   </sets>
 </xml>

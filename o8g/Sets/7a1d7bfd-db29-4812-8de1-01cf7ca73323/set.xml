@@ -122,7 +122,8 @@
     <card name="Restoration of Balance" id="9cbdfaf2-7559-481d-b5c4-39c2f31a129d" size="province">
       <property name="Clan" value="Dragon" />
       <property name="Text">
-        <b>Reaction:</b> After this province is revealed – your opponent chooses and discards cards from his or her hand until that player has 4 or fewer cards in hand.</property>
+        <b>Interrupt:</b> When this province is broken – your opponent discards cards from his or her hand until that player has 4 or fewer cards in hand.
+<i>Errata from RRG v9</i></property>
       <property name="Type" value="Province" />
       <property name="Ring" value="Fire" />
       <property name="Card Number" value="10" />
@@ -141,8 +142,9 @@
     </card>
     <card name="Kuroi Mori" id="99c8a45a-e16a-406b-9029-acf90e0c49bd" size="province">
       <property name="Clan" value="Phoenix" />
-      <property name="Text">
-        <b>Action:</b> During a conflict at this province, select one – switch the contested ring with an unclaimed ring <i>(the conflict retains its type)</i>, or switch the conflict type <i>(the conflict retains its element)</i>.</property>
+      <property name="Text">Cannot be a stronghold province.
+<b>Action:</b> During a conflict at this province, select one – switch the contested ring with an unclaimed ring <i>(the conflict retains its type)</i>, or switch the conflict type <i>(the conflict retains its element)</i>.
+<i>Errata from Imperial Law (2020-04-06).</i></property>
       <property name="Type" value="Province" />
       <property name="Ring" value="Void" />
       <property name="Card Number" value="12" />
@@ -1699,7 +1701,8 @@ You cannot place fate on this character when it is played from one of your provi
     </card>
     <card name="Steward of Law" id="ad350407-e999-4da0-b136-dd046375e07a" size="conflict">
       <property name="Clan" value="Crane" />
-      <property name="Text">While this character is participating in a conflict, characters cannot become dishonored.</property>
+      <property name="Text">While this character is participating in a conflict, characters cannot receive dishonored status tokens.
+<i>Errata from RRG v11</i></property>
       <property name="Type" value="Character" />
       <property name="Traits" value="Courtier. Scholar." />
       <property name="Card Number" value="139" />
@@ -2142,7 +2145,8 @@ Attached character cannot participate in <s value="military">[Military]</s> conf
     <card name="Against the Waves" id="bc87d1b4-28ea-4874-9d20-99e08efe753c" size="conflict">
       <property name="Clan" value="Phoenix" />
       <property name="Text">
-        <b>Action:</b> Choose a <i>Shugenja</i> character – bow or ready that character.</property>
+        <b>Action:</b> Choose a <i>Shugenja</i> character you control – bow or ready that character.
+<i>Errata from the Imperial Law (2020-01-06)</i></property>
       <property name="Type" value="Event" />
       <property name="Traits" value="Spell. Water." />
       <property name="Card Number" value="177" />

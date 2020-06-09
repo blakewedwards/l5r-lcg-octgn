@@ -2,8 +2,8 @@
 <game
     name="Legend of the Five Rings LCG"
     id="bb0f02e7-2a6f-4ae3-84a2-c501b4176844"
-    octgnVersion="3.1.295.0"
-    version="0.5.7.0"
+    octgnVersion="3.4.209.0"
+    version="0.5.9.0"
     scriptVersion="3.1.0.2"
     markersize="16"
     setsurl="https://tinyurl.com/mab3ars"
@@ -40,6 +40,13 @@
     <symbol src="symbols/earth.png" id="earth" name="Earth" />
     <symbol src="symbols/wind.png" id="air" name="Air" />
   </symbols>
+  <markers>
+    <marker id="dishonored" src="Markers/dishonored.png" name="Dishonored"/>
+    <marker id="fate" src="Markers/fate.png" name="Fate"/>
+    <marker id="honored" src="Markers/honored.png" name="Honored"/>
+    <marker id="military" src="Markers/military.png" name="Military"/>
+    <marker id="political" src="Markers/political.png" name="Political"/>
+  </markers>
   <proxygen definitionsrc="proxygen/definition.xml"/>
   <globalvariables>
     <globalvariable name="turn" value="1"/>
@@ -120,13 +127,13 @@
     <globalvariable name="fate_value" value="0"/>
     <counter name="Honor" icon="icons/honor.png"/>
     <counter name="Fate" icon="icons/fate.png"/>
-    <hand name="Hand" icon="card/conflict.png" visibility="me" ordered="False">
+    <group name="Hand" icon="card/conflict.png" visibility="me" ordered="False" viewState="expanded">
       <groupaction menu="Set up" execute="setup" showIf="setup_required"/>
       <groupaction menu="Random discard" execute="random_discard_from" showIf="setup_not_required"/>
       <cardaction menu="Play" execute="play_conflict" default="True" showIf="setup_not_required"/>
       <cardaction menu="Play (reduced)" execute="play_conflict_reduced" showIf="setup_not_required"/>
       <cardaction menu="Discard (unique)" execute="discard_unique" showIf="is_character" shortcut="SHIFT+DEL"/>
-    </hand>
+    </group>
     <group name="Conflict Deck" icon="card/conflict.png" visibility="none">
       <groupaction menu="Draw" execute="draw" default="True" showIf="setup_not_required" shortcut="F10"/>
       <groupaction menu="Search top" execute="search_top" showIf="setup_not_required"/>
@@ -138,7 +145,7 @@
       <groupaction menu="Shuffle" execute="shuffle" showIf="setup_not_required"/>
     </group>
     <group name="Dynasty Discard" icon="card/dynasty.png" visibility="all"/>
-    <group name="Claimed Rings" icon="card/dynasty.png" visibility="all" collapsed="True"/>
+    <group name="Claimed Rings" icon="card/dynasty.png" visibility="all" viewState="collapsed"/>
   </player>
   <deck>
     <section name="Stronghold" group="Hand"/>

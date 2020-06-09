@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<set name="Campaigns of Conquest" id="25a17ddd-9c9c-40ea-9132-f080b272b68b" gameId="bb0f02e7-2a6f-4ae3-84a2-c501b4176844" version="1.0.0.0" gameVersion="1.0.0.0">
+  <cards>
+    <card name="Hayaken no Shiro" id="9455cd1b-20ee-49ee-96cb-8f7c89a06154" size="province">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <b>Action:</b> Bow this stronghold. Choose a <i>Bushi</i> character with printed cost 2 or lower - ready that character.</property>
+      <property name="Type" value="Stronghold" />
+      <property name="Traits" value="Castle." />
+      <property name="Card Number" value="71" />
+      <property name="Bonus Strength" value="+2" />
+      <property name="Deck" value="Province" />
+      <property name="Unique" value="Unique" />
+      <property name="Influence Value" value="10" />
+      <property name="Starting Honor" value="12" />
+      <property name="Fate Value" value="7" />
+    </card>
+    <card name="The Pursuit of Justice" id="86bbc962-9eb1-4512-9ff1-f641289b56e8" size="province">
+      <property name="Clan" value="Neutral" />
+      <property name="Text">
+        <b>Action:</b> During a conflict at a <s value="water">[Water]</s> province, choose a participating character - ready that character.</property>
+      <property name="Type" value="Province" />
+      <property name="Ring" value="Water" />
+      <property name="Card Number" value="73" />
+      <property name="Bonus Strength" value="4" />
+      <property name="Deck" value="Province" />
+    </card>
+    <card name="Ikoma Tsanuri" id="f64a65c9-f485-4a18-ae74-980559abe721" size="dynasty">
+      <property name="Clan" value="Lion" />
+      <property name="Text">Rally. <i>(After this card is revealed in a province, add the top card of your dynasty deck to the province, faceup.)</i>
+During conflicts in which this character is participating, your opponent cannot trigger abilities on the attacked province.</property>
+      <property name="Type" value="Character" />
+      <property name="Traits" value="Bushi. Commander." />
+      <property name="Card Number" value="79" />
+      <property name="Cost" value="2" />
+      <property name="Military Skill" value="2" />
+      <property name="Political Skill" value="1" />
+      <property name="Glory" value="2" />
+      <property name="Deck" value="Dynasty" />
+      <property name="Unique" value="Unique" />
+    </card>
+    <card name="Under Siege" id="ee114035-6eb8-4494-b37a-f7801c735db2" size="conflict">
+      <property name="Clan" value="Lion" />
+      <property name="Text">
+        <b>Fire</b> Role only.
+<b>Reaction:</b> After a conflict is declared - the defending player sets their hand aside, facedown and out of play. If they do, they draw 5 cards. At the end of the conflict, that player discards their hand and adds the set-aside cards to their hand. (Max 1 per conflict.)</property>
+      <property name="Type" value="Event" />
+      <property name="Traits" value="Tactic." />
+      <property name="Card Number" value="89" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="2" />
+    </card>
+    <card name="Forgery" id="bef57a99-f502-4c5c-9a35-1b71c130f463" size="conflict">
+      <property name="Clan" value="Scorpion" />
+      <property name="Text">
+        <b>Interrupt:</b> When the effects of an event would initiate, if you are less honorable than the player initiating those effects – cancel those effects.</property>
+      <property name="Type" value="Event" />
+      <property name="Card Number" value="91" />
+      <property name="Cost" value="1" />
+      <property name="Deck" value="Conflict" />
+      <property name="Influence Value" value="3" />
+    </card>
+  </cards>
+</set>
